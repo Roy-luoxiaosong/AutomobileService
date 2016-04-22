@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+   
+    <com.roy.automobileservice.layout.TitleBackLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp">
+    </com.roy.automobileservice.layout.TitleBackLayout>
+  <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#FFFFF0"
+        android:orientation="vertical">
+        <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="30dp" 
+        android:background="#FFFFF0"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="24sp"
+        android:text="@string/emergency_tel_text"/>
+    
+    <Button
+        android:id="@+id/Rescue_tel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/tel_button_from"
+        android:textColor="#AEEEEE"
+        android:text="@string/tel_120"/>
+     <Button
+        android:id="@+id/police_tel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/tel_button_from"
+        android:textColor="#AEEEEE"
+        android:text="@string/tel_110"/>
+     <Button
+        android:id="@+id/traffic_tel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/tel_button_from"
+        android:textColor="#AEEEEE"
+        android:text="@string/tel_122"/>
+     <Button
+        android:id="@+id/fire_tel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/tel_button_from"
+        android:textColor="#AEEEEE"
+        android:text="@string/tel_119"/>
+      <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="30dp" 
+        android:background="#FFFFF0"/>
+     <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="24sp"
+      
+        android:text="@string/convenient_tel_text"/>
+    
+     <Button
+        android:id="@+id/road_help_tel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/tel_button_from"
+        android:textColor="#AEEEEE"
+        android:text="@string/road_assis_tel"/>
+     <Button
+        android:id="@+id/customer_service_tel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/tel_button_from"
+        android:textColor="#AEEEEE"
+        android:text="@string/customer_service"/>"
+    </LinearLayout>
+    
+
+</LinearLayout>

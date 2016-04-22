@@ -1,0 +1,21 @@
+<resources>
+
+    <string name="app_name">AutomobileService</string>
+    <string name="my_car_option_text">My Car</string>
+    <string name="auto_part_option_text">Auto Parts</string>
+    <string name="auto_beauty_option_text">Auto Beauty</string>
+    <string name="auto_repair_option_text">Auto Repair</string>
+    <string name="road_assis_option_text"> Road help</string>
+    <string name="title_default_text">AutomobileService</string>
+
+    <string name="emergency_tel_text">Emergency Telephone</string>
+    <string name="tel_120">Rescue tel:120</string>
+    <string name="tel_110">Police tel:110</string>
+    <string name="tel_122">Traffic tel:122</string>
+    <string name="tel_119">Fire tel:119</string>
+    <string name="convenient_tel_text">Convenient Telephone</string>
+    <string name="road_assis_tel">24 hour road help tel</string>
+    <string name="customer_service">24 hour customer tel</string>
+    
+
+</resources>
