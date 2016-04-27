@@ -29,6 +29,7 @@
         android:layout_height="wrap_content"
         android:background="@drawable/tel_button_from"
         android:textColor="#AEEEEE"
+        android:drawableRight="@drawable/card_phone"
         android:text="@string/tel_120"/>
      <Button
         android:id="@+id/police_tel"
@@ -36,6 +37,7 @@
         android:layout_height="wrap_content"
         android:background="@drawable/tel_button_from"
         android:textColor="#AEEEEE"
+        android:drawableRight="@drawable/card_phone"
         android:text="@string/tel_110"/>
      <Button
         android:id="@+id/traffic_tel"
@@ -43,6 +45,7 @@
         android:layout_height="wrap_content"
         android:background="@drawable/tel_button_from"
         android:textColor="#AEEEEE"
+        android:drawableRight="@drawable/card_phone"
         android:text="@string/tel_122"/>
      <Button
         android:id="@+id/fire_tel"
@@ -50,6 +53,7 @@
         android:layout_height="wrap_content"
         android:background="@drawable/tel_button_from"
         android:textColor="#AEEEEE"
+        android:drawableRight="@drawable/card_phone"
         android:text="@string/tel_119"/>
       <ImageView
         android:layout_width="match_parent"
@@ -68,6 +72,7 @@
         android:layout_height="wrap_content"
         android:background="@drawable/tel_button_from"
         android:textColor="#AEEEEE"
+        android:drawableRight="@drawable/card_phone"
         android:text="@string/road_assis_tel"/>
      <Button
         android:id="@+id/customer_service_tel"
@@ -75,6 +80,7 @@
         android:layout_height="wrap_content"
         android:background="@drawable/tel_button_from"
         android:textColor="#AEEEEE"
+        android:drawableRight="@drawable/card_phone"
         android:text="@string/customer_service"/>"
     </LinearLayout>
     
