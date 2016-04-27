@@ -33,22 +33,22 @@ public class ConvenientService extends Activity implements android.view.View.OnC
 	public void onClick(View v) {
 		switch (v.getId()) {
 		case R.id.Rescue_tel:
-			Utils.showTipAndCall(ConvenientService.this, "120");
+			Utils.showTipAndCall(ConvenientService.this, R.string.tip_msg_text_120,"120");
 			break;
 		case R.id.police_tel:
-			Utils.showTipAndCall(ConvenientService.this, "110");
+			Utils.showTipAndCall(ConvenientService.this, R.string.tip_msg_text_110,"110");
 			break;
 		case R.id.traffic_tel:
-			Utils.showTipAndCall(ConvenientService.this, "122");
+			Utils.showTipAndCall(ConvenientService.this, R.string.tip_msg_text_122,"122");
 			break;
 		case R.id.fire_tel:
-			Utils.showTipAndCall(ConvenientService.this, "119");
+			Utils.showTipAndCall(ConvenientService.this, R.string.tip_msg_text_119,"119");
 			break;
 		case R.id.road_help_tel:
-			Utils.showTipAndCall(ConvenientService.this, "24 hour rescue telephone","400 650 4680");
+			Utils.showTipAndCall(ConvenientService.this,R.string.tip_msg_rescue_text,"400 650 4680");
 			break;
 		case R.id.customer_service_tel:
-			Utils.showTipAndCall(ConvenientService.this, "24 hour Customer Service Hotline","400 818 1188");
+			Utils.showTipAndCall(ConvenientService.this, R.string.tip_msg_cs_text,"400 818 1188");
 			break;
 
 		default:

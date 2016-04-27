@@ -70,6 +70,7 @@ public final class R {
         public static final int auto_beauty_option_text=0x7f040003;
         public static final int auto_part_option_text=0x7f040002;
         public static final int auto_repair_option_text=0x7f040004;
+        public static final int cancle_bt=0x7f040018;
         public static final int car_models_text=0x7f040006;
         public static final int convenient_tel_text=0x7f04000d;
         public static final int customer_service=0x7f04000f;
@@ -81,7 +82,15 @@ public final class R {
         public static final int tel_119=0x7f04000c;
         public static final int tel_120=0x7f040009;
         public static final int tel_122=0x7f04000b;
+        public static final int tip_msg_cs_text=0x7f040016;
+        public static final int tip_msg_rescue_text=0x7f040015;
+        public static final int tip_msg_text_110=0x7f040012;
+        public static final int tip_msg_text_119=0x7f040014;
+        public static final int tip_msg_text_120=0x7f040011;
+        public static final int tip_msg_text_122=0x7f040013;
+        public static final int tip_text=0x7f040010;
         public static final int title_default_text=0x7f040007;
+        public static final int yes_bt=0x7f040017;
     }
     public static final class style {
         /** 

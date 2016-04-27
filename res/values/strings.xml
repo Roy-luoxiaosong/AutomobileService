@@ -18,5 +18,16 @@
     <string name="road_assis_tel">24 hour road help tel</string>
     <string name="customer_service">24 hour customer tel</string>
     
+    <string name="tip_text">TIP</string>
+    <string name="tip_msg_text_120">Are you sure to call 120 ?</string>
+    <string name="tip_msg_text_110">Are you sure to call 110 ?</string>
+    <string name="tip_msg_text_122">Are you sure to call 122 ?</string>
+    <string name="tip_msg_text_119">Are you sure to call 119 ?</string>
+    <string name="tip_msg_rescue_text">Are you sure to call 24 hour rescue telephone ?</string>
+    <string name="tip_msg_cs_text">Are you sure to call 24 hour Customer Service Hotline ?</string>
+    <string name="yes_bt">YES</string>
+    <string name="cancle_bt">CANCLE</string>
+    
+    
 
 </resources>

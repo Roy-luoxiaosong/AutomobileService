@@ -18,5 +18,15 @@
     <string name="road_assis_tel">24 道路救援电话</string>
     <string name="customer_service">24 服务热线</string>
     
+    <string name="tip_text">温馨提示</string>
+    <string name="tip_msg_text_120">你确定要拨打 120 ?</string>
+    <string name="tip_msg_text_110">你确定要拨打 110 ?</string>
+    <string name="tip_msg_text_122">你确定要拨打 122 ?</string>
+    <string name="tip_msg_text_119">你确定要拨打 119 ?</string>
+    <string name="tip_msg_rescue_text">你确定要拨打 24 小时救援电话 ?</string>
+    <string name="tip_msg_cs_text">你确定要拨打 24 客户服务热线 ?</string>
+    <string name="yes_bt">确定</string>
+    <string name="cancle_bt">取消</string>
+    
 
 </resources>

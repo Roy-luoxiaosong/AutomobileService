@@ -5,14 +5,15 @@ import android.content.Context;
 import android.content.DialogInterface;
 
 import com.roy.automobileservice.AssistantCallThread;
+import com.roy.automobileservice.R;
 
 public class Utils {
-	public static void showTipAndCall(final Context  context,final String telNum){
+	public static void showTipAndCall(final Context  context,final int tipMsg,final String telNum){
 		AlertDialog.Builder dialog = new AlertDialog.Builder(context);
-		dialog.setTitle("TIP");
-		dialog.setMessage("Are you sure to call "+telNum +"?");
+		dialog.setTitle(R.string.tip_text);
+		dialog.setMessage(tipMsg);
 		dialog.setCancelable(true);
-		dialog.setPositiveButton("YES", new DialogInterface.OnClickListener() {
+		dialog.setPositiveButton(R.string.yes_bt, new DialogInterface.OnClickListener() {
 			
 			@Override
 			public void onClick(DialogInterface dialog, int which) {
@@ -20,30 +21,7 @@ public class Utils {
 				;
 			}
 		});
-		dialog.setNegativeButton("CANCLE", new DialogInterface.OnClickListener(){
-
-			@Override
-			public void onClick(DialogInterface dialog, int which) {
-				
-			}
-			
-		});
-		dialog.show();
-	}
-	public static void showTipAndCall(final Context  context,final String tipMsg,final String telNum){
-		AlertDialog.Builder dialog = new AlertDialog.Builder(context);
-		dialog.setTitle("TIP");
-		dialog.setMessage("Are you sure to call "+tipMsg +"?");
-		dialog.setCancelable(true);
-		dialog.setPositiveButton("YES", new DialogInterface.OnClickListener() {
-			
-			@Override
-			public void onClick(DialogInterface dialog, int which) {
-				new Thread(new AssistantCallThread(context, telNum)).start()
-				;
-			}
-		});
-		dialog.setNegativeButton("CANCLE", new DialogInterface.OnClickListener(){
+		dialog.setNegativeButton(R.string.cancle_bt, new DialogInterface.OnClickListener(){
 
 			@Override
 			public void onClick(DialogInterface dialog, int which) {
