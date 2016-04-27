@@ -1,0 +1,22 @@
+<resources>
+
+    <string name="app_name">汽车服务</string>
+    <string name="my_info_option_text">我的资料</string>
+    <string name="auto_part_option_text">汽车配件</string>
+    <string name="auto_beauty_option_text">汽车美容</string>
+    <string name="auto_repair_option_text">汽车维修</string>
+    <string name="road_assis_option_text">道路救援</string>
+    <string name="car_models_text">所有车型</string>
+    <string name="title_default_text">汽车服务</string>
+
+    <string name="emergency_tel_text">紧急电话</string>
+    <string name="tel_120">救护电话:120</string>
+    <string name="tel_110">报警电话:110</string>
+    <string name="tel_122">交警电话:122</string>
+    <string name="tel_119">火警电话:119</string>
+    <string name="convenient_tel_text">便捷电话</string>
+    <string name="road_assis_tel">24 道路救援电话</string>
+    <string name="customer_service">24 服务热线</string>
+    
+
+</resources>

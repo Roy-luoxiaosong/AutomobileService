@@ -1,11 +1,12 @@
 <resources>
 
     <string name="app_name">AutomobileService</string>
-    <string name="my_car_option_text">My Car</string>
+    <string name="my_info_option_text">My Info</string>
     <string name="auto_part_option_text">Auto Parts</string>
     <string name="auto_beauty_option_text">Auto Beauty</string>
     <string name="auto_repair_option_text">Auto Repair</string>
-    <string name="road_assis_option_text"> Road help</string>
+    <string name="road_assis_option_text"> Road Help</string>
+    <string name="car_models_text">Car Models</string>
     <string name="title_default_text">AutomobileService</string>
 
     <string name="emergency_tel_text">Emergency Telephone</string>

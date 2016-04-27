@@ -18,13 +18,13 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal">
       	<Button
-        	android:id="@+id/my_car_option"
+        	android:id="@+id/my_info_option"
         	android:layout_width="0dp"
         	android:layout_weight="1"
         	android:layout_height="wrap_content"
         	android:background="@drawable/bt_from1"
-        	android:drawableTop="@drawable/my_car_option_bg"
-        	android:text="@string/my_car_option_text"/>
+        	android:drawableTop="@drawable/my_info_option_bg"
+        	android:text="@string/my_info_option_text"/>
      	<Button
         	android:id="@+id/auto_beauty_option"
         	android:layout_width="0dp"
@@ -63,10 +63,13 @@
         	android:drawableTop="@drawable/road_assistant_option_bg"
         	android:text="@string/road_assis_option_text"/>
     	<Button
+    	    android:id="@+id/car_models_option"
     	    android:layout_width="0dp"
     	    android:layout_weight="1"
-    	    android:layout_height="match_parent"
-    	    android:background="#ffffff"/>
+    	    android:layout_height="wrap_content"
+    	    android:background="@drawable/bt_from1"
+    	    android:drawableTop="@drawable/car_models_option_bg"
+    	    android:text="@string/car_models_text"/>
       </LinearLayout> 
       
     

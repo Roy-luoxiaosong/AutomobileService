@@ -18,11 +18,12 @@ import android.widget.Toast;
 
 public class HomePageActivity extends Activity implements android.view.View.OnClickListener,ViewPager.OnPageChangeListener{
 	
-	private Button myCarButton;
+	private Button myInfoButton;
 	private Button autoBeautyButton;
 	private Button autoRepairButton;
 	private Button autoPartButton;
 	private Button roadAssisButton;
+	private Button carModelsButton;
 	
 	private Button listButton;
 	
@@ -84,19 +85,21 @@ public class HomePageActivity extends Activity implements android.view.View.OnCl
 			images.add(imageView);
 		}
 		
-		myCarButton = (Button)findViewById(R.id.my_car_option);
+		myInfoButton = (Button)findViewById(R.id.my_info_option);
 		autoBeautyButton = (Button)findViewById(R.id.auto_beauty_option);
 		autoRepairButton = (Button)findViewById(R.id.auto_repair_option);
 		autoPartButton = (Button)findViewById(R.id.auto_part_option);
 		roadAssisButton = (Button)findViewById(R.id.road_assis_option);
+		carModelsButton = (Button)findViewById(R.id.car_models_option);
 		
 		listButton = (Button)findViewById(R.id.list_bt);
 		
-		myCarButton.setOnClickListener(this);
+		myInfoButton.setOnClickListener(this);
 		autoBeautyButton.setOnClickListener(this);
 		autoRepairButton.setOnClickListener(this);
 		autoPartButton.setOnClickListener(this);
 		roadAssisButton.setOnClickListener(this);
+		carModelsButton.setOnClickListener(this);
 		
 		listButton.setOnClickListener(this);
 		
@@ -114,8 +117,8 @@ public class HomePageActivity extends Activity implements android.view.View.OnCl
 	@Override
 	public void onClick(View v) {
 		switch (v.getId()) {
-		case R.id.my_car_option:
-			Toast.makeText(HomePageActivity.this, "you clicked myCar button", Toast.LENGTH_SHORT).show();
+		case R.id.my_info_option:
+			Toast.makeText(HomePageActivity.this, "you clicked myInfo button", Toast.LENGTH_SHORT).show();
 			break;
 		case R.id.auto_beauty_option:
 			Toast.makeText(HomePageActivity.this, "you clicked autoBeauty button", Toast.LENGTH_SHORT).show();
@@ -131,6 +134,9 @@ public class HomePageActivity extends Activity implements android.view.View.OnCl
 			break;
 		case R.id.road_assis_option:
 			ConvenientService.startAction(HomePageActivity.this);
+			break;
+		case R.id.car_models_option:
+			Toast.makeText(HomePageActivity.this, "you clicked CarModels button", Toast.LENGTH_SHORT).show();
 			break;
 		default:
 			break;
