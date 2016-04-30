@@ -1,4 +1,4 @@
-package com.roy.automobileservice;
+package com.roy.automobileservice.thread;
 
 import android.content.Context;
 import android.content.Intent;

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <LinearLayout
+        android:id="@+id/visibility_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+        
+        <TextView
+            android:id="@+id/car_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textSize="20sp"/>
+        <ImageView
+        	android:layout_width="match_parent"
+        	android:layout_height="30dp" 
+        	android:background="#ffffff"/>
+        <ImageView
+            android:id="@+id/car_picture"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"/>
+        <ImageView
+        	android:layout_width="match_parent"
+        	android:layout_height="30dp" 
+        	android:background="#ffffff"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/base_info"
+            android:textSize="20sp"/>
+        <Button
+            android:id="@+id/cal_for_more_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableRight="@drawable/card_phone"
+            android:background="@drawable/tel_button_from2"
+            android:layout_margin="5dp"
+            android:text="@string/cal_for_more_info_tel"/>
+        <ImageView
+        	android:layout_width="match_parent"
+        	android:layout_height="30dp" 
+        	android:background="#ffffff"/>
+       	<TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/car_discribe"
+            android:textSize="20sp"/>
+       	<TextView
+       	    android:id="@+id/car_discribe_info"
+       	    android:layout_width="match_parent"
+       	    android:layout_height="wrap_content"/>"
+    </LinearLayout>
+</ScrollView>

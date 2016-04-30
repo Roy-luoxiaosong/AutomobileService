@@ -25,8 +25,24 @@
     <string name="tip_msg_text_119">Are you sure to call 119 ?</string>
     <string name="tip_msg_rescue_text">Are you sure to call 24 hour rescue telephone ?</string>
     <string name="tip_msg_cs_text">Are you sure to call 24 hour Customer Service Hotline ?</string>
+   	<string name="tip_msg_cal_for_car_info">Are you sure to call 0852888888 for more information ?</string>
+   	<string name="tip_msg_to_login_text">Login Now ?</string>
+   	<string name="tip_msg_to_delete_user">Are sure to delete this user info ?</string>
     <string name="yes_bt">YES</string>
     <string name="cancle_bt">CANCLE</string>
+    
+    <string name="all_car_models">Car models list</string>
+    
+    <string name="base_info">base info</string>
+    <string name="cal_for_more_info_tel">08528888888</string>
+    <string name="car_discribe">Car Info</string>
+    
+    <string name="login_user_name_hint">QQ/tel/email</string>
+    <string name="login_pass_word_hint">password</string>
+    <string name="login_button">Login</string>
+    <string name="exit_button">exit</string>
+    <string name="register_button">Register</string>
+    
     
     
 

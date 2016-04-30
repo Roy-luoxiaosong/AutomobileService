@@ -22,5 +22,12 @@
 		android:text="@string/emergency_tel_text"
 		android:textColor="#fff"
 		android:textSize="24sp" />"
+	<Button
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_gravity="center"
+		android:layout_margin="5dip"
+		
+		android:background="#1E90FF"/>
 
 </LinearLayout>

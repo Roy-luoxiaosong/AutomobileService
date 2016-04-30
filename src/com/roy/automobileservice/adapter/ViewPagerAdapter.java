@@ -1,4 +1,4 @@
-package com.roy.automobileservice;
+package com.roy.automobileservice.adapter;
 
 import java.util.ArrayList;
 import java.util.List;

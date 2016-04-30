@@ -1,5 +1,6 @@
-package com.roy.automobileservice;
+package com.roy.automobileservice.activity;
 
+import com.roy.automobileservice.R;
 import com.roy.automobileservice.utils.Utils;
 
 import android.app.Activity;

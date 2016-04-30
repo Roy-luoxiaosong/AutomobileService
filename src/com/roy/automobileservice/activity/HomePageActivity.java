@@ -1,4 +1,4 @@
-package com.roy.automobileservice;
+package com.roy.automobileservice.activity;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -7,6 +7,8 @@ import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.TimeUnit;
 
 import android.app.Activity;
+import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.v4.view.ViewPager;
@@ -16,8 +18,18 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.roy.automobileservice.R;
+import com.roy.automobileservice.adapter.ViewPagerAdapter;
+import com.roy.automobileservice.layout.AvatarImageView;
+import com.roy.automobileservice.utils.Utils;
+
 public class HomePageActivity extends Activity implements android.view.View.OnClickListener,ViewPager.OnPageChangeListener{
 	
+	public static void startAction(Context context){
+		Intent intent = new Intent(context,HomePageActivity.class);
+		context.startActivity(intent);
+	}
+	private AvatarImageView userImage;
 	private Button myInfoButton;
 	private Button autoBeautyButton;
 	private Button autoRepairButton;
@@ -25,7 +37,7 @@ public class HomePageActivity extends Activity implements android.view.View.OnCl
 	private Button roadAssisButton;
 	private Button carModelsButton;
 	
-	private Button listButton;
+	private Button loginButton;
 	
 	private ViewPager mViewPaper;
 	private List<ImageView> images;
@@ -55,7 +67,10 @@ public class HomePageActivity extends Activity implements android.view.View.OnCl
 		adapter = new ViewPagerAdapter(images);
 		mViewPaper.setAdapter(adapter);
 		
-		mViewPaper.setOnPageChangeListener(this); 
+		mViewPaper.setOnPageChangeListener(this);
+		if(LoginActivity.isLogin){
+			loginButton.setText(R.string.exit_button);
+		}
 	}
 
 	private void init(){
@@ -91,9 +106,9 @@ public class HomePageActivity extends Activity implements android.view.View.OnCl
 		autoPartButton = (Button)findViewById(R.id.auto_part_option);
 		roadAssisButton = (Button)findViewById(R.id.road_assis_option);
 		carModelsButton = (Button)findViewById(R.id.car_models_option);
+		userImage = (AvatarImageView)findViewById(R.id.login_avatar_img);
 		
-		listButton = (Button)findViewById(R.id.list_bt);
-		
+		loginButton = (Button)findViewById(R.id.login_title_button);		
 		myInfoButton.setOnClickListener(this);
 		autoBeautyButton.setOnClickListener(this);
 		autoRepairButton.setOnClickListener(this);
@@ -101,7 +116,7 @@ public class HomePageActivity extends Activity implements android.view.View.OnCl
 		roadAssisButton.setOnClickListener(this);
 		carModelsButton.setOnClickListener(this);
 		
-		listButton.setOnClickListener(this);
+		loginButton.setOnClickListener(this);
 		
 		//显示的小点
 		dots = new ArrayList<View>();
@@ -118,7 +133,11 @@ public class HomePageActivity extends Activity implements android.view.View.OnCl
 	public void onClick(View v) {
 		switch (v.getId()) {
 		case R.id.my_info_option:
-			Toast.makeText(HomePageActivity.this, "you clicked myInfo button", Toast.LENGTH_SHORT).show();
+			if(!LoginActivity.isLogin){
+				Utils.showTipAndLogin(HomePageActivity.this, R.string.tip_msg_to_login_text);
+			}else{
+				MyInfoActivity.startAction(HomePageActivity.this);
+			}
 			break;
 		case R.id.auto_beauty_option:
 			Toast.makeText(HomePageActivity.this, "you clicked autoBeauty button", Toast.LENGTH_SHORT).show();
@@ -129,14 +148,23 @@ public class HomePageActivity extends Activity implements android.view.View.OnCl
 		case R.id.auto_part_option:
 			Toast.makeText(HomePageActivity.this, "you clicked autoPart button", Toast.LENGTH_SHORT).show();
 			break;
-		case R.id.list_bt:
-			Toast.makeText(HomePageActivity.this, "you clicked listView button", Toast.LENGTH_SHORT).show();
+		case R.id.login_title_button:
+			String str = loginButton.getText().toString();
+			if(str.equals("exit")||str.equals("退出")){
+				loginButton.setText(R.string.login_button);
+				userImage.setImageResource(R.drawable.user_default_icon);
+				LoginActivity.isLogin = false;
+			}else{
+				LoginActivity.startAction(HomePageActivity.this);
+				
+			}
+			Toast.makeText(HomePageActivity.this, "you clicked login button", Toast.LENGTH_SHORT).show();
 			break;
 		case R.id.road_assis_option:
 			ConvenientService.startAction(HomePageActivity.this);
 			break;
 		case R.id.car_models_option:
-			Toast.makeText(HomePageActivity.this, "you clicked CarModels button", Toast.LENGTH_SHORT).show();
+			CarModelsListActivity.startAction(HomePageActivity.this);
 			break;
 		default:
 			break;
@@ -148,7 +176,6 @@ public class HomePageActivity extends Activity implements android.view.View.OnCl
 	 */
 	@Override
 	protected void onStart() {
-		// TODO Auto-generated method stub
 		super.onStart();
 		scheduledExecutorService = Executors.newSingleThreadScheduledExecutor();
 		scheduledExecutorService.scheduleWithFixedDelay(
@@ -156,6 +183,7 @@ public class HomePageActivity extends Activity implements android.view.View.OnCl
 				2, 
 				2, 
 				TimeUnit.SECONDS);
+		refreshTitleContent();
 	}
 	
 	
@@ -205,6 +233,43 @@ public class HomePageActivity extends Activity implements android.view.View.OnCl
 	@Override
 	public void onPageScrollStateChanged(int arg0) {
 		
+	}
+
+	@Override
+	public void onBackPressed() {
+		super.onBackPressed();
+		fileList();
+		LoginActivity.isLogin = false;
+	}
+
+	@Override
+	protected void onPause() {
+		super.onPause();
+		refreshTitleContent();
+	}
+
+	@Override
+	protected void onRestart() {
+		super.onRestart();
+		refreshTitleContent();
+	}
+
+	@Override
+	protected void onResume() {
+		super.onResume();
+		refreshTitleContent();
+	}
+	
+	private void refreshTitleContent(){
+		if(LoginActivity.isLogin){
+			loginButton.setText(R.string.exit_button);
+			if(LoginActivity.curUserNameItem!=null&&LoginActivity.curUserNameItem.getAvatarImage()>0){
+				userImage.setImageResource(LoginActivity.curUserNameItem.getAvatarImage());
+			}
+		}else{
+			loginButton.setText(R.string.login_button);
+			userImage.setImageResource(R.drawable.user_default_icon);
+		}
 	}
 	
 

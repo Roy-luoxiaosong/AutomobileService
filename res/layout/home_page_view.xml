@@ -3,10 +3,10 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:padding="2dp" >
+     >
     <include layout="@layout/title"
         android:layout_width="match_parent"
-        android:layout_height="60dp"/>
+        android:layout_height="55dp"/>
      <include layout="@layout/cycle_picture"/>
     <ImageView
         android:layout_width="match_parent"

@@ -13,15 +13,35 @@
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
         <activity
-            android:name=".HomePageActivity"
+            android:name=".activity.HomePageActivity"
+            android:launchMode="singleTask"
             android:label="@string/app_name">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
-        <activity android:name=".ConvenientService">
+        <activity android:name=".activity.ConvenientService"
+            	android:launchMode="singleTask">
         </activity>
+        <activity android:name=".activity.CarModelsListActivity"
+             	android:launchMode="singleTask">
+        </activity>
+        <activity android:name=".activity.CarInfoActivity"
+            	android:launchMode="singleTask">
+        </activity>
+        <activity android:name=".activity.LoginActivity"
+            	android:launchMode="singleTask">
+        </activity>
+         <activity android:name=".activity.MyInfoActivity"
+             	android:launchMode="singleTask">
+        </activity>
+         <receiver android:name=".broadcast.IsLoginBroadcastReceiver"
+             	android:exported="false">
+			<intent-filter>
+				<action android:name="com.roy.automobileservice.ISLOGIN"/>
+			</intent-filter>
+		</receiver>
     </application>
 
 </manifest>

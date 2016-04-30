@@ -6,9 +6,11 @@ import android.app.Activity;
 import android.content.Context;
 import android.util.AttributeSet;
 import android.view.LayoutInflater;
+import android.view.TextureView;
 import android.view.View;
 import android.widget.Button;
 import android.widget.LinearLayout;
+import android.widget.TextView;
 
 public class TitleBackLayout extends LinearLayout{
 
@@ -24,5 +26,6 @@ public class TitleBackLayout extends LinearLayout{
 			}
 		});
 	}
+	
 
 }
