@@ -3,7 +3,6 @@ package com.roy.automobileservice.adapter;
 import java.util.List;
 
 import android.content.Context;
-import android.graphics.drawable.Drawable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -32,6 +31,8 @@ public class CarAdapter extends ArrayAdapter<Car>{
 			 viewHolder = new ViewHolder();
 			 viewHolder.carName = (TextView)view.findViewById(R.id.car_name);
 			 viewHolder.carPicture = (ImageView)view.findViewById(R.id.car_picture);
+			 viewHolder.carHeat = (TextView)view.findViewById(R.id.car_heat);
+			 viewHolder.carPrice = (TextView)view.findViewById(R.id.car_price);
 			 view.setTag(viewHolder);
 		 }else{
 			 view = convertView;
@@ -39,12 +40,16 @@ public class CarAdapter extends ArrayAdapter<Car>{
 		 }
 		 viewHolder.carName.setText(car.getName());
 		 viewHolder.carPicture.setImageResource(car.getImageId());
+		 viewHolder.carHeat.setText(String.valueOf(car.getHeat()));
+		 viewHolder.carPrice.setText(car.getPrice());
 		 return view;
 		 
 	}
 	class ViewHolder{
 		TextView carName;
 		ImageView carPicture;
+		TextView carHeat;
+		TextView carPrice;
 	}
 
 	

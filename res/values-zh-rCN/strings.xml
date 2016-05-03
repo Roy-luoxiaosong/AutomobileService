@@ -2,6 +2,7 @@
 
     <string name="app_name">汽车服务</string>
     <string name="my_info_option_text">我的资料</string>
+    <string name="car_appearance">汽车展示</string>
     <string name="auto_part_option_text">汽车配件</string>
     <string name="auto_beauty_option_text">汽车美容</string>
     <string name="auto_repair_option_text">汽车维修</string>
@@ -10,6 +11,7 @@
     <string name="title_default_text">汽车服务</string>
 
     <string name="emergency_tel_text">紧急电话</string>
+    <string name="emergency_title_text">紧急拨号</string>
     <string name="tel_120">救护电话:120</string>
     <string name="tel_110">报警电话:110</string>
     <string name="tel_122">交警电话:122</string>
@@ -26,8 +28,9 @@
     <string name="tip_msg_rescue_text">你确定要拨打 24 小时救援电话 ?</string>
     <string name="tip_msg_cs_text">你确定要拨打 24 客户服务热线 ?</string>
     <string name="tip_msg_cal_for_car_info">你确定要拨打 0852888888 以获得更多信息吗 ?</string>
-    <string name="tip_msg_to_login_text">现在去登录吗 ?</string>
+    <string name="tip_msg_to_login_text">您还没有登录，现在去登录吗 ?</string>
     <string name="tip_msg_to_delete_user">你确定要删除这个用户信息吗 ?</string>
+    <string name="notifiction_to_exit_app">再按一次退出</string>
     <string name="yes_bt">确定</string>
     <string name="cancle_bt">取消</string>
     
@@ -36,11 +39,30 @@
       <string name="base_info">基本信息</string>
       <string name="car_discribe">产品描述</string>
       
-      <string name="login_user_name_hint">QQ/电话号码/邮件</string>
+      <string name="login_user_name_hint">用户名</string>
      <string name="login_pass_word_hint">密码</string>
      <string name="login_button">登录</string>
      <string name="exit_button">退出</string>
      <string name="register_button">注册</string>
+     <string name="check_password">确认密码：</string>
+     <string name="password">输入密码：</string>
+     <string name="car">汽车类型：</string>
+     <string name="address">居住地址：</string>
+     <string name="email">邮箱地址：</string>
+     <string name="select_sex">选择性别：</string>
+     <string name="male">男</string>
+     <string name="female">女</string>
+     <string name="real_name">真实姓名：</string>
+     <string name="user_name">用户名字：</string>
+     <string name="user_icon">用户头像</string>
+     <string name="tel">手机号码</string>
+     
+     <string name="no_car">无车</string>
+     
+      <string name="back_to_home_page">首页</string>
+      <string name="reset_user_info">修改信息</string>
+      
+      <string name="net_unavailable">世界上最遥远的距离就是没网，检查设置</string>
     
 
 </resources>

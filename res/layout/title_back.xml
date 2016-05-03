@@ -7,7 +7,7 @@
     <Button
         android:id="@+id/title_back_button"
         android:layout_width="40dp"
-        android:layout_height="wrap_content"
+        android:layout_height="30dp"
         android:layout_gravity="center"
 		android:layout_margin="5dip"
 		android:background="@drawable/back_button_bg"/>
@@ -19,15 +19,18 @@
 		android:layout_marginRight="5dp"
 		android:layout_weight="1"
 		android:gravity="center"
-		android:text="@string/emergency_tel_text"
+		android:text="@string/emergency_title_text"
 		android:textColor="#fff"
-		android:textSize="24sp" />"
+		android:textSize="24sp" />
 	<Button
-        android:layout_width="40dp"
-        android:layout_height="40dp"
+	    android:id="@+id/title_back_to_home"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_gravity="center"
 		android:layout_margin="5dip"
-		
+		android:text="@string/back_to_home_page"
+		android:textColor="#fff"
+		android:textSize="20sp"
 		android:background="#1E90FF"/>
 
 </LinearLayout>

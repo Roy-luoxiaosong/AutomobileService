@@ -1,112 +1,74 @@
 package com.roy.automobileservice.activity;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.concurrent.Executors;
-import java.util.concurrent.ScheduledExecutorService;
-import java.util.concurrent.TimeUnit;
 
-import android.app.Activity;
+
 import android.content.Context;
 import android.content.Intent;
+import android.content.IntentFilter;
 import android.os.Bundle;
-import android.os.Handler;
-import android.support.v4.view.ViewPager;
+import android.text.TextUtils;
+import android.view.KeyEvent;
 import android.view.View;
+import android.view.Window;
 import android.widget.Button;
-import android.widget.ImageView;
-import android.widget.TextView;
+import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 import android.widget.Toast;
 
 import com.roy.automobileservice.R;
-import com.roy.automobileservice.adapter.ViewPagerAdapter;
+import com.roy.automobileservice.broadcast.NetworkChangeReceiver;
+import com.roy.automobileservice.cls.ActivityCollector;
+import com.roy.automobileservice.cls.Car;
 import com.roy.automobileservice.layout.AvatarImageView;
+import com.roy.automobileservice.utils.GlobalVariable;
+import com.roy.automobileservice.utils.TestData;
 import com.roy.automobileservice.utils.Utils;
 
-public class HomePageActivity extends Activity implements android.view.View.OnClickListener,ViewPager.OnPageChangeListener{
+public class HomePageActivity extends BaseActivity implements android.view.View.OnClickListener{
 	
 	public static void startAction(Context context){
 		Intent intent = new Intent(context,HomePageActivity.class);
 		context.startActivity(intent);
 	}
 	private AvatarImageView userImage;
-	private Button myInfoButton;
-	private Button autoBeautyButton;
-	private Button autoRepairButton;
-	private Button autoPartButton;
-	private Button roadAssisButton;
-	private Button carModelsButton;
+	private LinearLayout myInfoButton;
+	private LinearLayout autoBeautyButton;
+	private LinearLayout autoRepairButton;
+	private LinearLayout autoPartButton;
+	private LinearLayout roadAssisButton;
+	private LinearLayout carModelsButton;
+	private NetworkChangeReceiver networkChangeReceiver;
+	private IntentFilter intentFilter;
+	private RelativeLayout noNetNotifictionLayout;
 	
 	private Button loginButton;
-	
-	private ViewPager mViewPaper;
-	private List<ImageView> images;
-	private List<View> dots;
-	private int currentItem;
-	//记录上一次点的位置
-	private int oldPosition = 0;
-	//存放图片的id
-	private int[] imageIds;
-	//存放图片的标题
-	private String[]  titles;
-	private TextView title;
-	private ViewPagerAdapter adapter;
-	private ScheduledExecutorService scheduledExecutorService;
-	
-	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		//requestWindowFeature(Window.FEATURE_NO_TITLE);
+		requestWindowFeature(Window.FEATURE_NO_TITLE);
 		setContentView(R.layout.home_page_view);
-		
-		
-		
 		init();
-		
-		adapter = new ViewPagerAdapter(images);
-		mViewPaper.setAdapter(adapter);
-		
-		mViewPaper.setOnPageChangeListener(this);
+		registerReceiver(networkChangeReceiver, intentFilter);
 		if(LoginActivity.isLogin){
 			loginButton.setText(R.string.exit_button);
 		}
 	}
 
 	private void init(){
-		//存放图片的id
-		 imageIds = new int[]{
-				R.drawable.a_my_car,
-				R.drawable.b_auto_beauty,
-				R.drawable.c_auto_repair,
-				R.drawable.d_auto_part,
-				R.drawable.e_road_assistant
-		};
-		//存放图片的标题
-	  titles = new String[]{
-	        	"汽车风貌",	
-	        	"汽车美容",	
-	        	"汽车维修",	
-	        	"汽车备件",	
-	        	"道路救援"
-	        };
-	  mViewPaper = (ViewPager) findViewById(R.id.vp);
+		getCars();
+		TestData.initUserTest();
+		networkChangeReceiver = new NetworkChangeReceiver();
+		intentFilter = new IntentFilter();
+		intentFilter.addAction("android.net.conn.CONNECTIVITY_CHANGE");
 		
-		//显示的图片
-		images = new ArrayList<ImageView>();
-		for(int i = 0; i < imageIds.length; i++){
-			ImageView imageView = new ImageView(this);
-			imageView.setBackgroundResource(imageIds[i]);
-			images.add(imageView);
-		}
-		
-		myInfoButton = (Button)findViewById(R.id.my_info_option);
-		autoBeautyButton = (Button)findViewById(R.id.auto_beauty_option);
-		autoRepairButton = (Button)findViewById(R.id.auto_repair_option);
-		autoPartButton = (Button)findViewById(R.id.auto_part_option);
-		roadAssisButton = (Button)findViewById(R.id.road_assis_option);
-		carModelsButton = (Button)findViewById(R.id.car_models_option);
+		myInfoButton = (LinearLayout)findViewById(R.id.my_info_menu);
+		autoBeautyButton = (LinearLayout)findViewById(R.id.auto_beauty_menu);
+		autoRepairButton = (LinearLayout)findViewById(R.id.auto_repair_menu);
+		autoPartButton = (LinearLayout)findViewById(R.id.auto_part_menu);
+		roadAssisButton = (LinearLayout)findViewById(R.id.road_assis_menu);
+		carModelsButton = (LinearLayout)findViewById(R.id.car_models_menu);
 		userImage = (AvatarImageView)findViewById(R.id.login_avatar_img);
+		noNetNotifictionLayout = (RelativeLayout)findViewById(R.id.net_view_r1);
 		
 		loginButton = (Button)findViewById(R.id.login_title_button);		
 		myInfoButton.setOnClickListener(this);
@@ -117,160 +79,148 @@ public class HomePageActivity extends Activity implements android.view.View.OnCl
 		carModelsButton.setOnClickListener(this);
 		
 		loginButton.setOnClickListener(this);
+		noNetNotifictionLayout.setOnClickListener(this);
 		
-		//显示的小点
-		dots = new ArrayList<View>();
-		dots.add(findViewById(R.id.dot_0));
-		dots.add(findViewById(R.id.dot_1));
-		dots.add(findViewById(R.id.dot_2));
-		dots.add(findViewById(R.id.dot_3));
-		dots.add(findViewById(R.id.dot_4));
-		
-		title = (TextView) findViewById(R.id.title);
-		title.setText(titles[0]);
+	
 	}
 	@Override
 	public void onClick(View v) {
 		switch (v.getId()) {
-		case R.id.my_info_option:
+		case R.id.my_info_menu:
 			if(!LoginActivity.isLogin){
 				Utils.showTipAndLogin(HomePageActivity.this, R.string.tip_msg_to_login_text);
 			}else{
 				MyInfoActivity.startAction(HomePageActivity.this);
 			}
 			break;
-		case R.id.auto_beauty_option:
+		case R.id.auto_beauty_menu:
 			Toast.makeText(HomePageActivity.this, "you clicked autoBeauty button", Toast.LENGTH_SHORT).show();
 			break;
-		case R.id.auto_repair_option:
+		case R.id.auto_repair_menu:
 			Toast.makeText(HomePageActivity.this, "you clicked autoRepair button", Toast.LENGTH_SHORT).show();
 			break;
-		case R.id.auto_part_option:
+		case R.id.auto_part_menu:
 			Toast.makeText(HomePageActivity.this, "you clicked autoPart button", Toast.LENGTH_SHORT).show();
 			break;
 		case R.id.login_title_button:
 			String str = loginButton.getText().toString();
-			if(str.equals("exit")||str.equals("退出")){
+			if(str.equals("EXIT")||str.equals("退出")){
 				loginButton.setText(R.string.login_button);
-				userImage.setImageResource(R.drawable.user_default_icon);
+				userImage.setImageResource(R.drawable.user_default_icon1);
+				GlobalVariable.currentUser = null;
 				LoginActivity.isLogin = false;
 			}else{
 				LoginActivity.startAction(HomePageActivity.this);
 				
 			}
-			Toast.makeText(HomePageActivity.this, "you clicked login button", Toast.LENGTH_SHORT).show();
 			break;
-		case R.id.road_assis_option:
+		case R.id.road_assis_menu:
 			ConvenientService.startAction(HomePageActivity.this);
 			break;
-		case R.id.car_models_option:
+		case R.id.car_models_menu:
 			CarModelsListActivity.startAction(HomePageActivity.this);
 			break;
+		case R.id.net_view_r1:
+			if(noNetNotifictionLayout!=null){
+				Intent intent = new Intent("android.settings.SETTINGS");
+				startActivity(intent);
+			}
 		default:
 			break;
 		}
 		
 	}
-	/**
-	 * 利用线程池定时执行动画轮播
-	 */
+
 	@Override
 	protected void onStart() {
 		super.onStart();
-		scheduledExecutorService = Executors.newSingleThreadScheduledExecutor();
-		scheduledExecutorService.scheduleWithFixedDelay(
-				new ViewPageTask(), 
-				2, 
-				2, 
-				TimeUnit.SECONDS);
+		noNetNotifictionLayout.setVisibility(NetworkChangeReceiver.netState?View.GONE:View.VISIBLE);
 		refreshTitleContent();
 	}
-	
-	
-	private class ViewPageTask implements Runnable{
-
-		@Override
-		public void run() {
-			currentItem = (currentItem + 1) % imageIds.length;
-			mHandler.sendEmptyMessage(0);
-			try {
-				Thread.sleep(3000);
-			} catch (InterruptedException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
-		}
-	}
-	
-	/**
-	 * 接收子线程传递过来的数据
-	 */
-	private Handler mHandler = new Handler(){
-		public void handleMessage(android.os.Message msg) {
-			mViewPaper.setCurrentItem(currentItem);
-		};
-	};
 	@Override
 	protected void onStop() {
-		// TODO Auto-generated method stub
 		super.onStop();
-	}
-	@Override
-	public void onPageSelected(int position) {
-		title.setText(titles[position]);
-		dots.get(position).setBackgroundResource(R.drawable.dot_focused);
-		dots.get(oldPosition).setBackgroundResource(R.drawable.dot_normal);
-		
-		oldPosition = position;
-		currentItem = position;
-	}
-	
-	@Override
-	public void onPageScrolled(int arg0, float arg1, int arg2) {
-		
-	}
-	
-	@Override
-	public void onPageScrollStateChanged(int arg0) {
-		
 	}
 
 	@Override
 	public void onBackPressed() {
 		super.onBackPressed();
-		fileList();
+		finish();
 		LoginActivity.isLogin = false;
 	}
 
 	@Override
 	protected void onPause() {
 		super.onPause();
+		noNetNotifictionLayout.setVisibility(NetworkChangeReceiver.netState?View.GONE:View.VISIBLE);
 		refreshTitleContent();
 	}
 
 	@Override
 	protected void onRestart() {
 		super.onRestart();
+		noNetNotifictionLayout.setVisibility(NetworkChangeReceiver.netState?View.GONE:View.VISIBLE);
 		refreshTitleContent();
 	}
 
 	@Override
 	protected void onResume() {
 		super.onResume();
+		noNetNotifictionLayout.setVisibility(NetworkChangeReceiver.netState?View.GONE:View.VISIBLE);
 		refreshTitleContent();
 	}
 	
+	
+	@Override
+	protected void onDestroy() {
+		super.onDestroy();
+		unregisterReceiver(networkChangeReceiver);
+	}
+
 	private void refreshTitleContent(){
 		if(LoginActivity.isLogin){
 			loginButton.setText(R.string.exit_button);
-			if(LoginActivity.curUserNameItem!=null&&LoginActivity.curUserNameItem.getAvatarImage()>0){
-				userImage.setImageResource(LoginActivity.curUserNameItem.getAvatarImage());
+			if(!TextUtils.isEmpty(GlobalVariable.currentUser.getUserName())&&GlobalVariable.currentUser.getAvatarImage()>0){
+				userImage.setImageResource(GlobalVariable.currentUser.getAvatarImage());
 			}
 		}else{
 			loginButton.setText(R.string.login_button);
-			userImage.setImageResource(R.drawable.user_default_icon);
+			userImage.setImageResource(R.drawable.user_default_icon1);
 		}
 	}
+	private void getCars(){
+		for(int i=1;i<20;i++){
+			Car car = new Car("第"+i+"辆车",R.drawable.b_auto_beauty,
+					"这是第"+i+"ninfnifajfdlasflajfkdjsakfjadslfjsalfjdslajfkasjninfnifajfdlasflajfkdjsakfjadslfjsalfjdslajfkasninfnifajfdlasflajfkdjsakfjadslfjsalfjdslajfkasninfnifajfdlasflajfkdjsakfjadslfjsalfjdslajfkasninfnifajfdlasflajfkdjsakfjadslfjsalfjdslajfkasninfnifajfdlasflajfkdjsakfjadslfjsalfjdslajfkasninfnifajfdlasflajfkdjsakfjadslfjsalfjdslajfkasninfnifajfdlasflajfkdjsakfjadslfjsalfjdslajfkasninfnifajfdlasflajfkdjsakfjadslfjsalfjdslajfkasninfnifajfdlasflajfkdjsakfjadslfjsalfjdslajfkasninfnifajfdlasflajfkdjsakfjadslfjsalfjdslajfkasninfnifajfdlasflajfkdjsakfjadslfjsalfjdslajfkasninfnifajfdlasflajfkdjsakfjadslfjsalfjdslajfkasninfnifajfdlasflajfkdjsakfjadslfjsalfjdslajfkasninfnifajfdlasflajfkdjsakfjadslfjsalfjdslajfkasninfnifajfdlasflajfkdjsakfjadslfjsalfjdslajfkasninfnifajfdlasflajfkdjsakfjadslfjsalfjdslajfkasninfnifajfdlasflajfkdjsakfjadslfjsalfjdslajfkasninfnifajfdlasflajfkdjsakfjadslfjsalfjdslajfkasninfnifajfdlasflajfkdjsakfjadslfjsalfjdslajfkasninfnifajfdlasflajfkdjsakfjadslfjsalfjdslajfkasninfnifajfdlasflajfkdjsakfjadslfjsalfjdslajfkasninfnifajfdlasflajfkdjsakfjadslfjsalfjdslajfkasninfnifajfdlasflajfkdjsakfjadslfjsalfjdslajfkasninfnifajfdlasflajfkdjsakfjadslfjsalfjdslajfkasflajfkldsajfakfjasljfdasklfjalkfjalkfdjkasfjalfjak辆车");
+			car.setHeat(20);
+			car.setPrice("20万");
+			CarModelsListActivity.carList.add(car);
+			
+		}
+	}
+	@Override
+	public boolean dispatchKeyEvent(KeyEvent event) {
+		if (event.getKeyCode() == KeyEvent.KEYCODE_BACK) {  
+		    if (event.getAction() == KeyEvent.ACTION_DOWN && event.getRepeatCount() == 0) {  
+		      exitApp();  
+		    }  
+		    return true;  
+		  }  
+		return super.dispatchKeyEvent(event);
+	}
+	private void exitApp() {  
+		  
+		// 判断2次点击事件时间  
+		  if ((System.currentTimeMillis() - exitTime) > 2000) {  
+		    Toast.makeText(this, R.string.notifiction_to_exit_app, Toast.LENGTH_SHORT).show();  
+		    exitTime = System.currentTimeMillis();  
+		  } else {  
+		    ActivityCollector.finishAll();
+		    LoginActivity.isLogin = false;
+		  }  
+	}
+	
+
 	
 
 }

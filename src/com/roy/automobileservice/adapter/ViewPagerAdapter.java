@@ -1,6 +1,5 @@
 package com.roy.automobileservice.adapter;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import android.support.v4.view.PagerAdapter;
@@ -28,10 +27,6 @@ public class ViewPagerAdapter extends PagerAdapter {
 
 	@Override
 	public void destroyItem(ViewGroup view, int position, Object object) {
-		// TODO Auto-generated method stub
-//		super.destroyItem(container, position, object);
-//		view.removeView(view.getChildAt(position));
-//		view.removeViewAt(position);
 		view.removeView(images.get(position));
 	}
 

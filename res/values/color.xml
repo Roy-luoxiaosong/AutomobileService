@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="yellow_warning">#FFFF99</color>
+    <color name="menu_background_color">#ffffff</color>
+    <color name="menu_text_color_white">#fff</color>
+    <color name="red">#DC143C</color>
+    <color name="white">#ffffff</color>
+    <color name="bg">#1E90FF</color>
+    
+</resources>

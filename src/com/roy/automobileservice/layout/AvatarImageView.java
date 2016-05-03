@@ -1,5 +1,6 @@
 package com.roy.automobileservice.layout;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.Canvas;
@@ -51,6 +52,7 @@ public class AvatarImageView extends ImageView{
         return  scaleBitmap(newBitmap);  
     }
 
+	@SuppressLint("DrawAllocation")
 	@Override
 	protected void onDraw(Canvas canvas) {
 		Drawable drawable = getDrawable();  
@@ -86,7 +88,8 @@ public class AvatarImageView extends ImageView{
         paint.setXfermode(new PorterDuffXfermode(PorterDuff.Mode.SRC_IN));  
         canvas.drawBitmap(bitmap, rect, rect, paint);  
         return output;  
-    }  
+    }
+
     
 
 }

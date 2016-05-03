@@ -12,23 +12,23 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.roy.automobileservice.R;
-import com.roy.automobileservice.cls.UserNameItem;
+import com.roy.automobileservice.cls.User;
 import com.roy.automobileservice.utils.Utils;
 
 
-public class UserNameAdapter extends ArrayAdapter<UserNameItem> implements View.OnClickListener{
+public class UserNameAdapter extends ArrayAdapter<User> implements View.OnClickListener{
 
-    public static List<UserNameItem> list ;
+    private List<User> list ;
     private int itemPos;
     private String username;
-    public UserNameAdapter(Context context, int resource, List<UserNameItem> objects) {
+    public UserNameAdapter(Context context, int resource, List<User> objects) {
         super(context, resource, objects);
         list = objects;
     }
 
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
-        UserNameItem userNameItem = getItem(position);
+        User userNameItem = getItem(position);
         View view;
         ViewHolder viewHolder = new ViewHolder();
         if(convertView == null){
@@ -71,9 +71,6 @@ public class UserNameAdapter extends ArrayAdapter<UserNameItem> implements View.
         switch (v.getId()){
             //删除当前item
             case R.id.del_btn:
-                /**
-                 * 以后添加确认对话框防止误删
-                 */
             	
             	itemPos = (Integer)v.getTag();
             	

@@ -7,7 +7,7 @@
     <Button
         android:id="@+id/login_title_back_button"
         android:layout_width="40dp"
-        android:layout_height="wrap_content"
+        android:layout_height="35dp"
         android:layout_gravity="center"
 		android:layout_margin="5dip"
 		android:background="@drawable/back_button_bg"/>

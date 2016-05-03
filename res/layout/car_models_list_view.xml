@@ -2,6 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/menu_background_color"
     android:orientation="vertical" >
     
     <com.roy.automobileservice.layout.TitleBackLayout
@@ -9,15 +10,24 @@
         android:layout_width="match_parent"
         android:layout_height="60dp">
     </com.roy.automobileservice.layout.TitleBackLayout>
-    <TextView
+    <!-- <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/all_car_models"
-        android:textSize="24sp"/>
+        android:textSize="24sp"/> -->
+    <fragment
+        android:id="@+id/cycle_picture"
+        android:name="com.roy.automobileservice.layout.ViewPagerCycleFragment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="30dp" 
-        android:background="#ffffff"/>
+        android:background="@color/menu_background_color"/>
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#247F7F7F"/>
     <ListView
         android:id="@+id/car_models_listview"
         android:layout_width="match_parent"

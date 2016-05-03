@@ -1,15 +1,17 @@
 <resources>
 
-    <string name="app_name">AutomobileService</string>
+    <string name="app_name">AutoService</string>
     <string name="my_info_option_text">My Info</string>
+    <string name="car_appearance">Car appearance</string>
     <string name="auto_part_option_text">Auto Parts</string>
     <string name="auto_beauty_option_text">Auto Beauty</string>
     <string name="auto_repair_option_text">Auto Repair</string>
     <string name="road_assis_option_text"> Road Help</string>
     <string name="car_models_text">Car Models</string>
-    <string name="title_default_text">AutomobileService</string>
+    <string name="title_default_text">AutoService</string>
 
     <string name="emergency_tel_text">Emergency Telephone</string>
+    <string name="emergency_title_text">Telephone</string>
     <string name="tel_120">Rescue tel:120</string>
     <string name="tel_110">Police tel:110</string>
     <string name="tel_122">Traffic tel:122</string>
@@ -26,22 +28,42 @@
     <string name="tip_msg_rescue_text">Are you sure to call 24 hour rescue telephone ?</string>
     <string name="tip_msg_cs_text">Are you sure to call 24 hour Customer Service Hotline ?</string>
    	<string name="tip_msg_cal_for_car_info">Are you sure to call 0852888888 for more information ?</string>
-   	<string name="tip_msg_to_login_text">Login Now ?</string>
+   	<string name="tip_msg_to_login_text">You are not logged in, to login Now ?</string>
    	<string name="tip_msg_to_delete_user">Are sure to delete this user info ?</string>
+   	<string name="notifiction_to_exit_app">Click again to exit</string>
     <string name="yes_bt">YES</string>
     <string name="cancle_bt">CANCLE</string>
     
-    <string name="all_car_models">Car models list</string>
+    <string name="all_car_models">Car models</string>
     
-    <string name="base_info">base info</string>
+    <string name="base_info">Base info</string>
     <string name="cal_for_more_info_tel">08528888888</string>
     <string name="car_discribe">Car Info</string>
     
-    <string name="login_user_name_hint">QQ/tel/email</string>
+    <string name="login_user_name_hint">username</string>
     <string name="login_pass_word_hint">password</string>
-    <string name="login_button">Login</string>
-    <string name="exit_button">exit</string>
-    <string name="register_button">Register</string>
+    <string name="login_button">LOGIN</string>
+    <string name="exit_button">EXIT</string>
+    <string name="register_button">REGI</string>
+     <string name="check_password">PD CHECK:</string>
+     <string name="password">PASSWORD:</string>
+     <string name="car">CAR:</string>
+     <string name="address">ADDRESS:</string>
+     <string name="email">EMAIL:</string>
+     <string name="male">MALE:</string>
+     <string name="female">FEMALE:</string>
+      <string name="select_sex">GENDER</string>
+     <string name="real_name">REAL NAME:</string>
+     <string name="user_name">USER NAME:</string>
+     <string name="user_icon">ICON</string>
+    
+    <string name="back_to_home_page">HOME</string>
+    <string name="tel">TEL</string>
+    
+    <string name="no_car">no car</string>
+   <string name="reset_user_info">modify info</string>
+    
+     <string name="net_unavailable">The most remote distance in the world is no network,check net setting</string>
     
     
     

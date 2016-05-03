@@ -6,7 +6,7 @@
                 android:centerColor="#1E90FF"
                 android:endColor="#1C86EE"
                 android:angle="90"/>
-            <stroke android:width="2dp" android:color="#DBDBDB"/>
+            <stroke android:width="2dp" android:color="@color/menu_background_color"/>
             <corners android:radius="5dp"/>
             <padding android:left="5dp" android:top="5dp"
                 android:right="5dp" android:bottom="5dp"/>
@@ -14,11 +14,11 @@
     </item>
     <item>
        <shape>
-            <gradient android:startColor="#DBDBDB"
-                android:centerColor="#EBEBEB"
-                android:endColor="#DBDBDB"
+            <gradient android:startColor="@color/menu_background_color"
+                android:centerColor="@color/menu_background_color"
+                android:endColor="@color/menu_background_color"
                 android:angle="90"/>
-            <stroke android:width="2dp" android:color="#F8F8FF"/>
+            <stroke android:width="2dp" android:color="@color/menu_background_color"/>
             <corners android:radius="0dp"/>
             <padding android:left="5dp" android:top="0dp"
                 android:right="5dp" android:bottom="0dp"/>

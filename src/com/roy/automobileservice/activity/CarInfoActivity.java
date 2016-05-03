@@ -5,7 +5,6 @@ import com.roy.automobileservice.layout.CarInfoFragment;
 import com.roy.automobileservice.layout.TitleBackLayout;
 import com.roy.automobileservice.utils.Utils;
 
-import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
@@ -14,7 +13,7 @@ import android.view.Window;
 import android.widget.Button;
 import android.widget.TextView;
 
-public class CarInfoActivity extends Activity{
+public class CarInfoActivity extends BaseActivity{
 	private Button calButton;
 	public static void actionStart(Context context,String carName,int carPicture,String carDiscribe){
 		Intent intent = new Intent(context,CarInfoActivity.class);

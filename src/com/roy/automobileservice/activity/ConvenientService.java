@@ -3,21 +3,21 @@ package com.roy.automobileservice.activity;
 import com.roy.automobileservice.R;
 import com.roy.automobileservice.utils.Utils;
 
-import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
+import android.view.Window;
+import android.widget.LinearLayout;
 
-public class ConvenientService extends Activity implements android.view.View.OnClickListener{
-	private Button rescueButton;
-	private Button ploiceButton;
-	private Button trafficButton;
-	private Button fireButton;
+public class ConvenientService extends BaseActivity implements android.view.View.OnClickListener{
+	private LinearLayout rescueButton;
+	private LinearLayout ploiceButton;
+	private LinearLayout trafficButton;
+	private LinearLayout fireButton;
 	
-	private Button roadButton;
-	private Button customerButton;
+	private LinearLayout roadButton;
+	private LinearLayout customerButton;
 	public static void startAction(Context context){
 		Intent intent = new Intent(context,ConvenientService.class);
 		context.startActivity(intent);
@@ -26,6 +26,7 @@ public class ConvenientService extends Activity implements android.view.View.OnC
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
+		requestWindowFeature(Window.FEATURE_NO_TITLE);
 		setContentView(R.layout.convenient_service_lt);
 		
 		 init();
@@ -58,13 +59,13 @@ public class ConvenientService extends Activity implements android.view.View.OnC
 		
 	}
 	private void init(){
-		rescueButton = (Button)findViewById(R.id.Rescue_tel);
-		ploiceButton = (Button)findViewById(R.id.police_tel);
-		trafficButton = (Button)findViewById(R.id.traffic_tel);
-		fireButton = (Button)findViewById(R.id.fire_tel);
+		rescueButton = (LinearLayout)findViewById(R.id.Rescue_tel);
+		ploiceButton = (LinearLayout)findViewById(R.id.police_tel);
+		trafficButton = (LinearLayout)findViewById(R.id.traffic_tel);
+		fireButton = (LinearLayout)findViewById(R.id.fire_tel);
 		
-		roadButton = (Button)findViewById(R.id.road_help_tel);
-		customerButton = (Button)findViewById(R.id.customer_service_tel);
+		roadButton = (LinearLayout)findViewById(R.id.road_help_tel);
+		customerButton = (LinearLayout)findViewById(R.id.customer_service_tel);
 		
 		rescueButton.setOnClickListener(this);
 		ploiceButton.setOnClickListener(this);
