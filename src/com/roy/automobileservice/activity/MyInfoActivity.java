@@ -3,6 +3,7 @@ package com.roy.automobileservice.activity;
 
 import java.util.ArrayList;
 import java.util.List;
+
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
@@ -11,7 +12,9 @@ import android.support.v4.view.ViewPager;
 import android.util.TypedValue;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.view.View.OnClickListener;
 import android.view.Window;
+import android.widget.Button;
 import android.widget.ListView;
 import android.widget.TextView;
 
@@ -40,6 +43,7 @@ public class MyInfoActivity extends BaseActivity{
 	private InfoItemAdapter infoItemAdapter;
 	private ListView infoItemListView;
 	private View view1,view2,view3,view4;
+	private Button modifyInfo;
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -51,7 +55,7 @@ public class MyInfoActivity extends BaseActivity{
 	private void init(){
 		pager = (ViewPager) this.findViewById(R.id.viewpager);
         tabStrip = (PagerTabStrip) this.findViewById(R.id.tabstrip);
-
+        
         //取消tab下面的长横线
         tabStrip.setDrawFullUnderline(false);
         //设置tab的背景色
@@ -71,6 +75,14 @@ public class MyInfoActivity extends BaseActivity{
         initItemList();
         infoItemAdapter = new InfoItemAdapter(this, R.layout.info_item, infoItems);
         infoItemListView.setAdapter(infoItemAdapter);
+        modifyInfo = (Button)view1.findViewById(R.id.modify_info_button);
+        modifyInfo.setOnClickListener(new OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				InfoModifyActivity.startAction(MyInfoActivity.this);
+			}
+		});
         
         view2 = LayoutInflater.from(this).inflate(R.layout.my_car_info_tab, null);
         view3 = LayoutInflater.from(this).inflate(R.layout.auto_beauty_history_tab, null);
@@ -122,7 +134,8 @@ public class MyInfoActivity extends BaseActivity{
 		infoItems.add(new InfoItem("邮箱地址",GlobalVariable.currentUser.getEmail()));
 		infoItems.add(new InfoItem("手机号码",GlobalVariable.currentUser.getTelNumber()));
 		infoItems.add(new InfoItem("居住地址",GlobalVariable.currentUser.getAddress()));
-		infoItems.add(new InfoItem("汽车名字",GlobalVariable.currentUser.getCar().getName()));
+		infoItems.add(new InfoItem("汽车名字",GlobalVariable.currentUser.getCar()==null?
+				null:GlobalVariable.currentUser.getCar().getName()));
 	}
 	
 }

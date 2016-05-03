@@ -38,17 +38,17 @@ public class RegisterActivity extends BaseActivity implements OnClickListener,On
 	private User user = new User();
 	private Button regiButton;
 	
-	private Spinner carSpinner;
+	//private Spinner carSpinner;
 	private Spinner imageSpinner;
 	private EditText userName;
-	private EditText realName;
-	private EditText emaial;
-	private EditText tel;
-	private EditText address;
+	//private EditText realName;
+	//private EditText emaial;
+	//private EditText tel;
+	//private EditText address;
 	private EditText password,checkPassword;
 	private RadioButton male,female;
 	
-	private ArrayAdapter<String> carNameAdapter;
+	//private ArrayAdapter<String> carNameAdapter;
 	private UserImageSelectAdapter imageSelectAdapter;
 	private AvatarImageView imageIcon;
 	@Override
@@ -69,15 +69,15 @@ public class RegisterActivity extends BaseActivity implements OnClickListener,On
 	public void init(){
 		regiButton = (Button)findViewById(R.id.register_button);
 		
-		carSpinner = (Spinner)findViewById(R.id.register_car_name);
+		//carSpinner = (Spinner)findViewById(R.id.register_car_name);
 		imageSpinner = (Spinner)findViewById(R.id.register_select_image_name);
 		imageIcon = (AvatarImageView)findViewById(R.id.register_avatar_img);
 		userName = (EditText)findViewById(R.id.register_user_name);
-		realName = (EditText)findViewById(R.id.register_user_real_name);
-		emaial = (EditText)findViewById(R.id.register_email);
-		emaial.setInputType(InputType.TYPE_TEXT_VARIATION_EMAIL_ADDRESS);
-		tel = (EditText)findViewById(R.id.register_tel);
-		address = (EditText)findViewById(R.id.register_user_address);
+		//realName = (EditText)findViewById(R.id.register_user_real_name);
+		//emaial = (EditText)findViewById(R.id.register_email);
+		//emaial.setInputType(InputType.TYPE_TEXT_VARIATION_EMAIL_ADDRESS);
+		//tel = (EditText)findViewById(R.id.register_tel);
+		//address = (EditText)findViewById(R.id.register_user_address);
 		password = (EditText)findViewById(R.id.register_password);
 		checkPassword = (EditText)findViewById(R.id.register_check_password);
 		male = (RadioButton)findViewById(R.id.register_male);
@@ -85,14 +85,14 @@ public class RegisterActivity extends BaseActivity implements OnClickListener,On
 		
 		imageSelectAdapter = new UserImageSelectAdapter(RegisterActivity.this,TestData.headSculpturesList);
 		imageSpinner.setAdapter(imageSelectAdapter);
-		carNameAdapter = new ArrayAdapter<String>(RegisterActivity.this, android.R.layout.simple_dropdown_item_1line);
-		carNameAdapter.addAll(" ");
-		for(Car car:CarModelsListActivity.carList){
-			carNameAdapter.add(car.getName());
-		}
-		carSpinner.setAdapter(carNameAdapter);
+		//carNameAdapter = new ArrayAdapter<String>(RegisterActivity.this, android.R.layout.simple_dropdown_item_1line);
+		//carNameAdapter.addAll(" ");
+		//for(Car car:CarModelsListActivity.carList){
+		//	carNameAdapter.add(car.getName());
+		//}
+		//carSpinner.setAdapter(carNameAdapter);
 		imageSpinner.setOnItemSelectedListener(this);
-		carSpinner.setOnItemSelectedListener(this);
+		//carSpinner.setOnItemSelectedListener(this);
 		regiButton.setOnClickListener(this);
 	}
 
@@ -101,10 +101,10 @@ public class RegisterActivity extends BaseActivity implements OnClickListener,On
 		switch(v.getId()){
 		case R.id.register_button:
 			user.setUserName(userName.getText().toString());
-			user.setRealName(realName.getText().toString());
-			user.setEmail(emaial.getText().toString());
-			user.setTelNumber(tel.getText().toString());
-			user.setAddress(address.getText().toString());
+			//user.setRealName(realName.getText().toString());
+			//user.setEmail(emaial.getText().toString());
+			//user.setTelNumber(tel.getText().toString());
+			//user.setAddress(address.getText().toString());
 			user.setPassword(password.getText().toString().equals(checkPassword.getText().toString())?
 	    			password.getText().toString():null);
 			user.setSex(male.isChecked()?
@@ -125,10 +125,7 @@ public class RegisterActivity extends BaseActivity implements OnClickListener,On
 	@Override
 	public void onItemSelected(AdapterView<?> arg0, View arg1, int arg2,
 			long arg3) {
-		user.setCar(getCarByName((String)carSpinner.getSelectedItem()));
-//		Log.d("luoxiaosong",(String)carSpinner.getSelectedItem());
-//		Log.d("luoxiaosong", "nihao"+getCarByName((String)carSpinner.getSelectedItem()).getName());
-//		Log.d("luoxiaosong", "用户"+user.getCar().getName());
+		//user.setCar(getCarByName((String)carSpinner.getSelectedItem()));
 		HeadSculpture headSculpture = (HeadSculpture)imageSpinner.getSelectedItem();
 		user.setAvatarImage(headSculpture.getImageId());
 		imageIcon.setImageResource(headSculpture.getImageId());		
@@ -138,7 +135,8 @@ public class RegisterActivity extends BaseActivity implements OnClickListener,On
 		// TODO Auto-generated method stub
 		
 	}
-	private Car getCarByName(String name){
+	
+	/*private Car getCarByName(String name){
 		Car car = new Car();
 		if(!TextUtils.isEmpty(name)){
 			for(Car tem:CarModelsListActivity.carList){
@@ -149,7 +147,7 @@ public class RegisterActivity extends BaseActivity implements OnClickListener,On
 			}
 		}
 		return car;
-	}
+	}*/
 	private Boolean userInfoIsRight(User user){
 		if(TextUtils.isEmpty(user.getUserName())){
 			Toast.makeText(RegisterActivity.this, "用户名不能为空,请输入用户名", Toast.LENGTH_SHORT).show();
@@ -159,14 +157,14 @@ public class RegisterActivity extends BaseActivity implements OnClickListener,On
 			Toast.makeText(RegisterActivity.this, "密码不能为空，或者两次输入的密码不相同，请检查输入", Toast.LENGTH_SHORT).show();
 			return false;
 		}
-		if(TextUtils.isEmpty(user.getEmail())){
+		/*if(TextUtils.isEmpty(user.getEmail())){
 			Toast.makeText(RegisterActivity.this, "邮箱不能为空，请输入邮箱", Toast.LENGTH_SHORT).show();
 			return false;
-		}
-		if(TextUtils.isEmpty(user.getTelNumber())){
+		}*/
+		/*if(TextUtils.isEmpty(user.getTelNumber())){
 			Toast.makeText(RegisterActivity.this, "手机号码不能为空，请输入手机号码", Toast.LENGTH_SHORT).show();
 			return false;
-		}
+		}*/
 		for(User tem:TestData.userTestList){
 			if(user.getUserName().equals(tem.getUserName())){
 				Toast.makeText(RegisterActivity.this, "用户名已经被注册，请从新输入用户名", Toast.LENGTH_SHORT).show();

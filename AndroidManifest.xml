@@ -41,6 +41,9 @@
         <activity android:name=".activity.RegisterActivity"
              	android:launchMode="singleTask">
         </activity>
+        <activity android:name=".activity.InfoModifyActivity"
+             	android:launchMode="singleTask">
+        </activity>
          <receiver android:name=".broadcast.IsLoginBroadcastReceiver"
              	android:exported="false">
 			<intent-filter>

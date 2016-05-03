@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    <com.roy.automobileservice.layout.TitleBackLayout
+        android:layout_width="match_parent"
+        android:layout_height="55dp">
+    </com.roy.automobileservice.layout.TitleBackLayout>
+    <com.roy.automobileservice.layout.AvatarImageView
+      android:id="@+id/info_modify_avatar_img"
+      android:layout_width="96dip"
+      android:layout_height="96dip"
+      android:layout_gravity="center"
+      android:layout_margin="10dp"
+      android:src="@drawable/user_default_icon1"  
+      />
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+    	<include layout="@layout/user_info_modify_layout"/>
+   	</ScrollView>
+   	<Button
+         android:id="@+id/submit_button"
+         android:layout_gravity="center"
+         android:gravity="center"
+         android:layout_width="300dp"
+         android:layout_margin="10dp"
+         android:background="@drawable/login_btn_shape"
+         android:layout_height="wrap_content"
+         android:textColor="#fff"
+         android:text="@string/make_sure_modify_info"
+         />
+</LinearLayout>

@@ -92,20 +92,6 @@
             android:singleLine="true"/>
      </TableRow>
      <TableRow
-        android:id="@+id/info_modify_car_tabrow"
-        android:layout_width="match_parent"
-        android:layout_margin="5dp"
-        android:layout_height="wrap_content">
-        <TextView
-             style="@style/text_size_style"
-            android:text="@string/car"/>
-       	<Spinner
-       	    android:id="@+id/info_modify_car_name"
-       	    android:layout_height="45dp"
-       	    android:background="@drawable/login_edittext_style"
-       	    style="@style/match_wrap_group"/>
-     </TableRow>
-     <TableRow
         android:id="@+id/info_modify_image_tabrow"
         android:layout_width="match_parent"
         android:layout_margin="5dp"

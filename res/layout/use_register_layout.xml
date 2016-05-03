@@ -22,24 +22,6 @@
             android:maxLength="20"/>
      </TableRow>
      <TableRow
-        android:id="@+id/register_user_real_name_tabrow"
-        android:layout_width="match_parent"
-        android:layout_margin="5dp"
-        android:layout_height="wrap_content">
-        <TextView
-            style="@style/text_size_style"
-            android:text="@string/real_name"/>
-        <EditText
-            android:id="@+id/register_user_real_name"
-            android:layout_width="0dp"
-            android:layout_weight="1"
-            android:layout_height="wrap_content"
-            android:layout_marginRight="5dp"
-            android:background="@drawable/login_edittext_style"
-            android:singleLine="true"
-            android:maxLength="20"/>
-     </TableRow>
-     <TableRow
         android:id="@+id/set_sex_tabrow"
         android:layout_width="match_parent"
         android:layout_margin="5dp"
@@ -67,72 +49,6 @@
             android:text="@string/female"/>
         </RadioGroup>
         </TableRow>
-     <TableRow
-         android:id="@+id/eamil_tabrow"
-         android:layout_width="match_parent"
-         android:layout_margin="5dp"
-         android:layout_height="wrap_content">
-        <TextView
-             style="@style/text_size_style"
-            android:text="@string/email"/>
-        <EditText
-            android:id="@+id/register_email"
-            android:layout_width="0dp"
-            android:layout_weight="1"
-            android:layout_height="wrap_content"
-            android:singleLine="true"
-            android:layout_marginRight="5dp"
-            android:background="@drawable/login_edittext_style"/>
-      </TableRow>
-      <TableRow
-         android:id="@+id/register_tel_tabrow"
-         android:layout_width="match_parent"
-         android:layout_margin="5dp"
-         android:layout_height="wrap_content">
-        <TextView
-             style="@style/text_size_style"
-            android:text="@string/tel"/>
-        <EditText
-            android:id="@+id/register_tel"
-            android:layout_width="0dp"
-            android:layout_weight="1"
-            android:layout_height="wrap_content"
-            android:singleLine="true"
-            android:phoneNumber="true"
-            android:layout_marginRight="5dp"
-            android:background="@drawable/login_edittext_style"/>
-      </TableRow>
-       <TableRow
-        android:id="@+id/address_tabrow"
-        android:layout_width="match_parent"
-        android:layout_margin="5dp"
-        android:layout_height="wrap_content">
-        <TextView
-             style="@style/text_size_style"
-            android:text="@string/address"/>
-        <EditText
-            android:id="@+id/register_user_address"
-            android:layout_width="0dp"
-            android:layout_weight="1"
-            android:layout_marginRight="5dp"
-            android:background="@drawable/login_edittext_style"
-            android:layout_height="wrap_content"
-            android:singleLine="true"/>
-     </TableRow>
-     <TableRow
-        android:id="@+id/car_tabrow"
-        android:layout_width="match_parent"
-        android:layout_margin="5dp"
-        android:layout_height="wrap_content">
-        <TextView
-             style="@style/text_size_style"
-            android:text="@string/car"/>
-       	<Spinner
-       	    android:id="@+id/register_car_name"
-       	    android:layout_height="45dp"
-       	    android:background="@drawable/login_edittext_style"
-       	    style="@style/match_wrap_group"/>
-     </TableRow>
      <TableRow
         android:id="@+id/image_tabrow"
         android:layout_width="match_parent"

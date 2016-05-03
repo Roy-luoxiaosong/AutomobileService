@@ -61,6 +61,7 @@
      
       <string name="back_to_home_page">首页</string>
       <string name="reset_user_info">修改信息</string>
+      <string name="make_sure_modify_info">提交</string>
       
       <string name="net_unavailable">世界上最遥远的距离就是没网，检查设置</string>
     

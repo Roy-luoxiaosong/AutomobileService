@@ -62,6 +62,7 @@
     
     <string name="no_car">no car</string>
    <string name="reset_user_info">modify info</string>
+   <string name="make_sure_modify_info">SUBMMIT</string>
     
      <string name="net_unavailable">The most remote distance in the world is no network,check net setting</string>
     
