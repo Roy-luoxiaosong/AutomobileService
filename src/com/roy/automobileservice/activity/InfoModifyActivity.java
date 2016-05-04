@@ -40,15 +40,13 @@ public class InfoModifyActivity extends BaseActivity implements OnClickListener,
 	private User user = new User();
 	private Button submmitButton;
 	
-	//private Spinner carSpinner;
 	private Spinner imageSpinner;
 	private EditText userName;
 	private EditText realName;
 	private EditText emaial;
 	private EditText tel;
 	private EditText address;
-	private EditText password,checkPassword;
-	//private RadioButton male,female;
+	private EditText oldPassword,password,checkPassword;
 	
 	private ArrayAdapter<String> carNameAdapter;
 	private UserImageSelectAdapter imageSelectAdapter;
@@ -65,13 +63,12 @@ public class InfoModifyActivity extends BaseActivity implements OnClickListener,
         init();
       //设置标题
       	TextView textView = (TextView)findViewById(R.id.title_back_text);
-    	textView.setText(R.string.register_button);
+    	textView.setText(R.string.reset_user_info);
     	
 	}
 	public void init(){
 		submmitButton = (Button)findViewById(R.id.submit_button);
 		
-		//carSpinner = (Spinner)findViewById(R.id.info_modify_car_name);
 		imageSpinner = (Spinner)findViewById(R.id.info_modify_select_image_name);
 		imageIcon = (AvatarImageView)findViewById(R.id.info_modify_avatar_img);
 		userName = (EditText)findViewById(R.id.info_modify_user_name);
@@ -80,10 +77,13 @@ public class InfoModifyActivity extends BaseActivity implements OnClickListener,
 		emaial.setInputType(InputType.TYPE_TEXT_VARIATION_EMAIL_ADDRESS);
 		tel = (EditText)findViewById(R.id.info_modify_tel);
 		address = (EditText)findViewById(R.id.info_modify_user_address);
+		oldPassword = (EditText)findViewById(R.id.info_modify_old_password);
 		password = (EditText)findViewById(R.id.info_modify_password);
 		checkPassword = (EditText)findViewById(R.id.info_modify_check_password);
-//		male = (RadioButton)findViewById(R.id.register_male);
-//		female = (RadioButton)findViewById(R.id.register_female);
+		//设置提示文字以及字体大小
+		Utils.setEditTextHintSize(oldPassword,getResources().getString(R.string.noti_to_modify_password),10);
+		Utils.setEditTextHintSize(password,getResources().getString(R.string.noti_to_modify_password),10);
+		Utils.setEditTextHintSize(checkPassword,getResources().getString(R.string.noti_to_modify_password),10);
 		
 		imageSelectAdapter = new UserImageSelectAdapter(InfoModifyActivity.this,TestData.headSculpturesList);
 		imageSpinner.setAdapter(imageSelectAdapter);
@@ -92,9 +92,7 @@ public class InfoModifyActivity extends BaseActivity implements OnClickListener,
 		for(Car car:CarModelsListActivity.carList){
 			carNameAdapter.add(car.getName());
 		}
-		//carSpinner.setAdapter(carNameAdapter);
 		imageSpinner.setOnItemSelectedListener(this);
-		//carSpinner.setOnItemSelectedListener(this);
 		submmitButton.setOnClickListener(this);
 		showOrignValues();
 	}
@@ -103,31 +101,37 @@ public class InfoModifyActivity extends BaseActivity implements OnClickListener,
 	public void onClick(View v) {
 		switch(v.getId()){
 		case R.id.submit_button:
+			user.setSex(GlobalVariable.currentUser.getSex());
+			user.setCar(GlobalVariable.currentUser.getCar());
 			user.setUserName(userName.getText().toString());
 			user.setRealName(realName.getText().toString());
 			user.setEmail(emaial.getText().toString());
 			user.setTelNumber(tel.getText().toString());
 			user.setAddress(address.getText().toString());
-			user.setPassword(password.getText().toString().equals(checkPassword.getText().toString())?
-	    			password.getText().toString():null);
-//			user.setSex(male.isChecked()?
-//					male.getText().toString():female.getText().toString());
+			user.setPassword(GlobalVariable.currentUser.getPassword());
+			if(!TextUtils.isEmpty(password.getText().toString())||
+					!TextUtils.isEmpty(checkPassword.getText().toString())){
+				if(oldPassword.getText().toString().equals(GlobalVariable.currentUser.getPassword())){
+					user.setPassword(password.getText().toString().equals(checkPassword.getText().toString())?
+							password.getText().toString():null);
+				}else{
+					Toast.makeText(this, getResources().getString(R.string.tip_old_password_is_not_right), Toast.LENGTH_SHORT).show();
+					break;
+				}
+			}
 			if(userInfoIsRight(user)){
-				/*for(User tem:TestData.userTestList){
-					if(tem.getUserName().equals(GlobalVariable.currentUser.getUserName())){
-						
-					}
-				}*/
+				//删除当前用户，
 				Iterator<User> iterator = TestData.userTestList.iterator();
 				while (iterator.hasNext()) {
 					if(iterator.next().equals(GlobalVariable.currentUser)){
 						iterator.remove();
 					}
 				}
+				//添加新用户
 				TestData.userTestList.add(user);
 				GlobalVariable.currentUser = user;
 				//Toast.makeText(RegisterActivity.this, "注册成功", Toast.LENGTH_SHORT).show();
-				Utils.showBackToLogin(InfoModifyActivity.this, "修改成功，是否返回用户信息界面?");
+				Utils.showBackToMyInfo(InfoModifyActivity.this, getResources().getString(R.string.tip_user_info_modify_succeed));
 				break;
 			}
 			//Log.d("luoxiaosong", "nihao"+user.getTelNumber());
@@ -151,18 +155,6 @@ public class InfoModifyActivity extends BaseActivity implements OnClickListener,
 		
 	}
 	
-	/*private Car getCarByName(String name){
-		Car car = new Car();
-		if(!TextUtils.isEmpty(name)){
-			for(Car tem:CarModelsListActivity.carList){
-				if(tem!=null&&tem.getName().equals(name)){
-						car = tem;
-						break;
-				}
-			}
-		}
-		return car;
-	}*/
 	/**
 	 * 判断输入是否正确
 	 * @param user
@@ -170,16 +162,20 @@ public class InfoModifyActivity extends BaseActivity implements OnClickListener,
 	 */
 	private Boolean userInfoIsRight(User user){
 		if(TextUtils.isEmpty(user.getUserName())){
-			Toast.makeText(InfoModifyActivity.this, "用户名不能为空,请输入用户名", Toast.LENGTH_SHORT).show();
+			Toast.makeText(InfoModifyActivity.this,  getResources().getString(R.string.tip_user_name_is_empty), Toast.LENGTH_SHORT).show();
 			return false;
 		}
 		if(TextUtils.isEmpty(user.getPassword())){
-			Toast.makeText(InfoModifyActivity.this, "密码不能为空，或者两次输入的密码不相同，请检查输入", Toast.LENGTH_SHORT).show();
+			Toast.makeText(InfoModifyActivity.this, getResources().getString(R.string.tip_password_is_empty_or_not_right), Toast.LENGTH_SHORT).show();
 			return false;
+		}
+		//如果当前用户名字没有改变，也是属于正常
+		if(user.getUserName().equals(GlobalVariable.currentUser.getUserName())){
+			return true;
 		}
 		for(User tem:TestData.userTestList){
 			if(user.getUserName().equals(tem.getUserName())){
-				Toast.makeText(InfoModifyActivity.this, "用户名已经被注册，请从新输入用户名", Toast.LENGTH_SHORT).show();
+				Toast.makeText(InfoModifyActivity.this, getResources().getString(R.string.tip_user_is_exist), Toast.LENGTH_SHORT).show();
 				return false;
 			}
 		}
@@ -218,5 +214,12 @@ public class InfoModifyActivity extends BaseActivity implements OnClickListener,
 		}
 		return postion;
 	}
+	@Override
+	public void onBackPressed() {
+		super.onBackPressed();
+		MyInfoActivity.startAction(this);
+	}
+	
+	
 
 }

@@ -29,16 +29,16 @@
   		    android:layout_weight="1"
   		    android:orientation="horizontal">
   		    <TextView
-  		        android:layout_width="0dp"
+  		        android:layout_width="wrap_content"
   		        android:layout_height="wrap_content"
-  		        android:layout_weight="1"
-  		        android:text="价格"
-  		        android:layout_marginLeft="10dp"
+  		        android:text="@string/car_value"
+  		        android:layout_marginLeft="15dp"
   		        android:textColor="#000"/>
   		    <TextView
   		        android:id="@+id/car_price"
   		        android:layout_width="0dp"
   		        android:layout_height="20dp"
+  		        android:layout_marginLeft="10dp"
   		        android:layout_weight="1"
   		        android:textColor="#000"/>
   		    <ImageView

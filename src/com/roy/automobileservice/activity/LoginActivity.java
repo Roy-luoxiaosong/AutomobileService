@@ -139,7 +139,7 @@ PopupWindow.OnDismissListener,AdapterView.OnItemClickListener{
             	String userName = username_inputbox.getText().toString();
             	String password = password_inputbox.getText().toString();
             	if(TextUtils.isEmpty(password)){
-            		Toast.makeText(this, "密码不能为空", Toast.LENGTH_SHORT).show();
+            		Toast.makeText(this,getResources().getString(R.string.tip_password_is_empty), Toast.LENGTH_SHORT).show();
             		break;
             	}
             	if(Utils.isContainOfName(userName)){
@@ -151,14 +151,14 @@ PopupWindow.OnDismissListener,AdapterView.OnItemClickListener{
                 				finish();
                 				break;
                 			}else{
-                				Toast.makeText(this, "密码不正确，请重新输入", Toast.LENGTH_SHORT).show();
+                				Toast.makeText(this, getResources().getString(R.string.tip_password_is_not_right), Toast.LENGTH_SHORT).show();
                 				break;
                 			}
                 		}
                 	}
             		break;
             	}else{
-            		Utils.showLoRegister(this, "该用户还没有被注册，现在去注册吗？");
+            		Utils.showLoRegister(this, getResources().getString(R.string.tip_the_user_is_not_exist));
             	}
             	
                 break;

@@ -81,6 +81,8 @@ public class MyInfoActivity extends BaseActivity{
 			@Override
 			public void onClick(View v) {
 				InfoModifyActivity.startAction(MyInfoActivity.this);
+				//销毁当前活动，好让数据刷新
+				finish();
 			}
 		});
         
@@ -93,10 +95,10 @@ public class MyInfoActivity extends BaseActivity{
         viewList.add(view3);
         viewList.add(view4);
       //页签项
-        titleList.add("我的信息");
-        titleList.add("我的汽车");
-        titleList.add("美容历史");
-        titleList.add("维修历史");
+        titleList.add(getResources().getString(R.string.title_my_info));
+        titleList.add(getResources().getString(R.string.title_my_car));
+        titleList.add(getResources().getString(R.string.title_beauty_hitory));
+        titleList.add(getResources().getString(R.string.title_repair_history));
         adapter = new MyInfoPagerAdapter(viewList, titleList);
         pager.setPageTransformer(true, new CubeTransformer());
         pager.setAdapter(adapter);
@@ -128,14 +130,20 @@ public class MyInfoActivity extends BaseActivity{
 		
 	}
 	private void initItemList(){
-		infoItems.add(new InfoItem("用户昵称", GlobalVariable.currentUser.getUserName()));
-		infoItems.add(new InfoItem("真实姓名",GlobalVariable.currentUser.getRealName()));
-		infoItems.add(new InfoItem("性别",GlobalVariable.currentUser.getSex()));
-		infoItems.add(new InfoItem("邮箱地址",GlobalVariable.currentUser.getEmail()));
-		infoItems.add(new InfoItem("手机号码",GlobalVariable.currentUser.getTelNumber()));
-		infoItems.add(new InfoItem("居住地址",GlobalVariable.currentUser.getAddress()));
-		infoItems.add(new InfoItem("汽车名字",GlobalVariable.currentUser.getCar()==null?
-				null:GlobalVariable.currentUser.getCar().getName()));
+		infoItems.add(new InfoItem(getResources().getString(R.string.info_item_user_name), GlobalVariable.currentUser.getUserName()));
+		infoItems.add(new InfoItem(getResources().getString(R.string.info_item_real_name),GlobalVariable.currentUser.getRealName()));
+		infoItems.add(new InfoItem(getResources().getString(R.string.info_item_sex),GlobalVariable.currentUser.getSex()));
+		infoItems.add(new InfoItem(getResources().getString(R.string.info_item_emial_address),GlobalVariable.currentUser.getEmail()));
+		infoItems.add(new InfoItem(getResources().getString(R.string.info_item_tel),GlobalVariable.currentUser.getTelNumber()));
+		infoItems.add(new InfoItem(getResources().getString(R.string.info_item_address),GlobalVariable.currentUser.getAddress()));
+		infoItems.add(new InfoItem(getResources().getString(R.string.info_item_car_name),GlobalVariable.currentUser.getCar()==null?
+				getResources().getString(R.string.info_item_no_car):GlobalVariable.currentUser.getCar().getName()));
+	}
+	@Override
+	protected void onStop() {
+		// TODO Auto-generated method stub
+		super.onStop();
+		infoItems = null;
 	}
 	
 }

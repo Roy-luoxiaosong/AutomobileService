@@ -31,7 +31,16 @@
    	<string name="tip_msg_to_login_text">You are not logged in, to login Now ?</string>
    	<string name="tip_msg_to_delete_user">Are sure to delete this user info ?</string>
    	<string name="notifiction_to_exit_app">Click again to exit</string>
+   	<string name="tip_register_succeed">Register succeed back to login?</string>
+   	<string name="tip_user_name_is_empty">User name can\'t be empty</string>
+   	<string name="tip_password_is_empty_or_not_right">Passowrd is empty or passowrd not match</string>
+   	<string name="tip_user_is_exist">User is exist,please input again</string>
+   	<string name="tip_user_info_modify_succeed">Modify succeed,return to myInfo?</string>
+   	<string name="tip_old_password_is_not_right">The old passord is not right,please type again</string>
+   	<string name="tip_password_is_not_right">Password is not right,please type again</string>
     <string name="yes_bt">YES</string>
+    <string name="tip_password_is_empty">Please input password</string>
+    <string name="tip_the_user_is_not_exist">The user has not register yet,to register now？</string>
     <string name="cancle_bt">CANCLE</string>
     
     <string name="all_car_models">Car models</string>
@@ -46,27 +55,77 @@
     <string name="exit_button">EXIT</string>
     <string name="register_button">REGI</string>
      <string name="check_password">PD CHECK:</string>
-     <string name="password">PASSWORD:</string>
-     <string name="car">CAR:</string>
-     <string name="address">ADDRESS:</string>
-     <string name="email">EMAIL:</string>
-     <string name="male">MALE:</string>
-     <string name="female">FEMALE:</string>
+     <string name="password">PASSWORD</string>
+     <string name="car">CAR</string>
+     <string name="address">ADDRESS</string>
+     <string name="email">EMAIL</string>
+     <string name="male">MALE</string>
+     <string name="female">FEMALE</string>
       <string name="select_sex">GENDER</string>
-     <string name="real_name">REAL NAME:</string>
-     <string name="user_name">USER NAME:</string>
+     <string name="real_name">REAL NAME</string>
+     <string name="user_name">USER NAME</string>
      <string name="user_icon">ICON</string>
     
     <string name="back_to_home_page">HOME</string>
     <string name="tel">TEL</string>
     
     <string name="no_car">no car</string>
-   <string name="reset_user_info">modify info</string>
+   <string name="reset_user_info">MODIFY INFO</string>
    <string name="make_sure_modify_info">SUBMMIT</string>
-    
+   <string name="noti_to_modify_password">if Won\'t modify \,do not type here</string>
      <string name="net_unavailable">The most remote distance in the world is no network,check net setting</string>
+    <string name="old_password">OLD PD</string>
     
+    <string name="default_cion1_name">Default Icon1</string>
+    <string name="default_cion2_name">Default Icon2</string>
+    <string name="default_cion3_name">Default Icon3</string>
+    <string name="default_cion4_name">Default Icon4</string>
+    <string name="default_cion5_name">Default Icon5</string>
+    <string name="default_cion6_name">Default Icon6</string>
     
+    <string name="title_my_info">My Info</string>
+    <string name="title_my_car">My Car</string>
+    <string name="title_beauty_hitory">BeautyHistory</string>
+    <string name="title_repair_history">RepairHistory</string>
+    
+    <string name="info_item_user_name">USERNAEM</string>
+    <string name="info_item_real_name">REALNAME</string>
+    <string name="info_item_sex">GENDER</string>
+    <string name="info_item_emial_address">EMADDRESS</string>
+    <string name="info_item_tel">TEL</string>
+    <string name="info_item_address">ADDRESS</string>
+    <string name="info_item_car_name">CARNAME</string>
+     <string name="info_item_no_car">none</string>
+     
+    <string name="user1_name">user1</string>
+    <string name="user1_real_name">name1</string>
+    <string name="user1_sex">male</string>
+    
+    <string name="user2_name">user2</string>
+    <string name="user2_real_name">name2</string>
+    <string name="user2_sex">male</string>
+    
+    <string name="user3_name">user3</string>
+    <string name="user3_real_name">name3</string>
+    <string name="user3_sex">female</string>
+    
+    <string name="user4_name">user4</string>
+    <string name="user4_real_name">name4</string>
+    <string name="user4_sex">male</string>
+    
+    <string name="user5_name">user5</string>
+    <string name="user5_real_name">name4</string>
+    <string name="user5_sex">female</string>
+    
+    <string name="user6_name">user6</string>
+    <string name="user6_real_name">name6</string>
+    <string name="user6_sex">female</string>
+    
+    <string name="test_car_name">CarName</string>
+     <string name="test_car_discribute">this is car</string>
+     <string name="test_car_value">2 million </string>
+     
+      <string name="car_value">PRICE: </string>
     
 
 </resources>

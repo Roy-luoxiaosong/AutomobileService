@@ -105,6 +105,24 @@
        	    android:background="@drawable/login_edittext_style"
        	    style="@style/match_wrap_group"/>
      </TableRow>
+      <TableRow
+        android:id="@+id/info_modify_old_password_tabrow"
+        android:layout_width="match_parent"
+        android:layout_margin="5dp"
+        android:layout_height="wrap_content">
+        <TextView
+             style="@style/text_size_style"
+            android:text="@string/old_password"/>
+        <EditText
+            android:id="@+id/info_modify_old_password"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_marginRight="5dp"
+            android:background="@drawable/login_edittext_style"
+            android:layout_height="wrap_content"
+            android:password="true"
+            android:singleLine="true"/>
+     </TableRow>
      <TableRow
         android:id="@+id/info_modify_password_tabrow"
         android:layout_width="match_parent"

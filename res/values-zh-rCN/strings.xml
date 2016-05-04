@@ -31,6 +31,15 @@
     <string name="tip_msg_to_login_text">您还没有登录，现在去登录吗 ?</string>
     <string name="tip_msg_to_delete_user">你确定要删除这个用户信息吗 ?</string>
     <string name="notifiction_to_exit_app">再按一次退出</string>
+    <string name="tip_register_succeed">注册成功，是否要返回登录界面</string>
+    <string name="tip_user_name_is_empty">用户名不能为空,请输入用户名</string>
+    <string name="tip_password_is_empty_or_not_right">密码不能为空，或者两次输入的密码不相同，请检查输入</string>
+    <string name="tip_user_is_exist">用户名已经被注册</string>
+    <string name="tip_user_info_modify_succeed">修改成功，是否返回用户信息界面?</string>
+    <string name="tip_old_password_is_not_right">原始密码不正确，请重新输入</string>
+    <string name="tip_password_is_not_right">密码不正确，请重新输入</string>
+    <string name="tip_password_is_empty">请输入密码</string>
+    <string name="tip_the_user_is_not_exist">该用户还没有被注册，现在去注册吗？</string>
     <string name="yes_bt">确定</string>
     <string name="cancle_bt">取消</string>
     
@@ -62,8 +71,62 @@
       <string name="back_to_home_page">首页</string>
       <string name="reset_user_info">修改信息</string>
       <string name="make_sure_modify_info">提交</string>
+      <string name="noti_to_modify_password">不修改可不填写</string>
       
       <string name="net_unavailable">世界上最遥远的距离就是没网，检查设置</string>
+    <string name="old_password">原始密码</string>
+    
+     <string name="default_cion1_name">默认头像1</string>
+    <string name="default_cion2_name">默认头像2</string>
+    <string name="default_cion3_name">默认头像3</string>
+    <string name="default_cion4_name">默认头像4</string>
+    <string name="default_cion5_name">默认头像5</string>
+    <string name="default_cion6_name">默认头像6</string>
+    
+    <string name="title_my_info">我的信息</string>
+    <string name="title_my_car">我的汽车</string>
+    <string name="title_beauty_hitory">美容历史</string>
+    <string name="title_repair_history">维修历史</string>
+    
+    <string name="info_item_user_name">用户昵称</string>
+    <string name="info_item_real_name">真实姓名</string>
+    <string name="info_item_sex">性    别</string>
+    <string name="info_item_emial_address">邮箱地址</string>
+    <string name="info_item_tel">手机号码</string>
+    <string name="info_item_address">居住地址</string>
+    <string name="info_item_car_name">汽车名字</string>
+    <string name="info_item_no_car">无</string>
+    
+    <string name="user1_name">幼儿园大哥</string>
+    <string name="user1_real_name">叶良辰</string>
+    <string name="user1_sex">男</string>
+    
+    <string name="user2_name">厕所扛把子</string>
+    <string name="user2_real_name">赵日天</string>
+    <string name="user2_sex">男</string>
+    
+    <string name="user3_name">勾魂使者</string>
+    <string name="user3_real_name">郭美美</string>
+    <string name="user3_sex">女</string>
+    
+    <string name="user4_name">少女杀手</string>
+    <string name="user4_real_name">犀利哥</string>
+    <string name="user4_sex">男</string>
+    
+    <string name="user5_name">宅男女神</string>
+    <string name="user5_real_name">papi酱</string>
+    <string name="user5_sex">女</string>
+    
+    <string name="user6_name">搞逗先生</string>
+    <string name="user6_real_name">王尼玛</string>
+    <string name="user6_sex">男</string>
+    
+    <string name="test_car_name">汽车</string>
+    <string name="test_car_discribute">这是第</string>
+    <string name="test_car_value">20万</string>
+    
+    <string name="car_value">价格: </string>
+    
     
 
 </resources>

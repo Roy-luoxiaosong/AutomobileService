@@ -7,9 +7,15 @@ import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
+import android.text.SpannableString;
+import android.text.Spanned;
+import android.text.SpannedString;
+import android.text.style.AbsoluteSizeSpan;
+import android.widget.EditText;
 
 import com.roy.automobileservice.R;
 import com.roy.automobileservice.activity.LoginActivity;
+import com.roy.automobileservice.activity.MyInfoActivity;
 import com.roy.automobileservice.activity.RegisterActivity;
 import com.roy.automobileservice.adapter.UserNameAdapter;
 import com.roy.automobileservice.cls.ActivityCollector;
@@ -96,6 +102,32 @@ public class Utils {
 		
 		dialog.show();
 	}
+	public static void showBackToMyInfo(final Activity  context,final String tipMsg){
+		AlertDialog.Builder dialog = new AlertDialog.Builder(context);
+		//setDialogContent(dialog,tipMsg);
+		dialog.setTitle(R.string.tip_text);
+		dialog.setMessage(tipMsg);
+		dialog.setCancelable(true);
+		dialog.setPositiveButton(R.string.yes_bt, new DialogInterface.OnClickListener() {
+			
+			@Override
+			public void onClick(DialogInterface dialog, int which) {
+				//重新启动MyInfoActivity刷新数据
+				MyInfoActivity.startAction(context);
+				ActivityCollector.removeActivity(context);
+			}
+		});
+		dialog.setNegativeButton(R.string.cancle_bt, new DialogInterface.OnClickListener(){
+
+			@Override
+			public void onClick(DialogInterface dialog, int which) {
+				
+			}
+			
+		});
+		
+		dialog.show();
+	}
 	public static void showLoRegister(final Activity  context,final String tipMsg){
 		AlertDialog.Builder dialog = new AlertDialog.Builder(context);
 		//setDialogContent(dialog,tipMsg);
@@ -150,9 +182,21 @@ public class Utils {
 		}
 		return tem;
 	}
-//	public static void initInfoItems(String userName,String realName,String set,String){
-//		
-//	}
+/**
+ * 设置提示字以及字体的大小
+ * @param editText
+ * @param hintMsg
+ * @param hintSize
+ */
+	public static  void setEditTextHintSize(EditText editText,String hintMsg,int hintSize){
+		SpannableString ss = new SpannableString(hintMsg);
+		// 新建一个属性对象,设置文字的大小
+		AbsoluteSizeSpan ass = new AbsoluteSizeSpan(hintSize,true);
+		// 附加属性到文本
+		ss.setSpan(ass, 0, ss.length(), Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+		// 设置hint
+		editText.setHint(new SpannedString(ss)); // 一定要进行转换,否则属性会消失
+	}
 	
 	
 }
