@@ -18,12 +18,14 @@ import com.roy.automobileservice.utils.Utils;
 
 public class UserNameAdapter extends ArrayAdapter<User> implements View.OnClickListener{
 
-    private List<User> list ;
+    //private List<User> list ;
+	private int resourceId;
     private int itemPos;
     private String username;
     public UserNameAdapter(Context context, int resource, List<User> objects) {
         super(context, resource, objects);
-        list = objects;
+        //this.list = objects;
+        this.resourceId = resource;
     }
 
     @Override
@@ -32,7 +34,7 @@ public class UserNameAdapter extends ArrayAdapter<User> implements View.OnClickL
         View view;
         ViewHolder viewHolder = new ViewHolder();
         if(convertView == null){
-            view = LayoutInflater.from(getContext()).inflate(R.layout.username_item, null);
+            view = LayoutInflater.from(getContext()).inflate(resourceId, null);
             viewHolder.userName_tv = (TextView) view.findViewById(R.id.usernameText);
             //显示账号
             username = userNameItem.getUserName();

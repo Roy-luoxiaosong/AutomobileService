@@ -89,7 +89,7 @@ public class InfoModifyActivity extends BaseActivity implements OnClickListener,
 		imageSpinner.setAdapter(imageSelectAdapter);
 		carNameAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_dropdown_item_1line);
 		carNameAdapter.addAll(" ");
-		for(Car car:CarModelsListActivity.carList){
+		for(Car car:TestData.carList){
 			carNameAdapter.add(car.getName());
 		}
 		imageSpinner.setOnItemSelectedListener(this);

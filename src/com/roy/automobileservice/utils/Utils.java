@@ -19,6 +19,8 @@ import com.roy.automobileservice.activity.MyInfoActivity;
 import com.roy.automobileservice.activity.RegisterActivity;
 import com.roy.automobileservice.adapter.UserNameAdapter;
 import com.roy.automobileservice.cls.ActivityCollector;
+import com.roy.automobileservice.cls.Car;
+import com.roy.automobileservice.cls.HeadSculpture;
 import com.roy.automobileservice.cls.User;
 import com.roy.automobileservice.thread.AssistantCallThread;
 
@@ -198,5 +200,10 @@ public class Utils {
 		editText.setHint(new SpannedString(ss)); // 一定要进行转换,否则属性会消失
 	}
 	
-	
+	public static void deleteStaticVariables(){
+		TestData.carList = new ArrayList<Car>();
+		TestData.headSculpturesList = new ArrayList<HeadSculpture>();
+		TestData.userTestList = new ArrayList<User>();
+		GlobalVariable.currentUser = new User();
+	}
 }

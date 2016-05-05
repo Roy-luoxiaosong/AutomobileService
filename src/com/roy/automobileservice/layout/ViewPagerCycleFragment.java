@@ -6,7 +6,6 @@ import java.util.concurrent.Executors;
 import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.TimeUnit;
 
-import android.annotation.SuppressLint;
 import android.app.Fragment;
 import android.os.Bundle;
 import android.os.Handler;
@@ -19,10 +18,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.roy.automobileservice.R;
-import com.roy.automobileservice.activity.CarInfoActivity;
-import com.roy.automobileservice.activity.CarModelsListActivity;
 import com.roy.automobileservice.adapter.ViewPagerAdapter;
-import com.roy.automobileservice.cls.Car;
 
 public class ViewPagerCycleFragment extends Fragment implements OnPageChangeListener{
 
