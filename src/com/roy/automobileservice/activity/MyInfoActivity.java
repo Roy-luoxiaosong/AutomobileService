@@ -9,6 +9,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.view.PagerTabStrip;
 import android.support.v4.view.ViewPager;
+import android.util.Log;
 import android.util.TypedValue;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -82,9 +83,10 @@ public class MyInfoActivity extends BaseActivity{
 			public void onClick(View v) {
 				InfoModifyActivity.startAction(MyInfoActivity.this);
 				//销毁当前活动，好让数据刷新
-				finish();
+				//finish();
 			}
 		});
+        Log.d("luoxiaosong", " "+GlobalVariable.currentUser.getAvatarImage());
         
         view2 = LayoutInflater.from(this).inflate(R.layout.my_car_info_tab, null);
         view3 = LayoutInflater.from(this).inflate(R.layout.auto_beauty_history_tab, null);
@@ -106,28 +108,15 @@ public class MyInfoActivity extends BaseActivity{
         
 	}
 	private void inithanges(){
-		view1 = LayoutInflater.from(this).inflate(R.layout.my_info_layout, null);
-        imgAvatarImageView = (AvatarImageView)view1.findViewById(R.id.my_info_haha_avatar_img);
         imgAvatarImageView.setImageResource(GlobalVariable.currentUser.getAvatarImage());
-	}
-	@Override
-	protected void onRestart() {
-		// TODO Auto-generated method stub
-		super.onRestart();
-		inithanges();
+        infoItems.clear();
+		initItemList();
+		infoItemAdapter.notifyDataSetChanged();
 	}
 	@Override
 	protected void onResume() {
-		// TODO Auto-generated method stub
 		super.onResume();
 		inithanges();
-	}
-	@Override
-	protected void onStart() {
-		// TODO Auto-generated method stub
-		super.onStart();
-		inithanges();
-		
 	}
 	private void initItemList(){
 		infoItems.add(new InfoItem(getResources().getString(R.string.info_item_user_name), GlobalVariable.currentUser.getUserName()));
@@ -139,11 +128,6 @@ public class MyInfoActivity extends BaseActivity{
 		infoItems.add(new InfoItem(getResources().getString(R.string.info_item_car_name),GlobalVariable.currentUser.getCar()==null?
 				getResources().getString(R.string.info_item_no_car):GlobalVariable.currentUser.getCar().getName()));
 	}
-	@Override
-	protected void onStop() {
-		// TODO Auto-generated method stub
-		super.onStop();
-		infoItems = null;
-	}
+	
 	
 }

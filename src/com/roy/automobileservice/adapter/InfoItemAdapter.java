@@ -14,15 +14,16 @@ import com.roy.automobileservice.cls.InfoItem;
 
 public class InfoItemAdapter extends ArrayAdapter<InfoItem>{
 	private int resourceId;
-	
+	private List<InfoItem> list;
 	public InfoItemAdapter(Context context, int resource, List<InfoItem> objects) {
 		super(context, resource, objects);
 		this.resourceId = resource;
+		this.list = objects;
 	}
 
 	@Override
 	public View getView(int position, View convertView, ViewGroup parent) {
-		 InfoItem info = getItem(position);
+		 InfoItem info = list.get(position);
 		 View view;
 		 ViewHolder viewHolder;
 		 if(convertView==null){

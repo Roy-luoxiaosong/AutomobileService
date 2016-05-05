@@ -15,12 +15,9 @@ import android.widget.EditText;
 
 import com.roy.automobileservice.R;
 import com.roy.automobileservice.activity.LoginActivity;
-import com.roy.automobileservice.activity.MyInfoActivity;
 import com.roy.automobileservice.activity.RegisterActivity;
 import com.roy.automobileservice.adapter.UserNameAdapter;
 import com.roy.automobileservice.cls.ActivityCollector;
-import com.roy.automobileservice.cls.Car;
-import com.roy.automobileservice.cls.HeadSculpture;
 import com.roy.automobileservice.cls.User;
 import com.roy.automobileservice.thread.AssistantCallThread;
 
@@ -114,8 +111,6 @@ public class Utils {
 			
 			@Override
 			public void onClick(DialogInterface dialog, int which) {
-				//重新启动MyInfoActivity刷新数据
-				MyInfoActivity.startAction(context);
 				ActivityCollector.removeActivity(context);
 			}
 		});
@@ -201,9 +196,9 @@ public class Utils {
 	}
 	
 	public static void deleteStaticVariables(){
-		TestData.carList = new ArrayList<Car>();
-		TestData.headSculpturesList = new ArrayList<HeadSculpture>();
-		TestData.userTestList = new ArrayList<User>();
-		GlobalVariable.currentUser = new User();
+		TestData.carList.clear();
+		TestData.headSculpturesList.clear();
+		TestData.userTestList.clear();
+		//GlobalVariable.currentUser = new User();
 	}
 }

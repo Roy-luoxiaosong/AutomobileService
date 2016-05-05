@@ -127,14 +127,11 @@ public class InfoModifyActivity extends BaseActivity implements OnClickListener,
 						iterator.remove();
 					}
 				}
-				//添加新用户
 				TestData.userTestList.add(user);
 				GlobalVariable.currentUser = user;
-				//Toast.makeText(RegisterActivity.this, "注册成功", Toast.LENGTH_SHORT).show();
 				Utils.showBackToMyInfo(InfoModifyActivity.this, getResources().getString(R.string.tip_user_info_modify_succeed));
 				break;
 			}
-			//Log.d("luoxiaosong", "nihao"+user.getTelNumber());
 			break;
 		default:
 			break;

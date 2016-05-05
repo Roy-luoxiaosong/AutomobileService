@@ -188,22 +188,9 @@ PopupWindow.OnDismissListener,AdapterView.OnItemClickListener{
         popupWindow.dismiss();
     	}
 	@Override
-	protected void onRestart() {
-		// TODO Auto-generated method stub
-		super.onRestart();
-		//Log.d("luoxiaosong", "onRestart");
-		resetAapter();
-	}
-	@Override
 	protected void onResume() {
 		// TODO Auto-generated method stub
 		super.onResume();
-		resetAapter();
-	}
-	@Override
-	protected void onStart() {
-		// TODO Auto-generated method stub
-		super.onStart();
 		resetAapter();
 	}
 	private void resetAapter(){
