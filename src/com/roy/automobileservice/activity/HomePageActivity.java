@@ -2,23 +2,18 @@ package com.roy.automobileservice.activity;
 
 
 
-import java.io.IOException;
-
-
-
 import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.os.Bundle;
+import android.text.StaticLayout;
 import android.text.TextUtils;
 import android.view.KeyEvent;
 import android.view.View;
 import android.view.Window;
 import android.widget.Button;
-import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.Toast;
-
 
 import com.roy.automobileservice.R;
 import com.roy.automobileservice.broadcast.NetworkChangeReceiver;
@@ -27,23 +22,36 @@ import com.roy.automobileservice.cls.Car;
 import com.roy.automobileservice.cls.HeadSculpture;
 import com.roy.automobileservice.cls.User;
 import com.roy.automobileservice.layout.AvatarImageView;
+import com.roy.automobileservice.layout.CircleMenuLayout;
+import com.roy.automobileservice.layout.CircleMenuLayout.OnMenuItemClickListener;
 import com.roy.automobileservice.utils.GlobalVariable;
 import com.roy.automobileservice.utils.TestData;
 import com.roy.automobileservice.utils.Utils;
 
 public class HomePageActivity extends BaseActivity implements android.view.View.OnClickListener{
+	private final static int MY_INFO = R.drawable.my_info_option_bg;
+	private final static int AUTO_BEAUTY =R.drawable.auto_beauty_option_bg;
+	private final static int AUTO_REPAIR =R.drawable.auto_repair_option_bg;
+	private final static int AUTO_PART =R.drawable.auto_part_option_bg;
+	private final static int AUTO_ROAD =R.drawable.road_assistant_option_bg;
+	private final static int CAR_MODLE =R.drawable.car_models_option_bg;
 	
 	public static void startAction(Context context){
 		Intent intent = new Intent(context,HomePageActivity.class);
 		context.startActivity(intent);
 	}
 	private AvatarImageView userImage;
-	private LinearLayout myInfoButton;
-	private LinearLayout autoBeautyButton;
-	private LinearLayout autoRepairButton;
-	private LinearLayout autoPartButton;
-	private LinearLayout roadAssisButton;
-	private LinearLayout carModelsButton;
+//	private LinearLayout myInfoButton;
+//	private LinearLayout autoBeautyButton;
+//	private LinearLayout autoRepairButton;
+//	private LinearLayout autoPartButton;
+//	private LinearLayout roadAssisButton;
+//	private LinearLayout carModelsButton;
+	
+	private CircleMenuLayout mCircleMenuLayout;
+	private String[] itemTexts = new String[6];
+	private int[] itemImagIds = new int[6];
+	
 	private NetworkChangeReceiver networkChangeReceiver;
 	private IntentFilter intentFilter;
 	private RelativeLayout noNetNotifictionLayout;
@@ -55,6 +63,7 @@ public class HomePageActivity extends BaseActivity implements android.view.View.
 		
 		requestWindowFeature(Window.FEATURE_NO_TITLE);
 		setContentView(R.layout.home_page_view);
+		initMenuItems();
 		//AVOSCloud.initialize(this, "lplzKMKBu0zYcsYCORqGszqH-gzGzoHsz", "Pjc70oYT9mRz5gKquyPnN17D");
 		init();
 		
@@ -78,22 +87,22 @@ public class HomePageActivity extends BaseActivity implements android.view.View.
 		intentFilter = new IntentFilter();
 		intentFilter.addAction("android.net.conn.CONNECTIVITY_CHANGE");
 		
-		myInfoButton = (LinearLayout)findViewById(R.id.my_info_menu);
-		autoBeautyButton = (LinearLayout)findViewById(R.id.auto_beauty_menu);
-		autoRepairButton = (LinearLayout)findViewById(R.id.auto_repair_menu);
-		autoPartButton = (LinearLayout)findViewById(R.id.auto_part_menu);
-		roadAssisButton = (LinearLayout)findViewById(R.id.road_assis_menu);
-		carModelsButton = (LinearLayout)findViewById(R.id.car_models_menu);
+//		myInfoButton = (LinearLayout)findViewById(R.id.my_info_menu);
+//		autoBeautyButton = (LinearLayout)findViewById(R.id.auto_beauty_menu);
+//		autoRepairButton = (LinearLayout)findViewById(R.id.auto_repair_menu);
+//		autoPartButton = (LinearLayout)findViewById(R.id.auto_part_menu);
+//		roadAssisButton = (LinearLayout)findViewById(R.id.road_assis_menu);
+//		carModelsButton = (LinearLayout)findViewById(R.id.car_models_menu);
 		userImage = (AvatarImageView)findViewById(R.id.login_avatar_img);
 		noNetNotifictionLayout = (RelativeLayout)findViewById(R.id.net_view_r1);
 		
 		loginButton = (Button)findViewById(R.id.login_title_button);		
-		myInfoButton.setOnClickListener(this);
-		autoBeautyButton.setOnClickListener(this);
-		autoRepairButton.setOnClickListener(this);
-		autoPartButton.setOnClickListener(this);
-		roadAssisButton.setOnClickListener(this);
-		carModelsButton.setOnClickListener(this);
+//		myInfoButton.setOnClickListener(this);
+//		autoBeautyButton.setOnClickListener(this);
+//		autoRepairButton.setOnClickListener(this);
+//		autoPartButton.setOnClickListener(this);
+//		roadAssisButton.setOnClickListener(this);
+//		carModelsButton.setOnClickListener(this);
 		
 		loginButton.setOnClickListener(this);
 		noNetNotifictionLayout.setOnClickListener(this);
@@ -103,27 +112,27 @@ public class HomePageActivity extends BaseActivity implements android.view.View.
 	@Override
 	public void onClick(View v) {
 		switch (v.getId()) {
-		case R.id.my_info_menu:
-			//µÇÂ¼ÑéÖ¤£¬ÔÝÊ±È¥µô
-//			if(!LoginActivity.isLogin){
-//				Utils.showTipAndLogin(HomePageActivity.this, R.string.tip_msg_to_login_text);
-//			}else{
-//				MyInfoActivity.startAction(HomePageActivity.this);
-//			}
-			MyInfoActivity.startAction(HomePageActivity.this);
-			break;
-		case R.id.auto_beauty_menu:
-			Toast.makeText(HomePageActivity.this, "you clicked autoBeauty button", Toast.LENGTH_SHORT).show();
-			break;
-		case R.id.auto_repair_menu:
-			Toast.makeText(HomePageActivity.this, "you clicked autoRepair button", Toast.LENGTH_SHORT).show();
-			break;
-		case R.id.auto_part_menu:
-			Toast.makeText(HomePageActivity.this, "you clicked autoPart button", Toast.LENGTH_SHORT).show();
-			break;
+//		case R.id.my_info_menu:
+//			//ï¿½ï¿½Â¼ï¿½ï¿½Ö¤ï¿½ï¿½ï¿½ï¿½Ê±È¥ï¿½ï¿½
+////			if(!LoginActivity.isLogin){
+////				Utils.showTipAndLogin(HomePageActivity.this, R.string.tip_msg_to_login_text);
+////			}else{
+////				MyInfoActivity.startAction(HomePageActivity.this);
+////			}
+//			MyInfoActivity.startAction(HomePageActivity.this);
+//			break;
+//		case R.id.auto_beauty_menu:
+//			Toast.makeText(HomePageActivity.this, "you clicked autoBeauty button", Toast.LENGTH_SHORT).show();
+//			break;
+//		case R.id.auto_repair_menu:
+//			Toast.makeText(HomePageActivity.this, "you clicked autoRepair button", Toast.LENGTH_SHORT).show();
+//			break;
+//		case R.id.auto_part_menu:
+//			Toast.makeText(HomePageActivity.this, "you clicked autoPart button", Toast.LENGTH_SHORT).show();
+//			break;
 		case R.id.login_title_button:
 			String str = loginButton.getText().toString();
-			if(str.equals("EXIT")||str.equals("ÍË³ö")){
+			if(str.equals("EXIT")||str.equals("ï¿½Ë³ï¿½")){
 				loginButton.setText(R.string.login_button);
 				userImage.setImageResource(R.drawable.user_default_icon1);
 				GlobalVariable.currentUser = null;
@@ -133,12 +142,12 @@ public class HomePageActivity extends BaseActivity implements android.view.View.
 				
 			}
 			break;
-		case R.id.road_assis_menu:
-			ConvenientService.startAction(HomePageActivity.this);
-			break;
-		case R.id.car_models_menu:
-			CarModelsListActivity.startAction(HomePageActivity.this);
-			break;
+//		case R.id.road_assis_menu:
+//			ConvenientService.startAction(HomePageActivity.this);
+//			break;
+//		case R.id.car_models_menu:
+//			CarModelsListActivity.startAction(HomePageActivity.this);
+//			break;
 		case R.id.net_view_r1:
 			if(noNetNotifictionLayout!=null){
 				Intent intent = new Intent("android.settings.SETTINGS");
@@ -221,7 +230,7 @@ public class HomePageActivity extends BaseActivity implements android.view.View.
 	}
 	private void exitApp() {  
 		  
-		// ÅÐ¶Ï2´Îµã»÷ÊÂ¼þÊ±¼ä  
+		//
 		  if ((System.currentTimeMillis() - exitTime) > 2000) {  
 		    Toast.makeText(this, R.string.notifiction_to_exit_app, Toast.LENGTH_SHORT).show();  
 		    exitTime = System.currentTimeMillis();  
@@ -234,7 +243,7 @@ public class HomePageActivity extends BaseActivity implements android.view.View.
 
         for(int i=1;i<20;i++){
 			Car car = new Car(context.getResources().getString(R.string.test_car_name)+i,R.drawable.b_auto_beauty,
-					context.getResources().getString(R.string.test_car_discribute)+i+"ninfnifajfdlasflajfkdjsakfjadslfjsalfjdslajfkasjninfnifajfdlasflajfkdjsakfjadslfjsalfjdslajfkasninfnifajfdlasflajfkdjsakfjadslfjsalfjdslajfkasninfnifajfdlasflajfkdjsakfjadslfjsalfjdslajfkasninfnifajfdlasflajfkdjsakfjadslfjsalfjdslajfkasninfnifajfdlasflajfkdjsakfjadslfjsalfjdslajfkasninfnifajfdlasflajfkdjsakfjadslfjsalfjdslajfkasninfnifajfdlasflajfkdjsakfjadslfjsalfjdslajfkasninfnifajfdlasflajfkdjsakfjadslfjsalfjdslajfkasninfnifajfdlasflajfkdjsakfjadslfjsalfjdslajfkasninfnifajfdlasflajfkdjsakfjadslfjsalfjdslajfkasninfnifajfdlasflajfkdjsakfjadslfjsalfjdslajfkasninfnifajfdlasflajfkdjsakfjadslfjsalfjdslajfkasninfnifajfdlasflajfkdjsakfjadslfjsalfjdslajfkasninfnifajfdlasflajfkdjsakfjadslfjsalfjdslajfkasninfnifajfdlasflajfkdjsakfjadslfjsalfjdslajfkasninfnifajfdlasflajfkdjsakfjadslfjsalfjdslajfkasninfnifajfdlasflajfkdjsakfjadslfjsalfjdslajfkasninfnifajfdlasflajfkdjsakfjadslfjsalfjdslajfkasninfnifajfdlasflajfkdjsakfjadslfjsalfjdslajfkasninfnifajfdlasflajfkdjsakfjadslfjsalfjdslajfkasninfnifajfdlasflajfkdjsakfjadslfjsalfjdslajfkasninfnifajfdlasflajfkdjsakfjadslfjsalfjdslajfkasninfnifajfdlasflajfkdjsakfjadslfjsalfjdslajfkasninfnifajfdlasflajfkdjsakfjadslfjsalfjdslajfkasflajfkldsajfakfjasljfdasklfjalkfjalkfdjkasfjalfjakÁ¾³µ");
+					context.getResources().getString(R.string.test_car_discribute)+i+"ninfnifajfdlasflajfkdjsakfjadslfjsalfjdslajfkasjninfnifajfdlasflajfkdjsakfjadslfjsalfjdslajfkasninfnifajfdlasflajfkdjsakfjadslfjsalfjdslajfkasninfnifajfdlasflajfkdjsakfjadslfjsalfjdslajfkasninfnifajfdlasflajfkdjsakfjadslfjsalfjdslajfkasninfnifajfdlasflajfkdjsakfjadslfjsalfjdslajfkasninfnifajfdlasflajfkdjsakfjadslfjsalfjdslajfkasninfnifajfdlasflajfkdjsakfjadslfjsalfjdslajfkasninfnifajfdlasflajfkdjsakfjadslfjsalfjdslajfkasninfnifajfdlasflajfkdjsakfjadslfjsalfjdslajfkasninfnifajfdlasflajfkdjsakfjadslfjsalfjdslajfkasninfnifajfdlasflajfkdjsakfjadslfjsalfjdslajfkasninfnifajfdlasflajfkdjsakfjadslfjsalfjdslajfkasninfnifajfdlasflajfkdjsakfjadslfjsalfjdslajfkasninfnifajfdlasflajfkdjsakfjadslfjsalfjdslajfkasninfnifajfdlasflajfkdjsakfjadslfjsalfjdslajfkasninfnifajfdlasflajfkdjsakfjadslfjsalfjdslajfkasninfnifajfdlasflajfkdjsakfjadslfjsalfjdslajfkasninfnifajfdlasflajfkdjsakfjadslfjsalfjdslajfkasninfnifajfdlasflajfkdjsakfjadslfjsalfjdslajfkasninfnifajfdlasflajfkdjsakfjadslfjsalfjdslajfkasninfnifajfdlasflajfkdjsakfjadslfjsalfjdslajfkasninfnifajfdlasflajfkdjsakfjadslfjsalfjdslajfkasninfnifajfdlasflajfkdjsakfjadslfjsalfjdslajfkasninfnifajfdlasflajfkdjsakfjadslfjsalfjdslajfkasflajfkldsajfakfjasljfdasklfjalkfjalkfdjkasfjalfjakï¿½ï¿½ï¿½ï¿½");
 			car.setHeat(20);
 			car.setPrice(context.getResources().getString(R.string.test_car_value));
 			TestData.carList.add(car);
@@ -324,6 +333,73 @@ public class HomePageActivity extends BaseActivity implements android.view.View.
 	}
 	
 
-	
+	private void initMenuItems(){
+		itemTexts = new String[] { getResources().getString(R.string.my_info_option_text), 
+								getResources().getString(R.string.auto_beauty_option_text), 
+								getResources().getString(R.string.auto_repair_option_text),  
+								getResources().getString(R.string.auto_part_option_text),
+								getResources().getString(R.string.road_assis_option_text), 
+								getResources().getString(R.string.car_models_text)};  
+		itemImagIds = new int[] { MY_INFO,
+								AUTO_BEAUTY, 
+								AUTO_REPAIR,
+								AUTO_PART, 
+								AUTO_ROAD,
+								CAR_MODLE};
+		mCircleMenuLayout = (CircleMenuLayout) findViewById(R.id.id_menulayout);
+		mCircleMenuLayout.setMenuItemIconsAndTexts(itemImagIds, itemTexts);
+		
+		
+
+		mCircleMenuLayout.setOnMenuItemClickListener(new OnMenuItemClickListener()
+		{
+			
+			@Override
+			public void itemClick(View view, int pos)
+			{
+//				Toast.makeText(HomePageActivity.this, itemTexts[pos],
+//						Toast.LENGTH_SHORT).show();
+				switch (itemImagIds[pos]) {
+				case MY_INFO:
+////				if(!LoginActivity.isLogin){
+////				Utils.showTipAndLogin(HomePageActivity.this, R.string.tip_msg_to_login_text);
+////			}else{
+////				MyInfoActivity.startAction(HomePageActivity.this);
+////			}
+			MyInfoActivity.startAction(HomePageActivity.this);
+					break;
+				case AUTO_BEAUTY:
+					Toast.makeText(HomePageActivity.this, "you clicked autoBeauty button", Toast.LENGTH_SHORT).show();
+					break;
+				case AUTO_REPAIR:
+					Toast.makeText(HomePageActivity.this, "you clicked autoRepair button", Toast.LENGTH_SHORT).show();
+					break;
+				case AUTO_PART:
+					Toast.makeText(HomePageActivity.this, "you clicked autoPart button", Toast.LENGTH_SHORT).show();
+					break;
+				case AUTO_ROAD:
+					ConvenientService.startAction(HomePageActivity.this);
+					break;
+				case CAR_MODLE:
+					CarModelsListActivity.startAction(HomePageActivity.this);
+					break;
+
+				default:
+					break;
+				}
+
+			}
+			
+			@Override
+			public void itemCenterClick(View view)
+			{
+//				Toast.makeText(HomePageActivity.this,
+//						"you can do something just like ccb  ",
+//						Toast.LENGTH_SHORT).show();
+//				
+			}
+		});
+		
+	}
 
 }

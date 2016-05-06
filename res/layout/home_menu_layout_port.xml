@@ -2,91 +2,32 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:baselineAligned="false" 
     style="@style/match_parent"
-    android:background="@color/menu_background_color"
+    android:background="#55000000"
     android:orientation="horizontal">
-    <LinearLayout
-        android:layout_width="0dp"
+    <com.roy.automobileservice.layout.CircleMenuLayout
+        android:id="@+id/id_menulayout"
+        android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_weight="1"
-       	android:gravity="center"
-       	android:orientation="vertical">
-       	<LinearLayout
-       	    android:id="@+id/my_info_menu"
-       	    style="@style/menu_button_style"
-       	    android:background="@drawable/button_form1">
-       	    <ImageView
-       	        android:background="@drawable/my_info_option_bg"
-       	        style="@style/wrap_content"
-       	       />
-       	    <TextView
-       	        style="@style/menu_text_style"
-       	        android:text="@string/my_info_option_text"/>
-       	</LinearLayout>
-       	<LinearLayout
-       	    android:id="@+id/auto_beauty_menu"
-       	    style="@style/menu_button_style"
-       	    android:background="@drawable/button_form2">
-       	    <ImageView
-       	        android:background="@drawable/auto_beauty_option_bg"
-       	       	style="@style/wrap_content"/>"
-       	    <TextView
-       	        style="@style/menu_text_style"
-       	        android:text="@string/auto_beauty_option_text"/>
-       	</LinearLayout>
-       	<LinearLayout
-       	    android:id="@+id/auto_repair_menu"
-       	    style="@style/menu_button_style"
-       	    android:background="@drawable/button_form3">
-       	    <ImageView
-       	        android:background="@drawable/auto_repair_option_bg"
-       	        style="@style/wrap_content"/>
-       	    <TextView
-       	        style="@style/menu_text_style"
-       	        android:text="@string/auto_repair_option_text"/>
-       	</LinearLayout>
-       	
-   	</LinearLayout>
-   	
-    <LinearLayout
-        android:layout_width="0dp"
-        android:layout_height="match_parent"
-        android:layout_weight="1"
-       	android:gravity="center"
-       	android:orientation="vertical">
-       	<LinearLayout
-       	    android:id="@+id/auto_part_menu"
-       	    style="@style/menu_button_style"
-       	    android:background="@drawable/button_form4">
-       	    <ImageView
-       	        android:background="@drawable/auto_part_option_bg"
-       	        style="@style/wrap_content"/>
-       	    <TextView
-       	        style="@style/menu_text_style"
-       	        android:text="@string/auto_part_option_text"/>
-       	</LinearLayout>
-       	<LinearLayout
-       	    android:id="@+id/road_assis_menu"
-       	    style="@style/menu_button_style"
-       	    android:background="@drawable/button_form5">
-       	    <ImageView
-       	        android:background="@drawable/road_assistant_option_bg"
-       	         style="@style/wrap_content"/>
-       	    <TextView
-       	        style="@style/menu_text_style"
-       	        android:text="@string/road_assis_option_text"/>
-       	</LinearLayout>
-       	<LinearLayout
-       	    android:id="@+id/car_models_menu"
-       	    style="@style/menu_button_style"
-       	    android:background="@drawable/button_form6">
-       	    <ImageView
-       	        android:background="@drawable/car_models_option_bg"
-       	       	style="@style/wrap_content"/>
-       	    <TextView
-       	        style="@style/menu_text_style"
-       	        android:text="@string/car_models_text"/>
-       	</LinearLayout>
-       	
-   	</LinearLayout>
+        android:background="@drawable/circle_bg3"
+        android:layout_gravity="center"
+        android:padding="100dp">
+        <RelativeLayout
+            android:id="@id/id_circle_menu_item_center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+
+            <ImageView
+                android:layout_width="104.0dip"
+                android:layout_height="104.0dip"
+                android:layout_centerInParent="true"
+                 />
+            <ImageView
+                android:layout_width="116.0dip"
+                android:layout_height="116.0dip"
+                android:layout_centerInParent="true"
+                android:background="@drawable/turnplate_mask_unlogin_normal" />
+        </RelativeLayout>
+        
+    </com.roy.automobileservice.layout.CircleMenuLayout>
 
 </LinearLayout>

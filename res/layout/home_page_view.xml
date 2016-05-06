@@ -8,14 +8,7 @@
         android:layout_width="match_parent"
         android:layout_height="55dp"/>
     <include layout="@layout/net_state_notifiction_layout"/>
-<!--       <fragment
-        android:id="@+id/cycle_picture"
-        android:name="com.roy.automobileservice.layout.ViewPagerCycleFragment"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
-      <ImageView
-          android:layout_width="match_parent"
-          android:layout_height="2dp"
-          android:background="#fff"/> -->
-    <include layout="@layout/home_menu_layout_port"/>
+
+    <include layout="@layout/home_menu_layout_port"
+        android:layout_gravity="center"/>
 </LinearLayout>
