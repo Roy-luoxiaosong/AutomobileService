@@ -2,6 +2,10 @@ package com.roy.automobileservice.activity;
 
 
 
+import java.io.IOException;
+
+
+
 import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
@@ -14,6 +18,7 @@ import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.Toast;
+
 
 import com.roy.automobileservice.R;
 import com.roy.automobileservice.broadcast.NetworkChangeReceiver;
@@ -47,13 +52,24 @@ public class HomePageActivity extends BaseActivity implements android.view.View.
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
+		
 		requestWindowFeature(Window.FEATURE_NO_TITLE);
 		setContentView(R.layout.home_page_view);
+		//AVOSCloud.initialize(this, "lplzKMKBu0zYcsYCORqGszqH-gzGzoHsz", "Pjc70oYT9mRz5gKquyPnN17D");
 		init();
+		
+		/*try {
+			Document doc = Jsoup.connect("http://en.wikipedia.org/").get();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}*/
 		registerReceiver(networkChangeReceiver, intentFilter);
 		if(LoginActivity.isLogin){
 			loginButton.setText(R.string.exit_button);
 		}
+		//AVAnalytics.trackAppOpened(getIntent());
+		
 	}
 
 	private void init(){
@@ -88,11 +104,13 @@ public class HomePageActivity extends BaseActivity implements android.view.View.
 	public void onClick(View v) {
 		switch (v.getId()) {
 		case R.id.my_info_menu:
-			if(!LoginActivity.isLogin){
-				Utils.showTipAndLogin(HomePageActivity.this, R.string.tip_msg_to_login_text);
-			}else{
-				MyInfoActivity.startAction(HomePageActivity.this);
-			}
+			//登录验证，暂时去掉
+//			if(!LoginActivity.isLogin){
+//				Utils.showTipAndLogin(HomePageActivity.this, R.string.tip_msg_to_login_text);
+//			}else{
+//				MyInfoActivity.startAction(HomePageActivity.this);
+//			}
+			MyInfoActivity.startAction(HomePageActivity.this);
 			break;
 		case R.id.auto_beauty_menu:
 			Toast.makeText(HomePageActivity.this, "you clicked autoBeauty button", Toast.LENGTH_SHORT).show();

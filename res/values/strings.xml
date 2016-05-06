@@ -71,6 +71,8 @@
     
     <string name="no_car">no car</string>
    <string name="reset_user_info">MODIFY INFO</string>
+   <string name="beauty_request">APPLY BEAUTY</string>
+   <string name="repair_request">APPLY REPAIR</string>
    <string name="make_sure_modify_info">SUBMMIT</string>
    <string name="noti_to_modify_password">if Won\'t modify \,do not type here</string>
      <string name="net_unavailable">The most remote distance in the world is no network,check net setting</string>

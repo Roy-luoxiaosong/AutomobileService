@@ -127,6 +127,9 @@
     
     <string name="car_value">价格: </string>
     
+    <string name="beauty_request">申请美容</string>
+   <string name="repair_request">申请维修</string>
+    
     
 
 </resources>
