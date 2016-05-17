@@ -47,12 +47,12 @@ public class RegisterActivity extends BaseActivity implements OnClickListener,On
 		super.onCreate(savedInstanceState);
 		requestWindowFeature(Window.FEATURE_NO_TITLE);
 
-        //不显示系统的标题栏
+
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
                 WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.register_activity);
         init();
-      //设置标题
+
       	TextView textView = (TextView)findViewById(R.id.title_back_text);
     	textView.setText(R.string.register_button);
     	
@@ -107,10 +107,10 @@ public class RegisterActivity extends BaseActivity implements OnClickListener,On
 		
 	}
 	
-	/*private Car getCarByName(String name){
-		Car car = new Car();
+	/*private CarTemp getCarByName(String name){
+		CarTemp car = new CarTemp();
 		if(!TextUtils.isEmpty(name)){
-			for(Car tem:CarModelsListActivity.carList){
+			for(CarTemp tem:CarModelsListActivity.carList){
 				if(tem!=null&&tem.getName().equals(name)){
 						car = tem;
 						break;
@@ -129,11 +129,11 @@ public class RegisterActivity extends BaseActivity implements OnClickListener,On
 			return false;
 		}
 		/*if(TextUtils.isEmpty(user.getEmail())){
-			Toast.makeText(RegisterActivity.this, "邮箱不能为空，请输入邮箱", Toast.LENGTH_SHORT).show();
+			Toast.makeText(RegisterActivity.this, " ", Toast.LENGTH_SHORT).show();
 			return false;
 		}*/
 		/*if(TextUtils.isEmpty(user.getTelNumber())){
-			Toast.makeText(RegisterActivity.this, "手机号码不能为空，请输入手机号码", Toast.LENGTH_SHORT).show();
+			Toast.makeText(RegisterActivity.this, " ", Toast.LENGTH_SHORT).show();
 			return false;
 		}*/
 		for(User tem:TestData.userTestList){

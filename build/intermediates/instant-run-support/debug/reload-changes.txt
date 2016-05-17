@@ -1,0 +1,2 @@
+CHANGED,F:\360Downloads\AutomobileService\build\intermediates\transforms\instantRun\debug\folders\4000\5\enhanced\com\android\tools\fd\runtime\AppPatchesLoaderImpl.class
+CHANGED,F:\360Downloads\AutomobileService\build\intermediates\transforms\instantRun\debug\folders\4000\5\enhanced\com\roy\automobileservice\layout\PictureSwitcherFragment$override.class

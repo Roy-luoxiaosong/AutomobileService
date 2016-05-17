@@ -8,7 +8,7 @@ public class User {
     private String password;
     private String sex;
     private String realName;
-    private Car car;
+	private Car car;
     private String address;
     public String getAddress() {
 		return address;

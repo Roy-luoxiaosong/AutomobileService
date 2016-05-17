@@ -13,6 +13,7 @@ import android.widget.TextView;
 import com.roy.automobileservice.R;
 import com.roy.automobileservice.cls.Car;
 
+
 public class CarAdapter extends ArrayAdapter<Car>{
 	private int resourceId;
 	

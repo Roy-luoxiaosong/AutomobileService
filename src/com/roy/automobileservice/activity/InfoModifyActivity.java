@@ -22,6 +22,7 @@ import android.widget.Toast;
 
 import com.roy.automobileservice.R;
 import com.roy.automobileservice.adapter.UserImageSelectAdapter;
+
 import com.roy.automobileservice.cls.Car;
 import com.roy.automobileservice.cls.HeadSculpture;
 import com.roy.automobileservice.cls.User;
@@ -43,7 +44,7 @@ public class InfoModifyActivity extends BaseActivity implements OnClickListener,
 	private Spinner imageSpinner;
 	private EditText userName;
 	private EditText realName;
-	private EditText emaial;
+	private EditText email;
 	private EditText tel;
 	private EditText address;
 	private EditText oldPassword,password,checkPassword;
@@ -56,12 +57,12 @@ public class InfoModifyActivity extends BaseActivity implements OnClickListener,
 		super.onCreate(savedInstanceState);
 		requestWindowFeature(Window.FEATURE_NO_TITLE);
 
-        //²»ÏÔÊ¾ÏµÍ³µÄ±êÌâÀ¸
+        //ï¿½ï¿½ï¿½ï¿½Ê¾ÏµÍ³ï¿½Ä±ï¿½ï¿½ï¿½ï¿½ï¿½
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
                 WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.info_modify_activity);
         init();
-      //ÉèÖÃ±êÌâ
+      //ï¿½ï¿½ï¿½Ã±ï¿½ï¿½ï¿½
       	TextView textView = (TextView)findViewById(R.id.title_back_text);
     	textView.setText(R.string.reset_user_info);
     	
@@ -73,14 +74,14 @@ public class InfoModifyActivity extends BaseActivity implements OnClickListener,
 		imageIcon = (AvatarImageView)findViewById(R.id.info_modify_avatar_img);
 		userName = (EditText)findViewById(R.id.info_modify_user_name);
 		realName = (EditText)findViewById(R.id.info_modify_user_real_name);
-		emaial = (EditText)findViewById(R.id.info_modify_email);
-		emaial.setInputType(InputType.TYPE_TEXT_VARIATION_EMAIL_ADDRESS);
+		email = (EditText)findViewById(R.id.info_modify_email);
+		email.setInputType(InputType.TYPE_TEXT_VARIATION_EMAIL_ADDRESS);
 		tel = (EditText)findViewById(R.id.info_modify_tel);
 		address = (EditText)findViewById(R.id.info_modify_user_address);
 		oldPassword = (EditText)findViewById(R.id.info_modify_old_password);
 		password = (EditText)findViewById(R.id.info_modify_password);
 		checkPassword = (EditText)findViewById(R.id.info_modify_check_password);
-		//ÉèÖÃÌáÊ¾ÎÄ×ÖÒÔ¼°×ÖÌå´óĞ¡
+		//è®¾ç½®editTextçš„æç¤ºå­—ä½“å¤§å°
 		Utils.setEditTextHintSize(oldPassword,getResources().getString(R.string.noti_to_modify_password),10);
 		Utils.setEditTextHintSize(password,getResources().getString(R.string.noti_to_modify_password),10);
 		Utils.setEditTextHintSize(checkPassword,getResources().getString(R.string.noti_to_modify_password),10);
@@ -105,7 +106,7 @@ public class InfoModifyActivity extends BaseActivity implements OnClickListener,
 			user.setCar(GlobalVariable.currentUser.getCar());
 			user.setUserName(userName.getText().toString());
 			user.setRealName(realName.getText().toString());
-			user.setEmail(emaial.getText().toString());
+			user.setEmail(email.getText().toString());
 			user.setTelNumber(tel.getText().toString());
 			user.setAddress(address.getText().toString());
 			user.setPassword(GlobalVariable.currentUser.getPassword());
@@ -120,7 +121,7 @@ public class InfoModifyActivity extends BaseActivity implements OnClickListener,
 				}
 			}
 			if(userInfoIsRight(user)){
-				//É¾³ıµ±Ç°ÓÃ»§£¬
+				//åˆ é™¤ä»¥å‰çš„ç”¨æˆ·
 				Iterator<User> iterator = TestData.userTestList.iterator();
 				while (iterator.hasNext()) {
 					if(iterator.next().equals(GlobalVariable.currentUser)){
@@ -144,7 +145,7 @@ public class InfoModifyActivity extends BaseActivity implements OnClickListener,
 		//user.setCar(getCarByName((String)carSpinner.getSelectedItem()));
 		HeadSculpture headSculpture = (HeadSculpture)imageSpinner.getSelectedItem();
 		user.setAvatarImage(headSculpture.getImageId());
-		imageIcon.setImageResource(headSculpture.getImageId());	//ÉèÖÃÑ¡ÖĞÍ·Ïñ	
+		imageIcon.setImageResource(headSculpture.getImageId());	//ï¿½ï¿½ï¿½ï¿½Ñ¡ï¿½ï¿½Í·ï¿½ï¿½	
 	}
 	@Override
 	public void onNothingSelected(AdapterView<?> arg0) {
@@ -153,7 +154,7 @@ public class InfoModifyActivity extends BaseActivity implements OnClickListener,
 	}
 	
 	/**
-	 * ÅĞ¶ÏÊäÈëÊÇ·ñÕıÈ·
+	 * è¾“å…¥ç”¨æˆ·æ˜¯å¦æ­£ç¡®
 	 * @param user
 	 * @return
 	 */
@@ -166,7 +167,7 @@ public class InfoModifyActivity extends BaseActivity implements OnClickListener,
 			Toast.makeText(InfoModifyActivity.this, getResources().getString(R.string.tip_password_is_empty_or_not_right), Toast.LENGTH_SHORT).show();
 			return false;
 		}
-		//Èç¹ûµ±Ç°ÓÃ»§Ãû×ÖÃ»ÓĞ¸Ä±ä£¬Ò²ÊÇÊôÓÚÕı³£
+		//å¦‚æœæ²¡æœ‰ä¿®æ”¹ï¼Œä¸åˆ¤æ–­ç”¨æˆ·åè¢«æ³¨å†Œäº†
 		if(user.getUserName().equals(GlobalVariable.currentUser.getUserName())){
 			return true;
 		}
@@ -180,22 +181,23 @@ public class InfoModifyActivity extends BaseActivity implements OnClickListener,
 		
 	}
 	/**
-	 * ÏÔÊ¾Ô­Ê¼Êı¾İ
+	 * æ˜¾ç¤ºåŸæœ‰ä¿¡æ¯
 	 */
 	private void showOrignValues(){
 		//carSpinner.sett;
 		imageSpinner.setSelection(getImage(), true);
 		userName.setText(GlobalVariable.currentUser.getUserName());
 		realName.setText(GlobalVariable.currentUser.getRealName());
-		emaial.setText(GlobalVariable.currentUser.getEmail());
+		email.setText(GlobalVariable.currentUser.getEmail());
 		tel.setText(GlobalVariable.currentUser.getTelNumber());
 		address.setText(GlobalVariable.currentUser.getAddress());
 		imageIcon.setImageResource(GlobalVariable.currentUser.getAvatarImage());
 	}
+
 	/**
-	 * »ñÈ¡µ±Ç°Í·ÏñµÄÎ»ÖÃ
+	 * è·å–å¤´åƒçš„ä½ç½®
 	 * @return
-	 */
+     */
 	private int getImage(){
 		int postion = 0;
 		int[] imIds = new int[]{R.drawable.user_default_icon1,

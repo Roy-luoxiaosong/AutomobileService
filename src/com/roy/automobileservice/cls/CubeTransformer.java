@@ -7,16 +7,16 @@ public class CubeTransformer implements PageTransformer {
 	/*@Override  
     public void transformPage(View view, float position) {  
         if (position <= 0) {  
-            //´ÓÓÒÏò×ó»¬¶¯Îªµ±Ç°View  
+            //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ó»¬¶ï¿½Îªï¿½ï¿½Ç°View  
               
-            //ÉèÖÃÐý×ªÖÐÐÄµã£»  
+            //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½×ªï¿½ï¿½ï¿½Äµã£»  
             ViewHelper.setPivotX(view, view.getMeasuredWidth());  
             ViewHelper.setPivotY(view, view.getMeasuredHeight() * 0.5f);  
               
-            //Ö»ÔÚYÖá×öÐý×ª²Ù×÷  
+            //
             ViewHelper.setRotationY(view, 90f * position);  
         } else if (position <= 1) {  
-            //´Ó×óÏòÓÒ»¬¶¯Îªµ±Ç°View  
+            //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½Îªï¿½ï¿½Ç°View  
             ViewHelper.setPivotX(view, 0);  
             ViewHelper.setPivotY(view, view.getMeasuredHeight() * 0.5f);  
             ViewHelper.setRotationY(view, 90f * position);  

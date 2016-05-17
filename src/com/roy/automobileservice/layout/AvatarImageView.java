@@ -28,26 +28,26 @@ public class AvatarImageView extends ImageView{
 	public AvatarImageView(Context context, AttributeSet attrs) {
 		super(context, attrs);
 	}
-	 //½«Í·Ïñ°´±ÈÀýËõ·Å  
+	 //
     private Bitmap scaleBitmap(Bitmap bitmap){  
         int width = getWidth();  
-        //Ò»¶¨ÒªÇ¿×ª³Éfloat ²»È»ÓÐ¿ÉÄÜÒòÎª¾«¶È²»¹» ³öÏÖ scaleÎª0 µÄ´íÎó  
+        //
         float scale = (float)width/(float)bitmap.getWidth();  
         Matrix matrix = new Matrix();  
         matrix.postScale(scale, scale);  
         return Bitmap.createBitmap(bitmap, 0, 0, bitmap.getWidth(), bitmap.getHeight(), matrix, true);  
   
     }  
-  //½«Ô­Ê¼Í¼Ïñ²Ã¼ô³ÉÕý·½ÐÎ  
+  //ï¿½ï¿½Ô­Ê¼Í¼ï¿½ï¿½Ã¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½  
     private Bitmap dealRawBitmap(Bitmap bitmap){  
         int width = bitmap.getWidth();  
         int height = bitmap.getHeight();  
-        //»ñÈ¡¿í¶È  
+        //
         int minWidth = width > height ?  height:width ;  
-        //¼ÆËãÕý·½ÐÎµÄ·¶Î§  
+        //
         int leftTopX = (width - minWidth)/2;  
         int leftTopY = (height - minWidth)/2;  
-        //²Ã¼ô³ÉÕý·½ÐÎ  
+        //
         Bitmap newBitmap = Bitmap.createBitmap(bitmap,leftTopX,leftTopY,minWidth,minWidth,null,false);  
         return  scaleBitmap(newBitmap);  
     }
@@ -59,14 +59,14 @@ public class AvatarImageView extends ImageView{
         if (null != drawable) {  
             Bitmap rawBitmap =((BitmapDrawable)drawable).getBitmap();  
   
-            //´¦ÀíBitmap ×ª³ÉÕý·½ÐÎ  
+            //
             Bitmap newBitmap = dealRawBitmap(rawBitmap);  
-            //½«newBitmap ×ª»»³ÉÔ²ÐÎ  
+            //
             Bitmap circleBitmap = toRoundCorner(newBitmap, 14);  
   
             final Rect rect = new Rect(0, 0, circleBitmap.getWidth(), circleBitmap.getHeight());  
             paint.reset();  
-            //»æÖÆµ½»­²¼ÉÏ  
+            //
             canvas.drawBitmap(circleBitmap, rect, rect, paint);  
         } else {  
             super.onDraw(canvas);  
@@ -74,7 +74,7 @@ public class AvatarImageView extends ImageView{
 	}  
 	private Bitmap toRoundCorner(Bitmap bitmap, int pixels) {  
 		  
-        //Ö¸¶¨Îª ARGB_4444 ¿ÉÒÔ¼õÐ¡Í¼Æ¬´óÐ¡  
+        //Ö¸
         Bitmap output = Bitmap.createBitmap(bitmap.getWidth(), bitmap.getHeight(), Bitmap.Config.ARGB_4444);  
         Canvas canvas = new Canvas(output);  
   

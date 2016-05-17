@@ -28,20 +28,20 @@ public class ReapirAndBeautyHistoryAdapter extends BaseExpandableListAdapter{
 		this.context = context;
 	}
 	       
-	        //得到子item需要关联的数据
+	        //
 	        @Override
 	        public Object getChild(int groupPosition, int childPosition) {
 	            String key = mParent.get(groupPosition);
 	            return (mMap.get(key).get(childPosition));
 	        }
 	 
-	        //得到子item的ID
+	        //
 	        @Override
 	        public long getChildId(int groupPosition, int childPosition) {
 	            return childPosition;
 	        }
 	 
-	        //设置子item的组件
+	        //
 	        @Override
 	        public View getChildView(int groupPosition, int childPosition,
 	                boolean isLastChild, View convertView, ViewGroup parent) {
@@ -62,14 +62,14 @@ public class ReapirAndBeautyHistoryAdapter extends BaseExpandableListAdapter{
 	            return convertView;
 	        }
 	 
-	        //获取当前父item下的子item的个数
+	        //
 	        @Override
 	        public int getChildrenCount(int groupPosition) {
 	            String key = mParent.get(groupPosition);
 	            int size=mMap.get(key).size();
 	            return size;
 	        }
-	      //获取当前父item的数据
+	      //
 	        @Override
 	        public Object getGroup(int groupPosition) {
 	            return mParent.get(groupPosition);
@@ -84,7 +84,7 @@ public class ReapirAndBeautyHistoryAdapter extends BaseExpandableListAdapter{
 	        public long getGroupId(int groupPosition) {
 	            return groupPosition;
 	        }
-	       //设置父item组件
+	       //
 	        @Override
 	        public View getGroupView(int groupPosition, boolean isExpanded,
 	                View convertView, ViewGroup parent) {
@@ -112,12 +112,6 @@ public class ReapirAndBeautyHistoryAdapter extends BaseExpandableListAdapter{
 	        public boolean isChildSelectable(int groupPosition, int childPosition) {
 	            return true;
 	        }
-	        /*private class ViewHolder{
-	        	TextView parentTime;
-	        	TextView childShopName;
-	        	TextView childCostValue;
-	        	TextView childContentText;
-	        	TextView childStaffName;
-	        }*/
+
 	 
 }

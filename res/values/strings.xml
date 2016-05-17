@@ -5,7 +5,7 @@
     <string name="car_appearance">Car appearance</string>
     <string name="auto_part_option_text">Auto Parts</string>
     <string name="auto_beauty_option_text">Auto Beauty</string>
-    <string name="auto_repair_option_text">Auto Repair</string>
+    <string name="auto_repair_option_text">Auto Manitanence</string>
     <string name="road_assis_option_text"> Road Help</string>
     <string name="car_models_text">Car Models</string>
     <string name="title_default_text">AutoService</string>
@@ -45,7 +45,7 @@
     
     <string name="all_car_models">Car models</string>
     
-    <string name="base_info">Base info</string>
+    <string name="base_info">MORE INFO</string>
     <string name="cal_for_more_info_tel">08528888888</string>
     <string name="car_discribe">Car Info</string>
     
@@ -89,6 +89,13 @@
     <string name="title_my_car">My Car</string>
     <string name="title_beauty_hitory">BeautyHistory</string>
     <string name="title_repair_history">RepairHistory</string>
+    <string name="titel_my_orders">My Orders</string>
+    <string name="have_no_orders">You have no orders yet</string>
+    <string name="have_no_car">You have no car yet</string>
+    <string name="buy_a_new_car">TO BUY A CAR</string>
+    <string name="buy_car_time">own date</string>
+
+    <string name="select_beauty_content">Please select beauty content</string>
     
     <string name="info_item_user_name">USERNAEM</string>
     <string name="info_item_real_name">REALNAME</string>
@@ -128,6 +135,39 @@
      <string name="test_car_value">2 million </string>
      
       <string name="car_value">PRICE: </string>
+    <string name ="car_calculator">CALCULATOR</string>
+
+    <!--<string name="select_car">select car</string>
+    <string name="select_detial">select car type</string>
+    <string name="gou_che_jia_ge">cost</string>-->
+
+    <string name="select_car">选择车型</string>
+    <string name="select_car_detail">选择车款</string>
+    <string name="gou_che_jia_ge">购车价格</string>
+    <string name="gou_zhi_shui">购置税</string>
+    <string name="gou_zhi_shui_detial" formatted="false">购置税＝购车款/(1+17%)×购置税率(10%)</string>
+    <string name="shang_pai_fei_yong">上牌费用</string>
+    <string name="shang_pai_fei_yong_detial" >通常商家提供的一条龙服务收费约500元，个人办理约373元，其中工商验证、出库150元、移动证30元、环保卡3元、拓号费40元、行驶证相片20元、托盘费130元</string>
+    <string name="che_chuan_shi_yong_fei">车船使用费</string>
+    <string name="che_chuan_shi_yong_fei_detial">480元/年</string>
+    <string name="jiao_qiang_shui">交强险</string>
+    <string name="jiao_qiang_shui_detail">家用6座以上1100元/年</string>
+    <string name="zong_hua_fei">不算保险购车总花费</string>
+    <string name="reset_data">恢复默认</string>
+    <string name="buy_car">立即购买</string>
+
+    <string name="submit_beauty_request">SUBMIIT</string>
+
+    <string name="select_milenge_length">mileage</string>
+    <string name="what_shoud_to_do">You can do those service</string>
+
+
+    <string name="base_content">Base：</string>
+    <string name="recommend_content">Recommend：</string>
+    <string name="base_recommend_request">Maintenance Apply</string>
+
+
+
     
 
 </resources>

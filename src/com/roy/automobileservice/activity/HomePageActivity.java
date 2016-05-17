@@ -5,28 +5,45 @@ package com.roy.automobileservice.activity;
 import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
+
 import android.os.Bundle;
-import android.text.StaticLayout;
+
+
 import android.text.TextUtils;
+
+
+
 import android.view.KeyEvent;
 import android.view.View;
 import android.view.Window;
 import android.widget.Button;
+
 import android.widget.RelativeLayout;
 import android.widget.Toast;
 
 import com.roy.automobileservice.R;
 import com.roy.automobileservice.broadcast.NetworkChangeReceiver;
 import com.roy.automobileservice.cls.ActivityCollector;
+
 import com.roy.automobileservice.cls.Car;
 import com.roy.automobileservice.cls.HeadSculpture;
+
 import com.roy.automobileservice.cls.User;
+
 import com.roy.automobileservice.layout.AvatarImageView;
 import com.roy.automobileservice.layout.CircleMenuLayout;
 import com.roy.automobileservice.layout.CircleMenuLayout.OnMenuItemClickListener;
 import com.roy.automobileservice.utils.GlobalVariable;
 import com.roy.automobileservice.utils.TestData;
 import com.roy.automobileservice.utils.Utils;
+
+
+
+import java.util.List;
+
+import cn.bmob.v3.Bmob;
+
+
 
 public class HomePageActivity extends BaseActivity implements android.view.View.OnClickListener{
 	private final static int MY_INFO = R.drawable.my_info_option_bg;
@@ -40,45 +57,41 @@ public class HomePageActivity extends BaseActivity implements android.view.View.
 		Intent intent = new Intent(context,HomePageActivity.class);
 		context.startActivity(intent);
 	}
+
+
+	public static List<CarTemp> carTemps;
+
 	private AvatarImageView userImage;
-//	private LinearLayout myInfoButton;
-//	private LinearLayout autoBeautyButton;
-//	private LinearLayout autoRepairButton;
-//	private LinearLayout autoPartButton;
-//	private LinearLayout roadAssisButton;
-//	private LinearLayout carModelsButton;
-	
 	private CircleMenuLayout mCircleMenuLayout;
 	private String[] itemTexts = new String[6];
+
 	private int[] itemImagIds = new int[6];
-	
 	private NetworkChangeReceiver networkChangeReceiver;
 	private IntentFilter intentFilter;
+
 	private RelativeLayout noNetNotifictionLayout;
-	
 	private Button loginButton;
+
+
+
+
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		
+
 		requestWindowFeature(Window.FEATURE_NO_TITLE);
 		setContentView(R.layout.home_page_view);
+
+		Bmob.initialize(this, "811186c53ef97fe8b6579c684e61b053");
+
 		initMenuItems();
-		//AVOSCloud.initialize(this, "lplzKMKBu0zYcsYCORqGszqH-gzGzoHsz", "Pjc70oYT9mRz5gKquyPnN17D");
 		init();
-		
-		/*try {
-			Document doc = Jsoup.connect("http://en.wikipedia.org/").get();
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}*/
+
+
 		registerReceiver(networkChangeReceiver, intentFilter);
 		if(LoginActivity.isLogin){
 			loginButton.setText(R.string.exit_button);
 		}
-		//AVAnalytics.trackAppOpened(getIntent());
-		
 	}
 
 	private void init(){
@@ -87,22 +100,12 @@ public class HomePageActivity extends BaseActivity implements android.view.View.
 		intentFilter = new IntentFilter();
 		intentFilter.addAction("android.net.conn.CONNECTIVITY_CHANGE");
 		
-//		myInfoButton = (LinearLayout)findViewById(R.id.my_info_menu);
-//		autoBeautyButton = (LinearLayout)findViewById(R.id.auto_beauty_menu);
-//		autoRepairButton = (LinearLayout)findViewById(R.id.auto_repair_menu);
-//		autoPartButton = (LinearLayout)findViewById(R.id.auto_part_menu);
-//		roadAssisButton = (LinearLayout)findViewById(R.id.road_assis_menu);
-//		carModelsButton = (LinearLayout)findViewById(R.id.car_models_menu);
+
 		userImage = (AvatarImageView)findViewById(R.id.login_avatar_img);
 		noNetNotifictionLayout = (RelativeLayout)findViewById(R.id.net_view_r1);
 		
 		loginButton = (Button)findViewById(R.id.login_title_button);		
-//		myInfoButton.setOnClickListener(this);
-//		autoBeautyButton.setOnClickListener(this);
-//		autoRepairButton.setOnClickListener(this);
-//		autoPartButton.setOnClickListener(this);
-//		roadAssisButton.setOnClickListener(this);
-//		carModelsButton.setOnClickListener(this);
+
 		
 		loginButton.setOnClickListener(this);
 		noNetNotifictionLayout.setOnClickListener(this);
@@ -112,42 +115,19 @@ public class HomePageActivity extends BaseActivity implements android.view.View.
 	@Override
 	public void onClick(View v) {
 		switch (v.getId()) {
-//		case R.id.my_info_menu:
-//			//��¼��֤����ʱȥ��
-////			if(!LoginActivity.isLogin){
-////				Utils.showTipAndLogin(HomePageActivity.this, R.string.tip_msg_to_login_text);
-////			}else{
-////				MyInfoActivity.startAction(HomePageActivity.this);
-////			}
-//			MyInfoActivity.startAction(HomePageActivity.this);
-//			break;
-//		case R.id.auto_beauty_menu:
-//			Toast.makeText(HomePageActivity.this, "you clicked autoBeauty button", Toast.LENGTH_SHORT).show();
-//			break;
-//		case R.id.auto_repair_menu:
-//			Toast.makeText(HomePageActivity.this, "you clicked autoRepair button", Toast.LENGTH_SHORT).show();
-//			break;
-//		case R.id.auto_part_menu:
-//			Toast.makeText(HomePageActivity.this, "you clicked autoPart button", Toast.LENGTH_SHORT).show();
-//			break;
+
 		case R.id.login_title_button:
 			String str = loginButton.getText().toString();
-			if(str.equals("EXIT")||str.equals("�˳�")){
+			if(str.equals("EXIT")||str.equals("退出")){
 				loginButton.setText(R.string.login_button);
 				userImage.setImageResource(R.drawable.user_default_icon1);
 				GlobalVariable.currentUser = null;
 				LoginActivity.isLogin = false;
 			}else{
 				LoginActivity.startAction(HomePageActivity.this);
-				
 			}
 			break;
-//		case R.id.road_assis_menu:
-//			ConvenientService.startAction(HomePageActivity.this);
-//			break;
-//		case R.id.car_models_menu:
-//			CarModelsListActivity.startAction(HomePageActivity.this);
-//			break;
+
 		case R.id.net_view_r1:
 			if(noNetNotifictionLayout!=null){
 				Intent intent = new Intent("android.settings.SETTINGS");
@@ -204,6 +184,7 @@ public class HomePageActivity extends BaseActivity implements android.view.View.
 		super.onDestroy();
 		unregisterReceiver(networkChangeReceiver);
 		Utils.deleteStaticVariables();
+		//Log.d("tag","销毁后的长度是："+carTemps.size());
 	}
 
 	private void refreshTitleContent(){
@@ -247,9 +228,11 @@ public class HomePageActivity extends BaseActivity implements android.view.View.
 			car.setHeat(20);
 			car.setPrice(context.getResources().getString(R.string.test_car_value));
 			TestData.carList.add(car);
-			
+
 		}
-		
+
+
+
 		User userNameItem = new User();
         userNameItem.setUserName(context.getResources().getString(R.string.user1_name));
         userNameItem.setAvatarImage(R.drawable.user_default_icon1);
@@ -361,21 +344,25 @@ public class HomePageActivity extends BaseActivity implements android.view.View.
 //						Toast.LENGTH_SHORT).show();
 				switch (itemImagIds[pos]) {
 				case MY_INFO:
-////				if(!LoginActivity.isLogin){
-////				Utils.showTipAndLogin(HomePageActivity.this, R.string.tip_msg_to_login_text);
-////			}else{
-////				MyInfoActivity.startAction(HomePageActivity.this);
-////			}
-			MyInfoActivity.startAction(HomePageActivity.this);
+				if(!LoginActivity.isLogin){
+				Utils.showTipAndLogin(HomePageActivity.this, R.string.tip_msg_to_login_text);
+			}else{
+				MyInfoActivity.startAction(HomePageActivity.this);
+			}
+			//MyInfoActivity.startAction(HomePageActivity.this);
 					break;
 				case AUTO_BEAUTY:
-					Toast.makeText(HomePageActivity.this, "you clicked autoBeauty button", Toast.LENGTH_SHORT).show();
+					//Toast.makeText(HomePageActivity.this, "you clicked autoBeauty button", Toast.LENGTH_SHORT).show();
+					//TestActivity.startAction(HomePageActivity.this);
+					CarBeautyActivity.startAction(HomePageActivity.this);
 					break;
 				case AUTO_REPAIR:
-					Toast.makeText(HomePageActivity.this, "you clicked autoRepair button", Toast.LENGTH_SHORT).show();
+					//Toast.makeText(HomePageActivity.this, "you clicked autoRepair button", Toast.LENGTH_SHORT).show();
+					CarRepairActivity.startAction(HomePageActivity.this);
 					break;
 				case AUTO_PART:
-					Toast.makeText(HomePageActivity.this, "you clicked autoPart button", Toast.LENGTH_SHORT).show();
+					//Toast.makeText(HomePageActivity.this, "you clicked autoPart button", Toast.LENGTH_SHORT).show();
+					//MapActivity.startAction(HomePageActivity.this);
 					break;
 				case AUTO_ROAD:
 					ConvenientService.startAction(HomePageActivity.this);

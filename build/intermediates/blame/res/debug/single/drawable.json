@@ -1,0 +1,70 @@
+[
+    {
+        "merged": "F:\\360Downloads\\AutomobileService\\build\\intermediates\\res\\merged\\debug\\drawable\\button_form1.xml",
+        "source": "F:\\360Downloads\\AutomobileService\\res\\drawable\\button_form1.xml"
+    },
+    {
+        "merged": "F:\\360Downloads\\AutomobileService\\build\\intermediates\\res\\merged\\debug\\drawable\\button_form2.xml",
+        "source": "F:\\360Downloads\\AutomobileService\\res\\drawable\\button_form2.xml"
+    },
+    {
+        "merged": "F:\\360Downloads\\AutomobileService\\build\\intermediates\\res\\merged\\debug\\drawable\\car_list_from.xml",
+        "source": "F:\\360Downloads\\AutomobileService\\res\\drawable\\car_list_from.xml"
+    },
+    {
+        "merged": "F:\\360Downloads\\AutomobileService\\build\\intermediates\\res\\merged\\debug\\drawable\\title_bar_from1.xml",
+        "source": "F:\\360Downloads\\AutomobileService\\res\\drawable\\title_bar_from1.xml"
+    },
+    {
+        "merged": "F:\\360Downloads\\AutomobileService\\build\\intermediates\\res\\merged\\debug\\drawable\\login_btn_shape.xml",
+        "source": "F:\\360Downloads\\AutomobileService\\res\\drawable\\login_btn_shape.xml"
+    },
+    {
+        "merged": "F:\\360Downloads\\AutomobileService\\build\\intermediates\\res\\merged\\debug\\drawable\\button_form3.xml",
+        "source": "F:\\360Downloads\\AutomobileService\\res\\drawable\\button_form3.xml"
+    },
+    {
+        "merged": "F:\\360Downloads\\AutomobileService\\build\\intermediates\\res\\merged\\debug\\drawable\\dot_focused.xml",
+        "source": "F:\\360Downloads\\AutomobileService\\res\\drawable\\dot_focused.xml"
+    },
+    {
+        "merged": "F:\\360Downloads\\AutomobileService\\build\\intermediates\\res\\merged\\debug\\drawable\\login_edittext_style.xml",
+        "source": "F:\\360Downloads\\AutomobileService\\res\\drawable\\login_edittext_style.xml"
+    },
+    {
+        "merged": "F:\\360Downloads\\AutomobileService\\build\\intermediates\\res\\merged\\debug\\drawable\\button_form5.xml",
+        "source": "F:\\360Downloads\\AutomobileService\\res\\drawable\\button_form5.xml"
+    },
+    {
+        "merged": "F:\\360Downloads\\AutomobileService\\build\\intermediates\\res\\merged\\debug\\drawable\\dot_normal.xml",
+        "source": "F:\\360Downloads\\AutomobileService\\res\\drawable\\dot_normal.xml"
+    },
+    {
+        "merged": "F:\\360Downloads\\AutomobileService\\build\\intermediates\\res\\merged\\debug\\drawable\\bt_from1.xml",
+        "source": "F:\\360Downloads\\AutomobileService\\res\\drawable\\bt_from1.xml"
+    },
+    {
+        "merged": "F:\\360Downloads\\AutomobileService\\build\\intermediates\\res\\merged\\debug\\drawable\\button_form4.xml",
+        "source": "F:\\360Downloads\\AutomobileService\\res\\drawable\\button_form4.xml"
+    },
+    {
+        "merged": "F:\\360Downloads\\AutomobileService\\build\\intermediates\\res\\merged\\debug\\drawable\\tel_button_from2.xml",
+        "source": "F:\\360Downloads\\AutomobileService\\res\\drawable\\tel_button_from2.xml"
+    },
+    {
+        "merged": "F:\\360Downloads\\AutomobileService\\build\\intermediates\\res\\merged\\debug\\drawable\\checkbox_style.xml",
+        "source": "F:\\360Downloads\\AutomobileService\\res\\drawable\\checkbox_style.xml"
+    },
+    {
+        "merged": "F:\\360Downloads\\AutomobileService\\build\\intermediates\\res\\merged\\debug\\drawable\\tel_button_from.xml",
+        "source": "F:\\360Downloads\\AutomobileService\\res\\drawable\\tel_button_from.xml"
+    },
+    {
+        "merged": "F:\\360Downloads\\AutomobileService\\build\\intermediates\\res\\merged\\debug\\drawable\\button_form6.xml",
+        "source": "F:\\360Downloads\\AutomobileService\\res\\drawable\\button_form6.xml"
+    },
+    {
+        "merged": "F:\\360Downloads\\AutomobileService\\build\\intermediates\\res\\merged\\debug\\drawable\\info_item_from.xml",
+        "source": "F:\\360Downloads\\AutomobileService\\res\\drawable\\info_item_from.xml"
+    }
+]

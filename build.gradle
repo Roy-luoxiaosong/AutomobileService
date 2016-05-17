@@ -1,0 +1,65 @@
+buildscript {
+    repositories {
+        jcenter()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:2.0.0'
+
+        // NOTE: Do not place your application dependencies here; they belong
+        // in the individual module build.gradle files
+    }
+}
+apply plugin: 'android'
+allprojects {
+    repositories {
+        jcenter()
+        //Bmob的maven仓库地址，必须填写
+        maven { url "https://raw.github.com/bmob/bmob-android-sdk/master" }
+
+    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: '*.jar')
+    //以下SDK开发者请根据需要自行选择
+    //bmob-sdk：Bmob的android sdk包，包含了Bmob的数据存储、文件等服务，以下是最新的bmob-sdk:
+    compile 'cn.bmob.android:bmob-sdk:3.4.6'
+    compile 'com.squareup.okhttp:okhttp:2.4.0'//自`V3.4.3版本`开始，使用`okhttp`优化SDK的网络框架
+    compile 'com.squareup.okio:okio:1.4.0'
+    //compile 'com.android.support:support-v4:23.2.1'
+    compile 'com.squareup.picasso:picasso:2.5.2'
+    //compile 'com.baoyz.pullrefreshlayout:library:1.2.0'
+    //compile 'com.github.recruit-lifestyle:WaveSwipeRefreshLayout:1.6'
+
+
+
+}
+
+android {
+    compileSdkVersion 23
+    buildToolsVersion "23.0.1"
+
+    sourceSets {
+        main {
+            manifest.srcFile 'AndroidManifest.xml'
+            java.srcDirs = ['src']
+            resources.srcDirs = ['src']
+            aidl.srcDirs = ['src']
+            renderscript.srcDirs = ['src']
+            res.srcDirs = ['res']
+            assets.srcDirs = ['assets']
+        }
+
+        // Move the tests to tests/java, tests/res, etc...
+        instrumentTest.setRoot('tests')
+
+        // Move the build types to build-types/<type>
+        // For instance, build-types/debug/java, build-types/debug/AndroidManifest.xml, ...
+        // This moves them out of them default location under src/<type>/... which would
+        // conflict with src/ being used by the main source set.
+        // Adding new build types or product flavors should be accompanied
+        // by a similar customization.
+        debug.setRoot('build-types/debug')
+        release.setRoot('build-types/release')
+    }
+}

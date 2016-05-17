@@ -27,12 +27,12 @@ public class ViewPagerCycleFragment extends Fragment implements OnPageChangeList
 	private List<ImageView> images;
 	private List<View> dots;
 	private int currentItem;
-	//¼ÇÂ¼ÉÏÒ»´ÎµãµÄÎ»ÖÃ
+	//ï¿½ï¿½Â¼ï¿½ï¿½Ò»ï¿½Îµï¿½ï¿½Î»ï¿½ï¿½
 	private int oldPosition = 0;
-	//´æ·ÅÍ¼Æ¬µÄid
+	//ï¿½ï¿½ï¿½Í¼Æ¬ï¿½ï¿½id
 	private int[] imageIds;
-	//´æ·ÅÍ¼Æ¬µÄ±êÌâ
-	private int[]  titles;
+	//ï¿½ï¿½ï¿½Í¼Æ¬ï¿½Ä±ï¿½ï¿½ï¿½
+	private String[]  titles;
 	private TextView title;
 	private ViewPagerAdapter adapter;
 	private ScheduledExecutorService scheduledExecutorService;
@@ -45,42 +45,43 @@ public class ViewPagerCycleFragment extends Fragment implements OnPageChangeList
 		adapter = new ViewPagerAdapter(images);
 		mViewPaper.setAdapter(adapter);
 		
-		mViewPaper.setOnPageChangeListener((OnPageChangeListener) this); 
+		mViewPaper.setOnPageChangeListener(this);
 		return view;
 	}
 	private void init(){
-		//´æ·ÅÍ¼Æ¬µÄid
 		 imageIds = new int[]{
-				 R.drawable.a_my_car,
-				 R.drawable.b_auto_beauty,
-				 R.drawable.c_auto_repair,
-				 R.drawable.d_auto_part,
-				 R.drawable.e_road_assistant
+				 R.drawable.h220,
+				 R.drawable.h230,
+				 R.drawable.h330,
+				 R.drawable.h530,
+				 R.drawable.v3,
+				 R.drawable.v5,
 		};
-		//´æ·ÅÍ¼Æ¬µÄ±êÌâ
-	  titles = new int[]{
-			  	R.string.car_appearance,	
-	        	R.string.auto_beauty_option_text,	
-	        	R.string.auto_repair_option_text,	
-	        	R.string.auto_part_option_text,	
-	        	R.string.road_assis_option_text
-	        };
+	  titles = new String[]{
+			  	"ä¸­åH220",
+			  	"ä¸­åH230",
+			  	"ä¸­åH330",
+			  	"ä¸­åH5300",
+			  	"ä¸­åV3",
+			  	"ä¸­åV5",
+	  };
 	  mViewPaper = (ViewPager) view.findViewById(R.id.vp);
 		
-		//ÏÔÊ¾µÄÍ¼Æ¬
-		images = new ArrayList<ImageView>();
+		images = new ArrayList<>();
 		for(int i = 0; i < imageIds.length; i++){
 			ImageView imageView = new ImageView(getActivity());
 			imageView.setBackgroundResource(imageIds[i]);
 			images.add(imageView);
 		}
-		//ÏÔÊ¾µÄĞ¡µã
-		dots = new ArrayList<View>();
+		dots = new ArrayList<>();
 		dots.add(view.findViewById(R.id.dot_0));
 		dots.add(view.findViewById(R.id.dot_1));
 		dots.add(view.findViewById(R.id.dot_2));
 		dots.add(view.findViewById(R.id.dot_3));
 		dots.add(view.findViewById(R.id.dot_4));
+		dots.add(view.findViewById(R.id.dot_5));
+
+
 		
 		title = (TextView) view.findViewById(R.id.title);
 		title.setText(titles[0]);
@@ -111,14 +112,14 @@ public class ViewPagerCycleFragment extends Fragment implements OnPageChangeList
 	private Handler mHandler = new Handler(){
 		public void handleMessage(android.os.Message msg) {
 			mViewPaper.setCurrentItem(currentItem);
-		};
+		}
 	};
 	@Override
 	public void onPageSelected(int position) {
 		title.setText(titles[position]);
 		dots.get(position).setBackgroundResource(R.drawable.dot_focused);
 		dots.get(oldPosition).setBackgroundResource(R.drawable.dot_normal);
-		//Car car = CarModelsListActivity.carList.get(1);
+		//CarTemp car = CarModelsListActivity.carList.get(1);
 		//CarInfoActivity.actionStart(getActivity(), car.getName(), car.getImageId(), car.getDiscribText());
 		oldPosition = position;
 		currentItem = position;

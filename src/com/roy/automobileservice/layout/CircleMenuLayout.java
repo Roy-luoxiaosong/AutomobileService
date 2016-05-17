@@ -26,38 +26,38 @@ public class CircleMenuLayout extends ViewGroup
 {
 	private int mRadius;
 	/**
-	 * 该容器内child item的默认尺�?
+	 * 该容器内child item的默认尺�?
 	 */
 	private static final float RADIO_DEFAULT_CHILD_DIMENSION = 1 / 4f;
 	/**
-	 * 菜单的中心child的默认尺�?
+	 * 菜单的中心child的默认尺�?
 	 */
 	private float RADIO_DEFAULT_CENTERITEM_DIMENSION = 1 / 3f;
 	/**
-	 * 该容器的内边�?无视padding属�?，如�?��距请用该变量
+	 * 该容器的内边�?无视padding属�?，如�?��距请用该变量
 	 */
 	private static final float RADIO_PADDING_LAYOUT = 1 / 12f;
 
 	/**
-	 * 当每秒移动角度达到该值时，认为是快�?移动
+	 * 当每秒移动角度达到该值时，认为是快�?移动
 	 */
 	private static final int FLINGABLE_VALUE = 300;
 
 	/**
-	 * 如果移动角度达到该�?，则屏蔽点击
+	 * 如果移动角度达到该�?，则屏蔽点击
 	 */
 	private static final int NOCLICK_VALUE = 3;
 
 	/**
-	 * 当每秒移动角度达到该值时，认为是快�?移动
+	 * 当每秒移动角度达到该值时，认为是快�?移动
 	 */
 	private int mFlingableValue = FLINGABLE_VALUE;
 	/**
-	 * 该容器的内边�?无视padding属�?，如�?��距请用该变量
+	 * 该容器的内边�?无视padding属�?，如�?��距请用该变量
 	 */
 	private float mPadding;
 	/**
-	 * 布局时的�?��角度
+	 * 布局时的�?��角度
 	 */
 	private double mStartAngle = 0;
 	/**
@@ -70,16 +70,16 @@ public class CircleMenuLayout extends ViewGroup
 	private int[] mItemImgs;
 
 	/**
-	 * 菜单的个�?
+	 * 菜单的个�?
 	 */
 	private int mMenuItemCount;
 
 	/**
-	 * �?��按下到抬起时旋转的角�?
+	 * �?��按下到抬起时旋转的角�?
 	 */
 	private float mTmpAngle;
 	/**
-	 * �?��按下到抬起时使用的时�?
+	 * �?��按下到抬起时使用的时�?
 	 */
 	private long mDownTime;
 
@@ -107,7 +107,7 @@ public class CircleMenuLayout extends ViewGroup
 		int resHeight = 0;
 
 		/**
-		 * 根据传入的参数，分别获取测量模式和测量�?
+		 * 根据传入的参数，分别获取测量模式和测量
 		 */
 		int width = MeasureSpec.getSize(widthMeasureSpec);
 		int widthMode = MeasureSpec.getMode(widthMeasureSpec);
@@ -116,22 +116,22 @@ public class CircleMenuLayout extends ViewGroup
 		int heightMode = MeasureSpec.getMode(heightMeasureSpec);
 
 		/**
-		 * 如果宽或者高的测量模式非精确�?
+		 * 如果宽或者高的测量模式非精确
 		 */
 		if (widthMode != MeasureSpec.EXACTLY
 				|| heightMode != MeasureSpec.EXACTLY)
 		{
-			// 主要设置为背景图的高�?
+			// 主要设置为背景图的高
 			resWidth = getSuggestedMinimumWidth();
-			// 如果未设置背景图片，则设置为屏幕宽高的默认�?
+			// 如果未设置背景图片，则设置为屏幕宽高的默认
 			resWidth = resWidth == 0 ? getDefaultWidth() : resWidth;
 
 			resHeight = getSuggestedMinimumHeight();
-			// 如果未设置背景图片，则设置为屏幕宽高的默认�?
+			// 如果未设置背景图片，则设置为屏幕宽高的默认
 			resHeight = resHeight == 0 ? getDefaultWidth() : resHeight;
 		} else
 		{
-			// 如果都设置为精确值，则直接取小�?�?
+			// 如果都设置为精确值，则直接取小
 			resWidth = resHeight = Math.min(width, height);
 		}
 
@@ -178,7 +178,7 @@ public class CircleMenuLayout extends ViewGroup
 	}
 
 	/**
-	 * MenuItem的点击事件接�?
+	 * MenuItem的点击事件接
 	 * 
 	 * @author zhy
 	 * 
@@ -191,12 +191,12 @@ public class CircleMenuLayout extends ViewGroup
 	}
 
 	/**
-	 * MenuItem的点击事件接�?
+	 * MenuItem的点击事件接
 	 */
 	private OnMenuItemClickListener mOnMenuItemClickListener;
 
 	/**
-	 * 设置MenuItem的点击事件接�?
+	 * 设置MenuItem的点击事件接
 	 * 
 	 * @param mOnMenuItemClickListener
 	 */
@@ -207,7 +207,7 @@ public class CircleMenuLayout extends ViewGroup
 	}
 
 	/**
-	 * 设置menu item的位�?
+	 * 设置menu item的位
 	 */
 	@Override
 	protected void onLayout(boolean changed, int l, int t, int r, int b)
@@ -218,13 +218,13 @@ public class CircleMenuLayout extends ViewGroup
 		final int childCount = getChildCount();
 
 		int left, top;
-		// menu item 的尺�?
+		// menu item 的尺
 		int cWidth = (int) (layoutRadius * RADIO_DEFAULT_CHILD_DIMENSION);
 
 		// 根据menu item的个数，计算角度
 		float angleDelay = 360 / (getChildCount() - 1);
 
-		// 遍历去设置menuitem的位�?
+		// 遍历去设置menuitem的位
 		for (int i = 0; i < childCount; i++)
 		{
 			final View child = getChildAt(i);
@@ -239,10 +239,10 @@ public class CircleMenuLayout extends ViewGroup
 
 			mStartAngle %= 360;
 
-			// 计算，中心点到menu item中心的距�?
+			// 计算，中心点到menu item中心的距
 			float tmp = layoutRadius / 2f - cWidth / 2 - mPadding;
 
-			// tmp cosa 即menu item中心点的横坐�?
+			// tmp cosa 即menu item中心点的横
 			left = layoutRadius
 					/ 2
 					+ (int) Math.round(tmp
@@ -312,10 +312,10 @@ public class CircleMenuLayout extends ViewGroup
 			mDownTime = System.currentTimeMillis();
 			mTmpAngle = 0;
 
-			// 如果当前已经在快速滚�?
+			// 如果当前已经在快速滚
 			if (isFling)
 			{
-				// 移除快�?滚动的回�?
+				// 移除快?滚动的回
 				removeCallbacks(mFlingRunnable);
 				isFling = false;
 				return true;
@@ -325,22 +325,20 @@ public class CircleMenuLayout extends ViewGroup
 		case MotionEvent.ACTION_MOVE:
 
 			/**
-			 * 获得�?��的角�?
+			 * 获得
 			 */
 			float start = getAngle(mLastX, mLastY);
 			/**
-			 * 获得当前的角�?
+			 * 获得当前的
 			 */
 			float end = getAngle(x, y);
 
 			// Log.e("TAG", "start = " + start + " , end =" + end);
-			// 如果是一、四象限，则直接end-start，角度�?都是正�?
 			if (getQuadrant(x, y) == 1 || getQuadrant(x, y) == 4)
 			{
 				mStartAngle += end - start;
 				mTmpAngle += end - start;
 			} else
-			// 二�?三象限，色角度�?是付�?
 			{
 				mStartAngle += start - end;
 				mTmpAngle += start - end;
@@ -361,10 +359,8 @@ public class CircleMenuLayout extends ViewGroup
 			// Log.e("TAG", anglePrMillionSecond + " , mTmpAngel = " +
 			// mTmpAngle);
 
-			// 如果达到该�?认为是快速移�?
 			if (Math.abs(anglePerSecond) > mFlingableValue && !isFling)
 			{
-				// post�?��任务，去自动滚动
 				post(mFlingRunnable = new AutoFlingRunnable(anglePerSecond));
 
 				return true;
@@ -435,7 +431,6 @@ public class CircleMenuLayout extends ViewGroup
 		mItemImgs = resIds;
 		mItemTexts = texts;
 
-		// 参数�?��
 		if (resIds == null && texts == null)
 		{
 			throw new IllegalArgumentException("菜单项文本和图片至少设置其一");
@@ -454,8 +449,7 @@ public class CircleMenuLayout extends ViewGroup
 	}
 
 	/**
-	 * 设置MenuItem的布�?��件，必须在setMenuItemIconsAndTexts之前调用
-	 * 
+	 *
 	 * @param mMenuItemLayoutId
 	 */
 	public void setMenuItemLayoutId(int mMenuItemLayoutId)
@@ -464,7 +458,6 @@ public class CircleMenuLayout extends ViewGroup
 	}
 
 	/**
-	 * 添加菜单�?
 	 */
 	private void addMenuItems()
 	{
@@ -511,8 +504,7 @@ public class CircleMenuLayout extends ViewGroup
 	}
 
 	/**
-	 * 如果每秒旋转角度到达该�?，则认为是自动滚�?
-	 * 
+	 *
 	 * @param mFlingableValue
 	 */
 	public void setFlingableValue(int mFlingableValue)
@@ -531,8 +523,6 @@ public class CircleMenuLayout extends ViewGroup
 	}
 
 	/**
-	 * 获得默认该layout的尺�?
-	 * 
 	 * @return
 	 */
 	private int getDefaultWidth()
@@ -545,7 +535,7 @@ public class CircleMenuLayout extends ViewGroup
 	}
 
 	/**
-	 * 自动滚动的任�?
+	 * 自动滚动的任
 	 * 
 	 * @author zhy
 	 * 
@@ -562,7 +552,7 @@ public class CircleMenuLayout extends ViewGroup
 
 		public void run()
 		{
-			// 如果小于20,则停�?
+			// 如果小于20,则停
 			if ((int) Math.abs(angelPerSecond) < 20)
 			{
 				isFling = false;
@@ -571,7 +561,7 @@ public class CircleMenuLayout extends ViewGroup
 			isFling = true;
 			// 不断改变mStartAngle，让其滚动，/30为了避免滚动太快
 			mStartAngle += (angelPerSecond / 30);
-			// 逐渐减小这个�?
+			// 逐渐减小这个
 			angelPerSecond /= 1.0666F;
 			postDelayed(this, 30);
 			// 重新布局

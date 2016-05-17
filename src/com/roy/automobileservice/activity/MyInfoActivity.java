@@ -11,6 +11,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.view.PagerTabStrip;
 import android.support.v4.view.ViewPager;
+import android.text.TextUtils;
 import android.util.TypedValue;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -18,7 +19,10 @@ import android.view.View.OnClickListener;
 import android.view.Window;
 import android.widget.Button;
 import android.widget.ExpandableListView;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.ListView;
+import android.widget.ScrollView;
 import android.widget.TextView;
 
 import com.roy.automobileservice.R;
@@ -30,14 +34,14 @@ import com.roy.automobileservice.cls.InfoItem;
 import com.roy.automobileservice.layout.AvatarImageView;
 import com.roy.automobileservice.utils.GlobalVariable;
 
-public class MyInfoActivity extends BaseActivity{
+public class MyInfoActivity extends BaseActivity implements OnClickListener{
 	public static void startAction(Context context){
 		Intent intent = new Intent(context,MyInfoActivity.class);
 		context.startActivity(intent);
 	}
 //	private boolean hasBeautyHistory;
 //	private boolean hasReapairHistory;
-	//Æû³µÃÀÈİÀúÊ·ºÍÎ¬ĞŞÀúÊ·
+
 	private ExpandableListView repairHistory;
 	private ExpandableListView beautyHistory;
 	private ReapirAndBeautyHistoryAdapter repairHistoryAdapter;
@@ -56,8 +60,16 @@ public class MyInfoActivity extends BaseActivity{
 	private MyInfoPagerAdapter adapter;
 	private InfoItemAdapter infoItemAdapter;
 	private ListView infoItemListView;
-	private View view1,view2,view3,view4;
+	private View view1,view2,view3,view4,view5;
 	private Button modifyInfo;
+
+	//view2
+	private LinearLayout noCarLayout;
+	private LinearLayout haveCarLayout;
+	private ImageView carImage;
+	private TextView buyCarTime;
+	private TextView myCarInfo;
+	private Button buyNewCar;
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -70,21 +82,21 @@ public class MyInfoActivity extends BaseActivity{
 		pager = (ViewPager) this.findViewById(R.id.viewpager);
         tabStrip = (PagerTabStrip) this.findViewById(R.id.tabstrip);
         
-        //È¡ÏûtabÏÂÃæµÄ³¤ºáÏß
+        //È¡ï¿½ï¿½tabï¿½ï¿½ï¿½ï¿½Ä³ï¿½ï¿½ï¿½ï¿½ï¿½
         tabStrip.setDrawFullUnderline(false);
-        //ÉèÖÃtabµÄ±³¾°É«
+        //ï¿½ï¿½ï¿½ï¿½tabï¿½Ä±ï¿½ï¿½ï¿½É«
         tabStrip.setBackgroundColor(getResources().getColor(R.color.bg));
-        //ÉèÖÃµ±Ç°tabÒ³Ç©µÄÏÂ»®ÏßÑÕÉ«
+        //ï¿½ï¿½ï¿½Ãµï¿½Ç°tabÒ³Ç©ï¿½ï¿½ï¿½Â»ï¿½ï¿½ï¿½ï¿½ï¿½É«
         tabStrip.setTabIndicatorColor(android.graphics.Color.RED);
         tabStrip.setTextSpacing(100);
         tabStrip.setTextColor(android.graphics.Color.WHITE);
         tabStrip.setTextSize(TypedValue.COMPLEX_UNIT_SP, 24);
         
-        //ÉèÖÃ±êÌâ
+        //è®¾ç½®æ ‡é¢˜
       	TextView textView = (TextView)findViewById(R.id.title_back_text);
       	textView.setText(" ");
       	
-      	//¶Ôview1µÄÄÚÈİ³õÊ¼»¯
+      	//åˆå§‹åŒ–view1
         view1 = LayoutInflater.from(this).inflate(R.layout.my_info_layout, null);
         imgAvatarImageView = (AvatarImageView)view1.findViewById(R.id.my_info_haha_avatar_img);
         imgAvatarImageView.setImageResource(GlobalVariable.currentUser.getAvatarImage());
@@ -101,10 +113,26 @@ public class MyInfoActivity extends BaseActivity{
 			}
 		});
         
-        //¶Ôview2µÄÄÚÈİ×ö³õÊ¼»¯
+        //åˆå§‹åŒ–view2
         view2 = LayoutInflater.from(this).inflate(R.layout.my_car_info_tab, null);
+		carImage = (ImageView)view2.findViewById(R.id.my_car_picture);
+		buyCarTime = (TextView)view2.findViewById(R.id.buy_car_time);
+		myCarInfo = (TextView)view2.findViewById(R.id.my_car_discribe_info);
+		noCarLayout = (LinearLayout)view2.findViewById(R.id.no_car_layout);
+		haveCarLayout = (LinearLayout)view2.findViewById(R.id.have_car_layout);
+		buyNewCar = (Button)view2.findViewById(R.id.buy_a_new_car);
+		if(GlobalVariable.currentUser.getCar()!=null){
+			haveCarLayout.setVisibility(View.VISIBLE);
+			noCarLayout.setVisibility(View.GONE);
+			carImage.setBackgroundResource(GlobalVariable.currentUser.getCar().getImageId());
+			myCarInfo.setText(GlobalVariable.currentUser.getCar().getDiscribText());
+		}else{
+			haveCarLayout.setVisibility(View.GONE);
+			noCarLayout.setVisibility(View.VISIBLE);
+			buyNewCar.setOnClickListener(this);
+		}
         
-        //¶Ôview3µÄÄÚÈİ×ö³õÊ¼»¯
+        //åˆå§‹åŒ–view3
         view3 = LayoutInflater.from(this).inflate(R.layout.auto_beauty_history_tab, null);
         beautyHistory = (ExpandableListView)view3.findViewById(R.id.auto_beauty_history);
         beautyHistory.setGroupIndicator(null);
@@ -114,7 +142,7 @@ public class MyInfoActivity extends BaseActivity{
         		R.layout.history_title,R.layout.history_content_item);
         beautyHistory.setAdapter(beautyHistoryAdapter);
         
-        //¶Ôview4µÄÄÚÈİ×ö³õÊ¼»¯
+        //åˆå§‹åŒ–view4
         view4 = LayoutInflater.from(this).inflate(R.layout.auto_repair_history_tab, null);
         repairHistory = (ExpandableListView)view4.findViewById(R.id.auto_repair_history);
         repairHistory.setGroupIndicator(null);
@@ -123,18 +151,23 @@ public class MyInfoActivity extends BaseActivity{
         repairHistoryAdapter = new ReapirAndBeautyHistoryAdapter(this,repairTitle,repairContent,
         		R.layout.history_title,R.layout.history_content_item);
         repairHistory.setAdapter(repairHistoryAdapter);
+
+		//åˆå§‹åŒ–View5
+		view5 = LayoutInflater.from(this).inflate(R.layout.my_orders_tab,null);
         
-        //viewpager¿ªÊ¼Ìí¼Óview
+        //viewpager
         viewList.add(view1);
         viewList.add(view2);
         viewList.add(view3);
         viewList.add(view4);
+		viewList.add(view5);
         
-        //Ò³Ç©Ïî
+        //åˆå§‹åŒ–å„ä¸ªæ ‡é¢˜
         titleList.add(getResources().getString(R.string.title_my_info));
         titleList.add(getResources().getString(R.string.title_my_car));
         titleList.add(getResources().getString(R.string.title_beauty_hitory));
         titleList.add(getResources().getString(R.string.title_repair_history));
+		titleList.add(getResources().getString(R.string.titel_my_orders));
         adapter = new MyInfoPagerAdapter(viewList, titleList);
         pager.setPageTransformer(true, new CubeTransformer());
         pager.setAdapter(adapter);
@@ -152,6 +185,16 @@ public class MyInfoActivity extends BaseActivity{
 		super.onResume();
 		inithanges();
 	}
+
+	@Override
+	public void onClick(View v) {
+		switch (v.getId()){
+			case R.id.buy_a_new_car:
+				CarModelsListActivity.startAction(MyInfoActivity.this);
+				break;
+		}
+	}
+
 	private void initItemList(){
 		infoItems.add(new InfoItem(getResources().getString(R.string.info_item_user_name), GlobalVariable.currentUser.getUserName()));
 		infoItems.add(new InfoItem(getResources().getString(R.string.info_item_real_name),GlobalVariable.currentUser.getRealName()));
@@ -171,28 +214,28 @@ public class MyInfoActivity extends BaseActivity{
 		
 		repairContent = new HashMap<String, List<String>>();
 		List<String> list1 = new ArrayList<String>();
-		list1.add("Î¬ĞŞÔ±£ºÕÅÈı");
-		list1.add("·ÑÓÃ£º20¿é");
-		list1.add("Î¬ĞŞÄÚÈİ£ºÌ×²Í1");
-		list1.add("Î¬ĞŞµê£ºÎ¬ĞŞµê1");
+		list1.add("Î¬ï¿½ï¿½Ô±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½");
+		list1.add("ï¿½ï¿½ï¿½Ã£ï¿½20ï¿½ï¿½");
+		list1.add("Î¬ï¿½ï¿½ï¿½ï¿½ï¿½İ£ï¿½ï¿½×²ï¿½1");
+		list1.add("Î¬ï¿½Şµê£ºÎ¬ï¿½Şµï¿½1");
 		repairContent.put("2012-05-06", list1);
 		list1 = new ArrayList<String>();
-		list1.add("Î¬ĞŞÔ±£ºÕÅÈı");
-		list1.add("·ÑÓÃ£º20¿é");
-		list1.add("Î¬ĞŞÄÚÈİ£ºÌ×²Í1");
-		list1.add("Î¬ĞŞµê£ºÎ¬ĞŞµê1");
+		list1.add("Î¬ï¿½ï¿½Ô±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½");
+		list1.add("ï¿½ï¿½ï¿½Ã£ï¿½20ï¿½ï¿½");
+		list1.add("Î¬ï¿½ï¿½ï¿½ï¿½ï¿½İ£ï¿½ï¿½×²ï¿½1");
+		list1.add("Î¬ï¿½Şµê£ºÎ¬ï¿½Şµï¿½1");
 		repairContent.put("2012-06-06", list1);
 		list1 = new ArrayList<String>();
-		list1.add("Î¬ĞŞÔ±£ºÕÅÈı");
-		list1.add("·ÑÓÃ£º20¿é");
-		list1.add("Î¬ĞŞÄÚÈİ£ºÌ×²Í1");
-		list1.add("Î¬ĞŞµê£ºÎ¬ĞŞµê1");
+		list1.add("Î¬ï¿½ï¿½Ô±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½");
+		list1.add("ï¿½ï¿½ï¿½Ã£ï¿½20ï¿½ï¿½");
+		list1.add("Î¬ï¿½ï¿½ï¿½ï¿½ï¿½İ£ï¿½ï¿½×²ï¿½1");
+		list1.add("Î¬ï¿½Şµê£ºÎ¬ï¿½Şµï¿½1");
 		repairContent.put("2015-04-06", list1);
 		list1 = new ArrayList<String>();
-		list1.add("Î¬ĞŞÔ±£ºÕÅÈı");
-		list1.add("·ÑÓÃ£º20¿é");
-		list1.add("Î¬ĞŞÄÚÈİ£ºÌ×²Í1");
-		list1.add("Î¬ĞŞµê£ºÎ¬ĞŞµê1");
+		list1.add("Î¬ï¿½ï¿½Ô±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½");
+		list1.add("ï¿½ï¿½ï¿½Ã£ï¿½20ï¿½ï¿½");
+		list1.add("Î¬ï¿½ï¿½ï¿½ï¿½ï¿½İ£ï¿½ï¿½×²ï¿½1");
+		list1.add("Î¬ï¿½Şµê£ºÎ¬ï¿½Şµï¿½1");
 		repairContent.put("2016-05-06", list1);
 		
 	}
@@ -204,28 +247,28 @@ public class MyInfoActivity extends BaseActivity{
 		beautyTitle.add("2016-05-06");
 		beautyContent = new HashMap<String, List<String>>();
 		List<String> list1 = new ArrayList<String>();
-		list1.add("ÃÀÈİÔ±£ºÕÅÈı");
-		list1.add("·ÑÓÃ£º20¿é");
-		list1.add("ÃÀÈİÄÚÈİ£ºÌ×²Í1");
-		list1.add("ÃÀÈİµê£ºÃÀÈİµê1");
+		list1.add("ï¿½ï¿½ï¿½ï¿½Ô±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½");
+		list1.add("ï¿½ï¿½ï¿½Ã£ï¿½20ï¿½ï¿½");
+		list1.add("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½İ£ï¿½ï¿½×²ï¿½1");
+		list1.add("ï¿½ï¿½ï¿½İµê£ºï¿½ï¿½ï¿½İµï¿½1");
 		beautyContent.put("2012-05-06", list1);
 		list1 = new ArrayList<String>();
-		list1.add("ÃÀÈİÔ±£ºÕÅÈı");
-		list1.add("·ÑÓÃ£º20¿é");
-		list1.add("ÃÀÈİÄÚÈİ£ºÌ×²Í1");
-		list1.add("ÃÀÈİµê£ºÃÀÈİµê1");
+		list1.add("ï¿½ï¿½ï¿½ï¿½Ô±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½");
+		list1.add("ï¿½ï¿½ï¿½Ã£ï¿½20ï¿½ï¿½");
+		list1.add("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½İ£ï¿½ï¿½×²ï¿½1");
+		list1.add("ï¿½ï¿½ï¿½İµê£ºï¿½ï¿½ï¿½İµï¿½1");
 		beautyContent.put("2012-06-06", list1);
 		list1 = new ArrayList<String>();
-		list1.add("ÃÀÈİÔ±£ºÕÅÈı");
-		list1.add("·ÑÓÃ£º20¿é");
-		list1.add("ÃÀÈİÄÚÈİ£ºÌ×²Í1");
-		list1.add("ÃÀÈİµê£ºÃÀÈİµê1");
+		list1.add("ï¿½ï¿½ï¿½ï¿½Ô±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½");
+		list1.add("ï¿½ï¿½ï¿½Ã£ï¿½20ï¿½ï¿½");
+		list1.add("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½İ£ï¿½ï¿½×²ï¿½1");
+		list1.add("ï¿½ï¿½ï¿½İµê£ºï¿½ï¿½ï¿½İµï¿½1");
 		beautyContent.put("2015-04-06", list1);
 		list1 = new ArrayList<String>();
-		list1.add("ÃÀÈİÔ±£ºÕÅÈı");
-		list1.add("·ÑÓÃ£º20¿é");
-		list1.add("ÃÀÈİÄÚÈİ£ºÌ×²Í1");
-		list1.add("ÃÀÈİµê£ºÃÀÈİµê1");
+		list1.add("ï¿½ï¿½ï¿½ï¿½Ô±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½");
+		list1.add("ï¿½ï¿½ï¿½Ã£ï¿½20ï¿½ï¿½");
+		list1.add("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½İ£ï¿½ï¿½×²ï¿½1");
+		list1.add("ï¿½ï¿½ï¿½İµê£ºï¿½ï¿½ï¿½İµï¿½1");
 		beautyContent.put("2016-05-06", list1);
 		
 	}

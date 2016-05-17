@@ -5,7 +5,7 @@
     <string name="car_appearance">汽车展示</string>
     <string name="auto_part_option_text">汽车配件</string>
     <string name="auto_beauty_option_text">汽车美容</string>
-    <string name="auto_repair_option_text">汽车维修</string>
+    <string name="auto_repair_option_text">汽车保养</string>
     <string name="road_assis_option_text">道路救援</string>
     <string name="car_models_text">所有车型</string>
     <string name="title_default_text">汽车服务</string>
@@ -45,7 +45,7 @@
     
      <string name="all_car_models">所有车型</string>
      
-      <string name="base_info">基本信息</string>
+      <string name="base_info">更多选择</string>
       <string name="car_discribe">产品描述</string>
       
       <string name="login_user_name_hint">用户名</string>
@@ -72,6 +72,7 @@
       <string name="reset_user_info">修改信息</string>
       <string name="make_sure_modify_info">提交</string>
       <string name="noti_to_modify_password">不修改可不填写</string>
+    <string name="submit_beauty_request">提交申请</string>
       
       <string name="net_unavailable">世界上最遥远的距离就是没网，检查设置</string>
     <string name="old_password">原始密码</string>
@@ -87,6 +88,11 @@
     <string name="title_my_car">我的汽车</string>
     <string name="title_beauty_hitory">美容历史</string>
     <string name="title_repair_history">维修历史</string>
+    <string name="titel_my_orders">我的订单</string>
+    <string name="have_no_orders">您还没有任何订单</string>
+    <string name="have_no_car">您还没有汽车</string>
+    <string name="buy_a_new_car">我要买车</string>
+    <string name="buy_car_time">购车时间</string>
     
     <string name="info_item_user_name">用户昵称</string>
     <string name="info_item_real_name">真实姓名</string>
@@ -129,6 +135,49 @@
     
     <string name="beauty_request">申请美容</string>
    <string name="repair_request">申请维修</string>
+    <string name ="car_calculator">购车计算器</string>
+
+    <string name="select_beauty_content">请选择美容项目</string>
+
+    <string name="select_car">选择车型</string>
+    <string name="select_car_detail">选择车款</string>
+    <string name="gou_che_jia_ge">购车价格</string>
+    <string name="gou_zhi_shui">购置税</string>
+    <string name="gou_zhi_shui_detial" formatted="false">购置税＝购车款/(1+17%)×购置税率(10%)</string>
+    <string name="shang_pai_fei_yong">上牌费用</string>
+    <string name="shang_pai_fei_yong_detial">通常商家提供的一条龙服务收费约500元，个人办理约373元，其中工商验证、出库150元、移动证30元、环保卡3元、拓号费40元、行驶证相片20元、托盘费130元</string>
+    <string name="che_chuan_shi_yong_fei">车船使用费</string>
+    <string name="che_chuan_shi_yong_fei_detial">480元/年</string>
+    <string name="jiao_qiang_shui">交强险</string>
+    <string name="jiao_qiang_shui_detail">家用6座以上1100元/年</string>
+    <string name="zong_hua_fei">不算保险购车总花费</string>
+    <string name="reset_data">恢复默认</string>
+    <string name="buy_car">立即购买</string>
+
+
+    <string name="checkbox_1">内饰清洗</string>
+    <string name="checkbox_2">臭氧消毒</string>
+    <string name="checkbox_3">八度精洗</string>
+    <string name="checkbox_4">空调清洗</string>
+    <string name="checkbox_5">划痕修复</string>
+    <string name="checkbox_6">漆面抛光</string>
+    <string name="checkbox_7">室内桑拿</string>
+    <string name="checkbox_8">真皮护理</string>
+    <string name="checkbox_9">底盘装甲</string>
+    <string name="checkbox_10">隔音降噪</string>
+    <string name="checkbox_11">贴防爆膜</string>
+    <string name="checkbox_12">漆面镀膜</string>
+    <string name="checkbox_13">砖石镀晶</string>
+
+    <string name="select_milenge_length">汽车公里数</string>
+    <string name="what_shoud_to_do">您可以做以下保养</string>
+    <string name="base_content">基本保养：</string>
+    <string name="recommend_content">推荐保养：</string>
+
+    <string name="base_recommend_request">保养预约</string>
+
+
+
     
     
 

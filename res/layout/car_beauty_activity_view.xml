@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <com.roy.automobileservice.layout.TitleBackLayout
+        android:id="@+id/car_info_title"
+        android:layout_width="match_parent"
+        android:layout_height="55dp">
+    </com.roy.automobileservice.layout.TitleBackLayout>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:scaleType="fitXY"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/beauty_category_picture"/>
+
+    <ListView
+        android:id="@+id/beauty_catogory_name"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
+
+    <Button
+        android:id="@+id/beauty_catogory_beauty_request"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:layout_width="300dp"
+        android:layout_margin="10dp"
+        android:background="@drawable/login_btn_shape"
+        android:layout_height="wrap_content"
+        android:textColor="#fff"
+        android:text="@string/beauty_request"
+        />
+</LinearLayout>

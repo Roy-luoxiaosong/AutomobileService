@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#22242424"
+    android:orientation="vertical" >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+   <ExpandableListView
+        android:id="@+id/auto_beauty_history"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/info_item_from"
+        android:dividerHeight="1dp"/>
+   </LinearLayout>
+   <Button
+	    android:id="@+id/repair_request"
+	    android:layout_width="300dp"
+	    android:layout_height="wrap_content"
+	    android:layout_gravity="center"
+	    android:layout_margin="10dp"
+	    android:background="#773A5FCD"
+	    android:textColor="#fff"
+	    android:text="@string/beauty_request"/>
+
+</LinearLayout>

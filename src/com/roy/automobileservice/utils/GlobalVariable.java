@@ -4,5 +4,7 @@ import com.roy.automobileservice.cls.User;
 
 public class GlobalVariable {
 	public static User currentUser = new User();
-	
+
+
+
 }

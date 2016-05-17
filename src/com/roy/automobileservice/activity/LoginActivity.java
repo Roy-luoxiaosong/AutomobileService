@@ -59,10 +59,10 @@ PopupWindow.OnDismissListener,AdapterView.OnItemClickListener{
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        //²»ÏÔÊ¾³ÌĞòµÄ±êÌâÀ¸
+        //
         requestWindowFeature(Window.FEATURE_NO_TITLE);
 
-        //²»ÏÔÊ¾ÏµÍ³µÄ±êÌâÀ¸
+        //å»æ‰å¯¼èˆªæ 
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
                 WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.login_activity_layout);
@@ -100,14 +100,11 @@ PopupWindow.OnDismissListener,AdapterView.OnItemClickListener{
     @SuppressWarnings("deprecation")
 	void initPopupWindow(){
         popupWindow = new PopupWindow(popupwindow_view);
-        //×¢ÒâÒª¼ÓÕâ¾ä´úÂë£¬µã»÷µ¯³ö´°¿ÚÆäËüÇøÓò²Å»áÈÃ´°¿ÚÏûÊ§
+
         popupWindow.setOutsideTouchable(true);
-        //»ñÈ¡½¹µã£¬ÏìÓ¦°´¼ü
         popupWindow.setFocusable(true);
-        popupWindow.setBackgroundDrawable(new BitmapDrawable());// ÏìÓ¦·µ»Ø¼ü±ØĞëµÄÓï¾ä¡£
-        //Ìí¼Ó Dismiss ÊÂ¼ş¼àÌı
+        popupWindow.setBackgroundDrawable(new BitmapDrawable());// ï¿½ï¿½Ó¦ï¿½ï¿½ï¿½Ø¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ä¡£
         popupWindow.setOnDismissListener(this);
-        //ºöÂÔ¼üÅÌ
         popupWindow.setInputMethodMode(PopupWindow.INPUT_METHOD_NOT_NEEDED);
     }
 
@@ -128,10 +125,10 @@ PopupWindow.OnDismissListener,AdapterView.OnItemClickListener{
                 {
                     showUser_btn.setBackgroundResource(R.drawable.up_arrow);
                     popupWindow.showAtLocation(linearLayout, Gravity.CENTER | Gravity.TOP, 0, locationY);
-                    //Ò»¶¨Òªupdate
                     popupWindow.update(0, locationY, WindowManager.LayoutParams.WRAP_CONTENT, WindowManager.LayoutParams.WRAP_CONTENT, true);
-                    //Òş²Ø¼üÅÌ
-                    ((InputMethodManager)getSystemService(Context.INPUT_METHOD_SERVICE)).hideSoftInputFromWindow(LoginActivity.this.getCurrentFocus().getWindowToken(), InputMethodManager.HIDE_NOT_ALWAYS);
+                    ((InputMethodManager)getSystemService(Context.INPUT_METHOD_SERVICE)).
+                            hideSoftInputFromWindow(LoginActivity.this.getCurrentFocus().getWindowToken(),
+                                    InputMethodManager.HIDE_NOT_ALWAYS);
 
                 }
                 break;
@@ -182,9 +179,7 @@ PopupWindow.OnDismissListener,AdapterView.OnItemClickListener{
         int userImage = userNameAdapter.getItem(position).getAvatarImage();
         username_inputbox.setText(username);
         curUserImage.setImageResource(userImage);
-        //ÒÆ¶¯¹â±êÖ¸ĞĞÎ²
         username_inputbox.setSelection(username.length());
-        //Òş²ØÏÂÀ­ÁĞ±í
         popupWindow.dismiss();
     	}
 	@Override

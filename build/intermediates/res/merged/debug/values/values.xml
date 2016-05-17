@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="bg">#1E90FF</color>
+    <color name="menu_background_color">#ffffff</color>
+    <color name="menu_text_color_white">#fff</color>
+    <color name="red">#DC143C</color>
+    <color name="white">#ffffff</color>
+    <color name="yellow_warning">#FFFF99</color>
+    <dimen name="metro_menu_margin">5dp</dimen>
+    <dimen name="metro_menu_size">120dp</dimen>
+    <item name="id_circle_menu_item_center" type="id"/>
+    <item name="id_circle_menu_item_image" type="id"/>
+    <item name="id_circle_menu_item_text" type="id"/>
+    <string name="address">ADDRESS</string>
+    <string name="all_car_models">Car models</string>
+    <string name="app_name">AutoService</string>
+    <string name="auto_beauty_option_text">Auto Beauty</string>
+    <string name="auto_part_option_text">Auto Parts</string>
+    <string name="auto_repair_option_text">Auto Manitanence</string>
+    <string name="back_to_home_page">HOME</string>
+    <string name="base_content">Base：</string>
+    <string name="base_info">MORE INFO</string>
+    <string name="base_recommend_request">Maintenance Apply</string>
+    <string name="beauty_request">APPLY BEAUTY</string>
+    <string name="buy_a_new_car">TO BUY A CAR</string>
+    <string name="buy_car">立即购买</string>
+    <string name="buy_car_time">own date</string>
+    <string name="cal_for_more_info_tel">08528888888</string>
+    <string name="cancle_bt">CANCLE</string>
+    <string name="car">CAR</string>
+    <string name="car_appearance">Car appearance</string>
+    <string name="car_calculator">CALCULATOR</string>
+    <string name="car_discribe">Car Info</string>
+    <string name="car_models_text">Car Models</string>
+    <string name="car_value">PRICE: </string>
+    <string name="che_chuan_shi_yong_fei">车船使用费</string>
+    <string name="che_chuan_shi_yong_fei_detial">480元/年</string>
+    <string name="check_password">PD CHECK:</string>
+    <string name="convenient_tel_text">Convenient Telephone</string>
+    <string name="customer_service">24 hour customer tel</string>
+    <string name="default_cion1_name">Default Icon1</string>
+    <string name="default_cion2_name">Default Icon2</string>
+    <string name="default_cion3_name">Default Icon3</string>
+    <string name="default_cion4_name">Default Icon4</string>
+    <string name="default_cion5_name">Default Icon5</string>
+    <string name="default_cion6_name">Default Icon6</string>
+    <string name="email">EMAIL</string>
+    <string name="emergency_tel_text">Emergency Telephone</string>
+    <string name="emergency_title_text">Telephone</string>
+    <string name="exit_button">EXIT</string>
+    <string name="female">FEMALE</string>
+    <string name="gou_che_jia_ge">购车价格</string>
+    <string name="gou_zhi_shui">购置税</string>
+    <string formatted="false" name="gou_zhi_shui_detial">购置税＝购车款/(1+17%)×购置税率(10%)</string>
+    <string name="have_no_car">You have no car yet</string>
+    <string name="have_no_orders">You have no orders yet</string>
+    <string name="info_item_address">ADDRESS</string>
+    <string name="info_item_car_name">CARNAME</string>
+    <string name="info_item_emial_address">EMADDRESS</string>
+    <string name="info_item_no_car">none</string>
+    <string name="info_item_real_name">REALNAME</string>
+    <string name="info_item_sex">GENDER</string>
+    <string name="info_item_tel">TEL</string>
+    <string name="info_item_user_name">USERNAEM</string>
+    <string name="jiao_qiang_shui">交强险</string>
+    <string name="jiao_qiang_shui_detail">家用6座以上1100元/年</string>
+    <string name="login_button">LOGIN</string>
+    <string name="login_pass_word_hint">password</string>
+    <string name="login_user_name_hint">username</string>
+    <string name="make_sure_modify_info">SUBMMIT</string>
+    <string name="male">MALE</string>
+    <string name="my_info_option_text">My Info</string>
+    <string name="net_unavailable">The most remote distance in the world is no network,check net setting</string>
+    <string name="no_car">no car</string>
+    <string name="noti_to_modify_password">if Won\'t modify \,do not type here</string>
+    <string name="notifiction_to_exit_app">Click again to exit</string>
+    <string name="old_password">OLD PD</string>
+    <string name="password">PASSWORD</string>
+    <string name="real_name">REAL NAME</string>
+    <string name="recommend_content">Recommend：</string>
+    <string name="register_button">REGI</string>
+    <string name="repair_request">APPLY REPAIR</string>
+    <string name="reset_data">恢复默认</string>
+    <string name="reset_user_info">MODIFY INFO</string>
+    <string name="road_assis_option_text"> Road Help</string>
+    <string name="road_assis_tel">24 hour road help tel</string>
+    <string name="select_beauty_content">Please select beauty content</string>
+    <string name="select_car">选择车型</string>
+    <string name="select_car_detail">选择车款</string>
+    <string name="select_milenge_length">mileage</string>
+    <string name="select_sex">GENDER</string>
+    <string name="shang_pai_fei_yong">上牌费用</string>
+    <string name="shang_pai_fei_yong_detial">通常商家提供的一条龙服务收费约500元，个人办理约373元，其中工商验证、出库150元、移动证30元、环保卡3元、拓号费40元、行驶证相片20元、托盘费130元</string>
+    <string name="submit_beauty_request">SUBMIIT</string>
+    <string name="tel">TEL</string>
+    <string name="tel_110">Police tel:110</string>
+    <string name="tel_119">Fire tel:119</string>
+    <string name="tel_120">Rescue tel:120</string>
+    <string name="tel_122">Traffic tel:122</string>
+    <string name="test_car_discribute">this is car</string>
+    <string name="test_car_name">CarName</string>
+    <string name="test_car_value">2 million </string>
+    <string name="tip_msg_cal_for_car_info">Are you sure to call 0852888888 for more information ?</string>
+    <string name="tip_msg_cs_text">Are you sure to call 24 hour Customer Service Hotline ?</string>
+    <string name="tip_msg_rescue_text">Are you sure to call 24 hour rescue telephone ?</string>
+    <string name="tip_msg_text_110">Are you sure to call 110 ?</string>
+    <string name="tip_msg_text_119">Are you sure to call 119 ?</string>
+    <string name="tip_msg_text_120">Are you sure to call 120 ?</string>
+    <string name="tip_msg_text_122">Are you sure to call 122 ?</string>
+    <string name="tip_msg_to_delete_user">Are sure to delete this user info ?</string>
+    <string name="tip_msg_to_login_text">You are not logged in, to login Now ?</string>
+    <string name="tip_old_password_is_not_right">The old passord is not right,please type again</string>
+    <string name="tip_password_is_empty">Please input password</string>
+    <string name="tip_password_is_empty_or_not_right">Passowrd is empty or passowrd not match</string>
+    <string name="tip_password_is_not_right">Password is not right,please type again</string>
+    <string name="tip_register_succeed">Register succeed back to login?</string>
+    <string name="tip_text">TIP</string>
+    <string name="tip_the_user_is_not_exist">The user has not register yet,to register now？</string>
+    <string name="tip_user_info_modify_succeed">Modify succeed,return to myInfo?</string>
+    <string name="tip_user_is_exist">User is exist,please input again</string>
+    <string name="tip_user_name_is_empty">User name can\'t be empty</string>
+    <string name="titel_my_orders">My Orders</string>
+    <string name="title_beauty_hitory">BeautyHistory</string>
+    <string name="title_default_text">AutoService</string>
+    <string name="title_my_car">My Car</string>
+    <string name="title_my_info">My Info</string>
+    <string name="title_repair_history">RepairHistory</string>
+    <string name="user1_name">user1</string>
+    <string name="user1_real_name">name1</string>
+    <string name="user1_sex">male</string>
+    <string name="user2_name">user2</string>
+    <string name="user2_real_name">name2</string>
+    <string name="user2_sex">male</string>
+    <string name="user3_name">user3</string>
+    <string name="user3_real_name">name3</string>
+    <string name="user3_sex">female</string>
+    <string name="user4_name">user4</string>
+    <string name="user4_real_name">name4</string>
+    <string name="user4_sex">male</string>
+    <string name="user5_name">user5</string>
+    <string name="user5_real_name">name4</string>
+    <string name="user5_sex">female</string>
+    <string name="user6_name">user6</string>
+    <string name="user6_real_name">name6</string>
+    <string name="user6_sex">female</string>
+    <string name="user_icon">ICON</string>
+    <string name="user_name">USER NAME</string>
+    <string name="what_shoud_to_do">You can do those service</string>
+    <string name="yes_bt">YES</string>
+    <string name="zong_hua_fei">不算保险购车总花费</string>
+    <style name="AppBaseTheme" parent="android:Theme.Light">
+    </style>
+    <style name="AppTheme" parent="AppBaseTheme">
+    </style>
+    <style name="CustomCheckboxTheme" parent="@android:style/Widget.CompoundButton.CheckBox">
+        <item name="android:button">@drawable/checkbox_style</item>
+    </style>
+    <style name="match_parent">
+       <item name="android:layout_width">match_parent</item>
+       <item name="android:layout_height">match_parent</item>
+  	</style>
+    <style name="match_wrap_group">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+	</style>
+    <style name="menu_button_style">
+        <item name="android:gravity">center</item>
+        <item name="android:orientation">vertical</item>
+        <item name="android:layout_width">120dp</item>
+        <item name="android:layout_height">120dp</item>
+        <item name="android:layout_margin">4dp</item>
+        
+    </style>
+    <style name="menu_text_style">
+		<item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/menu_text_color_white</item>
+     </style>
+    <style name="my_info_content_style">
+	    <item name="android:layout_width">0dp</item>
+	    <item name="android:textSize">24sp</item>
+	    <item name="android:layout_height">wrap_content</item>
+	    <item name="android:layout_weight">3</item>
+	</style>
+    <style name="my_info_item_style">
+	    <item name="android:textColor">#5E5E5E</item>
+	    <item name="android:textSize">24sp</item>
+	    <item name="android:layout_width">0dp</item>
+	    <item name="android:layout_height">wrap_content</item>
+	    <item name="android:layout_weight">2</item>
+	</style>
+    <style name="text_size_style">
+        <item name="android:layout_width">90dp</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:layout_height">wrap_content</item>
+	</style>
+    <style name="wrap_content">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+</resources>
