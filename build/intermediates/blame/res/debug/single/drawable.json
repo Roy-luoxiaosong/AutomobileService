@@ -60,11 +60,11 @@
         "source": "F:\\360Downloads\\AutomobileService\\res\\drawable\\tel_button_from.xml"
     },
     {
-        "merged": "F:\\360Downloads\\AutomobileService\\build\\intermediates\\res\\merged\\debug\\drawable\\button_form6.xml",
-        "source": "F:\\360Downloads\\AutomobileService\\res\\drawable\\button_form6.xml"
-    },
-    {
         "merged": "F:\\360Downloads\\AutomobileService\\build\\intermediates\\res\\merged\\debug\\drawable\\info_item_from.xml",
         "source": "F:\\360Downloads\\AutomobileService\\res\\drawable\\info_item_from.xml"
+    },
+    {
+        "merged": "F:\\360Downloads\\AutomobileService\\build\\intermediates\\res\\merged\\debug\\drawable\\button_form6.xml",
+        "source": "F:\\360Downloads\\AutomobileService\\res\\drawable\\button_form6.xml"
     }
 ]

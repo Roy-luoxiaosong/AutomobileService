@@ -4,26 +4,26 @@
     api-level="17"
     density="xxhdpi"
     format="7"
-    timestamp="445973502315938" >
+    timestamp="179528685439953" >
 
     <task
         name="javac"
-        duration="2399" />
+        duration="0" />
     <task
         name="instant-run-dex"
         duration="0" />
     <task
         name="instant-run-transform"
-        duration="107" />
+        duration="0" />
     <task
         name="verifier"
-        duration="45" />
+        duration="0" />
 
     <artifact
         location="F:\360Downloads\AutomobileService\build\outputs\apk\AutomobileService-debug.apk"
         type="MAIN" />
 
-    <build timestamp="445973502315938" >
+    <build timestamp="179528685439953" >
         <artifact
             location="F:\360Downloads\AutomobileService\build\outputs\apk\AutomobileService-debug.apk"
             type="MAIN" />

@@ -1,6 +1,6 @@
 -- Merging decision tree log ---
 manifest
-ADDED from F:\360Downloads\AutomobileService\AndroidManifest.xml:1:1-86:12
+ADDED from F:\360Downloads\AutomobileService\AndroidManifest.xml:1:1-101:12
 	xmlns:android
 		ADDED from F:\360Downloads\AutomobileService\AndroidManifest.xml:1:11-69
 	package
@@ -44,7 +44,7 @@ ADDED from F:\360Downloads\AutomobileService\AndroidManifest.xml:15:5-75
 	android:name
 		ADDED from F:\360Downloads\AutomobileService\AndroidManifest.xml:15:22-72
 application
-ADDED from F:\360Downloads\AutomobileService\AndroidManifest.xml:16:5-84:19
+ADDED from F:\360Downloads\AutomobileService\AndroidManifest.xml:16:5-99:19
 	android:label
 		ADDED from F:\360Downloads\AutomobileService\AndroidManifest.xml:19:9-41
 	android:allowBackup
@@ -72,92 +72,118 @@ ADDED from F:\360Downloads\AutomobileService\AndroidManifest.xml:33:17-76
 	android:name
 		ADDED from F:\360Downloads\AutomobileService\AndroidManifest.xml:33:27-74
 activity#com.roy.automobileservice.activity.ConvenientService
-ADDED from F:\360Downloads\AutomobileService\AndroidManifest.xml:36:9-38:20
+ADDED from F:\360Downloads\AutomobileService\AndroidManifest.xml:36:9-39:20
+	android:theme
+		ADDED from F:\360Downloads\AutomobileService\AndroidManifest.xml:38:13-53
 	android:name
 		ADDED from F:\360Downloads\AutomobileService\AndroidManifest.xml:36:19-61
 	android:launchMode
 		ADDED from F:\360Downloads\AutomobileService\AndroidManifest.xml:37:13-44
 activity#com.roy.automobileservice.activity.CarModelsListActivity
-ADDED from F:\360Downloads\AutomobileService\AndroidManifest.xml:39:9-41:20
+ADDED from F:\360Downloads\AutomobileService\AndroidManifest.xml:40:9-43:20
+	android:theme
+		ADDED from F:\360Downloads\AutomobileService\AndroidManifest.xml:42:13-53
 	android:name
-		ADDED from F:\360Downloads\AutomobileService\AndroidManifest.xml:39:19-65
+		ADDED from F:\360Downloads\AutomobileService\AndroidManifest.xml:40:19-65
 	android:launchMode
-		ADDED from F:\360Downloads\AutomobileService\AndroidManifest.xml:40:13-44
+		ADDED from F:\360Downloads\AutomobileService\AndroidManifest.xml:41:13-44
 activity#com.roy.automobileservice.activity.CarInfoActivity
-ADDED from F:\360Downloads\AutomobileService\AndroidManifest.xml:42:9-44:20
+ADDED from F:\360Downloads\AutomobileService\AndroidManifest.xml:44:9-47:20
+	android:theme
+		ADDED from F:\360Downloads\AutomobileService\AndroidManifest.xml:46:13-53
 	android:name
-		ADDED from F:\360Downloads\AutomobileService\AndroidManifest.xml:42:19-59
+		ADDED from F:\360Downloads\AutomobileService\AndroidManifest.xml:44:19-59
 	android:launchMode
-		ADDED from F:\360Downloads\AutomobileService\AndroidManifest.xml:43:13-44
+		ADDED from F:\360Downloads\AutomobileService\AndroidManifest.xml:45:13-44
 activity#com.roy.automobileservice.activity.LoginActivity
-ADDED from F:\360Downloads\AutomobileService\AndroidManifest.xml:45:9-47:20
+ADDED from F:\360Downloads\AutomobileService\AndroidManifest.xml:48:9-51:20
+	android:theme
+		ADDED from F:\360Downloads\AutomobileService\AndroidManifest.xml:50:13-53
 	android:name
-		ADDED from F:\360Downloads\AutomobileService\AndroidManifest.xml:45:19-57
-	android:launchMode
-		ADDED from F:\360Downloads\AutomobileService\AndroidManifest.xml:46:13-44
-activity#com.roy.automobileservice.activity.MyInfoActivity
-ADDED from F:\360Downloads\AutomobileService\AndroidManifest.xml:48:9-50:20
-	android:name
-		ADDED from F:\360Downloads\AutomobileService\AndroidManifest.xml:48:19-58
+		ADDED from F:\360Downloads\AutomobileService\AndroidManifest.xml:48:19-57
 	android:launchMode
 		ADDED from F:\360Downloads\AutomobileService\AndroidManifest.xml:49:13-44
+activity#com.roy.automobileservice.activity.MyInfoActivity
+ADDED from F:\360Downloads\AutomobileService\AndroidManifest.xml:52:9-55:20
+	android:theme
+		ADDED from F:\360Downloads\AutomobileService\AndroidManifest.xml:54:13-53
+	android:name
+		ADDED from F:\360Downloads\AutomobileService\AndroidManifest.xml:52:19-58
+	android:launchMode
+		ADDED from F:\360Downloads\AutomobileService\AndroidManifest.xml:53:13-44
 activity#com.roy.automobileservice.activity.RegisterActivity
-ADDED from F:\360Downloads\AutomobileService\AndroidManifest.xml:51:9-53:20
+ADDED from F:\360Downloads\AutomobileService\AndroidManifest.xml:56:9-60:20
+	android:theme
+		ADDED from F:\360Downloads\AutomobileService\AndroidManifest.xml:58:13-53
 	android:name
-		ADDED from F:\360Downloads\AutomobileService\AndroidManifest.xml:51:19-60
+		ADDED from F:\360Downloads\AutomobileService\AndroidManifest.xml:56:19-60
 	android:launchMode
-		ADDED from F:\360Downloads\AutomobileService\AndroidManifest.xml:52:13-44
+		ADDED from F:\360Downloads\AutomobileService\AndroidManifest.xml:57:13-44
 activity#com.roy.automobileservice.activity.InfoModifyActivity
-ADDED from F:\360Downloads\AutomobileService\AndroidManifest.xml:54:9-56:20
+ADDED from F:\360Downloads\AutomobileService\AndroidManifest.xml:61:9-64:20
+	android:theme
+		ADDED from F:\360Downloads\AutomobileService\AndroidManifest.xml:63:13-53
 	android:name
-		ADDED from F:\360Downloads\AutomobileService\AndroidManifest.xml:54:19-62
-	android:launchMode
-		ADDED from F:\360Downloads\AutomobileService\AndroidManifest.xml:55:13-44
-activity#com.roy.automobileservice.activity.TestActivity
-ADDED from F:\360Downloads\AutomobileService\AndroidManifest.xml:58:9-60:20
-	android:name
-		ADDED from F:\360Downloads\AutomobileService\AndroidManifest.xml:58:19-56
-	android:launchMode
-		ADDED from F:\360Downloads\AutomobileService\AndroidManifest.xml:59:13-44
-activity#com.roy.automobileservice.activity.CarRepairActivity
-ADDED from F:\360Downloads\AutomobileService\AndroidManifest.xml:61:9-63:20
-	android:name
-		ADDED from F:\360Downloads\AutomobileService\AndroidManifest.xml:61:19-61
+		ADDED from F:\360Downloads\AutomobileService\AndroidManifest.xml:61:19-62
 	android:launchMode
 		ADDED from F:\360Downloads\AutomobileService\AndroidManifest.xml:62:13-44
-activity#com.roy.automobileservice.activity.CarCalculatorActivity
-ADDED from F:\360Downloads\AutomobileService\AndroidManifest.xml:64:9-66:20
+activity#com.roy.automobileservice.activity.TestActivity
+ADDED from F:\360Downloads\AutomobileService\AndroidManifest.xml:66:9-69:20
+	android:theme
+		ADDED from F:\360Downloads\AutomobileService\AndroidManifest.xml:68:13-53
 	android:name
-		ADDED from F:\360Downloads\AutomobileService\AndroidManifest.xml:64:19-65
+		ADDED from F:\360Downloads\AutomobileService\AndroidManifest.xml:66:19-56
 	android:launchMode
-		ADDED from F:\360Downloads\AutomobileService\AndroidManifest.xml:65:13-44
-activity#com.roy.automobileservice.activity.CarBeautyActivity
-ADDED from F:\360Downloads\AutomobileService\AndroidManifest.xml:67:9-69:20
+		ADDED from F:\360Downloads\AutomobileService\AndroidManifest.xml:67:13-44
+activity#com.roy.automobileservice.activity.CarRepairActivity
+ADDED from F:\360Downloads\AutomobileService\AndroidManifest.xml:70:9-73:20
+	android:theme
+		ADDED from F:\360Downloads\AutomobileService\AndroidManifest.xml:72:13-53
 	android:name
-		ADDED from F:\360Downloads\AutomobileService\AndroidManifest.xml:67:19-61
-	android:launchMode
-		ADDED from F:\360Downloads\AutomobileService\AndroidManifest.xml:68:13-44
-activity#com.roy.automobileservice.activity.BeautyCatogoryContentActivity
-ADDED from F:\360Downloads\AutomobileService\AndroidManifest.xml:70:9-72:20
-	android:name
-		ADDED from F:\360Downloads\AutomobileService\AndroidManifest.xml:70:19-73
+		ADDED from F:\360Downloads\AutomobileService\AndroidManifest.xml:70:19-61
 	android:launchMode
 		ADDED from F:\360Downloads\AutomobileService\AndroidManifest.xml:71:13-44
-activity#com.roy.automobileservice.activity.AskForBeautyActivity
-ADDED from F:\360Downloads\AutomobileService\AndroidManifest.xml:73:9-75:20
+activity#com.roy.automobileservice.activity.CarCalculatorActivity
+ADDED from F:\360Downloads\AutomobileService\AndroidManifest.xml:74:9-77:20
+	android:theme
+		ADDED from F:\360Downloads\AutomobileService\AndroidManifest.xml:76:13-53
 	android:name
-		ADDED from F:\360Downloads\AutomobileService\AndroidManifest.xml:73:19-64
+		ADDED from F:\360Downloads\AutomobileService\AndroidManifest.xml:74:19-65
 	android:launchMode
-		ADDED from F:\360Downloads\AutomobileService\AndroidManifest.xml:74:13-44
+		ADDED from F:\360Downloads\AutomobileService\AndroidManifest.xml:75:13-44
+activity#com.roy.automobileservice.activity.CarBeautyActivity
+ADDED from F:\360Downloads\AutomobileService\AndroidManifest.xml:78:9-81:20
+	android:theme
+		ADDED from F:\360Downloads\AutomobileService\AndroidManifest.xml:80:13-53
+	android:name
+		ADDED from F:\360Downloads\AutomobileService\AndroidManifest.xml:78:19-61
+	android:launchMode
+		ADDED from F:\360Downloads\AutomobileService\AndroidManifest.xml:79:13-44
+activity#com.roy.automobileservice.activity.BeautyCatogoryContentActivity
+ADDED from F:\360Downloads\AutomobileService\AndroidManifest.xml:82:9-85:20
+	android:theme
+		ADDED from F:\360Downloads\AutomobileService\AndroidManifest.xml:84:13-53
+	android:name
+		ADDED from F:\360Downloads\AutomobileService\AndroidManifest.xml:82:19-73
+	android:launchMode
+		ADDED from F:\360Downloads\AutomobileService\AndroidManifest.xml:83:13-44
+activity#com.roy.automobileservice.activity.AskForBeautyActivity
+ADDED from F:\360Downloads\AutomobileService\AndroidManifest.xml:86:9-89:20
+	android:theme
+		ADDED from F:\360Downloads\AutomobileService\AndroidManifest.xml:88:13-53
+	android:name
+		ADDED from F:\360Downloads\AutomobileService\AndroidManifest.xml:86:19-64
+	android:launchMode
+		ADDED from F:\360Downloads\AutomobileService\AndroidManifest.xml:87:13-44
 receiver#com.roy.automobileservice.broadcast.IsLoginBroadcastReceiver
-ADDED from F:\360Downloads\AutomobileService\AndroidManifest.xml:76:9-81:20
+ADDED from F:\360Downloads\AutomobileService\AndroidManifest.xml:90:9-96:20
 	android:exported
-		ADDED from F:\360Downloads\AutomobileService\AndroidManifest.xml:77:13-37
+		ADDED from F:\360Downloads\AutomobileService\AndroidManifest.xml:91:13-37
 	android:name
-		ADDED from F:\360Downloads\AutomobileService\AndroidManifest.xml:76:19-69
+		ADDED from F:\360Downloads\AutomobileService\AndroidManifest.xml:90:19-69
 intent-filter#com.roy.automobileservice.ISLOGIN
-ADDED from F:\360Downloads\AutomobileService\AndroidManifest.xml:78:13-80:29
+ADDED from F:\360Downloads\AutomobileService\AndroidManifest.xml:93:13-95:29
 action#com.roy.automobileservice.ISLOGIN
-ADDED from F:\360Downloads\AutomobileService\AndroidManifest.xml:79:17-75
+ADDED from F:\360Downloads\AutomobileService\AndroidManifest.xml:94:17-75
 	android:name
-		ADDED from F:\360Downloads\AutomobileService\AndroidManifest.xml:79:25-73
+		ADDED from F:\360Downloads\AutomobileService\AndroidManifest.xml:94:25-73

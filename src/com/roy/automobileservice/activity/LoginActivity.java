@@ -1,6 +1,7 @@
 package com.roy.automobileservice.activity;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 
 import android.content.Context;
@@ -14,6 +15,8 @@ import android.view.Window;
 import android.view.WindowManager;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
+import android.widget.AutoCompleteTextView;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
@@ -48,8 +51,10 @@ PopupWindow.OnDismissListener,AdapterView.OnItemClickListener{
 	private Button registerButton;
     private ListView listView;
     private UserNameAdapter userNameAdapter;
+    private ArrayAdapter autoCompleteAdapter;
+    private List<String> names;
     public static PopupWindow popupWindow;
-    public static EditText username_inputbox;
+    public static AutoCompleteTextView username_inputbox;
     public static EditText password_inputbox;
     ImageButton showUser_btn;
     Button login_btn;
@@ -72,13 +77,20 @@ PopupWindow.OnDismissListener,AdapterView.OnItemClickListener{
     void init(){
         linearLayout = (LinearLayout) findViewById(R.id.userName_layout);
         password_inputbox = (EditText) findViewById(R.id.password_inputbox);
-        username_inputbox = (EditText) findViewById(R.id.username_inputbox);
+        username_inputbox = (AutoCompleteTextView) findViewById(R.id.username_inputbox);
         login_btn = (Button) findViewById(R.id.login_btn);
         showUser_btn = (ImageButton) findViewById(R.id.showUser_btn);
         backButton = (Button)findViewById(R.id.login_title_back_button);
         registerButton = (Button)findViewById(R.id.login_register_button);
         curUserImage = (AvatarImageView)findViewById(R.id.login_avatar_img);
         userList = Utils.getBackRestraintLenthOfUserList(TestData.userTestList,6);
+
+        //自动适配名字
+        names =  getNames();
+        autoCompleteAdapter = new ArrayAdapter<>(LoginActivity.this,android.R.layout.simple_dropdown_item_1line,
+                names);
+        username_inputbox.setAdapter(autoCompleteAdapter);
+        username_inputbox.setThreshold(1);
 
 
 
@@ -103,7 +115,7 @@ PopupWindow.OnDismissListener,AdapterView.OnItemClickListener{
 
         popupWindow.setOutsideTouchable(true);
         popupWindow.setFocusable(true);
-        popupWindow.setBackgroundDrawable(new BitmapDrawable());// ��Ӧ���ؼ�������䡣
+        popupWindow.setBackgroundDrawable(new BitmapDrawable());//
         popupWindow.setOnDismissListener(this);
         popupWindow.setInputMethodMode(PopupWindow.INPUT_METHOD_NOT_NEEDED);
     }
@@ -192,7 +204,17 @@ PopupWindow.OnDismissListener,AdapterView.OnItemClickListener{
 		userList = Utils.getBackRestraintLenthOfUserList(TestData.userTestList,6);
 		userNameAdapter = new UserNameAdapter(this,R.layout.username_item,userList);
 		listView.setAdapter(userNameAdapter);
+        names = getNames();
+        autoCompleteAdapter.notifyDataSetChanged();
+        username_inputbox.setAdapter(autoCompleteAdapter);
 	}
-    
+    private List<String> getNames(){
+        List<String> names = new ArrayList<>();
+        Iterator<User> it =TestData.userTestList.iterator();
+        while (it.hasNext()){
+            names.add(it.next().getUserName());
+        }
+        return names;
+    }
     
     }

@@ -9,8 +9,8 @@ import com.roy.automobileservice.cls.HeadSculpture;
 import com.roy.automobileservice.cls.User;
 
 public class TestData {
-	public static List<User> userTestList = new ArrayList<User>();
-	public static List<HeadSculpture> headSculpturesList = new ArrayList<HeadSculpture>();
-	public static List<Car> carList = new ArrayList<Car>();
+	public static List<User> userTestList = new ArrayList<>();
+	public static List<HeadSculpture> headSculpturesList = new ArrayList<>();
+	public static List<Car> carList = new ArrayList<>();
 	
 }

@@ -3,79 +3,89 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
+
     <com.roy.automobileservice.layout.TitleBackLayout
         android:layout_width="match_parent"
-        android:layout_height="55dp">
-    </com.roy.automobileservice.layout.TitleBackLayout>
+        android:layout_height="55dp"/>
 
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1"
-            android:orientation="vertical">
     <TableRow
         android:layout_width="match_parent"
-        android:layout_margin="10dp"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp">
+
         <TextView
             style="@style/text_size_style"
-            android:text="@string/select_milenge_length"/>
+            android:text="@string/select_milenge_length" />
+
         <Spinner
             android:id="@+id/select_mileage"
+            style="@style/match_wrap_group"
             android:layout_height="45dp"
-            android:background="@drawable/login_edittext_style"
-            style="@style/match_wrap_group"/>
+            android:background="@drawable/login_edittext_style" />
     </TableRow>
 
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textSize="20sp"
-        android:layout_margin="10dp"
-        android:text="@string/base_content"/>
-            <FrameLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-            <ProgressBar
-                android:id="@+id/load_base_data"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
-    <ListView
-        android:id="@+id/base_content"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
-       />
-            </FrameLayout>
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textSize="20sp"
-        android:layout_margin="10dp"
-        android:text="@string/recommend_content"/>
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="5dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:text="@string/base_content"
+                android:textSize="20sp" />
+
+            <ListView
+                android:id="@+id/base_content"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="5dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:text="@string/recommend_content"
+                android:textSize="20sp" />
 
 
-    <ListView
-        android:id="@+id/recommend_content"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"
-        />
+            <ListView
+                android:id="@+id/recommend_content"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
+        </LinearLayout>
+    </LinearLayout>
 
-            </LinearLayout>
 
     <Button
         android:id="@+id/maintenance_request"
-        android:layout_gravity="center"
-        android:gravity="center"
         android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
         android:layout_margin="10dp"
         android:background="@drawable/login_btn_shape"
-        android:layout_height="wrap_content"
-        android:textColor="#fff"
+        android:gravity="center"
         android:text="@string/base_recommend_request"
-        />
+        android:textColor="#fff" />
 
 </LinearLayout>

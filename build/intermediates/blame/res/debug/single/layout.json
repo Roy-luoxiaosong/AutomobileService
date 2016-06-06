@@ -120,12 +120,12 @@
         "source": "F:\\360Downloads\\AutomobileService\\res\\layout\\auto_repair_history_tab.xml"
     },
     {
-        "merged": "F:\\360Downloads\\AutomobileService\\build\\intermediates\\res\\merged\\debug\\layout\\beauty_catogory_content.xml",
-        "source": "F:\\360Downloads\\AutomobileService\\res\\layout\\beauty_catogory_content.xml"
-    },
-    {
         "merged": "F:\\360Downloads\\AutomobileService\\build\\intermediates\\res\\merged\\debug\\layout\\car_calculator_activity_view.xml",
         "source": "F:\\360Downloads\\AutomobileService\\res\\layout\\car_calculator_activity_view.xml"
+    },
+    {
+        "merged": "F:\\360Downloads\\AutomobileService\\build\\intermediates\\res\\merged\\debug\\layout\\beauty_catogory_content.xml",
+        "source": "F:\\360Downloads\\AutomobileService\\res\\layout\\beauty_catogory_content.xml"
     },
     {
         "merged": "F:\\360Downloads\\AutomobileService\\build\\intermediates\\res\\merged\\debug\\layout\\login_activity_layout.xml",

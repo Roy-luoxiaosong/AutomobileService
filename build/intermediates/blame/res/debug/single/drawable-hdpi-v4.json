@@ -148,12 +148,12 @@
         "source": "F:\\360Downloads\\AutomobileService\\res\\drawable-hdpi\\auto_part_option_bg.png"
     },
     {
-        "merged": "F:\\360Downloads\\AutomobileService\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\h330.jpg",
-        "source": "F:\\360Downloads\\AutomobileService\\res\\drawable-hdpi\\h330.jpg"
-    },
-    {
         "merged": "F:\\360Downloads\\AutomobileService\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\d_auto_part.jpg",
         "source": "F:\\360Downloads\\AutomobileService\\res\\drawable-hdpi\\d_auto_part.jpg"
+    },
+    {
+        "merged": "F:\\360Downloads\\AutomobileService\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\h330.jpg",
+        "source": "F:\\360Downloads\\AutomobileService\\res\\drawable-hdpi\\h330.jpg"
     },
     {
         "merged": "F:\\360Downloads\\AutomobileService\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\car_heat.png",

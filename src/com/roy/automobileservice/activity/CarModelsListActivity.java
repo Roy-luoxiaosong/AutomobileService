@@ -2,42 +2,38 @@ package com.roy.automobileservice.activity;
 
 import android.content.Context;
 import android.content.Intent;
-import android.database.Cursor;
-import android.database.sqlite.SQLiteDatabase;
+
 import android.os.Bundle;
-import android.util.Log;
+
 import android.view.View;
 import android.view.Window;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ListView;
-import android.widget.ProgressBar;
+
 import android.widget.TextView;
 import com.roy.automobileservice.R;
-import com.roy.automobileservice.adapter.CarAdapter;
+
 import com.roy.automobileservice.adapter.CarTempAdapter;
-import com.roy.automobileservice.cls.Car;
+
 
 import com.roy.automobileservice.cls.ChinaCar;
-import com.roy.automobileservice.dbhelper.MyDatabaseHelper;
-import com.roy.automobileservice.utils.GlobalVariable;
-import com.roy.automobileservice.utils.TestData;
+
 
 import java.util.ArrayList;
-import java.util.Iterator;
+
 import java.util.List;
 
 import cn.bmob.v3.BmobQuery;
 import cn.bmob.v3.datatype.BmobQueryResult;
 import cn.bmob.v3.exception.BmobException;
 import cn.bmob.v3.listener.SQLQueryListener;
-import cn.bmob.v3.listener.SaveListener;
-import cn.bmob.v3.listener.UpdateListener;
 
+import cn.bmob.v3.listener.UpdateListener;
 
 public class CarModelsListActivity extends BaseActivity{
 	
-	//private View viewPagerCycleFragment;
+
 	public static void startAction(Context context){
 		Intent intent = new Intent(context,CarModelsListActivity.class);
 		context.startActivity(intent);

@@ -34,47 +34,62 @@
             </intent-filter>
         </activity>
         <activity android:name=".activity.ConvenientService"
-            android:launchMode="singleTask">
+            android:launchMode="singleTask"
+            android:theme="@style/AnimActivityTheme">
         </activity>
         <activity android:name=".activity.CarModelsListActivity"
-            android:launchMode="singleTask">
+            android:launchMode="singleTask"
+            android:theme="@style/AnimActivityTheme">
         </activity>
         <activity android:name=".activity.CarInfoActivity"
-            android:launchMode="singleTask">
+            android:launchMode="singleTask"
+            android:theme="@style/AnimActivityTheme">
         </activity>
         <activity android:name=".activity.LoginActivity"
-            android:launchMode="singleTask">
+            android:launchMode="singleTask"
+            android:theme="@style/AnimActivityTheme">
         </activity>
         <activity android:name=".activity.MyInfoActivity"
-            android:launchMode="singleTask">
+            android:launchMode="singleTask"
+            android:theme="@style/AnimActivityTheme">
         </activity>
         <activity android:name=".activity.RegisterActivity"
-            android:launchMode="singleTask">
+            android:launchMode="singleTask"
+            android:theme="@style/AnimActivityTheme">
+            >
         </activity>
         <activity android:name=".activity.InfoModifyActivity"
-            android:launchMode="singleTask">
+            android:launchMode="singleTask"
+            android:theme="@style/AnimActivityTheme">
         </activity>
 
         <activity android:name=".activity.TestActivity"
-            android:launchMode="singleTask">
+            android:launchMode="singleTask"
+            android:theme="@style/AnimActivityTheme">
         </activity>
         <activity android:name=".activity.CarRepairActivity"
-            android:launchMode="singleTask">
+            android:launchMode="singleTask"
+            android:theme="@style/AnimActivityTheme">
         </activity>
         <activity android:name=".activity.CarCalculatorActivity"
-            android:launchMode="singleTask">
+            android:launchMode="singleTask"
+            android:theme="@style/AnimActivityTheme">
         </activity>
         <activity android:name=".activity.CarBeautyActivity"
-            android:launchMode="singleTask">
+            android:launchMode="singleTask"
+            android:theme="@style/AnimActivityTheme">
         </activity>
         <activity android:name=".activity.BeautyCatogoryContentActivity"
-            android:launchMode="singleTask">
+            android:launchMode="singleTask"
+            android:theme="@style/AnimActivityTheme">
         </activity>
         <activity android:name=".activity.AskForBeautyActivity"
-            android:launchMode="singleTask">
+            android:launchMode="singleTask"
+            android:theme="@style/AnimActivityTheme">
         </activity>
         <receiver android:name=".broadcast.IsLoginBroadcastReceiver"
-            android:exported="false">
+            android:exported="false"
+            >
             <intent-filter>
                 <action android:name="com.roy.automobileservice.ISLOGIN"/>
             </intent-filter>

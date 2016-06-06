@@ -1,16 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <color name="background_holo_light">#fff3f3f3</color>
     <color name="bg">#1E90FF</color>
     <color name="menu_background_color">#ffffff</color>
     <color name="menu_text_color_white">#fff</color>
     <color name="red">#DC143C</color>
     <color name="white">#ffffff</color>
     <color name="yellow_warning">#FFFF99</color>
+    <declare-styleable name="CirCleRefreshLayout"><attr format="color" name="AniBackColor"/><attr format="color" name="AniForeColor"/><attr format="integer" name="CircleSmaller"/></declare-styleable>
     <dimen name="metro_menu_margin">5dp</dimen>
     <dimen name="metro_menu_size">120dp</dimen>
     <item name="id_circle_menu_item_center" type="id"/>
     <item name="id_circle_menu_item_image" type="id"/>
     <item name="id_circle_menu_item_text" type="id"/>
+    <integer name="activity_anim_duration">800</integer>
     <string name="address">ADDRESS</string>
     <string name="all_car_models">Car models</string>
     <string name="app_name">AutoService</string>
@@ -148,12 +151,22 @@
     <string name="what_shoud_to_do">You can do those service</string>
     <string name="yes_bt">YES</string>
     <string name="zong_hua_fei">不算保险购车总花费</string>
+    <style name="AnimActivityTheme" parent="AppTheme">
+        <item name="android:windowAnimationStyle">@style/FeelyouWindowAnimTheme</item>
+    </style>
     <style name="AppBaseTheme" parent="android:Theme.Light">
     </style>
     <style name="AppTheme" parent="AppBaseTheme">
     </style>
     <style name="CustomCheckboxTheme" parent="@android:style/Widget.CompoundButton.CheckBox">
         <item name="android:button">@drawable/checkbox_style</item>
+    </style>
+    <style name="FeelyouWindowAnimTheme" parent="@android:style/Animation.Activity">
+        <item name="android:activityOpenEnterAnimation">@anim/in_from_left</item>
+        <item name="android:windowBackground">@color/background_holo_light</item>
+        <item name="android:activityOpenExitAnimation">@anim/out_from_right</item>
+        <item name="android:activityCloseEnterAnimation">@anim/in_from_right</item>
+        <item name="android:activityCloseExitAnimation">@anim/out_from_left</item>
     </style>
     <style name="match_parent">
        <item name="android:layout_width">match_parent</item>

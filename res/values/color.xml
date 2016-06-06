@@ -6,5 +6,6 @@
     <color name="red">#DC143C</color>
     <color name="white">#ffffff</color>
     <color name="bg">#1E90FF</color>
+    <color name="background_holo_light">#fff3f3f3</color>
     
 </resources>

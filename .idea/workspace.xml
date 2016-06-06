@@ -22,117 +22,176 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bcc4737e-3540-4ffd-bf5e-9edae4a040d5" name="Default" comment="change to android studio&#10;">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/AutomobileService.iml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build.gradle" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gradlew" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gradlew.bat" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/AndroidManifest.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/classes/com/roy/automobileservice/activity/CarInfoActivity$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/classes/com/roy/automobileservice/activity/CarModelsListActivity$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/classes/com/roy/automobileservice/activity/HomePageActivity$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/classes/com/roy/automobileservice/activity/MyInfoActivity$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/classes/com/roy/automobileservice/layout/CircleMenuLayout$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/classes/com/roy/automobileservice/layout/CircleMenuLayout$2.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/classes/com/roy/automobileservice/layout/TitleBackLayout$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/classes/com/roy/automobileservice/layout/TitleBackLayout$2.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/classes/com/roy/automobileservice/layout/ViewPagerCycleFragment$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/classes/com/roy/automobileservice/utils/Utils$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/classes/com/roy/automobileservice/utils/Utils$10.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/classes/com/roy/automobileservice/utils/Utils$2.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/classes/com/roy/automobileservice/utils/Utils$3.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/classes/com/roy/automobileservice/utils/Utils$4.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/classes/com/roy/automobileservice/utils/Utils$5.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/classes/com/roy/automobileservice/utils/Utils$6.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/classes/com/roy/automobileservice/utils/Utils$7.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/classes/com/roy/automobileservice/utils/Utils$8.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/classes/com/roy/automobileservice/utils/Utils$9.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/com/roy/automobileservice/cls/Car.java" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/AutomobileService.apk" afterPath="$PROJECT_DIR$/bin/AutomobileService.apk" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/classes.dex" afterPath="$PROJECT_DIR$/bin/classes.dex" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/classes/com/roy/automobileservice/BuildConfig.class" afterPath="$PROJECT_DIR$/bin/classes/com/roy/automobileservice/BuildConfig.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/classes/com/roy/automobileservice/R$attr.class" afterPath="$PROJECT_DIR$/bin/classes/com/roy/automobileservice/R$attr.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/classes/com/roy/automobileservice/R$color.class" afterPath="$PROJECT_DIR$/bin/classes/com/roy/automobileservice/R$color.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/classes/com/roy/automobileservice/R$dimen.class" afterPath="$PROJECT_DIR$/bin/classes/com/roy/automobileservice/R$dimen.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/classes/com/roy/automobileservice/R$drawable.class" afterPath="$PROJECT_DIR$/bin/classes/com/roy/automobileservice/R$drawable.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/classes/com/roy/automobileservice/R$id.class" afterPath="$PROJECT_DIR$/bin/classes/com/roy/automobileservice/R$id.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/classes/com/roy/automobileservice/R$layout.class" afterPath="$PROJECT_DIR$/bin/classes/com/roy/automobileservice/R$layout.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/classes/com/roy/automobileservice/R$string.class" afterPath="$PROJECT_DIR$/bin/classes/com/roy/automobileservice/R$string.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/classes/com/roy/automobileservice/R$style.class" afterPath="$PROJECT_DIR$/bin/classes/com/roy/automobileservice/R$style.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/classes/com/roy/automobileservice/R.class" afterPath="$PROJECT_DIR$/bin/classes/com/roy/automobileservice/R.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/classes/com/roy/automobileservice/activity/BaseActivity.class" afterPath="$PROJECT_DIR$/bin/classes/com/roy/automobileservice/activity/BaseActivity.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/classes/com/roy/automobileservice/activity/CarInfoActivity.class" afterPath="$PROJECT_DIR$/bin/classes/com/roy/automobileservice/activity/CarInfoActivity.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/classes/com/roy/automobileservice/activity/CarModelsListActivity.class" afterPath="$PROJECT_DIR$/bin/classes/com/roy/automobileservice/activity/CarModelsListActivity.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/classes/com/roy/automobileservice/activity/ConvenientService.class" afterPath="$PROJECT_DIR$/bin/classes/com/roy/automobileservice/activity/ConvenientService.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/classes/com/roy/automobileservice/activity/HomePageActivity.class" afterPath="$PROJECT_DIR$/bin/classes/com/roy/automobileservice/activity/HomePageActivity.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/classes/com/roy/automobileservice/activity/InfoModifyActivity.class" afterPath="$PROJECT_DIR$/bin/classes/com/roy/automobileservice/activity/InfoModifyActivity.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/classes/com/roy/automobileservice/activity/LoginActivity.class" afterPath="$PROJECT_DIR$/bin/classes/com/roy/automobileservice/activity/LoginActivity.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/classes/com/roy/automobileservice/activity/MyInfoActivity.class" afterPath="$PROJECT_DIR$/bin/classes/com/roy/automobileservice/activity/MyInfoActivity.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/classes/com/roy/automobileservice/activity/RegisterActivity.class" afterPath="$PROJECT_DIR$/bin/classes/com/roy/automobileservice/activity/RegisterActivity.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/classes/com/roy/automobileservice/adapter/CarAdapter$ViewHolder.class" afterPath="$PROJECT_DIR$/bin/classes/com/roy/automobileservice/adapter/CarAdapter$ViewHolder.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/classes/com/roy/automobileservice/adapter/CarAdapter.class" afterPath="$PROJECT_DIR$/bin/classes/com/roy/automobileservice/adapter/CarAdapter.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/classes/com/roy/automobileservice/adapter/InfoItemAdapter$ViewHolder.class" afterPath="$PROJECT_DIR$/bin/classes/com/roy/automobileservice/adapter/InfoItemAdapter$ViewHolder.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/classes/com/roy/automobileservice/adapter/InfoItemAdapter.class" afterPath="$PROJECT_DIR$/bin/classes/com/roy/automobileservice/adapter/InfoItemAdapter.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/classes/com/roy/automobileservice/adapter/MyInfoPagerAdapter.class" afterPath="$PROJECT_DIR$/bin/classes/com/roy/automobileservice/adapter/MyInfoPagerAdapter.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/classes/com/roy/automobileservice/adapter/ReapirAndBeautyHistoryAdapter.class" afterPath="$PROJECT_DIR$/bin/classes/com/roy/automobileservice/adapter/ReapirAndBeautyHistoryAdapter.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/classes/com/roy/automobileservice/adapter/UserImageSelectAdapter$ViewHolder.class" afterPath="$PROJECT_DIR$/bin/classes/com/roy/automobileservice/adapter/UserImageSelectAdapter$ViewHolder.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/classes/com/roy/automobileservice/adapter/UserImageSelectAdapter.class" afterPath="$PROJECT_DIR$/bin/classes/com/roy/automobileservice/adapter/UserImageSelectAdapter.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/classes/com/roy/automobileservice/adapter/UserNameAdapter$ViewHolder.class" afterPath="$PROJECT_DIR$/bin/classes/com/roy/automobileservice/adapter/UserNameAdapter$ViewHolder.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/classes/com/roy/automobileservice/adapter/UserNameAdapter.class" afterPath="$PROJECT_DIR$/bin/classes/com/roy/automobileservice/adapter/UserNameAdapter.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/classes/com/roy/automobileservice/adapter/ViewPagerAdapter.class" afterPath="$PROJECT_DIR$/bin/classes/com/roy/automobileservice/adapter/ViewPagerAdapter.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/classes/com/roy/automobileservice/broadcast/BroadcastNames.class" afterPath="$PROJECT_DIR$/bin/classes/com/roy/automobileservice/broadcast/BroadcastNames.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/classes/com/roy/automobileservice/broadcast/IsLoginBroadcastReceiver.class" afterPath="$PROJECT_DIR$/bin/classes/com/roy/automobileservice/broadcast/IsLoginBroadcastReceiver.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/classes/com/roy/automobileservice/broadcast/NetworkChangeReceiver.class" afterPath="$PROJECT_DIR$/bin/classes/com/roy/automobileservice/broadcast/NetworkChangeReceiver.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/classes/com/roy/automobileservice/cls/ActivityCollector.class" afterPath="$PROJECT_DIR$/bin/classes/com/roy/automobileservice/cls/ActivityCollector.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/classes/com/roy/automobileservice/cls/Car.class" afterPath="$PROJECT_DIR$/bin/classes/com/roy/automobileservice/cls/Car.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/classes/com/roy/automobileservice/cls/CubeTransformer.class" afterPath="$PROJECT_DIR$/bin/classes/com/roy/automobileservice/cls/CubeTransformer.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/classes/com/roy/automobileservice/cls/HeadSculpture.class" afterPath="$PROJECT_DIR$/bin/classes/com/roy/automobileservice/cls/HeadSculpture.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/classes/com/roy/automobileservice/cls/InfoItem.class" afterPath="$PROJECT_DIR$/bin/classes/com/roy/automobileservice/cls/InfoItem.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/classes/com/roy/automobileservice/cls/User.class" afterPath="$PROJECT_DIR$/bin/classes/com/roy/automobileservice/cls/User.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/classes/com/roy/automobileservice/layout/AvatarImageView.class" afterPath="$PROJECT_DIR$/bin/classes/com/roy/automobileservice/layout/AvatarImageView.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/classes/com/roy/automobileservice/layout/CarInfoFragment.class" afterPath="$PROJECT_DIR$/bin/classes/com/roy/automobileservice/layout/CarInfoFragment.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/classes/com/roy/automobileservice/layout/CircleMenuLayout$AutoFlingRunnable.class" afterPath="$PROJECT_DIR$/bin/classes/com/roy/automobileservice/layout/CircleMenuLayout$AutoFlingRunnable.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/classes/com/roy/automobileservice/layout/CircleMenuLayout$OnMenuItemClickListener.class" afterPath="$PROJECT_DIR$/bin/classes/com/roy/automobileservice/layout/CircleMenuLayout$OnMenuItemClickListener.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/classes/com/roy/automobileservice/layout/CircleMenuLayout.class" afterPath="$PROJECT_DIR$/bin/classes/com/roy/automobileservice/layout/CircleMenuLayout.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/classes/com/roy/automobileservice/layout/TitleBackLayout.class" afterPath="$PROJECT_DIR$/bin/classes/com/roy/automobileservice/layout/TitleBackLayout.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/classes/com/roy/automobileservice/layout/ViewPagerCycleFragment$ViewPageTask.class" afterPath="$PROJECT_DIR$/bin/classes/com/roy/automobileservice/layout/ViewPagerCycleFragment$ViewPageTask.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/classes/com/roy/automobileservice/layout/ViewPagerCycleFragment.class" afterPath="$PROJECT_DIR$/bin/classes/com/roy/automobileservice/layout/ViewPagerCycleFragment.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/classes/com/roy/automobileservice/thread/AssistantCallThread.class" afterPath="$PROJECT_DIR$/bin/classes/com/roy/automobileservice/thread/AssistantCallThread.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/classes/com/roy/automobileservice/utils/GlobalVariable.class" afterPath="$PROJECT_DIR$/bin/classes/com/roy/automobileservice/utils/GlobalVariable.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/classes/com/roy/automobileservice/utils/TestData.class" afterPath="$PROJECT_DIR$/bin/classes/com/roy/automobileservice/utils/TestData.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/classes/com/roy/automobileservice/utils/Utils.class" afterPath="$PROJECT_DIR$/bin/classes/com/roy/automobileservice/utils/Utils.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/resources.ap_" afterPath="$PROJECT_DIR$/bin/resources.ap_" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/AndroidManifest.xml" afterPath="$PROJECT_DIR$/bin/AndroidManifest.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gen/com/roy/automobileservice/R.java" afterPath="$PROJECT_DIR$/gen/com/roy/automobileservice/R.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable/tel_button_from2.xml" afterPath="$PROJECT_DIR$/res/drawable/tel_button_from2.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout/car_info_activity.xml" afterPath="$PROJECT_DIR$/res/layout/car_info_activity.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout/car_info_fragment.xml" afterPath="$PROJECT_DIR$/res/layout/car_info_fragment.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.10/taskArtifacts/cache.properties.lock" afterPath="$PROJECT_DIR$/.gradle/2.10/taskArtifacts/cache.properties.lock" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.10/taskArtifacts/fileHashes.bin" afterPath="$PROJECT_DIR$/.gradle/2.10/taskArtifacts/fileHashes.bin" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.10/taskArtifacts/fileSnapshots.bin" afterPath="$PROJECT_DIR$/.gradle/2.10/taskArtifacts/fileSnapshots.bin" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.10/taskArtifacts/outputFileStates.bin" afterPath="$PROJECT_DIR$/.gradle/2.10/taskArtifacts/outputFileStates.bin" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.10/taskArtifacts/taskArtifacts.bin" afterPath="$PROJECT_DIR$/.gradle/2.10/taskArtifacts/taskArtifacts.bin" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/generated/mockable-android-23.jar" afterPath="$PROJECT_DIR$/build/generated/mockable-android-23.jar" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/classes/debug/com/roy/automobileservice/R$attr.class" afterPath="$PROJECT_DIR$/build/intermediates/classes/debug/com/roy/automobileservice/R$attr.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/classes/debug/com/roy/automobileservice/R$color.class" afterPath="$PROJECT_DIR$/build/intermediates/classes/debug/com/roy/automobileservice/R$color.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/classes/debug/com/roy/automobileservice/R$dimen.class" afterPath="$PROJECT_DIR$/build/intermediates/classes/debug/com/roy/automobileservice/R$dimen.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/classes/debug/com/roy/automobileservice/R$drawable.class" afterPath="$PROJECT_DIR$/build/intermediates/classes/debug/com/roy/automobileservice/R$drawable.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/classes/debug/com/roy/automobileservice/R$id.class" afterPath="$PROJECT_DIR$/build/intermediates/classes/debug/com/roy/automobileservice/R$id.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/classes/debug/com/roy/automobileservice/R$layout.class" afterPath="$PROJECT_DIR$/build/intermediates/classes/debug/com/roy/automobileservice/R$layout.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/classes/debug/com/roy/automobileservice/R$string.class" afterPath="$PROJECT_DIR$/build/intermediates/classes/debug/com/roy/automobileservice/R$string.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/classes/debug/com/roy/automobileservice/R$style.class" afterPath="$PROJECT_DIR$/build/intermediates/classes/debug/com/roy/automobileservice/R$style.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/classes/debug/com/roy/automobileservice/R.class" afterPath="$PROJECT_DIR$/build/intermediates/classes/debug/com/roy/automobileservice/R.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/classes/debug/com/roy/automobileservice/activity/AskForBeautyActivity.class" afterPath="$PROJECT_DIR$/build/intermediates/classes/debug/com/roy/automobileservice/activity/AskForBeautyActivity.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/classes/debug/com/roy/automobileservice/activity/BeautyCatogoryContentActivity.class" afterPath="$PROJECT_DIR$/build/intermediates/classes/debug/com/roy/automobileservice/activity/BeautyCatogoryContentActivity.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/classes/debug/com/roy/automobileservice/activity/CarBeautyActivity.class" afterPath="$PROJECT_DIR$/build/intermediates/classes/debug/com/roy/automobileservice/activity/CarBeautyActivity.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/classes/debug/com/roy/automobileservice/activity/CarCalculatorActivity.class" afterPath="$PROJECT_DIR$/build/intermediates/classes/debug/com/roy/automobileservice/activity/CarCalculatorActivity.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/classes/debug/com/roy/automobileservice/activity/CarInfoActivity.class" afterPath="$PROJECT_DIR$/build/intermediates/classes/debug/com/roy/automobileservice/activity/CarInfoActivity.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/classes/debug/com/roy/automobileservice/activity/CarModelsListActivity$1$1$1.class" afterPath="$PROJECT_DIR$/build/intermediates/classes/debug/com/roy/automobileservice/activity/CarModelsListActivity$1$1$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/classes/debug/com/roy/automobileservice/activity/CarModelsListActivity$1$1.class" afterPath="$PROJECT_DIR$/build/intermediates/classes/debug/com/roy/automobileservice/activity/CarModelsListActivity$1$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/classes/debug/com/roy/automobileservice/activity/CarModelsListActivity$1.class" afterPath="$PROJECT_DIR$/build/intermediates/classes/debug/com/roy/automobileservice/activity/CarModelsListActivity$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/classes/debug/com/roy/automobileservice/activity/CarModelsListActivity.class" afterPath="$PROJECT_DIR$/build/intermediates/classes/debug/com/roy/automobileservice/activity/CarModelsListActivity.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/classes/debug/com/roy/automobileservice/activity/CarRepairActivity.class" afterPath="$PROJECT_DIR$/build/intermediates/classes/debug/com/roy/automobileservice/activity/CarRepairActivity.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/classes/debug/com/roy/automobileservice/activity/ConvenientService.class" afterPath="$PROJECT_DIR$/build/intermediates/classes/debug/com/roy/automobileservice/activity/ConvenientService.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/classes/debug/com/roy/automobileservice/activity/HomePageActivity$1.class" afterPath="$PROJECT_DIR$/build/intermediates/classes/debug/com/roy/automobileservice/activity/HomePageActivity$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/classes/debug/com/roy/automobileservice/activity/HomePageActivity.class" afterPath="$PROJECT_DIR$/build/intermediates/classes/debug/com/roy/automobileservice/activity/HomePageActivity.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/classes/debug/com/roy/automobileservice/activity/InfoModifyActivity.class" afterPath="$PROJECT_DIR$/build/intermediates/classes/debug/com/roy/automobileservice/activity/InfoModifyActivity.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/classes/debug/com/roy/automobileservice/activity/LoginActivity.class" afterPath="$PROJECT_DIR$/build/intermediates/classes/debug/com/roy/automobileservice/activity/LoginActivity.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/classes/debug/com/roy/automobileservice/activity/MyInfoActivity.class" afterPath="$PROJECT_DIR$/build/intermediates/classes/debug/com/roy/automobileservice/activity/MyInfoActivity.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/classes/debug/com/roy/automobileservice/activity/RegisterActivity.class" afterPath="$PROJECT_DIR$/build/intermediates/classes/debug/com/roy/automobileservice/activity/RegisterActivity.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/classes/debug/com/roy/automobileservice/activity/TestActivity.class" afterPath="$PROJECT_DIR$/build/intermediates/classes/debug/com/roy/automobileservice/activity/TestActivity.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/classes/debug/com/roy/automobileservice/adapter/CarAdapter.class" afterPath="$PROJECT_DIR$/build/intermediates/classes/debug/com/roy/automobileservice/adapter/CarAdapter.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/classes/debug/com/roy/automobileservice/adapter/CarTempAdapter.class" afterPath="$PROJECT_DIR$/build/intermediates/classes/debug/com/roy/automobileservice/adapter/CarTempAdapter.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/classes/debug/com/roy/automobileservice/adapter/InfoItemAdapter.class" afterPath="$PROJECT_DIR$/build/intermediates/classes/debug/com/roy/automobileservice/adapter/InfoItemAdapter.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/classes/debug/com/roy/automobileservice/adapter/ReapirAndBeautyHistoryAdapter.class" afterPath="$PROJECT_DIR$/build/intermediates/classes/debug/com/roy/automobileservice/adapter/ReapirAndBeautyHistoryAdapter.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/classes/debug/com/roy/automobileservice/adapter/UserImageSelectAdapter.class" afterPath="$PROJECT_DIR$/build/intermediates/classes/debug/com/roy/automobileservice/adapter/UserImageSelectAdapter.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/classes/debug/com/roy/automobileservice/adapter/UserNameAdapter.class" afterPath="$PROJECT_DIR$/build/intermediates/classes/debug/com/roy/automobileservice/adapter/UserNameAdapter.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/classes/debug/com/roy/automobileservice/layout/BeautyCatogoryContentFragment.class" afterPath="$PROJECT_DIR$/build/intermediates/classes/debug/com/roy/automobileservice/layout/BeautyCatogoryContentFragment.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/classes/debug/com/roy/automobileservice/layout/CarInfoFragment.class" afterPath="$PROJECT_DIR$/build/intermediates/classes/debug/com/roy/automobileservice/layout/CarInfoFragment.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/classes/debug/com/roy/automobileservice/layout/CircleMenuLayout.class" afterPath="$PROJECT_DIR$/build/intermediates/classes/debug/com/roy/automobileservice/layout/CircleMenuLayout.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/classes/debug/com/roy/automobileservice/layout/PictureSwitcherFragment.class" afterPath="$PROJECT_DIR$/build/intermediates/classes/debug/com/roy/automobileservice/layout/PictureSwitcherFragment.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/classes/debug/com/roy/automobileservice/layout/TitleBackLayout.class" afterPath="$PROJECT_DIR$/build/intermediates/classes/debug/com/roy/automobileservice/layout/TitleBackLayout.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/classes/debug/com/roy/automobileservice/layout/ViewPagerCycleFragment.class" afterPath="$PROJECT_DIR$/build/intermediates/classes/debug/com/roy/automobileservice/layout/ViewPagerCycleFragment.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/classes/debug/com/roy/automobileservice/utils/Utils.class" afterPath="$PROJECT_DIR$/build/intermediates/classes/debug/com/roy/automobileservice/utils/Utils.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar" afterPath="$PROJECT_DIR$/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/incremental-runtime-classes/debug/instant-run.jar" afterPath="$PROJECT_DIR$/build/intermediates/incremental-runtime-classes/debug/instant-run.jar" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/incremental-verifier/debug/com/roy/automobileservice/R$attr.class" afterPath="$PROJECT_DIR$/build/intermediates/incremental-verifier/debug/com/roy/automobileservice/R$attr.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/incremental-verifier/debug/com/roy/automobileservice/R$color.class" afterPath="$PROJECT_DIR$/build/intermediates/incremental-verifier/debug/com/roy/automobileservice/R$color.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/incremental-verifier/debug/com/roy/automobileservice/R$dimen.class" afterPath="$PROJECT_DIR$/build/intermediates/incremental-verifier/debug/com/roy/automobileservice/R$dimen.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/incremental-verifier/debug/com/roy/automobileservice/R$drawable.class" afterPath="$PROJECT_DIR$/build/intermediates/incremental-verifier/debug/com/roy/automobileservice/R$drawable.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/incremental-verifier/debug/com/roy/automobileservice/R$id.class" afterPath="$PROJECT_DIR$/build/intermediates/incremental-verifier/debug/com/roy/automobileservice/R$id.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/incremental-verifier/debug/com/roy/automobileservice/R$layout.class" afterPath="$PROJECT_DIR$/build/intermediates/incremental-verifier/debug/com/roy/automobileservice/R$layout.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/incremental-verifier/debug/com/roy/automobileservice/R$string.class" afterPath="$PROJECT_DIR$/build/intermediates/incremental-verifier/debug/com/roy/automobileservice/R$string.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/incremental-verifier/debug/com/roy/automobileservice/R$style.class" afterPath="$PROJECT_DIR$/build/intermediates/incremental-verifier/debug/com/roy/automobileservice/R$style.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/incremental-verifier/debug/com/roy/automobileservice/R.class" afterPath="$PROJECT_DIR$/build/intermediates/incremental-verifier/debug/com/roy/automobileservice/R.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/incremental-verifier/debug/com/roy/automobileservice/activity/AskForBeautyActivity.class" afterPath="$PROJECT_DIR$/build/intermediates/incremental-verifier/debug/com/roy/automobileservice/activity/AskForBeautyActivity.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/incremental-verifier/debug/com/roy/automobileservice/activity/BeautyCatogoryContentActivity.class" afterPath="$PROJECT_DIR$/build/intermediates/incremental-verifier/debug/com/roy/automobileservice/activity/BeautyCatogoryContentActivity.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/incremental-verifier/debug/com/roy/automobileservice/activity/CarBeautyActivity.class" afterPath="$PROJECT_DIR$/build/intermediates/incremental-verifier/debug/com/roy/automobileservice/activity/CarBeautyActivity.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/incremental-verifier/debug/com/roy/automobileservice/activity/CarCalculatorActivity.class" afterPath="$PROJECT_DIR$/build/intermediates/incremental-verifier/debug/com/roy/automobileservice/activity/CarCalculatorActivity.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/incremental-verifier/debug/com/roy/automobileservice/activity/CarInfoActivity.class" afterPath="$PROJECT_DIR$/build/intermediates/incremental-verifier/debug/com/roy/automobileservice/activity/CarInfoActivity.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/incremental-verifier/debug/com/roy/automobileservice/activity/CarModelsListActivity$1$1$1.class" afterPath="$PROJECT_DIR$/build/intermediates/incremental-verifier/debug/com/roy/automobileservice/activity/CarModelsListActivity$1$1$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/incremental-verifier/debug/com/roy/automobileservice/activity/CarModelsListActivity$1$1.class" afterPath="$PROJECT_DIR$/build/intermediates/incremental-verifier/debug/com/roy/automobileservice/activity/CarModelsListActivity$1$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/incremental-verifier/debug/com/roy/automobileservice/activity/CarModelsListActivity$1.class" afterPath="$PROJECT_DIR$/build/intermediates/incremental-verifier/debug/com/roy/automobileservice/activity/CarModelsListActivity$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/incremental-verifier/debug/com/roy/automobileservice/activity/CarModelsListActivity.class" afterPath="$PROJECT_DIR$/build/intermediates/incremental-verifier/debug/com/roy/automobileservice/activity/CarModelsListActivity.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/incremental-verifier/debug/com/roy/automobileservice/activity/CarRepairActivity.class" afterPath="$PROJECT_DIR$/build/intermediates/incremental-verifier/debug/com/roy/automobileservice/activity/CarRepairActivity.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/incremental-verifier/debug/com/roy/automobileservice/activity/ConvenientService.class" afterPath="$PROJECT_DIR$/build/intermediates/incremental-verifier/debug/com/roy/automobileservice/activity/ConvenientService.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/incremental-verifier/debug/com/roy/automobileservice/activity/HomePageActivity$1.class" afterPath="$PROJECT_DIR$/build/intermediates/incremental-verifier/debug/com/roy/automobileservice/activity/HomePageActivity$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/incremental-verifier/debug/com/roy/automobileservice/activity/HomePageActivity.class" afterPath="$PROJECT_DIR$/build/intermediates/incremental-verifier/debug/com/roy/automobileservice/activity/HomePageActivity.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/incremental-verifier/debug/com/roy/automobileservice/activity/InfoModifyActivity.class" afterPath="$PROJECT_DIR$/build/intermediates/incremental-verifier/debug/com/roy/automobileservice/activity/InfoModifyActivity.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/incremental-verifier/debug/com/roy/automobileservice/activity/LoginActivity.class" afterPath="$PROJECT_DIR$/build/intermediates/incremental-verifier/debug/com/roy/automobileservice/activity/LoginActivity.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/incremental-verifier/debug/com/roy/automobileservice/activity/MyInfoActivity.class" afterPath="$PROJECT_DIR$/build/intermediates/incremental-verifier/debug/com/roy/automobileservice/activity/MyInfoActivity.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/incremental-verifier/debug/com/roy/automobileservice/activity/RegisterActivity.class" afterPath="$PROJECT_DIR$/build/intermediates/incremental-verifier/debug/com/roy/automobileservice/activity/RegisterActivity.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/incremental-verifier/debug/com/roy/automobileservice/activity/TestActivity.class" afterPath="$PROJECT_DIR$/build/intermediates/incremental-verifier/debug/com/roy/automobileservice/activity/TestActivity.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/incremental-verifier/debug/com/roy/automobileservice/adapter/CarAdapter.class" afterPath="$PROJECT_DIR$/build/intermediates/incremental-verifier/debug/com/roy/automobileservice/adapter/CarAdapter.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/incremental-verifier/debug/com/roy/automobileservice/adapter/CarTempAdapter.class" afterPath="$PROJECT_DIR$/build/intermediates/incremental-verifier/debug/com/roy/automobileservice/adapter/CarTempAdapter.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/incremental-verifier/debug/com/roy/automobileservice/adapter/InfoItemAdapter.class" afterPath="$PROJECT_DIR$/build/intermediates/incremental-verifier/debug/com/roy/automobileservice/adapter/InfoItemAdapter.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/incremental-verifier/debug/com/roy/automobileservice/adapter/ReapirAndBeautyHistoryAdapter.class" afterPath="$PROJECT_DIR$/build/intermediates/incremental-verifier/debug/com/roy/automobileservice/adapter/ReapirAndBeautyHistoryAdapter.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/incremental-verifier/debug/com/roy/automobileservice/adapter/UserImageSelectAdapter.class" afterPath="$PROJECT_DIR$/build/intermediates/incremental-verifier/debug/com/roy/automobileservice/adapter/UserImageSelectAdapter.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/incremental-verifier/debug/com/roy/automobileservice/adapter/UserNameAdapter.class" afterPath="$PROJECT_DIR$/build/intermediates/incremental-verifier/debug/com/roy/automobileservice/adapter/UserNameAdapter.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/incremental-verifier/debug/com/roy/automobileservice/layout/BeautyCatogoryContentFragment.class" afterPath="$PROJECT_DIR$/build/intermediates/incremental-verifier/debug/com/roy/automobileservice/layout/BeautyCatogoryContentFragment.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/incremental-verifier/debug/com/roy/automobileservice/layout/CarInfoFragment.class" afterPath="$PROJECT_DIR$/build/intermediates/incremental-verifier/debug/com/roy/automobileservice/layout/CarInfoFragment.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/incremental-verifier/debug/com/roy/automobileservice/layout/CircleMenuLayout.class" afterPath="$PROJECT_DIR$/build/intermediates/incremental-verifier/debug/com/roy/automobileservice/layout/CircleMenuLayout.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/incremental-verifier/debug/com/roy/automobileservice/layout/PictureSwitcherFragment.class" afterPath="$PROJECT_DIR$/build/intermediates/incremental-verifier/debug/com/roy/automobileservice/layout/PictureSwitcherFragment.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/incremental-verifier/debug/com/roy/automobileservice/layout/TitleBackLayout.class" afterPath="$PROJECT_DIR$/build/intermediates/incremental-verifier/debug/com/roy/automobileservice/layout/TitleBackLayout.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/incremental-verifier/debug/com/roy/automobileservice/layout/ViewPagerCycleFragment.class" afterPath="$PROJECT_DIR$/build/intermediates/incremental-verifier/debug/com/roy/automobileservice/layout/ViewPagerCycleFragment.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/incremental-verifier/debug/com/roy/automobileservice/utils/Utils.class" afterPath="$PROJECT_DIR$/build/intermediates/incremental-verifier/debug/com/roy/automobileservice/utils/Utils.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/pre-dexed/debug/android-support-v4_0c536413d7a2e3bf180bb485763711888aa6ff55.jar" afterPath="$PROJECT_DIR$/build/intermediates/pre-dexed/debug/android-support-v4_0c536413d7a2e3bf180bb485763711888aa6ff55.jar" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/pre-dexed/debug/bmob-sdk-3.4.6_bedc74b7b6d2062347fb31704c633f7f6b106f5f.jar" afterPath="$PROJECT_DIR$/build/intermediates/pre-dexed/debug/bmob-sdk-3.4.6_bedc74b7b6d2062347fb31704c633f7f6b106f5f.jar" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/pre-dexed/debug/instant-run-bootstrap_e16fcd31d9b84b080de307ded4064caf6ed099e4.jar" afterPath="$PROJECT_DIR$/build/intermediates/pre-dexed/debug/instant-run-bootstrap_e16fcd31d9b84b080de307ded4064caf6ed099e4.jar" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/pre-dexed/debug/instant-run_94c7edaa9eafbb7962fe92699bf892331d1e9617.jar" afterPath="$PROJECT_DIR$/build/intermediates/pre-dexed/debug/instant-run_94c7edaa9eafbb7962fe92699bf892331d1e9617.jar" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/pre-dexed/debug/main_c0e63701ba3130a826dd0784d7249c93bafb117e.jar" afterPath="$PROJECT_DIR$/build/intermediates/pre-dexed/debug/main_c0e63701ba3130a826dd0784d7249c93bafb117e.jar" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/pre-dexed/debug/okhttp-2.4.0_650dedc8301f8834117b1b730d2867953f8e27c5.jar" afterPath="$PROJECT_DIR$/build/intermediates/pre-dexed/debug/okhttp-2.4.0_650dedc8301f8834117b1b730d2867953f8e27c5.jar" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/pre-dexed/debug/okio-1.4.0_d0af601940d3d328cd04991273b32cc863c21cbf.jar" afterPath="$PROJECT_DIR$/build/intermediates/pre-dexed/debug/okio-1.4.0_d0af601940d3d328cd04991273b32cc863c21cbf.jar" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/pre-dexed/debug/picasso-2.5.2_b8ef1d3241618d708a388976b73c684067ec1790.jar" afterPath="$PROJECT_DIR$/build/intermediates/pre-dexed/debug/picasso-2.5.2_b8ef1d3241618d708a388976b73c684067ec1790.jar" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/res/resources-debug-androidTest.ap_" afterPath="$PROJECT_DIR$/build/intermediates/res/resources-debug-androidTest.ap_" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/res/resources-debug.ap_" afterPath="$PROJECT_DIR$/build/intermediates/res/resources-debug.ap_" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/transforms/dex/debug/folders/1000/1f/main/classes.dex" afterPath="$PROJECT_DIR$/build/intermediates/transforms/dex/debug/folders/1000/1f/main/classes.dex" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/roy/automobileservice/R$attr.class" afterPath="$PROJECT_DIR$/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/roy/automobileservice/R$attr.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/roy/automobileservice/R$color.class" afterPath="$PROJECT_DIR$/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/roy/automobileservice/R$color.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/roy/automobileservice/R$dimen.class" afterPath="$PROJECT_DIR$/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/roy/automobileservice/R$dimen.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/roy/automobileservice/R$drawable.class" afterPath="$PROJECT_DIR$/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/roy/automobileservice/R$drawable.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/roy/automobileservice/R$id.class" afterPath="$PROJECT_DIR$/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/roy/automobileservice/R$id.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/roy/automobileservice/R$layout.class" afterPath="$PROJECT_DIR$/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/roy/automobileservice/R$layout.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/roy/automobileservice/R$string.class" afterPath="$PROJECT_DIR$/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/roy/automobileservice/R$string.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/roy/automobileservice/R$style.class" afterPath="$PROJECT_DIR$/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/roy/automobileservice/R$style.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/roy/automobileservice/R.class" afterPath="$PROJECT_DIR$/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/roy/automobileservice/R.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/roy/automobileservice/activity/AskForBeautyActivity.class" afterPath="$PROJECT_DIR$/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/roy/automobileservice/activity/AskForBeautyActivity.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/roy/automobileservice/activity/BeautyCatogoryContentActivity.class" afterPath="$PROJECT_DIR$/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/roy/automobileservice/activity/BeautyCatogoryContentActivity.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/roy/automobileservice/activity/CarBeautyActivity.class" afterPath="$PROJECT_DIR$/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/roy/automobileservice/activity/CarBeautyActivity.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/roy/automobileservice/activity/CarCalculatorActivity.class" afterPath="$PROJECT_DIR$/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/roy/automobileservice/activity/CarCalculatorActivity.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/roy/automobileservice/activity/CarInfoActivity.class" afterPath="$PROJECT_DIR$/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/roy/automobileservice/activity/CarInfoActivity.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/roy/automobileservice/activity/CarModelsListActivity$1$1$1.class" afterPath="$PROJECT_DIR$/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/roy/automobileservice/activity/CarModelsListActivity$1$1$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/roy/automobileservice/activity/CarModelsListActivity$1$1.class" afterPath="$PROJECT_DIR$/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/roy/automobileservice/activity/CarModelsListActivity$1$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/roy/automobileservice/activity/CarModelsListActivity$1.class" afterPath="$PROJECT_DIR$/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/roy/automobileservice/activity/CarModelsListActivity$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/roy/automobileservice/activity/CarModelsListActivity.class" afterPath="$PROJECT_DIR$/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/roy/automobileservice/activity/CarModelsListActivity.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/roy/automobileservice/activity/CarRepairActivity.class" afterPath="$PROJECT_DIR$/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/roy/automobileservice/activity/CarRepairActivity.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/roy/automobileservice/activity/ConvenientService.class" afterPath="$PROJECT_DIR$/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/roy/automobileservice/activity/ConvenientService.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/roy/automobileservice/activity/HomePageActivity$1.class" afterPath="$PROJECT_DIR$/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/roy/automobileservice/activity/HomePageActivity$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/roy/automobileservice/activity/HomePageActivity.class" afterPath="$PROJECT_DIR$/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/roy/automobileservice/activity/HomePageActivity.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/roy/automobileservice/activity/InfoModifyActivity.class" afterPath="$PROJECT_DIR$/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/roy/automobileservice/activity/InfoModifyActivity.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/roy/automobileservice/activity/LoginActivity.class" afterPath="$PROJECT_DIR$/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/roy/automobileservice/activity/LoginActivity.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/roy/automobileservice/activity/MyInfoActivity.class" afterPath="$PROJECT_DIR$/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/roy/automobileservice/activity/MyInfoActivity.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/roy/automobileservice/activity/RegisterActivity.class" afterPath="$PROJECT_DIR$/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/roy/automobileservice/activity/RegisterActivity.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/roy/automobileservice/activity/TestActivity.class" afterPath="$PROJECT_DIR$/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/roy/automobileservice/activity/TestActivity.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/roy/automobileservice/adapter/CarAdapter.class" afterPath="$PROJECT_DIR$/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/roy/automobileservice/adapter/CarAdapter.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/roy/automobileservice/adapter/CarTempAdapter.class" afterPath="$PROJECT_DIR$/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/roy/automobileservice/adapter/CarTempAdapter.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/roy/automobileservice/adapter/InfoItemAdapter.class" afterPath="$PROJECT_DIR$/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/roy/automobileservice/adapter/InfoItemAdapter.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/roy/automobileservice/adapter/ReapirAndBeautyHistoryAdapter.class" afterPath="$PROJECT_DIR$/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/roy/automobileservice/adapter/ReapirAndBeautyHistoryAdapter.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/roy/automobileservice/adapter/UserImageSelectAdapter.class" afterPath="$PROJECT_DIR$/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/roy/automobileservice/adapter/UserImageSelectAdapter.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/roy/automobileservice/adapter/UserNameAdapter.class" afterPath="$PROJECT_DIR$/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/roy/automobileservice/adapter/UserNameAdapter.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/roy/automobileservice/layout/BeautyCatogoryContentFragment.class" afterPath="$PROJECT_DIR$/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/roy/automobileservice/layout/BeautyCatogoryContentFragment.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/roy/automobileservice/layout/CarInfoFragment.class" afterPath="$PROJECT_DIR$/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/roy/automobileservice/layout/CarInfoFragment.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/roy/automobileservice/layout/CircleMenuLayout.class" afterPath="$PROJECT_DIR$/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/roy/automobileservice/layout/CircleMenuLayout.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/roy/automobileservice/layout/PictureSwitcherFragment.class" afterPath="$PROJECT_DIR$/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/roy/automobileservice/layout/PictureSwitcherFragment.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/roy/automobileservice/layout/TitleBackLayout.class" afterPath="$PROJECT_DIR$/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/roy/automobileservice/layout/TitleBackLayout.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/roy/automobileservice/layout/ViewPagerCycleFragment.class" afterPath="$PROJECT_DIR$/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/roy/automobileservice/layout/ViewPagerCycleFragment.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/roy/automobileservice/utils/Utils.class" afterPath="$PROJECT_DIR$/build/intermediates/transforms/instantRun/debug/folders/1/5/main/com/roy/automobileservice/utils/Utils.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRun/debug/folders/4000/5/enhanced/com/android/tools/fd/runtime/AppPatchesLoaderImpl.class" afterPath="$PROJECT_DIR$/build/intermediates/transforms/instantRun/debug/folders/4000/5/enhanced/com/android/tools/fd/runtime/AppPatchesLoaderImpl.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/transforms/instantRun/debug/folders/4000/5/enhanced/com/roy/automobileservice/layout/PictureSwitcherFragment$override.class" afterPath="$PROJECT_DIR$/build/intermediates/transforms/instantRun/debug/folders/4000/5/enhanced/com/roy/automobileservice/layout/PictureSwitcherFragment$override.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/outputs/apk/AutomobileService-debug-unaligned.apk" afterPath="$PROJECT_DIR$/build/outputs/apk/AutomobileService-debug-unaligned.apk" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/outputs/apk/AutomobileService-debug.apk" afterPath="$PROJECT_DIR$/build/outputs/apk/AutomobileService-debug.apk" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AndroidManifest.xml" afterPath="$PROJECT_DIR$/AndroidManifest.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AutomobileService.iml" afterPath="$PROJECT_DIR$/AutomobileService.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/generated/source/r/debug/com/roy/automobileservice/R.java" afterPath="$PROJECT_DIR$/build/generated/source/r/debug/com/roy/automobileservice/R.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/blame/res/debug/multi/values.json" afterPath="$PROJECT_DIR$/build/intermediates/blame/res/debug/multi/values.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/blame/res/debug/single/drawable-hdpi-v4.json" afterPath="$PROJECT_DIR$/build/intermediates/blame/res/debug/single/drawable-hdpi-v4.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/blame/res/debug/single/drawable.json" afterPath="$PROJECT_DIR$/build/intermediates/blame/res/debug/single/drawable.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/blame/res/debug/single/layout.json" afterPath="$PROJECT_DIR$/build/intermediates/blame/res/debug/single/layout.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/bundles/debug/instant-run/AndroidManifest.xml" afterPath="$PROJECT_DIR$/build/intermediates/bundles/debug/instant-run/AndroidManifest.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/merger.xml" afterPath="$PROJECT_DIR$/build/intermediates/incremental/mergeDebugResources/merger.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/instant-run-support/debug/manifest.crc" afterPath="$PROJECT_DIR$/build/intermediates/instant-run-support/debug/manifest.crc" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/instant-run-support/debug/reload-changes.txt" afterPath="$PROJECT_DIR$/build/intermediates/instant-run-support/debug/reload-changes.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/manifests/full/debug/AndroidManifest.xml" afterPath="$PROJECT_DIR$/build/intermediates/manifests/full/debug/AndroidManifest.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/res/merged/debug/layout/car_models_list_view.xml" afterPath="$PROJECT_DIR$/build/intermediates/res/merged/debug/layout/car_models_list_view.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/res/merged/debug/layout/car_repair_activity_view.xml" afterPath="$PROJECT_DIR$/build/intermediates/res/merged/debug/layout/car_repair_activity_view.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/res/merged/debug/layout/login_activity_layout.xml" afterPath="$PROJECT_DIR$/build/intermediates/res/merged/debug/layout/login_activity_layout.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/res/merged/debug/values/values.xml" afterPath="$PROJECT_DIR$/build/intermediates/res/merged/debug/values/values.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/restart-dex/debug/build-info.xml" afterPath="$PROJECT_DIR$/build/intermediates/restart-dex/debug/build-info.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/outputs/logs/manifest-merger-debug-report.txt" afterPath="$PROJECT_DIR$/build/outputs/logs/manifest-merger-debug-report.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout/car_models_list_view.xml" afterPath="$PROJECT_DIR$/res/layout/car_models_list_view.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout/cycle_picture.xml" afterPath="$PROJECT_DIR$/res/layout/cycle_picture.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout/home_page_view.xml" afterPath="$PROJECT_DIR$/res/layout/home_page_view.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout/my_car_info_tab.xml" afterPath="$PROJECT_DIR$/res/layout/my_car_info_tab.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout/net_state_notifiction_layout.xml" afterPath="$PROJECT_DIR$/res/layout/net_state_notifiction_layout.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/values-zh-rCN/strings.xml" afterPath="$PROJECT_DIR$/res/values-zh-rCN/strings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/values/strings.xml" afterPath="$PROJECT_DIR$/res/values/strings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout/car_repair_activity_view.xml" afterPath="$PROJECT_DIR$/res/layout/car_repair_activity_view.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/layout/login_activity_layout.xml" afterPath="$PROJECT_DIR$/res/layout/login_activity_layout.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/values/color.xml" afterPath="$PROJECT_DIR$/res/values/color.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/values/styles.xml" afterPath="$PROJECT_DIR$/res/values/styles.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/roy/automobileservice/activity/BaseActivity.java" afterPath="$PROJECT_DIR$/src/com/roy/automobileservice/activity/BaseActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/roy/automobileservice/activity/CarInfoActivity.java" afterPath="$PROJECT_DIR$/src/com/roy/automobileservice/activity/CarInfoActivity.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/roy/automobileservice/activity/CarModelsListActivity.java" afterPath="$PROJECT_DIR$/src/com/roy/automobileservice/activity/CarModelsListActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/roy/automobileservice/activity/HomePageActivity.java" afterPath="$PROJECT_DIR$/src/com/roy/automobileservice/activity/HomePageActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/roy/automobileservice/activity/InfoModifyActivity.java" afterPath="$PROJECT_DIR$/src/com/roy/automobileservice/activity/InfoModifyActivity.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/roy/automobileservice/activity/LoginActivity.java" afterPath="$PROJECT_DIR$/src/com/roy/automobileservice/activity/LoginActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/roy/automobileservice/activity/MyInfoActivity.java" afterPath="$PROJECT_DIR$/src/com/roy/automobileservice/activity/MyInfoActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/roy/automobileservice/activity/RegisterActivity.java" afterPath="$PROJECT_DIR$/src/com/roy/automobileservice/activity/RegisterActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/roy/automobileservice/adapter/CarAdapter.java" afterPath="$PROJECT_DIR$/src/com/roy/automobileservice/adapter/CarAdapter.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/roy/automobileservice/adapter/ReapirAndBeautyHistoryAdapter.java" afterPath="$PROJECT_DIR$/src/com/roy/automobileservice/adapter/ReapirAndBeautyHistoryAdapter.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/roy/automobileservice/cls/CubeTransformer.java" afterPath="$PROJECT_DIR$/src/com/roy/automobileservice/cls/CubeTransformer.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/roy/automobileservice/cls/User.java" afterPath="$PROJECT_DIR$/src/com/roy/automobileservice/cls/User.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/roy/automobileservice/layout/AvatarImageView.java" afterPath="$PROJECT_DIR$/src/com/roy/automobileservice/layout/AvatarImageView.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/roy/automobileservice/layout/CarInfoFragment.java" afterPath="$PROJECT_DIR$/src/com/roy/automobileservice/layout/CarInfoFragment.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/roy/automobileservice/layout/CircleMenuLayout.java" afterPath="$PROJECT_DIR$/src/com/roy/automobileservice/layout/CircleMenuLayout.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/roy/automobileservice/layout/ViewPagerCycleFragment.java" afterPath="$PROJECT_DIR$/src/com/roy/automobileservice/layout/ViewPagerCycleFragment.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/roy/automobileservice/utils/GlobalVariable.java" afterPath="$PROJECT_DIR$/src/com/roy/automobileservice/utils/GlobalVariable.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/roy/automobileservice/utils/TestData.java" afterPath="$PROJECT_DIR$/src/com/roy/automobileservice/utils/TestData.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/roy/automobileservice/utils/Utils.java" afterPath="$PROJECT_DIR$/src/com/roy/automobileservice/utils/Utils.java" />
     </list>
     <ignored path="AutomobileService.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -160,94 +219,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="PictureSwitcherFragment.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/com/roy/automobileservice/layout/PictureSwitcherFragment.java">
+      <file leaf-file-name="car_repair_activity_view.xml" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/res/layout/car_repair_activity_view.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.119942196">
-              <caret line="113" column="0" selection-start-line="113" selection-start-column="0" selection-end-line="113" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.5482234">
+              <caret line="8" column="37" selection-start-line="8" selection-start-column="37" selection-end-line="8" selection-end-column="37" />
               <folding>
-                <element signature="imports" expanded="true" />
+                <element signature="e#1517#1539#0" expanded="true" />
+                <element signature="e#2257#2284#0" expanded="true" />
+                <element signature="e#2917#2949#0" expanded="true" />
               </folding>
             </state>
           </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ViewPagerCycleFragment.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/roy/automobileservice/layout/ViewPagerCycleFragment.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="76" column="42" selection-start-line="76" selection-start-column="42" selection-end-line="76" selection-end-column="42" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="cycle_picture.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/res/layout/cycle_picture.xml">
           <provider editor-type-id="android-designer">
             <state />
-          </provider>
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="33" column="32" selection-start-line="33" selection-start-column="32" selection-end-line="33" selection-end-column="32" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CarModelsListActivity.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/roy/automobileservice/activity/CarModelsListActivity.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="111" column="54" selection-start-line="111" selection-start-column="54" selection-end-line="111" selection-end-column="54" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CarInfoActivity.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/roy/automobileservice/activity/CarInfoActivity.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="48" column="35" selection-start-line="47" selection-start-column="8" selection-end-line="48" selection-end-column="35" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="car_info_activity.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/res/layout/car_info_activity.xml">
-          <provider editor-type-id="android-designer">
-            <state />
-          </provider>
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="16" column="30" selection-start-line="16" selection-start-column="30" selection-end-line="16" selection-end-column="30" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CarInfoFragment.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/roy/automobileservice/layout/CarInfoFragment.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="34" column="35" selection-start-line="33" selection-start-column="8" selection-end-line="34" selection-end-column="35" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="car_info_fragment.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/res/layout/car_info_fragment.xml">
-          <provider editor-type-id="android-designer">
-            <state />
-          </provider>
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="12" column="4" selection-start-line="12" selection-start-column="0" selection-end-line="16" selection-end-column="47" />
-              <folding />
-            </state>
           </provider>
         </entry>
       </file>
@@ -1063,12 +1048,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/com/roy/automobileservice/activity/InfoModifyActivity.java" />
-        <option value="$PROJECT_DIR$/src/com/roy/automobileservice/cls/User.java" />
-        <option value="$PROJECT_DIR$/res/layout/car_item_temp.xml" />
-        <option value="$PROJECT_DIR$/src/com/roy/automobileservice/dbhelper/MyDatabaseHelper.java" />
-        <option value="$PROJECT_DIR$/res/layout/home_page_view.xml" />
-        <option value="$PROJECT_DIR$/res/drawable/tel_button_from2.xml" />
         <option value="$PROJECT_DIR$/src/com/roy/automobileservice/activity/CarCalculator.java" />
         <option value="$PROJECT_DIR$/build/intermediates/res/merged/debug/values-zh-rCN/values-zh-rCN.xml" />
         <option value="$PROJECT_DIR$/res/layout/car_calculator_activity_view.xml" />
@@ -1082,9 +1061,7 @@
         <option value="$PROJECT_DIR$/src/com/roy/automobileservice/activity/BeautyCatogoryContentActivity.java" />
         <option value="$PROJECT_DIR$/res/layout/beauty_catogory_content_frg.xml" />
         <option value="$PROJECT_DIR$/src/com/roy/automobileservice/activity/AskForBeauty.java" />
-        <option value="$PROJECT_DIR$/AndroidManifest.xml" />
         <option value="$PROJECT_DIR$/res/drawable/checkbox_style.xml" />
-        <option value="$PROJECT_DIR$/res/values/styles.xml" />
         <option value="$PROJECT_DIR$/res/layout/ask_for_beauty_activity_view.xml" />
         <option value="$PROJECT_DIR$/src/com/roy/automobileservice/activity/AskForBeautyActivity.java" />
         <option value="$PROJECT_DIR$/build.gradle" />
@@ -1101,19 +1078,27 @@
         <option value="$PROJECT_DIR$/src/com/roy/automobileservice/activity/HomePageActivity.java" />
         <option value="$PROJECT_DIR$/src/com/roy/automobileservice/layout/ViewPagerCycleFragment.java" />
         <option value="$PROJECT_DIR$/res/layout/cycle_picture.xml" />
-        <option value="$PROJECT_DIR$/res/layout/car_models_list_view.xml" />
         <option value="$PROJECT_DIR$/src/com/roy/automobileservice/cls/ChinaCar.java" />
         <option value="$PROJECT_DIR$/src/com/roy/automobileservice/utils/GlobalVariable.java" />
-        <option value="$PROJECT_DIR$/res/layout/car_repair_activity_view.xml" />
         <option value="$PROJECT_DIR$/res/layout/car_beauty_activity_view.xml" />
         <option value="$PROJECT_DIR$/res/layout/picture_swithcer.xml" />
         <option value="$PROJECT_DIR$/src/com/roy/automobileservice/layout/PictureSwitcher.java" />
-        <option value="$PROJECT_DIR$/src/com/roy/automobileservice/activity/CarModelsListActivity.java" />
         <option value="$PROJECT_DIR$/src/com/roy/automobileservice/activity/CarInfoActivity.java" />
         <option value="$PROJECT_DIR$/res/layout/car_info_fragment.xml" />
         <option value="$PROJECT_DIR$/src/com/roy/automobileservice/layout/CarInfoFragment.java" />
         <option value="$PROJECT_DIR$/res/layout/car_info_activity.xml" />
         <option value="$PROJECT_DIR$/src/com/roy/automobileservice/layout/PictureSwitcherFragment.java" />
+        <option value="$PROJECT_DIR$/src/com/roy/automobileservice/activity/CarModelsListActivity.java" />
+        <option value="$PROJECT_DIR$/src/com/roy/automobileservice/layout/AnimationView.java" />
+        <option value="$PROJECT_DIR$/src/com/roy/automobileservice/layout/CircleRefreshLayout.java" />
+        <option value="$PROJECT_DIR$/res/layout/login_activity_layout.xml" />
+        <option value="$PROJECT_DIR$/src/com/roy/automobileservice/utils/TestData.java" />
+        <option value="$PROJECT_DIR$/src/com/roy/automobileservice/activity/LoginActivity.java" />
+        <option value="$PROJECT_DIR$/AndroidManifest.xml" />
+        <option value="$PROJECT_DIR$/res/values/color.xml" />
+        <option value="$PROJECT_DIR$/res/values/styles.xml" />
+        <option value="$PROJECT_DIR$/res/layout/car_models_list_view.xml" />
+        <option value="$PROJECT_DIR$/res/layout/car_repair_activity_view.xml" />
       </list>
     </option>
   </component>
@@ -1121,7 +1106,7 @@
     <option name="x" value="1358" />
     <option name="y" value="-149" />
     <option name="width" value="1616" />
-    <option name="height" value="916" />
+    <option name="height" value="886" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -1164,6 +1149,43 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="AutomobileService" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="AutomobileService" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="AutomobileService" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="AutomobileService" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="AutomobileService" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="res" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="AndroidView">
         <subPane>
           <PATH>
@@ -1184,29 +1206,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="Scratches" />
-      <pane id="ProjectPane">
-        <subPane>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="AutomobileService" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="AutomobileService" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="AutomobileService" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -1214,11 +1213,13 @@
     <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.Java" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
     <property name="device.picker.selection" value="5TSCFYMVEYAEKVWW" />
-    <property name="last_opened_file_path" value="E:/myandroidworkspace/InboxLayout" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../GussMusics" />
     <property name="ToolWindowGradle Console.ShowToolbar" value="false" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="F:\360Downloads\AutomobileService\res\values" />
+      <recent name="F:\360Downloads\AutomobileService\res\anim" />
       <recent name="F:\360Downloads\AutomobileService\res\drawable-hdpi" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
@@ -1520,15 +1521,16 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="1358" y="-149" width="1616" height="916" extended-state="6" />
-    <editor active="true" />
+    <frame x="1358" y="-149" width="1616" height="886" extended-state="6" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32760897" sideWeight="0.4974293" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32737276" sideWeight="0.4974293" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Android Model" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Android Monitor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.047556143" sideWeight="0.8541131" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Android Monitor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.038514443" sideWeight="0.8541131" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Captures" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="true" content_ui="tabs" />
@@ -1541,13 +1543,12 @@
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32934928" sideWeight="0.4974293" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.155527" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.13174807" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32760897" sideWeight="0.4974293" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32893" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -1557,14 +1558,14 @@
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Android Monitor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.36459708" sideWeight="0.4922879" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32802126" sideWeight="0.5025707" order="8" side_tool="true" content_ui="tabs" />
-      <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32802126" sideWeight="0.4922879" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
-      <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32802126" sideWeight="0.4922879" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="true" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32934928" sideWeight="0.4974293" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15616967" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32841823" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32841823" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -1617,215 +1618,36 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/res/layout/user_info_modify_layout.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.29602888">
-          <caret line="148" column="17" selection-start-line="148" selection-start-column="17" selection-end-line="148" selection-end-column="17" />
-          <folding>
-            <element signature="e#5194#5212#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/layout/my_orders_tab.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.46534654">
-          <caret line="21" column="23" selection-start-line="21" selection-start-column="23" selection-end-line="21" selection-end-column="23" />
-          <folding>
-            <element signature="e#516#540#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/layout/my_car_info_tab.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.053465348">
-          <caret line="33" column="20" selection-start-line="33" selection-start-column="20" selection-end-line="33" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/roy/automobileservice/cls/BeautyCategory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="11" column="29" selection-start-line="11" selection-start-column="29" selection-end-line="11" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/layout/title_back.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-2.2272727">
-          <caret line="14" column="20" selection-start-line="14" selection-start-column="20" selection-end-line="14" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/layout/beauty_catogory_content.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.2">
-          <caret line="9" column="55" selection-start-line="9" selection-start-column="55" selection-end-line="9" selection-end-column="55" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/AppData/Local/Android/sdk/sources/android-23/android/widget/ArrayAdapter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.2068965">
-          <caret line="329" column="0" selection-start-line="329" selection-start-column="0" selection-end-line="329" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/layout/info_modify_activity.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7941176">
-          <caret line="33" column="11" selection-start-line="23" selection-start-column="3" selection-end-line="33" selection-end-column="11" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/layout/beauty_catogory_content_frg.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7147059">
-          <caret line="9" column="28" selection-start-line="9" selection-start-column="28" selection-end-line="9" selection-end-column="28" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/roy/automobileservice/activity/BeautyCatogoryContentActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.16256158">
-          <caret line="14" column="42" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/roy/automobileservice/activity/MyInfoActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-5.958128">
-          <caret line="40" column="5" selection-start-line="37" selection-start-column="4" selection-end-line="40" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/roy/automobileservice/activity/InfoModifyActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.46551725">
-          <caret line="62" column="43" selection-start-line="62" selection-start-column="43" selection-end-line="62" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/drawable/checkbox_style.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.2918919">
-          <caret line="4" column="56" selection-start-line="4" selection-start-column="56" selection-end-line="4" selection-end-column="56" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/values/styles.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6052632">
-          <caret line="53" column="12" selection-start-line="53" selection-start-column="12" selection-end-line="53" selection-end-column="12" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/roy/automobileservice/cls/Car.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/layout/ask_for_beauty_activity_view.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.47398844">
-          <caret line="163" column="49" selection-start-line="163" selection-start-column="49" selection-end-line="163" selection-end-column="49" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/AndroidManifest.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="72" column="62" selection-start-line="72" selection-start-column="62" selection-end-line="72" selection-end-column="62" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/roy/automobileservice/activity/AskForBeautyActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.04963235">
-          <caret line="99" column="66" selection-start-line="99" selection-start-column="66" selection-end-line="99" selection-end-column="66" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/build.gradle">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.84375">
-          <caret line="16" column="49" selection-start-line="16" selection-start-column="49" selection-end-line="16" selection-end-column="49" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/values/color.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.15458015">
-          <caret line="3" column="17" selection-start-line="3" selection-start-column="17" selection-end-line="3" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/res/layout/car_calculator_activity_view.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-3.2727273">
           <caret line="8" column="55" selection-start-line="5" selection-start-column="4" selection-end-line="8" selection-end-column="55" />
           <folding />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/AppData/Local/Android/sdk/platforms/android-23/data/res/layout/simple_list_item_1.xml">
       <provider editor-type-id="android-designer">
         <state />
       </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Android/sdk/platforms/android-23/data/res/layout/simple_list_item_1.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/layout/string_center_list_item.xml">
       <provider editor-type-id="android-designer">
         <state />
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/layout/string_center_list_item.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-2.0454545">
           <caret line="5" column="36" selection-start-line="5" selection-start-column="36" selection-end-line="5" selection-end-column="36" />
           <folding />
         </state>
+      </provider>
+      <provider editor-type-id="android-designer">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/roy/automobileservice/cls/CarMaintenance.java">
@@ -1901,9 +1723,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/res/layout/car_beauty_activity_view.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-7.8939395">
           <caret line="24" column="0" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
@@ -1911,6 +1730,9 @@
             <element signature="e#1290#1314#0" expanded="true" />
           </folding>
         </state>
+      </provider>
+      <provider editor-type-id="android-designer">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/roy/automobileservice/activity/CarBeautyActivity.java">
@@ -1924,30 +1746,18 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="1.2378223">
           <caret line="23" column="70" selection-start-line="23" selection-start-column="70" selection-end-line="23" selection-end-column="70" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/res/layout/picture_swithcer.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.97590363">
           <caret line="15" column="36" selection-start-line="15" selection-start-column="36" selection-end-line="15" selection-end-column="36" />
           <folding />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/layout/car_models_list_view.xml">
       <provider editor-type-id="android-designer">
         <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.8">
-          <caret line="31" column="43" selection-start-line="30" selection-start-column="3" selection-end-line="36" selection-end-column="51" />
-          <folding />
-        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/roy/automobileservice/activity/HomePageActivity.java">
@@ -1961,22 +1771,6 @@
             <element signature="e#6038#6094#0" expanded="false" />
             <element signature="e#6128#6190#0" expanded="false" />
             <element signature="e#7464#7521#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/layout/car_repair_activity_view.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.2554216">
-          <caret line="58" column="0" selection-start-line="58" selection-start-column="0" selection-end-line="58" selection-end-column="0" />
-          <folding>
-            <element signature="e#842#873#0" expanded="true" />
-            <element signature="e#1300#1322#0" expanded="true" />
-            <element signature="e#2035#2062#0" expanded="true" />
-            <element signature="e#2639#2671#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1999,83 +1793,277 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="48" column="35" selection-start-line="47" selection-start-column="8" selection-end-line="48" selection-end-column="35" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/res/layout/car_info_fragment.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="12" column="4" selection-start-line="12" selection-start-column="0" selection-end-line="16" selection-end-column="47" />
           <folding />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/roy/automobileservice/layout/CarInfoFragment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="34" column="35" selection-start-line="33" selection-start-column="8" selection-end-line="34" selection-end-column="35" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/layout/car_info_activity.xml">
       <provider editor-type-id="android-designer">
         <state />
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/layout/car_info_activity.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="16" column="30" selection-start-line="16" selection-start-column="30" selection-end-line="16" selection-end-column="30" />
           <folding />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/roy/automobileservice/activity/CarModelsListActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="111" column="54" selection-start-line="111" selection-start-column="54" selection-end-line="111" selection-end-column="54" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/AppData/Local/Android/sdk/sources/android-23/android/widget/ImageView.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.7004342">
-          <caret line="120" column="24" selection-start-line="120" selection-start-column="18" selection-end-line="120" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/layout/cycle_picture.xml">
       <provider editor-type-id="android-designer">
         <state />
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/layout/cycle_picture.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="33" column="32" selection-start-line="33" selection-start-column="32" selection-end-line="33" selection-end-column="32" />
           <folding />
         </state>
       </provider>
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/roy/automobileservice/layout/ViewPagerCycleFragment.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="76" column="42" selection-start-line="76" selection-start-column="42" selection-end-line="76" selection-end-column="42" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/roy/automobileservice/layout/PictureSwitcherFragment.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.119942196">
+        <state vertical-scroll-proportion="0.0">
           <caret line="113" column="0" selection-start-line="113" selection-start-column="0" selection-end-line="113" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/roy/automobileservice/layout/CarInfoFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.49277458">
+          <caret line="34" column="35" selection-start-line="33" selection-start-column="8" selection-end-line="34" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/values/attrs.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/roy/automobileservice/layout/AnimationView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="89" column="84" selection-start-line="89" selection-start-column="84" selection-end-line="89" selection-end-column="84" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/libs/android-support-v4.jar!/android/support/v4/view/ViewCompat.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="14.88253">
+          <caret line="440" column="35" selection-start-line="440" selection-start-column="16" selection-end-line="440" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/roy/automobileservice/layout/CircleRefreshLayout.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.67919075">
+          <caret line="167" column="0" selection-start-line="167" selection-start-column="0" selection-end-line="167" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/roy/automobileservice/activity/CarModelsListActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.039017342">
+          <caret line="32" column="0" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Android/sdk/sources/android-23/android/widget/ArrayAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-7.713873">
+          <caret line="61" column="43" selection-start-line="61" selection-start-column="43" selection-end-line="61" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/layout/login_activity_layout.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.0">
+          <caret line="0" column="38" selection-start-line="0" selection-start-column="38" selection-end-line="0" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Android/sdk/platforms/android-23/data/res/layout/simple_dropdown_item_1line.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="20" column="30" selection-start-line="20" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/roy/automobileservice/utils/TestData.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="13" column="52" selection-start-line="13" selection-start-column="52" selection-end-line="13" selection-end-column="52" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Android/sdk/sources/android-23/android/widget/ImageView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-2.5278811">
+          <caret line="407" column="16" selection-start-line="407" selection-start-column="16" selection-end-line="407" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/values/color.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-6.0">
+          <caret line="8" column="38" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Android/sdk/platforms/android-23/data/res/values/colors_holo.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-6.1944447">
+          <caret line="27" column="4" selection-start-line="27" selection-start-column="4" selection-end-line="27" selection-end-column="57" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Android/sdk/platforms/android-23/data/res/values/themes_holo.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-3.484375">
+          <caret line="406" column="51" selection-start-line="406" selection-start-column="51" selection-end-line="406" selection-end-column="51" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/anim/out_from_right.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.10725552">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#141#174#0" expanded="false" />
+            <element signature="e#326#359#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/roy/automobileservice/activity/LoginActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.7641791">
+          <caret line="192" column="26" selection-start-line="192" selection-start-column="26" selection-end-line="192" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/values-v11/styles.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.089108914">
+          <caret line="2" column="55" selection-start-line="2" selection-start-column="55" selection-end-line="2" selection-end-column="55" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/values/styles.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.44554454">
+          <caret line="13" column="8" selection-start-line="13" selection-start-column="8" selection-end-line="13" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/layout/beauty_catogory_content_frg.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/layout/beauty_catogory_content.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/layout/car_models_list_view.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="1.0447019">
+          <caret line="54" column="63" selection-start-line="54" selection-start-column="63" selection-end-line="54" selection-end-column="63" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/values/config.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AndroidManifest.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="1.8312303">
+          <caret line="58" column="12" selection-start-line="58" selection-start-column="12" selection-end-line="58" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/values/dimens.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.12776025">
+          <caret line="3" column="17" selection-start-line="3" selection-start-column="17" selection-end-line="3" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/layout/car_repair_activity_view.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5482234">
+          <caret line="8" column="37" selection-start-line="8" selection-start-column="37" selection-end-line="8" selection-end-column="37" />
+          <folding>
+            <element signature="e#1517#1539#0" expanded="true" />
+            <element signature="e#2257#2284#0" expanded="true" />
+            <element signature="e#2917#2949#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer">
+        <state />
       </provider>
     </entry>
   </component>

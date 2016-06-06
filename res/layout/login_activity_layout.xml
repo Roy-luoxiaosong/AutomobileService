@@ -25,7 +25,7 @@
         android:orientation="horizontal"
         android:background="#fff"
         >
-        <EditText
+        <AutoCompleteTextView
             android:id="@+id/username_inputbox"
             android:hint="@string/login_user_name_hint"
             android:textSize="20sp"
