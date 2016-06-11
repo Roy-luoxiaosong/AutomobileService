@@ -166,6 +166,12 @@
     <string name="recommend_content">Recommend：</string>
     <string name="base_recommend_request">Maintenance Apply</string>
 
+    <string name="order_user_name">订单用户：</string>
+    <string name="order_handle_staff_name">处理人：</string>
+    <string name="order_state">订单状态：</string>
+    <string name="order_complete_time">完成时间：</string>
+    <string name="order_dispatch_order_btn">分派任务</string>
+    <string name="order_handle_btn">处理</string>
 
 
     

@@ -11,7 +11,6 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.view.PagerTabStrip;
 import android.support.v4.view.ViewPager;
-import android.text.TextUtils;
 import android.util.TypedValue;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -22,25 +21,39 @@ import android.widget.ExpandableListView;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ListView;
-import android.widget.ScrollView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.roy.automobileservice.R;
 import com.roy.automobileservice.adapter.InfoItemAdapter;
 import com.roy.automobileservice.adapter.MyInfoPagerAdapter;
 import com.roy.automobileservice.adapter.ReapirAndBeautyHistoryAdapter;
+import com.roy.automobileservice.adapter.UserCarBOrderAdapter;
+import com.roy.automobileservice.adapter.UserCarMOrderAdapter;
+import com.roy.automobileservice.adapter.UserCarOrderAdapter;
+import com.roy.automobileservice.cls.CarBOrder;
+import com.roy.automobileservice.cls.CarMOrder;
+import com.roy.automobileservice.cls.CarOrder;
+import com.roy.automobileservice.cls.ChinaCar;
 import com.roy.automobileservice.cls.CubeTransformer;
 import com.roy.automobileservice.cls.InfoItem;
 import com.roy.automobileservice.layout.AvatarImageView;
 import com.roy.automobileservice.utils.GlobalVariable;
+import com.roy.automobileservice.utils.SqlHelper;
+import com.roy.automobileservice.utils.Utils;
+import com.squareup.picasso.Picasso;
+
+import cn.bmob.v3.BmobQuery;
+import cn.bmob.v3.datatype.BmobQueryResult;
+import cn.bmob.v3.exception.BmobException;
+import cn.bmob.v3.listener.SQLQueryListener;
 
 public class MyInfoActivity extends BaseActivity implements OnClickListener{
 	public static void startAction(Context context){
 		Intent intent = new Intent(context,MyInfoActivity.class);
 		context.startActivity(intent);
 	}
-//	private boolean hasBeautyHistory;
-//	private boolean hasReapairHistory;
+
 
 	private ExpandableListView repairHistory;
 	private ExpandableListView beautyHistory;
@@ -55,7 +68,7 @@ public class MyInfoActivity extends BaseActivity implements OnClickListener{
 	private AvatarImageView imgAvatarImageView;
 	private ViewPager pager = null;
 	private PagerTabStrip tabStrip = null;
-	private ArrayList<View> viewList = new ArrayList<View>();
+	private ArrayList<View> viewList = new ArrayList<>();
 	private ArrayList<String> titleList = new ArrayList<String>();
 	private MyInfoPagerAdapter adapter;
 	private InfoItemAdapter infoItemAdapter;
@@ -70,6 +83,15 @@ public class MyInfoActivity extends BaseActivity implements OnClickListener{
 	private TextView buyCarTime;
 	private TextView myCarInfo;
 	private Button buyNewCar;
+	private TextView carName;
+	private TextView carType;
+	//view5
+	private ListView mCarOrderListView,mCarBOrderListView,mCarMOrderListView;
+	private List<CarOrder> mCarOrderList;
+	private List<CarBOrder> mCarBOrderList;
+	private List<CarMOrder> mCarMOrderList;
+
+	private String bql;
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -117,20 +139,51 @@ public class MyInfoActivity extends BaseActivity implements OnClickListener{
         view2 = LayoutInflater.from(this).inflate(R.layout.my_car_info_tab, null);
 		carImage = (ImageView)view2.findViewById(R.id.my_car_picture);
 		buyCarTime = (TextView)view2.findViewById(R.id.buy_car_time);
+		carName = (TextView)view2.findViewById(R.id.user_car_name);
+		carType = (TextView)view2.findViewById(R.id.user_car_type);
 		myCarInfo = (TextView)view2.findViewById(R.id.my_car_discribe_info);
 		noCarLayout = (LinearLayout)view2.findViewById(R.id.no_car_layout);
 		haveCarLayout = (LinearLayout)view2.findViewById(R.id.have_car_layout);
 		buyNewCar = (Button)view2.findViewById(R.id.buy_a_new_car);
-		if(GlobalVariable.currentUser.getCar()!=null){
-			haveCarLayout.setVisibility(View.VISIBLE);
-			noCarLayout.setVisibility(View.GONE);
-			carImage.setBackgroundResource(GlobalVariable.currentUser.getCar().getImageId());
-			myCarInfo.setText(GlobalVariable.currentUser.getCar().getDiscribText());
-		}else{
-			haveCarLayout.setVisibility(View.GONE);
-			noCarLayout.setVisibility(View.VISIBLE);
-			buyNewCar.setOnClickListener(this);
-		}
+
+		new BmobQuery<ChinaCar>().doSQLQuery(MyInfoActivity.this, SqlHelper.SEARCH_CAR_FROM_BMBO, new SQLQueryListener<ChinaCar>() {
+			@Override
+			public void done(BmobQueryResult<ChinaCar> bmobQueryResult, BmobException e) {
+				if(e==null){
+					List<ChinaCar> cars = bmobQueryResult.getResults();
+					ChinaCar car = Utils.getCarByName(GlobalVariable.currentUser.getCarName(),cars);
+					if(car!=null){
+						haveCarLayout.setVisibility(View.VISIBLE);
+						noCarLayout.setVisibility(View.GONE);
+						Picasso.with(MyInfoActivity.this).load(car.getImageIds().get(1)).into(carImage);
+						myCarInfo.setText(car.getConfig());
+						carName.setText(car.getCarName());
+						bql = "select * from CarOrder where userName="+"'"+GlobalVariable.currentUser.getUserName()+"'"+"and state='交易完成'";
+						new BmobQuery<CarOrder>().doSQLQuery(MyInfoActivity.this, bql, new SQLQueryListener<CarOrder>() {
+							@Override
+							public void done(BmobQueryResult<CarOrder> bmobQueryResult, BmobException e) {
+								if(e==null&&bmobQueryResult.getResults().size()>0){
+									carType.setText(bmobQueryResult.getResults().get(0).getCarDetialName());
+									buyCarTime.setText(bmobQueryResult.getResults().get(0).getUpdatedAt().toString());
+								}else{
+									carType.setText("1.5MT精英型");
+									buyCarTime.setText("2015-4-1");
+								}
+							}
+						});
+
+
+					}else{
+						haveCarLayout.setVisibility(View.GONE);
+						noCarLayout.setVisibility(View.VISIBLE);
+						buyNewCar.setOnClickListener(MyInfoActivity.this);
+					}
+				}
+
+			}
+		});
+
+
         
         //初始化view3
         view3 = LayoutInflater.from(this).inflate(R.layout.auto_beauty_history_tab, null);
@@ -147,13 +200,17 @@ public class MyInfoActivity extends BaseActivity implements OnClickListener{
         repairHistory = (ExpandableListView)view4.findViewById(R.id.auto_repair_history);
         repairHistory.setGroupIndicator(null);
         repairHistory.setDivider(null);
-        initRepairHistory();
+        initMaintenanceHistory();
         repairHistoryAdapter = new ReapirAndBeautyHistoryAdapter(this,repairTitle,repairContent,
         		R.layout.history_title,R.layout.history_content_item);
         repairHistory.setAdapter(repairHistoryAdapter);
 
 		//初始化View5
+
 		view5 = LayoutInflater.from(this).inflate(R.layout.my_orders_tab,null);
+		initManageOrderViews(view5);
+		initOrderViewData();
+
         
         //viewpager
         viewList.add(view1);
@@ -203,15 +260,11 @@ public class MyInfoActivity extends BaseActivity implements OnClickListener{
 		infoItems.add(new InfoItem(getResources().getString(R.string.info_item_tel),GlobalVariable.currentUser.getTelNumber()));
 		infoItems.add(new InfoItem(getResources().getString(R.string.info_item_address),GlobalVariable.currentUser.getAddress()));
 		infoItems.add(new InfoItem(getResources().getString(R.string.info_item_car_name),GlobalVariable.currentUser.getCar()==null?
-				getResources().getString(R.string.info_item_no_car):GlobalVariable.currentUser.getCar().getName()));
+				getResources().getString(R.string.info_item_no_car):GlobalVariable.currentUser.getCar().getCarName()));
 	}
-	private void initRepairHistory(){
-		repairTitle = new ArrayList<String>();
-		repairTitle.add("2012-05-06");
-		repairTitle.add("2012-06-06");
-		repairTitle.add("2015-04-06");
-		repairTitle.add("2016-05-06");
-		
+	private void initMaintenanceHistory(){
+		repairTitle = new ArrayList<>();
+		//bql = "select * from "
 		repairContent = new HashMap<String, List<String>>();
 		List<String> list1 = new ArrayList<String>();
 		list1.add("ά��Ա������");
@@ -272,6 +325,58 @@ public class MyInfoActivity extends BaseActivity implements OnClickListener{
 		beautyContent.put("2016-05-06", list1);
 		
 	}
-	
-	
+	private void initManageOrderViews(View view){
+		mCarOrderListView = (ListView)view.findViewById(R.id.manager_car_order_list);
+
+		mCarBOrderListView = (ListView)view.findViewById(R.id.manager_beauty_order_list);
+		mCarMOrderListView = (ListView)view.findViewById(R.id.manager_maintenance_order_list);
+	}
+	private void initOrderViewData(){
+		bql = "select * from CarOrder where userName="+"'"+GlobalVariable.currentUser.getUserName()+"'";
+		new BmobQuery<CarOrder>().doSQLQuery(MyInfoActivity.this, bql, new SQLQueryListener<CarOrder>() {
+			@Override
+			public void done(BmobQueryResult<CarOrder> bmobQueryResult, BmobException e) {
+				if(e==null){
+					mCarOrderList = bmobQueryResult.getResults();
+					if(mCarOrderList!=null&&mCarOrderList.size()>0){
+						UserCarOrderAdapter adapter = new UserCarOrderAdapter(MyInfoActivity.this,R.layout.car_order_item,mCarOrderList);
+						mCarOrderListView.setAdapter(adapter);
+						Utils.setListViewHeightBasedOnChildren(mCarOrderListView);
+					}
+				}else {
+					Toast.makeText(MyInfoActivity.this,"获取订单失败",Toast.LENGTH_SHORT).show();
+				}
+			}
+		});
+		bql = "select * from CarBOrder where userName="+"'"+GlobalVariable.currentUser.getUserName()+"'";
+		new BmobQuery<CarBOrder>().doSQLQuery(MyInfoActivity.this, bql, new SQLQueryListener<CarBOrder>() {
+			@Override
+			public void done(BmobQueryResult<CarBOrder> bmobQueryResult, BmobException e) {
+				if(e==null){
+					mCarBOrderList = bmobQueryResult.getResults();
+					if(mCarBOrderList!=null&&mCarBOrderList.size()>0){
+						UserCarBOrderAdapter adapter = new UserCarBOrderAdapter(MyInfoActivity.this,R.layout.car_beauty_order_item,mCarBOrderList);
+						mCarBOrderListView.setAdapter(adapter);
+						Utils.setListViewHeightBasedOnChildren(mCarBOrderListView);
+					}
+				}else {
+					Toast.makeText(MyInfoActivity.this,"获取订单失败",Toast.LENGTH_SHORT).show();
+				}
+			}
+		});
+		bql = "select * from CarMOrder where userName="+"'"+GlobalVariable.currentUser.getUserName()+"'";
+		new BmobQuery<CarMOrder>().doSQLQuery(MyInfoActivity.this, bql, new SQLQueryListener<CarMOrder>() {
+			@Override
+			public void done(BmobQueryResult<CarMOrder> bmobQueryResult, BmobException e) {
+				if(e==null){
+					mCarMOrderList = bmobQueryResult.getResults();
+					if(mCarMOrderList!=null&&mCarMOrderList.size()>0){
+						UserCarMOrderAdapter adapter = new UserCarMOrderAdapter(MyInfoActivity.this,R.layout.car_maintenance_order_item,mCarMOrderList);
+						mCarMOrderListView.setAdapter(adapter);
+						Utils.setListViewHeightBasedOnChildren(mCarMOrderListView);
+					}
+				}
+			}
+		});
+	}
 }

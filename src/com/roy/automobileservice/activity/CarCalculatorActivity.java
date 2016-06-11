@@ -138,19 +138,17 @@ public class CarCalculatorActivity extends BaseActivity implements View.OnClickL
             case R.id.buy_car:
                 if(!LoginActivity.isLogin){
                     Utils.showTipAndLogin(CarCalculatorActivity.this, R.string.tip_msg_to_login_text);
+                }else if(GlobalVariable.loginType!=GlobalVariable.USER_LOGIN){
+                    Toast.makeText(CarCalculatorActivity.this,"请以用户身份登录",Toast.LENGTH_SHORT).show();
                 }else{
                     if (!TextUtils.isEmpty(selectedCarName)&&
                             !TextUtils.isEmpty(selectedCarNameDetail)
                             &&!selectedCarName.equals("请选择车型")
                             &&!selectedCarNameDetail.equals("请选择车款")){
-                        CarOrder carOrder = new CarOrder(selectedCarName,selectedCarNameDetail, GlobalVariable.currentUser.getUserName(),
-                                new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(new Date()));
-                        Log.d("tag","用户名为："+carOrder.getUserName()+
-                                "车名："+carOrder.getCarName()+
-                                "车型："+carOrder.getCarDetialName()+
-                                "得到时间为："+carOrder.getDate());
+                        CarOrder carOrder = new CarOrder(selectedCarName,selectedCarNameDetail, GlobalVariable.currentUser.getUserName());
+
                         Utils.showCarorderInfo(CarCalculatorActivity.this,"您的订单信息为：\n车型： "+carOrder.getCarName()
-                        +"\n车款： "+carOrder.getCarDetialName()+"\n提交请按确认！");
+                        +"\n车款： "+carOrder.getCarDetialName()+"\n提交请按确认！",carOrder);
                     }else {
                         Toast.makeText(CarCalculatorActivity.this,"请选择车型",Toast.LENGTH_SHORT).show();
                     }

@@ -12,6 +12,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.roy.automobileservice.R;
+import com.roy.automobileservice.cls.IOnDeleteUserButtonClickListener;
 import com.roy.automobileservice.cls.User;
 import com.roy.automobileservice.utils.Utils;
 
@@ -22,6 +23,10 @@ public class UserNameAdapter extends ArrayAdapter<User> implements View.OnClickL
 	private int resourceId;
     private int itemPos;
     private String username;
+    private IOnDeleteUserButtonClickListener mListner = null;
+    public void setOnDeleteUserListener(IOnDeleteUserButtonClickListener listener){
+        mListner = listener;
+    }
     public UserNameAdapter(Context context, int resource, List<User> objects) {
         super(context, resource, objects);
         //this.list = objects;
@@ -41,7 +46,7 @@ public class UserNameAdapter extends ArrayAdapter<User> implements View.OnClickL
             viewHolder.userName_tv.setText(username);
             //显示头像
             viewHolder.avatar_img = (ImageView) view.findViewById(R.id.avatar_img);
-            viewHolder.avatar_img.setImageResource(userNameItem.getAvatarImage());
+            viewHolder.avatar_img.setImageResource(R.drawable.user_default_icon1);
             //添加删除按钮的click监听事件
             viewHolder.del_btn = (ImageButton) view.findViewById(R.id.del_btn);
             //保存当前按钮的位置
@@ -56,7 +61,7 @@ public class UserNameAdapter extends ArrayAdapter<User> implements View.OnClickL
             username = userNameItem.getUserName();
             viewHolder.userName_tv.setText(username);
           //显示头像
-            viewHolder.avatar_img.setImageResource(userNameItem.getAvatarImage());
+            viewHolder.avatar_img.setImageResource(R.drawable.user_default_icon1);
             
             //添加删除按钮的click监听事件
             viewHolder.del_btn = (ImageButton) view.findViewById(R.id.del_btn);
@@ -73,10 +78,10 @@ public class UserNameAdapter extends ArrayAdapter<User> implements View.OnClickL
         switch (v.getId()){
             //删除当前item
             case R.id.del_btn:
-            	
-            	itemPos = (Integer)v.getTag();
-            	
-            	Utils.showTipAndDeleteUer(getContext(), R.string.tip_msg_to_delete_user, itemPos,UserNameAdapter.this);
+                itemPos = (Integer)v.getTag();
+                if(mListner!=null){
+                    mListner.onClick((ImageButton)v,itemPos,UserNameAdapter.this);
+                }
                 break;
         }
     }

@@ -25,6 +25,8 @@ import com.roy.automobileservice.layout.AvatarImageView;
 import com.roy.automobileservice.utils.TestData;
 import com.roy.automobileservice.utils.Utils;
 
+import cn.bmob.v3.listener.SaveListener;
+
 public class RegisterActivity extends BaseActivity implements OnClickListener,OnItemSelectedListener{
 	
 	public static void startAction(Context context){
@@ -84,8 +86,20 @@ public class RegisterActivity extends BaseActivity implements OnClickListener,On
 			user.setSex(male.isChecked()?
 					male.getText().toString():female.getText().toString());
 			if(userInfoIsRight(user)){
-				TestData.userTestList.add(user);
-				Utils.showBackToLogin(RegisterActivity.this, getResources().getString(R.string.tip_register_succeed));
+				//TestData.userTestList.add(user);
+				user.save(RegisterActivity.this, new SaveListener() {
+					@Override
+					public void onSuccess() {
+						Utils.showBackToLogin(RegisterActivity.this, getResources().getString(R.string.tip_register_succeed));
+					}
+
+					@Override
+					public void onFailure(int i, String s) {
+						Toast.makeText(RegisterActivity.this,"注册失败，用户名已经存在或者网络不好",Toast.LENGTH_SHORT).show();
+
+					}
+				});
+
 				break;
 			}
 			break;
@@ -107,18 +121,7 @@ public class RegisterActivity extends BaseActivity implements OnClickListener,On
 		
 	}
 	
-	/*private CarTemp getCarByName(String name){
-		CarTemp car = new CarTemp();
-		if(!TextUtils.isEmpty(name)){
-			for(CarTemp tem:CarModelsListActivity.carList){
-				if(tem!=null&&tem.getName().equals(name)){
-						car = tem;
-						break;
-				}
-			}
-		}
-		return car;
-	}*/
+
 	private Boolean userInfoIsRight(User user){
 		if(TextUtils.isEmpty(user.getUserName())){
 			Toast.makeText(RegisterActivity.this, getResources().getString(R.string.tip_user_name_is_empty), Toast.LENGTH_SHORT).show();
@@ -127,20 +130,6 @@ public class RegisterActivity extends BaseActivity implements OnClickListener,On
 		if(TextUtils.isEmpty(user.getPassword())){
 			Toast.makeText(RegisterActivity.this, getResources().getString(R.string.tip_password_is_empty_or_not_right), Toast.LENGTH_SHORT).show();
 			return false;
-		}
-		/*if(TextUtils.isEmpty(user.getEmail())){
-			Toast.makeText(RegisterActivity.this, " ", Toast.LENGTH_SHORT).show();
-			return false;
-		}*/
-		/*if(TextUtils.isEmpty(user.getTelNumber())){
-			Toast.makeText(RegisterActivity.this, " ", Toast.LENGTH_SHORT).show();
-			return false;
-		}*/
-		for(User tem:TestData.userTestList){
-			if(user.getUserName().equals(tem.getUserName())){
-				Toast.makeText(RegisterActivity.this, getResources().getString(R.string.tip_user_is_exist), Toast.LENGTH_SHORT).show();
-				return false;
-			}
 		}
 		return true;
 		

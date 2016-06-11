@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/register_staff_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:visibility="gone"
+    >
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="60dp"
+        android:layout_marginTop="20dp"
+        android:text="添加员工"
+        android:gravity="center"
+        android:layout_gravity="center_horizontal"
+        android:textSize="35sp" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:gravity="center"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TableRow
+                android:id="@+id/user_name_tabrow"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp">
+
+                <TextView
+                    style="@style/text_size_style"
+                    android:text="员工姓名："
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/register_staff_name"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/login_edittext_style"
+                    android:maxLength="20"
+                    android:singleLine="true" />
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/password_tabrow"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp">
+
+                <TextView
+                    style="@style/text_size_style"
+                    android:text="密       码："
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/register_staff_password"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/login_edittext_style"
+                    android:password="true"
+                    android:singleLine="true"
+                    android:text="123456" />
+            </TableRow>
+
+            <TableRow
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp">
+
+                <TextView
+                    style="@style/text_size_style"
+                    android:text="邮       件："
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/register_staff_email"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/login_edittext_style"
+                    android:singleLine="true" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp">
+
+                <TextView
+                    style="@style/text_size_style"
+                    android:text="部        门：" />
+
+                <Spinner
+                    android:id="@+id/staff_depart_select"
+                    style="@style/match_wrap_group"
+                    android:layout_height="45dp"
+                    android:layout_width="match_parent"
+                    android:background="@drawable/login_edittext_style" />
+            </TableRow>
+        </LinearLayout>
+    </ScrollView>
+
+
+    <Button
+        android:id="@+id/add_staff_submit_btn"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="10dp"
+        android:background="@drawable/login_btn_shape"
+        android:gravity="center"
+        android:text="@string/make_sure_modify_info"
+        android:textColor="#fff" />
+
+    <Button
+        android:id="@+id/add_staff_quit_btn"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="10dp"
+        android:background="@drawable/login_btn_shape"
+        android:gravity="center"
+        android:text="放弃"
+        android:textColor="#fff" />
+
+
+</LinearLayout>

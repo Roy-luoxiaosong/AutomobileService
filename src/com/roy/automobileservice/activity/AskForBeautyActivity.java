@@ -4,6 +4,7 @@ package com.roy.automobileservice.activity;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
 import android.view.Window;
@@ -11,12 +12,18 @@ import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.roy.automobileservice.R;
+import com.roy.automobileservice.cls.CarBOrder;
+import com.roy.automobileservice.utils.GlobalVariable;
+import com.roy.automobileservice.utils.Utils;
 
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
+
+import cn.bmob.v3.BmobObject;
 
 
 /**
@@ -209,12 +216,21 @@ public class AskForBeautyActivity extends BaseActivity implements CompoundButton
     public void onClick(View v) {
         switch (v.getId()){
             case R.id.submit_beauty_request:
-                Log.d("tag","当前选中的长度为："+checkedList.size());
-                Iterator<String> it = checkedList.iterator();
-                while (it.hasNext()){
-                    String tem = it.next();
-                    Log.d("tag","当前有这些内容："+tem);
+
+                if(!LoginActivity.isLogin){
+                    Utils.showTipAndLogin(AskForBeautyActivity.this, R.string.tip_msg_to_login_text);
+                }else if(GlobalVariable.loginType!=GlobalVariable.USER_LOGIN){
+                    Toast.makeText(AskForBeautyActivity.this,"请以用户身份登录",Toast.LENGTH_SHORT).show();
+                }else if(TextUtils.isEmpty(GlobalVariable.currentUser.getCarName())){
+                    Utils.showTipAndJumpToCarModel(AskForBeautyActivity.this,"您还没有拥有汽车，去看看有没有喜欢的汽车吧？");
+                }else{
+                    CarBOrder order = new CarBOrder(checkedList, GlobalVariable.currentUser.getUserName());
+                    Utils.showTipAndSubmitBOrder(AskForBeautyActivity.this,"请确认需要美容的项目\n" +
+                            "提交成功后您将会在我的订单里面看到订单内容",order);
                 }
+                break;
+
+
         }
     }
 }

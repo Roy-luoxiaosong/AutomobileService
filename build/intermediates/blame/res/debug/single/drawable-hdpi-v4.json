@@ -4,6 +4,14 @@
         "source": "F:\\360Downloads\\AutomobileService\\res\\drawable-hdpi\\user_default_icon1.jpg"
     },
     {
+        "merged": "F:\\360Downloads\\AutomobileService\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\add_staff_content.png",
+        "source": "F:\\360Downloads\\AutomobileService\\res\\drawable-hdpi\\add_staff_content.png"
+    },
+    {
+        "merged": "F:\\360Downloads\\AutomobileService\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\delet_staff.png",
+        "source": "F:\\360Downloads\\AutomobileService\\res\\drawable-hdpi\\delet_staff.png"
+    },
+    {
         "merged": "F:\\360Downloads\\AutomobileService\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\up_arrow.png",
         "source": "F:\\360Downloads\\AutomobileService\\res\\drawable-hdpi\\up_arrow.png"
     },
@@ -44,28 +52,24 @@
         "source": "F:\\360Downloads\\AutomobileService\\res\\drawable-hdpi\\car_models_option_bg.png"
     },
     {
-        "merged": "F:\\360Downloads\\AutomobileService\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\card_phone.png",
-        "source": "F:\\360Downloads\\AutomobileService\\res\\drawable-hdpi\\card_phone.png"
-    },
-    {
         "merged": "F:\\360Downloads\\AutomobileService\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\del_btn.png",
         "source": "F:\\360Downloads\\AutomobileService\\res\\drawable-hdpi\\del_btn.png"
+    },
+    {
+        "merged": "F:\\360Downloads\\AutomobileService\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\card_phone.png",
+        "source": "F:\\360Downloads\\AutomobileService\\res\\drawable-hdpi\\card_phone.png"
     },
     {
         "merged": "F:\\360Downloads\\AutomobileService\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\road_assistant_option_bg.png",
         "source": "F:\\360Downloads\\AutomobileService\\res\\drawable-hdpi\\road_assistant_option_bg.png"
     },
     {
+        "merged": "F:\\360Downloads\\AutomobileService\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\staff.png",
+        "source": "F:\\360Downloads\\AutomobileService\\res\\drawable-hdpi\\staff.png"
+    },
+    {
         "merged": "F:\\360Downloads\\AutomobileService\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\home_page_bg.jpg",
         "source": "F:\\360Downloads\\AutomobileService\\res\\drawable-hdpi\\home_page_bg.jpg"
-    },
-    {
-        "merged": "F:\\360Downloads\\AutomobileService\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\h230.jpg",
-        "source": "F:\\360Downloads\\AutomobileService\\res\\drawable-hdpi\\h230.jpg"
-    },
-    {
-        "merged": "F:\\360Downloads\\AutomobileService\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\turnplate_mask_unlogin_normal.png",
-        "source": "F:\\360Downloads\\AutomobileService\\res\\drawable-hdpi\\turnplate_mask_unlogin_normal.png"
     },
     {
         "merged": "F:\\360Downloads\\AutomobileService\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\list_button_bg.png",
@@ -88,12 +92,28 @@
         "source": "F:\\360Downloads\\AutomobileService\\res\\drawable-hdpi\\arrow_right.png"
     },
     {
+        "merged": "F:\\360Downloads\\AutomobileService\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\cycle_menu_center.png",
+        "source": "F:\\360Downloads\\AutomobileService\\res\\drawable-hdpi\\cycle_menu_center.png"
+    },
+    {
+        "merged": "F:\\360Downloads\\AutomobileService\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\h230.jpg",
+        "source": "F:\\360Downloads\\AutomobileService\\res\\drawable-hdpi\\h230.jpg"
+    },
+    {
+        "merged": "F:\\360Downloads\\AutomobileService\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\turnplate_mask_unlogin_normal.png",
+        "source": "F:\\360Downloads\\AutomobileService\\res\\drawable-hdpi\\turnplate_mask_unlogin_normal.png"
+    },
+    {
         "merged": "F:\\360Downloads\\AutomobileService\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\checkbox_pressed.jpg",
         "source": "F:\\360Downloads\\AutomobileService\\res\\drawable-hdpi\\checkbox_pressed.jpg"
     },
     {
         "merged": "F:\\360Downloads\\AutomobileService\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\user_default_icon5.jpg",
         "source": "F:\\360Downloads\\AutomobileService\\res\\drawable-hdpi\\user_default_icon5.jpg"
+    },
+    {
+        "merged": "F:\\360Downloads\\AutomobileService\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\add_staff_bg.png",
+        "source": "F:\\360Downloads\\AutomobileService\\res\\drawable-hdpi\\add_staff_bg.png"
     },
     {
         "merged": "F:\\360Downloads\\AutomobileService\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\auto_repair_option_bg.png",
@@ -148,16 +168,20 @@
         "source": "F:\\360Downloads\\AutomobileService\\res\\drawable-hdpi\\auto_part_option_bg.png"
     },
     {
-        "merged": "F:\\360Downloads\\AutomobileService\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\d_auto_part.jpg",
-        "source": "F:\\360Downloads\\AutomobileService\\res\\drawable-hdpi\\d_auto_part.jpg"
-    },
-    {
         "merged": "F:\\360Downloads\\AutomobileService\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\h330.jpg",
         "source": "F:\\360Downloads\\AutomobileService\\res\\drawable-hdpi\\h330.jpg"
     },
     {
+        "merged": "F:\\360Downloads\\AutomobileService\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\d_auto_part.jpg",
+        "source": "F:\\360Downloads\\AutomobileService\\res\\drawable-hdpi\\d_auto_part.jpg"
+    },
+    {
         "merged": "F:\\360Downloads\\AutomobileService\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\car_heat.png",
         "source": "F:\\360Downloads\\AutomobileService\\res\\drawable-hdpi\\car_heat.png"
+    },
+    {
+        "merged": "F:\\360Downloads\\AutomobileService\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\user.png",
+        "source": "F:\\360Downloads\\AutomobileService\\res\\drawable-hdpi\\user.png"
     },
     {
         "merged": "F:\\360Downloads\\AutomobileService\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\home_page_bg2_meitu_1.jpg",
@@ -166,5 +190,9 @@
     {
         "merged": "F:\\360Downloads\\AutomobileService\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\h220.jpg",
         "source": "F:\\360Downloads\\AutomobileService\\res\\drawable-hdpi\\h220.jpg"
+    },
+    {
+        "merged": "F:\\360Downloads\\AutomobileService\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\manager.png",
+        "source": "F:\\360Downloads\\AutomobileService\\res\\drawable-hdpi\\manager.png"
     }
 ]

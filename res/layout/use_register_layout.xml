@@ -4,12 +4,12 @@
     android:layout_height="match_parent"
     android:orientation="vertical" >
     <TableRow
-        android:id="@+id/user_name_tabrow"
-        android:layout_width="match_parent"
-        android:layout_margin="5dp"
-        android:layout_height="wrap_content">
-        <TextView
-            style="@style/text_size_style"
+    android:id="@+id/user_name_tabrow"
+    android:layout_width="match_parent"
+    android:layout_margin="5dp"
+    android:layout_height="wrap_content">
+    <TextView
+        style="@style/text_size_style"
             android:text="@string/user_name"/>
         <EditText
             android:id="@+id/register_user_name"

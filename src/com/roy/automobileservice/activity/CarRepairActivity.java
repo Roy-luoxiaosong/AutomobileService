@@ -3,6 +3,7 @@ package com.roy.automobileservice.activity;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
 import android.view.Window;
@@ -13,9 +14,13 @@ import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.Spinner;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.roy.automobileservice.R;
+import com.roy.automobileservice.cls.CarMOrder;
 import com.roy.automobileservice.cls.CarMaintenance;
+import com.roy.automobileservice.utils.GlobalVariable;
+import com.roy.automobileservice.utils.Utils;
 
 import java.util.ArrayList;
 import java.util.Iterator;
@@ -126,6 +131,26 @@ public class CarRepairActivity extends BaseActivity implements View.OnClickListe
     public void onClick(View v) {
         switch (v.getId()){
             case R.id.maintenance_request:
+                if(!LoginActivity.isLogin){
+                    Utils.showTipAndLogin(CarRepairActivity.this, R.string.tip_msg_to_login_text);
+                }else if(GlobalVariable.loginType!=GlobalVariable.USER_LOGIN){
+                    Toast.makeText(CarRepairActivity.this,"请以用户身份登录",Toast.LENGTH_SHORT).show();
+                }else if(TextUtils.isEmpty(GlobalVariable.currentUser.getCarName())){
+                    Utils.showTipAndJumpToCarModel(CarRepairActivity.this,"您还没有拥有汽车，去看看有没有喜欢的汽车吧？");
+                }else{
+                    CarMOrder order = new CarMOrder(GlobalVariable.currentUser.getUserName(),selectedMileage);
+                    order.save(CarRepairActivity.this, new SaveListener() {
+                        @Override
+                        public void onSuccess() {
+                            Toast.makeText(CarRepairActivity.this,"您已经预约成功，我们的管理员会电话联系您取车时间",Toast.LENGTH_SHORT).show();
+                        }
+
+                        @Override
+                        public void onFailure(int i, String s) {
+                            Toast.makeText(CarRepairActivity.this,"预约失败了，可能网络不好，晚点再试试吧",Toast.LENGTH_SHORT).show();
+                        }
+                    });
+                }
                 break;
         }
     }

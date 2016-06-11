@@ -2,6 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:gravity="center"
     android:orientation="vertical" >
     <FrameLayout
         android:layout_width="match_parent"
@@ -16,12 +17,14 @@
                 android:layout_height="0dp"
                 android:layout_weight="1"
                 android:text="@string/have_no_car"
+                android:layout_gravity="center"
                 android:textSize="24sp"
                 android:textColor="#ff0000"
                 android:gravity="center"/>
             <Button
                 android:id="@+id/buy_a_new_car"
                 android:layout_width="300dp"
+                android:layout_gravity="center"
                 android:layout_height="wrap_content"
                 android:text="@string/buy_a_new_car"
                 android:background="#773A5FCD"/>
@@ -53,6 +56,36 @@
                     android:text="@string/buy_car_time"/>
                 <TextView
                     android:id="@+id/buy_car_time"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_marginRight="5dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/login_edittext_style"/>
+            </TableRow>
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_margin="5dp"
+                android:layout_height="wrap_content">
+                <TextView
+                    style="@style/text_size_style"
+                    android:text="车名："/>
+                <TextView
+                    android:id="@+id/user_car_name"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_marginRight="5dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/login_edittext_style"/>
+            </TableRow>
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_margin="5dp"
+                android:layout_height="wrap_content">
+                <TextView
+                    style="@style/text_size_style"
+                    android:text="车型："/>
+                <TextView
+                    android:id="@+id/user_car_type"
                     android:layout_width="0dp"
                     android:layout_weight="1"
                     android:layout_marginRight="5dp"

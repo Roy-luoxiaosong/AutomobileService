@@ -12,6 +12,7 @@ import android.graphics.Rect;
 import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
 import android.util.AttributeSet;
+import android.view.View;
 import android.widget.ImageView;
 
 public class AvatarImageView extends ImageView{
@@ -20,8 +21,17 @@ public class AvatarImageView extends ImageView{
 	public AvatarImageView(Context context) {
 		super(context);
 	}
+/*    interface onAvatarImageClickListener {
+        void onClick();
+    }
+    private onAvatarImageClickListener mListener;
 
-	public AvatarImageView(Context context, AttributeSet attrs, int defStyle) {
+    @Override
+    public void setOnClickListener(OnClickListener l) {
+        super.setOnClickListener(l);
+    }*/
+
+    public AvatarImageView(Context context, AttributeSet attrs, int defStyle) {
 		super(context, attrs, defStyle);
 	}
 

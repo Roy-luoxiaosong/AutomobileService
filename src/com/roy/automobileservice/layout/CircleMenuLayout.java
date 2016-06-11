@@ -496,6 +496,18 @@ public class CircleMenuLayout extends ViewGroup
 			{
 				tv.setVisibility(View.VISIBLE);
 				tv.setText(mItemTexts[i]);
+				tv.setOnClickListener(new OnClickListener()
+				{
+					@Override
+					public void onClick(View v)
+					{
+
+						if (mOnMenuItemClickListener != null)
+						{
+							mOnMenuItemClickListener.itemClick(v, j);
+						}
+					}
+				});
 			}
 
 			// 添加view到容器中

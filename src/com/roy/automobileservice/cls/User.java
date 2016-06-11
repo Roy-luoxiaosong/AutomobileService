@@ -1,6 +1,8 @@
 package com.roy.automobileservice.cls;
 
-public class User {
+import cn.bmob.v3.BmobObject;
+
+public class User extends BmobObject {
 	private String userName;
     private int avatarImage;
     private String telNumber;
@@ -8,7 +10,8 @@ public class User {
     private String password;
     private String sex;
     private String realName;
-	private Car car;
+	private ChinaCar car;
+	private String carName;
     private String address;
     public String getAddress() {
 		return address;
@@ -46,11 +49,17 @@ public class User {
 	public void setRealName(String realName) {
 		this.realName = realName;
 	}
-	public Car getCar() {
+	public ChinaCar getCar() {
 		return car;
 	}
-	public void setCar(Car car) {
+	public void setCar(ChinaCar car) {
 		this.car = car;
+	}
+	public String getCarName(){
+		return carName;
+	}
+	public void setCarName(String carName){
+		this.carName = carName;
 	}
 	public User(){}
     public User(String userName, int avatarImage) {

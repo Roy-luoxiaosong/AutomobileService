@@ -19,7 +19,7 @@
     <string name="convenient_tel_text">便捷电话</string>
     <string name="road_assis_tel">24 道路救援电话</string>
     <string name="customer_service">24 服务热线</string>
-    
+
     <string name="tip_text">温馨提示</string>
     <string name="tip_msg_text_120">你确定要拨打 120 ?</string>
     <string name="tip_msg_text_110">你确定要拨打 110 ?</string>
@@ -42,48 +42,48 @@
     <string name="tip_the_user_is_not_exist">该用户还没有被注册，现在去注册吗？</string>
     <string name="yes_bt">确定</string>
     <string name="cancle_bt">取消</string>
-    
-     <string name="all_car_models">所有车型</string>
-     
-      <string name="base_info">更多选择</string>
-      <string name="car_discribe">产品描述</string>
-      
-      <string name="login_user_name_hint">用户名</string>
-     <string name="login_pass_word_hint">密码</string>
-     <string name="login_button">登录</string>
-     <string name="exit_button">退出</string>
-     <string name="register_button">注册</string>
-     <string name="check_password">确认密码：</string>
-     <string name="password">输入密码：</string>
-     <string name="car">汽车类型：</string>
-     <string name="address">居住地址：</string>
-     <string name="email">邮箱地址：</string>
-     <string name="select_sex">选择性别：</string>
-     <string name="male">男</string>
-     <string name="female">女</string>
-     <string name="real_name">真实姓名：</string>
-     <string name="user_name">用户名字：</string>
-     <string name="user_icon">用户头像</string>
-     <string name="tel">手机号码</string>
-     
-     <string name="no_car">无车</string>
-     
-      <string name="back_to_home_page">首页</string>
-      <string name="reset_user_info">修改信息</string>
-      <string name="make_sure_modify_info">提交</string>
-      <string name="noti_to_modify_password">不修改可不填写</string>
+
+    <string name="all_car_models">所有车型</string>
+
+    <string name="base_info">更多选择</string>
+    <string name="car_discribe">产品描述</string>
+
+    <string name="login_user_name_hint">用户名</string>
+    <string name="login_pass_word_hint">密码</string>
+    <string name="login_button">登录</string>
+    <string name="exit_button">退出</string>
+    <string name="register_button">注册</string>
+    <string name="check_password">确认密码：</string>
+    <string name="password">输入密码：</string>
+    <string name="car">汽车类型：</string>
+    <string name="address">居住地址：</string>
+    <string name="email">邮箱地址：</string>
+    <string name="select_sex">选择性别：</string>
+    <string name="male">男</string>
+    <string name="female">女</string>
+    <string name="real_name">真实姓名：</string>
+    <string name="user_name">用户名字：</string>
+    <string name="user_icon">用户头像</string>
+    <string name="tel">手机号码</string>
+
+    <string name="no_car">无车</string>
+
+    <string name="back_to_home_page">首页</string>
+    <string name="reset_user_info">修改信息</string>
+    <string name="make_sure_modify_info">提交</string>
+    <string name="noti_to_modify_password">不修改可不填写</string>
     <string name="submit_beauty_request">提交申请</string>
-      
-      <string name="net_unavailable">世界上最遥远的距离就是没网，检查设置</string>
+
+    <string name="net_unavailable">世界上最遥远的距离就是没网，检查设置</string>
     <string name="old_password">原始密码</string>
-    
-     <string name="default_cion1_name">默认头像1</string>
+
+    <string name="default_cion1_name">默认头像1</string>
     <string name="default_cion2_name">默认头像2</string>
     <string name="default_cion3_name">默认头像3</string>
     <string name="default_cion4_name">默认头像4</string>
     <string name="default_cion5_name">默认头像5</string>
     <string name="default_cion6_name">默认头像6</string>
-    
+
     <string name="title_my_info">我的信息</string>
     <string name="title_my_car">我的汽车</string>
     <string name="title_beauty_hitory">美容历史</string>
@@ -93,7 +93,7 @@
     <string name="have_no_car">您还没有汽车</string>
     <string name="buy_a_new_car">我要买车</string>
     <string name="buy_car_time">购车时间</string>
-    
+
     <string name="info_item_user_name">用户昵称</string>
     <string name="info_item_real_name">真实姓名</string>
     <string name="info_item_sex">性    别</string>
@@ -102,40 +102,40 @@
     <string name="info_item_address">居住地址</string>
     <string name="info_item_car_name">汽车名字</string>
     <string name="info_item_no_car">无</string>
-    
-    <string name="user1_name">幼儿园大哥</string>
-    <string name="user1_real_name">叶良辰</string>
+
+    <string name="user1_name">用户1</string>
+    <string name="user1_real_name">真实姓名1</string>
     <string name="user1_sex">男</string>
-    
-    <string name="user2_name">厕所扛把子</string>
-    <string name="user2_real_name">赵日天</string>
+
+    <string name="user2_name">用户2</string>
+    <string name="user2_real_name">真实姓名2</string>
     <string name="user2_sex">男</string>
-    
-    <string name="user3_name">勾魂使者</string>
-    <string name="user3_real_name">郭美美</string>
+
+    <string name="user3_name">用户3</string>
+    <string name="user3_real_name">真实姓名3</string>
     <string name="user3_sex">女</string>
-    
-    <string name="user4_name">少女杀手</string>
-    <string name="user4_real_name">犀利哥</string>
+
+    <string name="user4_name">用户4</string>
+    <string name="user4_real_name">真实姓名4</string>
     <string name="user4_sex">男</string>
-    
-    <string name="user5_name">宅男女神</string>
-    <string name="user5_real_name">papi酱</string>
+
+    <string name="user5_name">用户5</string>
+    <string name="user5_real_name">真实姓名5</string>
     <string name="user5_sex">女</string>
-    
-    <string name="user6_name">搞逗先生</string>
-    <string name="user6_real_name">王尼玛</string>
+
+    <string name="user6_name">用户6</string>
+    <string name="user6_real_name">真实姓名6</string>
     <string name="user6_sex">男</string>
-    
+
     <string name="test_car_name">汽车</string>
     <string name="test_car_discribute">这是第</string>
     <string name="test_car_value">20万</string>
-    
+
     <string name="car_value">价格: </string>
-    
+
     <string name="beauty_request">申请美容</string>
-   <string name="repair_request">申请维修</string>
-    <string name ="car_calculator">购车计算器</string>
+    <string name="repair_request">申请维修</string>
+    <string name="car_calculator">购车计算器</string>
 
     <string name="select_beauty_content">请选择美容项目</string>
 
@@ -176,9 +176,11 @@
 
     <string name="base_recommend_request">保养预约</string>
 
-
-
-    
-    
+    <string name="order_user_name">订单用户：</string>
+    <string name="order_handle_staff_name">处理人：</string>
+    <string name="order_state">订单状态：</string>
+    <string name="order_complete_time">完成时间：</string>
+    <string name="order_dispatch_order_btn">分派任务</string>
+    <string name="order_handle_btn">处理</string>
 
 </resources>

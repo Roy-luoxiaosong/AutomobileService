@@ -1,26 +1,37 @@
 package com.roy.automobileservice.cls;
 
+import com.roy.automobileservice.utils.OrderHP;
+
+import cn.bmob.v3.BmobObject;
+
 /**
  * Created by Roy on 2016/5/10.
  */
-public class CarOrder {
+public class CarOrder extends BmobObject {
     private String carName;
     private String carDetialName;
     private String userName;
-    private String date;
-    private OrderState state;
+    //private String date;
+    private String state = OrderHP.ORDER_SUBMIT_STATE;
+    private String staffName;
+
+    public String getStaffName() {
+        return staffName;
+    }
+
+    public void setStaffName(String staffName) {
+        this.staffName = staffName;
+    }
 
     public CarOrder() {
     }
-    public static enum OrderState{
-        SUBMMIT,CHULIZHONG,WANCHENG
-    }
-    public CarOrder(String carName, String carDetialName, String userName,String date) {
+
+    public CarOrder(String carName, String carDetialName, String userName) {
         this.carName = carName;
         this.carDetialName = carDetialName;
         this.userName = userName;
-        this.date = date;
-        this.state = OrderState.SUBMMIT;
+        //this.date = date;
+        this.state = OrderHP.ORDER_SUBMIT_STATE;
     }
 
     public String getCarName() {
@@ -47,19 +58,19 @@ public class CarOrder {
         this.userName = userName;
     }
 
-    public String getDate() {
+    /*public String getDate() {
         return date;
-    }
+    }*/
 
-    public void setDate(String date) {
+   /* public void setDate(String date) {
         this.date = date;
-    }
+    }*/
 
-    public OrderState getState() {
+    public String getState() {
         return state;
     }
 
-    public void setState(OrderState state) {
+    public void setState(String state) {
         this.state = state;
     }
 }
