@@ -92,7 +92,6 @@ public class RegisterActivity extends BaseActivity implements OnClickListener,On
 					public void onSuccess() {
 						Utils.showBackToLogin(RegisterActivity.this, getResources().getString(R.string.tip_register_succeed));
 					}
-
 					@Override
 					public void onFailure(int i, String s) {
 						Toast.makeText(RegisterActivity.this,"注册失败，用户名已经存在或者网络不好",Toast.LENGTH_SHORT).show();
@@ -105,14 +104,13 @@ public class RegisterActivity extends BaseActivity implements OnClickListener,On
 			break;
 		default:
 			break;
-		
 		}
 	}
 	@Override
-	public void onItemSelected(AdapterView<?> arg0, View arg1, int arg2,
+	public void onItemSelected(AdapterView<?> arg0, View arg1, int position,
 			long arg3) {
 		HeadSculpture headSculpture = (HeadSculpture)imageSpinner.getSelectedItem();
-		user.setAvatarImage(headSculpture.getImageId());
+		user.setAvatarImage(Utils.getIntByUserIcon(position));
 		imageIcon.setImageResource(headSculpture.getImageId());		
 	}
 	@Override

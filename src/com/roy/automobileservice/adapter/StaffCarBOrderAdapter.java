@@ -33,7 +33,8 @@ public class StaffCarBOrderAdapter extends CommonAdapter<CarBOrder> {
               .setText(R.id.order_beauty_content,data.getBeautyList().toString())
               .setText(R.id.order_beauty_state_text,data.getState())
               .setText(R.id.order_beauty_complete_time,getOrderCompleteTime(data))
-              .setText(R.id.order_beauty_handle_staff_name_text,data.getStaffName());
+              .setText(R.id.order_beauty_handle_staff_name_text,data.getStaffName())
+                .setText(R.id.order_beauty_submit_time_text,data.getCreatedAt().toString());
         final Button button = holer.getView(R.id.order_beauty_btn);
         final TextView beautyContent = holer.getView(R.id.order_beauty_content);
         beautyContent.setOnClickListener(new View.OnClickListener() {

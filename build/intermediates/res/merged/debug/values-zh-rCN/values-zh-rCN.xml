@@ -81,6 +81,7 @@
     <string name="order_handle_btn">处理</string>
     <string name="order_handle_staff_name">处理人：</string>
     <string name="order_state">订单状态：</string>
+    <string name="order_submit_time">提交时间：</string>
     <string name="order_user_name">订单用户：</string>
     <string name="password">输入密码：</string>
     <string name="real_name">真实姓名：</string>
@@ -131,7 +132,7 @@
     <string name="title_default_text">汽车服务</string>
     <string name="title_my_car">我的汽车</string>
     <string name="title_my_info">我的信息</string>
-    <string name="title_repair_history">维修历史</string>
+    <string name="title_repair_history">保养历史</string>
     <string name="user1_name">用户1</string>
     <string name="user1_real_name">真实姓名1</string>
     <string name="user1_sex">男</string>

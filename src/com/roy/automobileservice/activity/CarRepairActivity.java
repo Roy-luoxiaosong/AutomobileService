@@ -20,6 +20,7 @@ import com.roy.automobileservice.R;
 import com.roy.automobileservice.cls.CarMOrder;
 import com.roy.automobileservice.cls.CarMaintenance;
 import com.roy.automobileservice.utils.GlobalVariable;
+import com.roy.automobileservice.utils.OrderHP;
 import com.roy.automobileservice.utils.Utils;
 
 import java.util.ArrayList;
@@ -52,6 +53,8 @@ public class CarRepairActivity extends BaseActivity implements View.OnClickListe
     private List<String> selectedBaseContent = new ArrayList<>();
     private List<String> selectedRecommendContent = new ArrayList<>();
     private String selectedMileage;
+
+    private boolean hasOrder = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -138,18 +141,39 @@ public class CarRepairActivity extends BaseActivity implements View.OnClickListe
                 }else if(TextUtils.isEmpty(GlobalVariable.currentUser.getCarName())){
                     Utils.showTipAndJumpToCarModel(CarRepairActivity.this,"您还没有拥有汽车，去看看有没有喜欢的汽车吧？");
                 }else{
-                    CarMOrder order = new CarMOrder(GlobalVariable.currentUser.getUserName(),selectedMileage);
-                    order.save(CarRepairActivity.this, new SaveListener() {
+                    String bql = "select * from CarMOrder where userName="+"'"+GlobalVariable.currentUser.getUserName()+"'";
+                    new BmobQuery<CarMOrder>().doSQLQuery(CarRepairActivity.this, bql, new SQLQueryListener<CarMOrder>() {
                         @Override
-                        public void onSuccess() {
-                            Toast.makeText(CarRepairActivity.this,"您已经预约成功，我们的管理员会电话联系您取车时间",Toast.LENGTH_SHORT).show();
-                        }
+                        public void done(BmobQueryResult<CarMOrder> bmobQueryResult, BmobException e) {
+                            if(e==null){
+                                List<CarMOrder> orders = bmobQueryResult.getResults();
+                                Iterator<CarMOrder> it = orders.iterator();
+                                while (it.hasNext()){
+                                    CarMOrder temp = it.next();
+                                    if(!temp.getState().equals(OrderHP.ORDER_COMPLETE_STATE)){
+                                        Toast.makeText(CarRepairActivity.this,"您还有未处理的订单，不能重复下单",Toast.LENGTH_SHORT).show();
+                                        hasOrder = true;
+                                        break;
+                                    }
+                                }
+                                if(!hasOrder){
+                                    CarMOrder order = new CarMOrder(GlobalVariable.currentUser.getUserName(),selectedMileage);
+                                    order.save(CarRepairActivity.this, new SaveListener() {
+                                        @Override
+                                        public void onSuccess() {
+                                            Toast.makeText(CarRepairActivity.this,"您已经预约成功，我们的管理员会电话联系您取车时间",Toast.LENGTH_SHORT).show();
+                                        }
 
-                        @Override
-                        public void onFailure(int i, String s) {
-                            Toast.makeText(CarRepairActivity.this,"预约失败了，可能网络不好，晚点再试试吧",Toast.LENGTH_SHORT).show();
+                                        @Override
+                                        public void onFailure(int i, String s) {
+                                            Toast.makeText(CarRepairActivity.this,"预约失败了，可能网络不好，晚点再试试吧",Toast.LENGTH_SHORT).show();
+                                        }
+                                    });
+                                }
+                            }
                         }
                     });
+
                 }
                 break;
         }

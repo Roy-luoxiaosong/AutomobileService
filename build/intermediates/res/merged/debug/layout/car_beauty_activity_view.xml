@@ -8,13 +8,20 @@
         android:layout_width="match_parent"
         android:layout_height="55dp">
     </com.roy.automobileservice.layout.TitleBackLayout>
+    <ProgressBar
+        android:id="@+id/beauty_progressBar"
+        android:visibility="visible"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
 
     <ImageView
+        android:id="@+id/car_beauty_image"
         android:layout_width="match_parent"
         android:layout_height="180dp"
         android:scaleType="fitXY"
         android:layout_marginTop="5dp"
         android:layout_marginBottom="10dp"
+        android:visibility="invisible"
         android:background="@drawable/beauty_category_picture"/>
 
     <ListView

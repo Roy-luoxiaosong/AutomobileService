@@ -87,7 +87,7 @@
     <string name="title_my_info">我的信息</string>
     <string name="title_my_car">我的汽车</string>
     <string name="title_beauty_hitory">美容历史</string>
-    <string name="title_repair_history">维修历史</string>
+    <string name="title_repair_history">保养历史</string>
     <string name="titel_my_orders">我的订单</string>
     <string name="have_no_orders">您还没有任何订单</string>
     <string name="have_no_car">您还没有汽车</string>
@@ -180,6 +180,7 @@
     <string name="order_handle_staff_name">处理人：</string>
     <string name="order_state">订单状态：</string>
     <string name="order_complete_time">完成时间：</string>
+    <string name="order_submit_time">提交时间：</string>
     <string name="order_dispatch_order_btn">分派任务</string>
     <string name="order_handle_btn">处理</string>
 

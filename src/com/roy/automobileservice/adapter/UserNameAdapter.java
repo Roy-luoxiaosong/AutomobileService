@@ -46,7 +46,7 @@ public class UserNameAdapter extends ArrayAdapter<User> implements View.OnClickL
             viewHolder.userName_tv.setText(username);
             //显示头像
             viewHolder.avatar_img = (ImageView) view.findViewById(R.id.avatar_img);
-            viewHolder.avatar_img.setImageResource(R.drawable.user_default_icon1);
+            viewHolder.avatar_img.setImageResource(Utils.getUserIconByInt(userNameItem.getAvatarImage()));
             //添加删除按钮的click监听事件
             viewHolder.del_btn = (ImageButton) view.findViewById(R.id.del_btn);
             //保存当前按钮的位置
@@ -61,7 +61,7 @@ public class UserNameAdapter extends ArrayAdapter<User> implements View.OnClickL
             username = userNameItem.getUserName();
             viewHolder.userName_tv.setText(username);
           //显示头像
-            viewHolder.avatar_img.setImageResource(R.drawable.user_default_icon1);
+            viewHolder.avatar_img.setImageResource(Utils.getUserIconByInt(userNameItem.getAvatarImage()));
             
             //添加删除按钮的click监听事件
             viewHolder.del_btn = (ImageButton) view.findViewById(R.id.del_btn);

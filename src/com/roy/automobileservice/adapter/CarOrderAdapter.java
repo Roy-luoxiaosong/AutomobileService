@@ -30,7 +30,8 @@ public class CarOrderAdapter extends CommonAdapter<CarOrder> {
                 .setText(R.id.order_state_text,data.getState())
                 .setText(R.id.order_car_type,data.getCarDetialName())
                 .setText(R.id.order_handle_staff_name_text,data.getStaffName())
-                .setText(R.id.order_complete_time_text, getOrderCompleteTime(data));
+                .setText(R.id.order_complete_time_text, getOrderCompleteTime(data))
+                .setText(R.id.order_submit_time_text,data.getCreatedAt().toString());
 
         final Button button = holer.getView(R.id.order_btn);
         Utils.setButtonText(mContext,button,data);

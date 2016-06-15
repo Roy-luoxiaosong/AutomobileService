@@ -9,16 +9,17 @@
         android:id="@+id/car_models_list_title"
         android:layout_width="match_parent"
         android:layout_height="60dp"></com.roy.automobileservice.layout.TitleBackLayout>
-
-    <!--<com.roy.automobileservice.layout.CircleRefreshLayout
-        xmlns:app="http://schemas.android.com/apk/res-auto"
-        app:AniBackColor="#ff0097cd"
-        android:id="@+id/refresh_layout"
+    <ProgressBar
+        android:id="@+id/car_progressBar"
+        android:visibility="visible"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">-->
+        android:layout_height="wrap_content" />
+
     <LinearLayout
+        android:id="@+id/car_models"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+         android:visibility="invisible"
         android:orientation="vertical">
 
         <fragment
@@ -52,5 +53,5 @@
                 android:layout_height="wrap_content" />
         </FrameLayout>
     </LinearLayout>
-    <!--</com.roy.automobileservice.layout.CircleRefreshLayout>-->
+
 </LinearLayout>

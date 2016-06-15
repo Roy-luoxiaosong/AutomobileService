@@ -31,7 +31,7 @@
         android:scaleType="fitXY"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="@drawable/del_btn"
+        android:background="@drawable/delet_staff"
         android:layout_marginRight="10dp"
         android:layout_gravity="center"
         />

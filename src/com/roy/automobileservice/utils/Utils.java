@@ -1,7 +1,7 @@
 package com.roy.automobileservice.utils;
 
 import java.util.ArrayList;
-import java.util.Comparator;
+
 import java.util.Iterator;
 import java.util.List;
 
@@ -9,6 +9,7 @@ import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
+
 import android.text.SpannableString;
 import android.text.Spanned;
 import android.text.SpannedString;
@@ -18,21 +19,21 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Adapter;
+
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.ImageButton;
+
 import android.widget.ListAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.roy.automobileservice.R;
-import com.roy.automobileservice.activity.CarCalculatorActivity;
+
 import com.roy.automobileservice.activity.CarModelsListActivity;
-import com.roy.automobileservice.activity.HomePageActivity;
+
 import com.roy.automobileservice.activity.LoginActivity;
 import com.roy.automobileservice.activity.RegisterActivity;
 import com.roy.automobileservice.adapter.CarBOrderAdapter;
@@ -41,7 +42,7 @@ import com.roy.automobileservice.adapter.CarOrderAdapter;
 import com.roy.automobileservice.adapter.StaffInfoAdapter;
 import com.roy.automobileservice.adapter.UserNameAdapter;
 import com.roy.automobileservice.cls.ActivityCollector;
-import com.roy.automobileservice.cls.Car;
+
 import com.roy.automobileservice.cls.CarBOrder;
 import com.roy.automobileservice.cls.CarMOrder;
 import com.roy.automobileservice.cls.CarOrder;
@@ -60,6 +61,8 @@ import cn.bmob.v3.listener.DeleteListener;
 import cn.bmob.v3.listener.SQLQueryListener;
 import cn.bmob.v3.listener.SaveListener;
 import cn.bmob.v3.listener.UpdateListener;
+
+import static com.roy.automobileservice.utils.GlobalVariable.*;
 
 public class Utils {
     //public static final int HOME_PAGE_REQUEST_CODE = 1;
@@ -142,9 +145,9 @@ public class Utils {
             public void onClick(DialogInterface dialog, int which) {
                 login.setText(R.string.login_button);
                 userIcon.setImageResource(R.drawable.user_default_icon1);
-                GlobalVariable.currentUser = null;
+                currentUser = null;
                 LoginActivity.isLogin = false;
-                GlobalVariable.loginType = GlobalVariable.LOGIN_FALSE;
+                loginType = LOGIN_FALSE;
             }
         });
 
@@ -158,7 +161,7 @@ public class Utils {
 
             @Override
             public void onClick(DialogInterface dialog, int which) {
-                GlobalVariable.loginType = GlobalVariable.USER_LOGIN;
+                loginType = USER_LOGIN;
                 LoginActivity.startAction(context);
             }
         });
@@ -931,5 +934,55 @@ public class Utils {
         mAlertDialog.show();
 
     }
+    public static final int USER_DEFAULT_ICON1 = 1110;
+    public static final int USER_DEFAULT_ICON2 = 1111;
+    public static final int USER_DEFAULT_ICON3 = 1112;
+    public static final int USER_DEFAULT_ICON4 = 1113;
+    public static final int USER_DEFAULT_ICON5 = 1114;
+    public static final int USER_DEFAULT_ICON6 = 1115;
 
+    /**
+     * 通过int值获得头像
+     * @param icon
+     * @return
+     */
+    public static int getUserIconByInt(Integer icon){
+        switch (icon.intValue()){
+            case USER_DEFAULT_ICON1:
+                return R.drawable.user_default_icon1;
+            case USER_DEFAULT_ICON2:
+                return R.drawable.user_default_icon2;
+            case USER_DEFAULT_ICON3:
+                return R.drawable.user_default_icon3;
+            case USER_DEFAULT_ICON4:
+                return R.drawable.user_default_icon4;
+            case USER_DEFAULT_ICON5:
+                return R.drawable.user_default_icon5;
+            case USER_DEFAULT_ICON6:
+                return R.drawable.user_default_icon6;
+            default:
+                return R.drawable.user_default_icon1;
+        }
+    }
+    /**
+     * 根据头像获取int值
+     */
+    public static Integer getIntByUserIcon(int icon){
+        switch (icon){
+            case 0:
+                return USER_DEFAULT_ICON1;
+            case 1:
+                return USER_DEFAULT_ICON2;
+            case 2:
+                return USER_DEFAULT_ICON3;
+            case 3:
+                return USER_DEFAULT_ICON4;
+            case 4:
+                return USER_DEFAULT_ICON5;
+            case 5:
+                return USER_DEFAULT_ICON6;
+            default:
+                return USER_DEFAULT_ICON1;
+        }
+    }
 }

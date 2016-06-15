@@ -30,6 +30,7 @@ import com.roy.automobileservice.R;
 import com.roy.automobileservice.adapter.UserNameAdapter;
 
 import com.roy.automobileservice.cls.IOnDeleteUserButtonClickListener;
+import com.roy.automobileservice.cls.Manager;
 import com.roy.automobileservice.cls.Staff;
 import com.roy.automobileservice.cls.User;
 import com.roy.automobileservice.layout.AvatarImageView;
@@ -41,6 +42,7 @@ import com.roy.automobileservice.utils.Utils;
 import cn.bmob.v3.BmobQuery;
 import cn.bmob.v3.datatype.BmobQueryResult;
 import cn.bmob.v3.exception.BmobException;
+import cn.bmob.v3.listener.GetListener;
 import cn.bmob.v3.listener.SQLQueryListener;
 
 
@@ -62,7 +64,7 @@ public class LoginActivity extends BaseActivity implements android.view.View.OnC
     private ListView listView;
     private UserNameAdapter userNameAdapter;
     private ArrayAdapter autoCompleteAdapter;
-    private List<String> names;
+    private List<String> names = new ArrayList<>();
     public static PopupWindow popupWindow;
     public static AutoCompleteTextView username_inputbox;
     public static EditText password_inputbox;
@@ -84,12 +86,24 @@ public class LoginActivity extends BaseActivity implements android.view.View.OnC
         setContentView(R.layout.login_activity_layout);
 
         init();
-        if (GlobalVariable.loginType == GlobalVariable.MANAGER_LOGIN) {
-            username_inputbox.setText("manager");
-            password_inputbox.setText("manager");
+        initLoginInfo();
+    }
+    private void initLoginInfo(){
+        switch (GlobalVariable.loginType){
+            case GlobalVariable.MANAGER_LOGIN:
+                username_inputbox.setText("manager");
+                password_inputbox.setText("123456");
+                break;
+            case GlobalVariable.USER_LOGIN:
+                username_inputbox.setText("用户3");
+                password_inputbox.setText("user3");
+                break;
+            case GlobalVariable.STAFF_LOGIN:
+                username_inputbox.setText("美容部员工1");
+                password_inputbox.setText("123456");
+                break;
         }
     }
-
     void init() {
         linearLayout = (LinearLayout) findViewById(R.id.userName_layout);
         password_inputbox = (EditText) findViewById(R.id.password_inputbox);
@@ -102,11 +116,11 @@ public class LoginActivity extends BaseActivity implements android.view.View.OnC
         userList = Utils.getBackRestraintLenthOfUserList(TestData.userTestList, 6);
 
         //自动适配名字
-        names = getNames();
-        autoCompleteAdapter = new ArrayAdapter<>(LoginActivity.this, android.R.layout.simple_dropdown_item_1line,
+        getNames();
+        /*autoCompleteAdapter = new ArrayAdapter<>(LoginActivity.this, android.R.layout.simple_dropdown_item_1line,
                 names);
         username_inputbox.setAdapter(autoCompleteAdapter);
-        username_inputbox.setThreshold(1);
+        username_inputbox.setThreshold(1);*/
 
 
         popupwindow_view = getLayoutInflater().inflate(R.layout.username_listview, null);
@@ -216,7 +230,7 @@ public class LoginActivity extends BaseActivity implements android.view.View.OnC
         String username = userNameAdapter.getItem(position).getUserName();
         int userImage = userNameAdapter.getItem(position).getAvatarImage();
         username_inputbox.setText(username);
-        curUserImage.setImageResource(userImage);
+        curUserImage.setImageResource(Utils.getUserIconByInt(userImage));
         username_inputbox.setSelection(username.length());
         popupWindow.dismiss();
     }
@@ -225,6 +239,7 @@ public class LoginActivity extends BaseActivity implements android.view.View.OnC
     protected void onResume() {
         // TODO Auto-generated method stub
         super.onResume();
+
         resetAapter();
     }
 
@@ -232,18 +247,73 @@ public class LoginActivity extends BaseActivity implements android.view.View.OnC
         userList = Utils.getBackRestraintLenthOfUserList(TestData.userTestList, 6);
         userNameAdapter = new UserNameAdapter(this, R.layout.username_item, userList);
         listView.setAdapter(userNameAdapter);
-        names = getNames();
-        autoCompleteAdapter.notifyDataSetChanged();
+        getNames();
+        //autoCompleteAdapter.notifyDataSetChanged();
+        //username_inputbox.setAdapter(autoCompleteAdapter);
+    }
+    private void initAutoBox(List<String> names){
+        autoCompleteAdapter = new ArrayAdapter<>(LoginActivity.this, android.R.layout.simple_dropdown_item_1line,
+                names);
         username_inputbox.setAdapter(autoCompleteAdapter);
+        username_inputbox.setThreshold(1);
     }
 
-    private List<String> getNames() {
-        List<String> names = new ArrayList<>();
-        Iterator<User> it = TestData.userTestList.iterator();
-        while (it.hasNext()) {
-            names.add(it.next().getUserName());
+    private void getNames() {
+        String bql ;
+        switch (GlobalVariable.loginType){
+            case GlobalVariable.MANAGER_LOGIN:
+                names.clear();
+                names.add("manager");
+                initAutoBox(names);
+                break;
+            case GlobalVariable.USER_LOGIN:
+                names.clear();
+                bql = "select * from User";
+                new BmobQuery<User>().doSQLQuery(LoginActivity.this, bql, new SQLQueryListener<User>() {
+                    @Override
+                    public void done(BmobQueryResult<User> bmobQueryResult, BmobException e) {
+                        if(e==null){
+                            List<User> users = bmobQueryResult.getResults();
+                            Iterator<User> it = users.iterator();
+                            while (it.hasNext()){
+                                User user = it.next();
+                                names.add(user.getUserName());
+                            }
+                            //Log.d("tag",names.size()+"");
+                        }else {
+                            names.add("用户1");
+                            names.add("用户2");
+                        }
+                        initAutoBox(names);
+                    }
+                });
+                break;
+            case GlobalVariable.STAFF_LOGIN:
+                names.clear();
+                bql = "select * from Staff";
+                new BmobQuery<Staff>().doSQLQuery(LoginActivity.this, bql, new SQLQueryListener<Staff>() {
+                    @Override
+                    public void done(BmobQueryResult<Staff> bmobQueryResult, BmobException e) {
+                        if(e==null){
+                            List<Staff> staffs = bmobQueryResult.getResults();
+                            Iterator<Staff> it = staffs.iterator();
+                            while (it.hasNext()){
+                                Staff staff = it.next();
+                                names.add(staff.getName());
+                            }
+                            //Log.d("tag",names.size()+"");
+                        }else {
+                            names.add("美容部员工1");
+                            names.add("保养部员工1");
+                            names.add("销售部员工1");
+                        }
+                        initAutoBox(names);
+                    }
+                });
+                break;
         }
-        return names;
+       /* Log.d("tag",names.size()+"");
+        return names;*/
     }
 
     /**
@@ -271,7 +341,8 @@ public class LoginActivity extends BaseActivity implements android.view.View.OnC
                     } else {
                         Utils.showLoRegister(LoginActivity.this, getResources().getString(R.string.tip_the_user_is_not_exist));
                     }
-
+                }else {
+                    Toast.makeText(LoginActivity.this, "登录失败，请检查网络设置", Toast.LENGTH_SHORT).show();
                 }
             }
         });
@@ -301,6 +372,8 @@ public class LoginActivity extends BaseActivity implements android.view.View.OnC
                             Toast.makeText(LoginActivity.this, getResources().getString(R.string.tip_password_is_not_right), Toast.LENGTH_SHORT).show();
                         }
                     }
+                }else {
+                    Toast.makeText(LoginActivity.this, "登录失败，请检查网络设置", Toast.LENGTH_SHORT).show();
                 }
             }
         });
@@ -313,13 +386,25 @@ public class LoginActivity extends BaseActivity implements android.view.View.OnC
      * @param userName
      * @param password
      */
-    private void handleManagerLogin(String userName, String password) {
-        if (userName.equals("manager") && password.equals("manager")) {
-            LoginActivity.isLogin = true;
-            ManagerActivity.startAction(LoginActivity.this);
-        } else {
-            Toast.makeText(LoginActivity.this, "用户名或者密码不对,请重新输入", Toast.LENGTH_SHORT).show();
-        }
+    private void handleManagerLogin(final String userName, final String password) {
+        BmobQuery<Manager> query = new BmobQuery<>();
+        query.getObject(this, "GBZr777D", new GetListener<Manager>() {
+            @Override
+            public void onSuccess(Manager manager) {
+                if (userName.equals(manager.getName()) && password.equals(manager.getPassword())) {
+                    LoginActivity.isLogin = true;
+                    ManagerActivity.startAction(LoginActivity.this);
+                } else {
+                    Toast.makeText(LoginActivity.this, "用户名或者密码不对,请重新输入", Toast.LENGTH_SHORT).show();
+                }
+            }
+
+            @Override
+            public void onFailure(int i, String s) {
+                Toast.makeText(LoginActivity.this, "登录失败，请检查网络设置", Toast.LENGTH_SHORT).show();
+            }
+        });
+
 
     }
 }

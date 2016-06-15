@@ -5,14 +5,18 @@ import android.content.Intent;
 
 import android.os.Bundle;
 
+import android.provider.ContactsContract;
 import android.view.View;
 import android.view.Window;
 
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.ListView;
+import android.widget.ProgressBar;
 import android.widget.TextView;
+import android.widget.Toast;
 
 
 import com.roy.automobileservice.R;
@@ -43,6 +47,10 @@ public class CarBeautyActivity extends BaseActivity implements View.OnClickListe
     private List<BeautyCategory> beautyCategoryList = new ArrayList<>();
     private BmobQuery<BeautyCategory> query;
     private List<String> nameList = new ArrayList<>();
+
+    private ProgressBar progressBar;
+
+    private ImageView carBeautyImageView;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -61,7 +69,9 @@ public class CarBeautyActivity extends BaseActivity implements View.OnClickListe
     }
     private void initViews(){
         names = (ListView)findViewById(R.id.beauty_catogory_name);
+        carBeautyImageView = (ImageView)findViewById(R.id.car_beauty_image);
         beautyRequest = (Button)findViewById(R.id.beauty_catogory_beauty_request);
+        progressBar = (ProgressBar)findViewById(R.id.beauty_progressBar);
         beautyRequest.setOnClickListener(this);
     }
     private void initDatas(){
@@ -72,16 +82,16 @@ public class CarBeautyActivity extends BaseActivity implements View.OnClickListe
                 public void done(BmobQueryResult<BeautyCategory> bmobQueryResult, BmobException e) {
                     if(e==null){
                         beautyCategoryList = bmobQueryResult.getResults();
-                        //Log.d("tag","返回的数据长度为："+beautyCategoryList.size());
                         Iterator<BeautyCategory> it = beautyCategoryList.iterator();
                         while (it.hasNext()){
                             nameList.add(it.next().getName());
-                            //Log.d("tag","名字数组为："+nameList.size());
                         }
                         ArrayAdapter<String> adapter = new ArrayAdapter<>(CarBeautyActivity.this,
                                 android.R.layout.simple_list_item_1,nameList);
                         names.setAdapter(adapter);
                         adapter.notifyDataSetChanged();
+                        carBeautyImageView.setVisibility(View.VISIBLE);
+                        progressBar.setVisibility(View.GONE);
                         names.setOnItemClickListener(new AdapterView.OnItemClickListener() {
                             @Override
                             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
@@ -89,6 +99,8 @@ public class CarBeautyActivity extends BaseActivity implements View.OnClickListe
                                 BeautyCatogoryContentActivity.startAction(CarBeautyActivity.this,beautyCategory.getName(),beautyCategory.getContent());
                             }
                         });
+                    }else {
+                        Toast.makeText(CarBeautyActivity.this,"加载数据失败，请检查网络设置",Toast.LENGTH_SHORT).show();
                     }
                 }
             });

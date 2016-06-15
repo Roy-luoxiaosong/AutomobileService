@@ -31,6 +31,12 @@ import com.roy.automobileservice.utils.GlobalVariable;
 import com.roy.automobileservice.utils.TestData;
 import com.roy.automobileservice.utils.Utils;
 
+import cn.bmob.v3.BmobQuery;
+import cn.bmob.v3.datatype.BmobQueryResult;
+import cn.bmob.v3.exception.BmobException;
+import cn.bmob.v3.listener.SQLQueryListener;
+import cn.bmob.v3.listener.UpdateListener;
+
 public class InfoModifyActivity extends BaseActivity implements OnClickListener,OnItemSelectedListener{
 	
 	public static void startAction(Context context){
@@ -121,16 +127,36 @@ public class InfoModifyActivity extends BaseActivity implements OnClickListener,
 				}
 			}
 			if(userInfoIsRight(user)){
-				//删除以前的用户
-				Iterator<User> iterator = TestData.userTestList.iterator();
-				while (iterator.hasNext()) {
-					if(iterator.next().equals(GlobalVariable.currentUser)){
-						iterator.remove();
+				//更新用户资料
+				String bql = "select * from User where userName="+"'"+GlobalVariable.currentUser.getUserName()+"'";
+				new BmobQuery<User>().doSQLQuery(InfoModifyActivity.this, bql, new SQLQueryListener<User>() {
+					@Override
+					public void done(BmobQueryResult<User> bmobQueryResult, BmobException e) {
+						if(e==null&&bmobQueryResult.getResults().size()>0){
+							User newUser = bmobQueryResult.getResults().get(0);
+							newUser.setUserName(user.getUserName());
+							newUser.setEmail(user.getEmail());
+							newUser.setAddress(user.getAddress());
+							newUser.setAvatarImage(user.getAvatarImage());
+							newUser.setRealName(user.getRealName());
+							newUser.setPassword(user.getPassword());
+							newUser.setTelNumber(user.getTelNumber());
+							newUser.update(InfoModifyActivity.this, newUser.getObjectId(), new UpdateListener() {
+								@Override
+								public void onSuccess() {
+									GlobalVariable.currentUser = user;
+									Utils.showBackToMyInfo(InfoModifyActivity.this, getResources().getString(R.string.tip_user_info_modify_succeed));
+								}
+
+								@Override
+								public void onFailure(int i, String s) {
+									Toast.makeText(InfoModifyActivity.this,"修改信息失败，可能是网络不稳定",Toast.LENGTH_SHORT).show();
+								}
+							});
+						}
 					}
-				}
-				TestData.userTestList.add(user);
-				GlobalVariable.currentUser = user;
-				Utils.showBackToMyInfo(InfoModifyActivity.this, getResources().getString(R.string.tip_user_info_modify_succeed));
+				});
+
 				break;
 			}
 			break;
@@ -140,12 +166,13 @@ public class InfoModifyActivity extends BaseActivity implements OnClickListener,
 		}
 	}
 	@Override
-	public void onItemSelected(AdapterView<?> arg0, View arg1, int arg2,
+	public void onItemSelected(AdapterView<?> arg0, View arg1, int position,
 			long arg3) {
+
 		//user.setCar(getCarByName((String)carSpinner.getSelectedItem()));
 		HeadSculpture headSculpture = (HeadSculpture)imageSpinner.getSelectedItem();
-		user.setAvatarImage(headSculpture.getImageId());
-		imageIcon.setImageResource(headSculpture.getImageId());	//����ѡ��ͷ��	
+		user.setAvatarImage(Utils.getIntByUserIcon(position));
+		imageIcon.setImageResource(headSculpture.getImageId());
 	}
 	@Override
 	public void onNothingSelected(AdapterView<?> arg0) {
@@ -191,7 +218,7 @@ public class InfoModifyActivity extends BaseActivity implements OnClickListener,
 		email.setText(GlobalVariable.currentUser.getEmail());
 		tel.setText(GlobalVariable.currentUser.getTelNumber());
 		address.setText(GlobalVariable.currentUser.getAddress());
-		imageIcon.setImageResource(GlobalVariable.currentUser.getAvatarImage());
+		imageIcon.setImageResource(Utils.getUserIconByInt(GlobalVariable.currentUser.getAvatarImage()));
 	}
 
 	/**

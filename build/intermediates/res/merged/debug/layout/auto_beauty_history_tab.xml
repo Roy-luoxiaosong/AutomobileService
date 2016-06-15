@@ -16,7 +16,7 @@
         android:dividerHeight="1dp"/>
    </LinearLayout>
    <Button
-	    android:id="@+id/repair_request"
+	    android:id="@+id/beauty_request"
 	    android:layout_width="300dp"
 	    android:layout_height="wrap_content"
 	    android:layout_gravity="center"

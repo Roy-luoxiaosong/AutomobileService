@@ -33,7 +33,8 @@ public class StaffCarMOrderAdapter extends CommonAdapter<CarMOrder> {
                 .setText(R.id.order_maintenance_complete_time, getOrderCompleteTime(data))
                 .setText(R.id.order_maintenance_handle_staff_name_text, data.getStaffName())
                 .setText(R.id.order_maintenance_state_text, data.getState())
-                .setText(R.id.order_maintenance_milege, data.getMileage());
+                .setText(R.id.order_maintenance_milege, data.getMileage())
+                .setText(R.id.order_maintenance_submit_time, data.getCreatedAt().toString());
         final Button button = holer.getView(R.id.order_maintenance_btn);
 
 

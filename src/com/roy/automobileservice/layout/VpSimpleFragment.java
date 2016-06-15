@@ -84,6 +84,7 @@ public class VpSimpleFragment extends Fragment implements View.OnClickListener {
     private List<CarOrder> mCarOrderList;
     private List<CarBOrder> mCarBOrderList;
     private List<CarMOrder> mCarMOrderList;
+    private TextView mCarOrderTitle,mCarBOrderTitle,mCarMOrderTitle;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -140,6 +141,7 @@ public class VpSimpleFragment extends Fragment implements View.OnClickListener {
                                 CarOrderAdapter adapter = new CarOrderAdapter(getActivity(),R.layout.car_order_item,mCarOrderList);
                                 mCarOrderListView.setAdapter(adapter);
                                 Utils.setListViewHeightBasedOnChildren(mCarOrderListView);
+                                mCarOrderTitle.setVisibility(View.VISIBLE);
                             }
                         }else {
                             Toast.makeText(getActivity(),"获取订单失败",Toast.LENGTH_SHORT).show();
@@ -155,6 +157,7 @@ public class VpSimpleFragment extends Fragment implements View.OnClickListener {
                                 CarBOrderAdapter adapter = new CarBOrderAdapter(getActivity(),R.layout.car_beauty_order_item,mCarBOrderList);
                                 mCarBOrderListView.setAdapter(adapter);
                                 Utils.setListViewHeightBasedOnChildren(mCarBOrderListView);
+                                mCarBOrderTitle.setVisibility(View.VISIBLE);
                             }
                         }else {
                             Toast.makeText(getActivity(),"获取订单失败",Toast.LENGTH_SHORT).show();
@@ -170,7 +173,10 @@ public class VpSimpleFragment extends Fragment implements View.OnClickListener {
                                 CarMOrderAdapter adapter = new CarMOrderAdapter(getActivity(),R.layout.car_maintenance_order_item,mCarMOrderList);
                                 mCarMOrderListView.setAdapter(adapter);
                                 Utils.setListViewHeightBasedOnChildren(mCarMOrderListView);
+                                mCarMOrderTitle.setVisibility(View.VISIBLE);
                             }
+                        }else {
+                            Toast.makeText(getActivity(),"获取订单失败",Toast.LENGTH_SHORT).show();
                         }
                     }
                 });
@@ -285,6 +291,10 @@ public class VpSimpleFragment extends Fragment implements View.OnClickListener {
         //测是数据
         mCarBOrderListView = (ListView)view.findViewById(R.id.manager_beauty_order_list);
         mCarMOrderListView = (ListView)view.findViewById(R.id.manager_maintenance_order_list);
+
+        mCarOrderTitle = (TextView)view.findViewById(R.id.car_order_title);
+        mCarBOrderTitle = (TextView)view.findViewById(R.id.car_beauty_order_title);
+        mCarMOrderTitle = (TextView)view.findViewById(R.id.car_m_order_title);
     }
 
 }

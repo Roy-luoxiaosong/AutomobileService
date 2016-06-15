@@ -72,7 +72,7 @@ public class HomePageActivity extends BaseActivity implements android.view.View.
     private NetworkChangeReceiver networkChangeReceiver;
     private IntentFilter intentFilter;
 
-    private RelativeLayout noNetNotifictionLayout;
+    //private RelativeLayout noNetNotifictionLayout;
     private Button loginButton;
 
     //登录相关
@@ -140,13 +140,13 @@ public class HomePageActivity extends BaseActivity implements android.view.View.
                 }
             }
         });
-        noNetNotifictionLayout = (RelativeLayout) findViewById(R.id.net_view_r1);
+        //noNetNotifictionLayout = (RelativeLayout) findViewById(R.id.net_view_r1);
 
         loginButton = (Button) findViewById(R.id.login_title_button);
 
 
         loginButton.setOnClickListener(this);
-        noNetNotifictionLayout.setOnClickListener(this);
+        //noNetNotifictionLayout.setOnClickListener(this);
 
     }
     private void initPopupWindow() {
@@ -181,10 +181,10 @@ public class HomePageActivity extends BaseActivity implements android.view.View.
                 break;
 
             case R.id.net_view_r1:
-                if (noNetNotifictionLayout != null) {
+               /* if (noNetNotifictionLayout != null) {
                     Intent intent = new Intent("android.settings.SETTINGS");
                     startActivity(intent);
-                }
+                }*/
             case R.id.manager_login:
                 GlobalVariable.loginType = GlobalVariable.MANAGER_LOGIN;
                 LoginActivity.startAction(HomePageActivity.this);
@@ -232,7 +232,7 @@ public class HomePageActivity extends BaseActivity implements android.view.View.
     @Override
     protected void onResume() {
         super.onResume();
-        noNetNotifictionLayout.setVisibility(NetworkChangeReceiver.netState ? View.GONE : View.VISIBLE);
+        //noNetNotifictionLayout.setVisibility(NetworkChangeReceiver.netState ? View.GONE : View.VISIBLE);
         refreshTitleContent();
     }
 
@@ -250,7 +250,7 @@ public class HomePageActivity extends BaseActivity implements android.view.View.
             loginButton.setText(R.string.exit_button);
             if (GlobalVariable.loginType == GlobalVariable.USER_LOGIN) {
                 if (!TextUtils.isEmpty(GlobalVariable.currentUser.getUserName()) && GlobalVariable.currentUser.getAvatarImage() > 0) {
-                    userImage.setImageResource(GlobalVariable.currentUser.getAvatarImage());
+                    userImage.setImageResource(Utils.getUserIconByInt(GlobalVariable.currentUser.getAvatarImage()));
                 }
             } else if (GlobalVariable.loginType == GlobalVariable.MANAGER_LOGIN) {
 
@@ -292,13 +292,13 @@ public class HomePageActivity extends BaseActivity implements android.view.View.
         itemTexts = new String[]{getResources().getString(R.string.my_info_option_text),
                 getResources().getString(R.string.auto_beauty_option_text),
                 getResources().getString(R.string.auto_repair_option_text),
-                getResources().getString(R.string.auto_part_option_text),
+                /*getResources().getString(R.string.auto_part_option_text),*/
                 getResources().getString(R.string.road_assis_option_text),
                 getResources().getString(R.string.car_models_text)};
         itemImagIds = new int[]{MY_INFO,
                 AUTO_BEAUTY,
                 AUTO_REPAIR,
-                AUTO_PART,
+               /* AUTO_PART,*/
                 AUTO_ROAD,
                 CAR_MODLE};
         mCircleMenuLayout = (CircleMenuLayout) findViewById(R.id.id_menulayout);

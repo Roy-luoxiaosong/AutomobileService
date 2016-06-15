@@ -3,6 +3,7 @@ package com.roy.automobileservice.activity;
 
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 
@@ -31,12 +32,15 @@ import com.roy.automobileservice.adapter.ReapirAndBeautyHistoryAdapter;
 import com.roy.automobileservice.adapter.UserCarBOrderAdapter;
 import com.roy.automobileservice.adapter.UserCarMOrderAdapter;
 import com.roy.automobileservice.adapter.UserCarOrderAdapter;
+import com.roy.automobileservice.cls.BeautyHistory;
 import com.roy.automobileservice.cls.CarBOrder;
 import com.roy.automobileservice.cls.CarMOrder;
 import com.roy.automobileservice.cls.CarOrder;
 import com.roy.automobileservice.cls.ChinaCar;
 import com.roy.automobileservice.cls.CubeTransformer;
 import com.roy.automobileservice.cls.InfoItem;
+import com.roy.automobileservice.cls.MaintenanceHistory;
+import com.roy.automobileservice.cls.Staff;
 import com.roy.automobileservice.layout.AvatarImageView;
 import com.roy.automobileservice.utils.GlobalVariable;
 import com.roy.automobileservice.utils.SqlHelper;
@@ -60,7 +64,7 @@ public class MyInfoActivity extends BaseActivity implements OnClickListener{
 	private ReapirAndBeautyHistoryAdapter repairHistoryAdapter;
 	private ReapirAndBeautyHistoryAdapter beautyHistoryAdapter;
 	private List<String> repairTitle;
-	private Map<String,List<String>> repairContent;
+	private Map<String,List<String>> mainContent;
 	private List<String> beautyTitle;
 	private Map<String, List<String>> beautyContent;
 	
@@ -90,7 +94,12 @@ public class MyInfoActivity extends BaseActivity implements OnClickListener{
 	private List<CarOrder> mCarOrderList;
 	private List<CarBOrder> mCarBOrderList;
 	private List<CarMOrder> mCarMOrderList;
+	private TextView mCarOrderTitle,mCarBOrderTitle,mCarMOrderTitle;
 
+
+	//申请美容和保养
+	private Button askForMBtn;
+	private Button askForBBtn;
 	private String bql;
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -121,7 +130,7 @@ public class MyInfoActivity extends BaseActivity implements OnClickListener{
       	//初始化view1
         view1 = LayoutInflater.from(this).inflate(R.layout.my_info_layout, null);
         imgAvatarImageView = (AvatarImageView)view1.findViewById(R.id.my_info_haha_avatar_img);
-        imgAvatarImageView.setImageResource(GlobalVariable.currentUser.getAvatarImage());
+        imgAvatarImageView.setImageResource(Utils.getUserIconByInt(GlobalVariable.currentUser.getAvatarImage()));
         infoItemListView = (ListView)view1.findViewById(R.id.info_item);
         initItemList();
         infoItemAdapter = new InfoItemAdapter(this, R.layout.info_item, infoItems);
@@ -188,22 +197,21 @@ public class MyInfoActivity extends BaseActivity implements OnClickListener{
         //初始化view3
         view3 = LayoutInflater.from(this).inflate(R.layout.auto_beauty_history_tab, null);
         beautyHistory = (ExpandableListView)view3.findViewById(R.id.auto_beauty_history);
+		askForBBtn = (Button)view3.findViewById(R.id.beauty_request);
+		askForBBtn.setOnClickListener(this);
         beautyHistory.setGroupIndicator(null);
         beautyHistory.setDivider(null);
         initBeautyHistory();
-        beautyHistoryAdapter = new ReapirAndBeautyHistoryAdapter(this,beautyTitle, beautyContent, 
-        		R.layout.history_title,R.layout.history_content_item);
-        beautyHistory.setAdapter(beautyHistoryAdapter);
-        
+
         //初始化view4
         view4 = LayoutInflater.from(this).inflate(R.layout.auto_repair_history_tab, null);
         repairHistory = (ExpandableListView)view4.findViewById(R.id.auto_repair_history);
-        repairHistory.setGroupIndicator(null);
+		askForMBtn = (Button) view4.findViewById(R.id.repair_request);
+		askForMBtn.setOnClickListener(this);
+		repairHistory.setGroupIndicator(null);
         repairHistory.setDivider(null);
         initMaintenanceHistory();
-        repairHistoryAdapter = new ReapirAndBeautyHistoryAdapter(this,repairTitle,repairContent,
-        		R.layout.history_title,R.layout.history_content_item);
-        repairHistory.setAdapter(repairHistoryAdapter);
+
 
 		//初始化View5
 
@@ -232,7 +240,7 @@ public class MyInfoActivity extends BaseActivity implements OnClickListener{
         
 	}
 	private void inithanges(){
-        imgAvatarImageView.setImageResource(GlobalVariable.currentUser.getAvatarImage());
+        imgAvatarImageView.setImageResource(Utils.getUserIconByInt(GlobalVariable.currentUser.getAvatarImage()));
         infoItems.clear();
 		initItemList();
 		infoItemAdapter.notifyDataSetChanged();
@@ -248,7 +256,11 @@ public class MyInfoActivity extends BaseActivity implements OnClickListener{
 		switch (v.getId()){
 			case R.id.buy_a_new_car:
 				CarModelsListActivity.startAction(MyInfoActivity.this);
+			case R.id.repair_request:
+				CarRepairActivity.startAction(MyInfoActivity.this);
 				break;
+			case R.id.beauty_request:
+				CarBeautyActivity.startAction(MyInfoActivity.this);
 		}
 	}
 
@@ -264,65 +276,95 @@ public class MyInfoActivity extends BaseActivity implements OnClickListener{
 	}
 	private void initMaintenanceHistory(){
 		repairTitle = new ArrayList<>();
-		//bql = "select * from "
-		repairContent = new HashMap<String, List<String>>();
-		List<String> list1 = new ArrayList<String>();
-		list1.add("ά��Ա������");
-		list1.add("���ã�20��");
-		list1.add("ά�����ݣ��ײ�1");
-		list1.add("ά�޵꣺ά�޵�1");
-		repairContent.put("2012-05-06", list1);
-		list1 = new ArrayList<String>();
-		list1.add("ά��Ա������");
-		list1.add("���ã�20��");
-		list1.add("ά�����ݣ��ײ�1");
-		list1.add("ά�޵꣺ά�޵�1");
-		repairContent.put("2012-06-06", list1);
-		list1 = new ArrayList<String>();
-		list1.add("ά��Ա������");
-		list1.add("���ã�20��");
-		list1.add("ά�����ݣ��ײ�1");
-		list1.add("ά�޵꣺ά�޵�1");
-		repairContent.put("2015-04-06", list1);
-		list1 = new ArrayList<String>();
-		list1.add("ά��Ա������");
-		list1.add("���ã�20��");
-		list1.add("ά�����ݣ��ײ�1");
-		list1.add("ά�޵꣺ά�޵�1");
-		repairContent.put("2016-05-06", list1);
+		bql = "select * from MaintenanceHistory where userName="+"'"+GlobalVariable.currentUser.getUserName()+"'";
+		new BmobQuery<MaintenanceHistory>().doSQLQuery(MyInfoActivity.this, bql, new SQLQueryListener<MaintenanceHistory>() {
+			@Override
+			public void done(BmobQueryResult<MaintenanceHistory> bmobQueryResult, BmobException e) {
+				if(e==null){
+					List<MaintenanceHistory> mh = bmobQueryResult.getResults();
+					mainContent = new HashMap<>();
+					final List<String> list1 = new ArrayList<>();
+					Iterator<MaintenanceHistory> it = mh.iterator();
+					while (it.hasNext()){
+						final MaintenanceHistory tem = it.next();
+						repairTitle.add(tem.getUpdatedAt().toString());
+						bql = "select * from Staff where name="+"'"+tem.getStaffName()+"'";
+						new BmobQuery<Staff>().doSQLQuery(MyInfoActivity.this, bql, new SQLQueryListener<Staff>() {
+							@Override
+							public void done(BmobQueryResult<Staff> bmobQueryResult, BmobException e) {
+								if(e==null&&bmobQueryResult.getResults().size()>0){
+									Staff staff = bmobQueryResult.getResults().get(0);
+									list1.clear();
+									list1.add("处理人："+staff.getName());
+									list1.add("电话："+staff.getTel());
+									list1.add("邮箱："+staff.getEmail());
+									mainContent.put(tem.getUpdatedAt().toString(), list1);
+
+
+								}else {
+									Toast.makeText(MyInfoActivity.this,"获取处理人信息失败",Toast.LENGTH_SHORT).show();
+								}
+							}
+						});
+					}
+
+						repairHistoryAdapter = new ReapirAndBeautyHistoryAdapter(MyInfoActivity.this,repairTitle, mainContent,
+                                R.layout.history_title,R.layout.history_content_item);
+						repairHistory.setAdapter(repairHistoryAdapter);
+
+
+				}else{
+					Toast.makeText(MyInfoActivity.this,"获取保养记录失败",Toast.LENGTH_SHORT).show();
+				}
+			}
+		});
+
 		
 	}
 	private void initBeautyHistory(){
-		beautyTitle = new ArrayList<String>();
-		beautyTitle.add("2012-05-06");
-		beautyTitle.add("2012-06-06");
-		beautyTitle.add("2015-04-06");
-		beautyTitle.add("2016-05-06");
-		beautyContent = new HashMap<String, List<String>>();
-		List<String> list1 = new ArrayList<String>();
-		list1.add("����Ա������");
-		list1.add("���ã�20��");
-		list1.add("�������ݣ��ײ�1");
-		list1.add("���ݵ꣺���ݵ�1");
-		beautyContent.put("2012-05-06", list1);
-		list1 = new ArrayList<String>();
-		list1.add("����Ա������");
-		list1.add("���ã�20��");
-		list1.add("�������ݣ��ײ�1");
-		list1.add("���ݵ꣺���ݵ�1");
-		beautyContent.put("2012-06-06", list1);
-		list1 = new ArrayList<String>();
-		list1.add("����Ա������");
-		list1.add("���ã�20��");
-		list1.add("�������ݣ��ײ�1");
-		list1.add("���ݵ꣺���ݵ�1");
-		beautyContent.put("2015-04-06", list1);
-		list1 = new ArrayList<String>();
-		list1.add("����Ա������");
-		list1.add("���ã�20��");
-		list1.add("�������ݣ��ײ�1");
-		list1.add("���ݵ꣺���ݵ�1");
-		beautyContent.put("2016-05-06", list1);
+		beautyTitle = new ArrayList<>();
+		bql = "select * from BeautyHistory where userName="+"'"+GlobalVariable.currentUser.getUserName()+"'";
+		new BmobQuery<BeautyHistory>().doSQLQuery(MyInfoActivity.this, bql, new SQLQueryListener<BeautyHistory>() {
+			@Override
+			public void done(BmobQueryResult<BeautyHistory> bmobQueryResult, BmobException e) {
+				if(e==null){
+					List<BeautyHistory> bh = bmobQueryResult.getResults();
+					beautyContent = new HashMap<>();
+					final List<String> list1 = new ArrayList<>();
+					Iterator<BeautyHistory> it = bh.iterator();
+					while (it.hasNext()){
+						final BeautyHistory tem = it.next();
+						beautyTitle.add(tem.getUpdatedAt().toString());
+						bql = "select * from Staff where name="+"'"+tem.getStaffName()+"'";
+						new BmobQuery<Staff>().doSQLQuery(MyInfoActivity.this, bql, new SQLQueryListener<Staff>() {
+							@Override
+							public void done(BmobQueryResult<Staff> bmobQueryResult, BmobException e) {
+								if(e==null&&bmobQueryResult.getResults().size()>0){
+									Staff staff = bmobQueryResult.getResults().get(0);
+									list1.clear();
+									list1.add("处理人："+staff.getName());
+									list1.add("电话："+staff.getTel());
+									list1.add("邮箱："+staff.getEmail());
+									beautyContent.put(tem.getUpdatedAt().toString(), list1);
+
+								}else {
+									Toast.makeText(MyInfoActivity.this,"获取处理人信息失败",Toast.LENGTH_SHORT).show();
+								}
+							}
+						});
+					}
+
+						beautyHistoryAdapter = new ReapirAndBeautyHistoryAdapter(MyInfoActivity.this,beautyTitle, beautyContent,
+                                R.layout.history_title,R.layout.history_content_item);
+						beautyHistory.setAdapter(beautyHistoryAdapter);
+
+
+				}else{
+					Toast.makeText(MyInfoActivity.this,"获取美容记录失败记录失败",Toast.LENGTH_SHORT).show();
+				}
+			}
+		});
+
 		
 	}
 	private void initManageOrderViews(View view){
@@ -330,6 +372,9 @@ public class MyInfoActivity extends BaseActivity implements OnClickListener{
 
 		mCarBOrderListView = (ListView)view.findViewById(R.id.manager_beauty_order_list);
 		mCarMOrderListView = (ListView)view.findViewById(R.id.manager_maintenance_order_list);
+		mCarOrderTitle = (TextView)view.findViewById(R.id.car_order_title);
+		mCarBOrderTitle = (TextView)view.findViewById(R.id.car_beauty_order_title);
+		mCarMOrderTitle = (TextView)view.findViewById(R.id.car_m_order_title);
 	}
 	private void initOrderViewData(){
 		bql = "select * from CarOrder where userName="+"'"+GlobalVariable.currentUser.getUserName()+"'";
@@ -342,6 +387,7 @@ public class MyInfoActivity extends BaseActivity implements OnClickListener{
 						UserCarOrderAdapter adapter = new UserCarOrderAdapter(MyInfoActivity.this,R.layout.car_order_item,mCarOrderList);
 						mCarOrderListView.setAdapter(adapter);
 						Utils.setListViewHeightBasedOnChildren(mCarOrderListView);
+						mCarOrderTitle.setVisibility(View.VISIBLE);
 					}
 				}else {
 					Toast.makeText(MyInfoActivity.this,"获取订单失败",Toast.LENGTH_SHORT).show();
@@ -358,6 +404,7 @@ public class MyInfoActivity extends BaseActivity implements OnClickListener{
 						UserCarBOrderAdapter adapter = new UserCarBOrderAdapter(MyInfoActivity.this,R.layout.car_beauty_order_item,mCarBOrderList);
 						mCarBOrderListView.setAdapter(adapter);
 						Utils.setListViewHeightBasedOnChildren(mCarBOrderListView);
+						mCarBOrderTitle.setVisibility(View.VISIBLE);
 					}
 				}else {
 					Toast.makeText(MyInfoActivity.this,"获取订单失败",Toast.LENGTH_SHORT).show();
@@ -374,7 +421,11 @@ public class MyInfoActivity extends BaseActivity implements OnClickListener{
 						UserCarMOrderAdapter adapter = new UserCarMOrderAdapter(MyInfoActivity.this,R.layout.car_maintenance_order_item,mCarMOrderList);
 						mCarMOrderListView.setAdapter(adapter);
 						Utils.setListViewHeightBasedOnChildren(mCarMOrderListView);
+						mCarMOrderTitle.setVisibility(View.VISIBLE);
 					}
+				}
+				else {
+					Toast.makeText(MyInfoActivity.this,"获取订单失败",Toast.LENGTH_SHORT).show();
 				}
 			}
 		});

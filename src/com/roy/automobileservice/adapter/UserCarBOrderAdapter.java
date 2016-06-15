@@ -24,22 +24,24 @@ public class UserCarBOrderAdapter extends CommonAdapter<CarBOrder> {
 
     @Override
     public void convert(BaseViewHoler holer, final CarBOrder data) {
-        holer.setText(R.id.order_beauty_user_name,data.getUserName())
-                .setText(R.id.order_beauty_content,data.getBeautyList().toString())
-                .setText(R.id.order_beauty_state_text,data.getState())
-                .setText(R.id.order_beauty_complete_time,getOrderCompleteTime(data))
-                .setText(R.id.order_beauty_handle_staff_name_text,data.getStaffName());
+        holer.setText(R.id.order_beauty_user_name, data.getUserName())
+                .setText(R.id.order_beauty_content, data.getBeautyList().toString())
+                .setText(R.id.order_beauty_state_text, data.getState())
+                .setText(R.id.order_beauty_complete_time, getOrderCompleteTime(data))
+                .setText(R.id.order_beauty_handle_staff_name_text, data.getStaffName())
+                .setText(R.id.order_beauty_submit_time_text, data.getCreatedAt().toString());
         final Button button = holer.getView(R.id.order_beauty_btn);
         button.setVisibility(View.GONE);
         final TextView beautyContent = holer.getView(R.id.order_beauty_content);
         beautyContent.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Utils.showDialogBeautyContent(mContext,data);
+                Utils.showDialogBeautyContent(mContext, data);
             }
         });
     }
-    private String getOrderCompleteTime(CarBOrder data){
-        return  data.getState().equals(OrderHP.ORDER_COMPLETE_STATE)?data.getUpdatedAt().toString():"";
+
+    private String getOrderCompleteTime(CarBOrder data) {
+        return data.getState().equals(OrderHP.ORDER_COMPLETE_STATE) ? data.getUpdatedAt().toString() : "";
     }
 }

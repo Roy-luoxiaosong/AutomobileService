@@ -4,12 +4,12 @@
         "source": "F:\\360Downloads\\AutomobileService\\res\\layout\\picture_swithcer.xml"
     },
     {
-        "merged": "F:\\360Downloads\\AutomobileService\\build\\intermediates\\res\\merged\\debug\\layout\\add_staff_view.xml",
-        "source": "F:\\360Downloads\\AutomobileService\\res\\layout\\add_staff_view.xml"
-    },
-    {
         "merged": "F:\\360Downloads\\AutomobileService\\build\\intermediates\\res\\merged\\debug\\layout\\info_item.xml",
         "source": "F:\\360Downloads\\AutomobileService\\res\\layout\\info_item.xml"
+    },
+    {
+        "merged": "F:\\360Downloads\\AutomobileService\\build\\intermediates\\res\\merged\\debug\\layout\\add_staff_view.xml",
+        "source": "F:\\360Downloads\\AutomobileService\\res\\layout\\add_staff_view.xml"
     },
     {
         "merged": "F:\\360Downloads\\AutomobileService\\build\\intermediates\\res\\merged\\debug\\layout\\auto_beauty_history_tab.xml",
@@ -24,28 +24,28 @@
         "source": "F:\\360Downloads\\AutomobileService\\res\\layout\\title_back.xml"
     },
     {
-        "merged": "F:\\360Downloads\\AutomobileService\\build\\intermediates\\res\\merged\\debug\\layout\\staff_activity_view.xml",
-        "source": "F:\\360Downloads\\AutomobileService\\res\\layout\\staff_activity_view.xml"
+        "merged": "F:\\360Downloads\\AutomobileService\\build\\intermediates\\res\\merged\\debug\\layout\\cycle_picture.xml",
+        "source": "F:\\360Downloads\\AutomobileService\\res\\layout\\cycle_picture.xml"
     },
     {
         "merged": "F:\\360Downloads\\AutomobileService\\build\\intermediates\\res\\merged\\debug\\layout\\circle_menu_item.xml",
         "source": "F:\\360Downloads\\AutomobileService\\res\\layout\\circle_menu_item.xml"
     },
     {
-        "merged": "F:\\360Downloads\\AutomobileService\\build\\intermediates\\res\\merged\\debug\\layout\\cycle_picture.xml",
-        "source": "F:\\360Downloads\\AutomobileService\\res\\layout\\cycle_picture.xml"
+        "merged": "F:\\360Downloads\\AutomobileService\\build\\intermediates\\res\\merged\\debug\\layout\\staff_activity_view.xml",
+        "source": "F:\\360Downloads\\AutomobileService\\res\\layout\\staff_activity_view.xml"
     },
     {
         "merged": "F:\\360Downloads\\AutomobileService\\build\\intermediates\\res\\merged\\debug\\layout\\car_repair_activity_view.xml",
         "source": "F:\\360Downloads\\AutomobileService\\res\\layout\\car_repair_activity_view.xml"
     },
     {
-        "merged": "F:\\360Downloads\\AutomobileService\\build\\intermediates\\res\\merged\\debug\\layout\\my_info_layout.xml",
-        "source": "F:\\360Downloads\\AutomobileService\\res\\layout\\my_info_layout.xml"
-    },
-    {
         "merged": "F:\\360Downloads\\AutomobileService\\build\\intermediates\\res\\merged\\debug\\layout\\string_center_list_item.xml",
         "source": "F:\\360Downloads\\AutomobileService\\res\\layout\\string_center_list_item.xml"
+    },
+    {
+        "merged": "F:\\360Downloads\\AutomobileService\\build\\intermediates\\res\\merged\\debug\\layout\\my_info_layout.xml",
+        "source": "F:\\360Downloads\\AutomobileService\\res\\layout\\my_info_layout.xml"
     },
     {
         "merged": "F:\\360Downloads\\AutomobileService\\build\\intermediates\\res\\merged\\debug\\layout\\my_orders_tab.xml",
@@ -80,16 +80,16 @@
         "source": "F:\\360Downloads\\AutomobileService\\res\\layout\\username_item.xml"
     },
     {
-        "merged": "F:\\360Downloads\\AutomobileService\\build\\intermediates\\res\\merged\\debug\\layout\\convenient_menu_layout_port.xml",
-        "source": "F:\\360Downloads\\AutomobileService\\res\\layout\\convenient_menu_layout_port.xml"
+        "merged": "F:\\360Downloads\\AutomobileService\\build\\intermediates\\res\\merged\\debug\\layout\\car_info_activity.xml",
+        "source": "F:\\360Downloads\\AutomobileService\\res\\layout\\car_info_activity.xml"
     },
     {
         "merged": "F:\\360Downloads\\AutomobileService\\build\\intermediates\\res\\merged\\debug\\layout\\manager_login_activity.xml",
         "source": "F:\\360Downloads\\AutomobileService\\res\\layout\\manager_login_activity.xml"
     },
     {
-        "merged": "F:\\360Downloads\\AutomobileService\\build\\intermediates\\res\\merged\\debug\\layout\\car_info_activity.xml",
-        "source": "F:\\360Downloads\\AutomobileService\\res\\layout\\car_info_activity.xml"
+        "merged": "F:\\360Downloads\\AutomobileService\\build\\intermediates\\res\\merged\\debug\\layout\\convenient_menu_layout_port.xml",
+        "source": "F:\\360Downloads\\AutomobileService\\res\\layout\\convenient_menu_layout_port.xml"
     },
     {
         "merged": "F:\\360Downloads\\AutomobileService\\build\\intermediates\\res\\merged\\debug\\layout\\car_maintenance_order_item.xml",
@@ -112,12 +112,12 @@
         "source": "F:\\360Downloads\\AutomobileService\\res\\layout\\car_models_list_view.xml"
     },
     {
-        "merged": "F:\\360Downloads\\AutomobileService\\build\\intermediates\\res\\merged\\debug\\layout\\my_car_info_tab.xml",
-        "source": "F:\\360Downloads\\AutomobileService\\res\\layout\\my_car_info_tab.xml"
-    },
-    {
         "merged": "F:\\360Downloads\\AutomobileService\\build\\intermediates\\res\\merged\\debug\\layout\\home_menu_layout_port.xml",
         "source": "F:\\360Downloads\\AutomobileService\\res\\layout\\home_menu_layout_port.xml"
+    },
+    {
+        "merged": "F:\\360Downloads\\AutomobileService\\build\\intermediates\\res\\merged\\debug\\layout\\my_car_info_tab.xml",
+        "source": "F:\\360Downloads\\AutomobileService\\res\\layout\\my_car_info_tab.xml"
     },
     {
         "merged": "F:\\360Downloads\\AutomobileService\\build\\intermediates\\res\\merged\\debug\\layout\\ask_for_beauty_activity_view.xml",
@@ -128,12 +128,12 @@
         "source": "F:\\360Downloads\\AutomobileService\\res\\layout\\register_activity.xml"
     },
     {
-        "merged": "F:\\360Downloads\\AutomobileService\\build\\intermediates\\res\\merged\\debug\\layout\\beauty_catogory_content_frg.xml",
-        "source": "F:\\360Downloads\\AutomobileService\\res\\layout\\beauty_catogory_content_frg.xml"
-    },
-    {
         "merged": "F:\\360Downloads\\AutomobileService\\build\\intermediates\\res\\merged\\debug\\layout\\net_state_notifiction_layout.xml",
         "source": "F:\\360Downloads\\AutomobileService\\res\\layout\\net_state_notifiction_layout.xml"
+    },
+    {
+        "merged": "F:\\360Downloads\\AutomobileService\\build\\intermediates\\res\\merged\\debug\\layout\\beauty_catogory_content_frg.xml",
+        "source": "F:\\360Downloads\\AutomobileService\\res\\layout\\beauty_catogory_content_frg.xml"
     },
     {
         "merged": "F:\\360Downloads\\AutomobileService\\build\\intermediates\\res\\merged\\debug\\layout\\car_order_item.xml",
@@ -156,12 +156,12 @@
         "source": "F:\\360Downloads\\AutomobileService\\res\\layout\\auto_repair_history_tab.xml"
     },
     {
-        "merged": "F:\\360Downloads\\AutomobileService\\build\\intermediates\\res\\merged\\debug\\layout\\beauty_catogory_content.xml",
-        "source": "F:\\360Downloads\\AutomobileService\\res\\layout\\beauty_catogory_content.xml"
-    },
-    {
         "merged": "F:\\360Downloads\\AutomobileService\\build\\intermediates\\res\\merged\\debug\\layout\\car_calculator_activity_view.xml",
         "source": "F:\\360Downloads\\AutomobileService\\res\\layout\\car_calculator_activity_view.xml"
+    },
+    {
+        "merged": "F:\\360Downloads\\AutomobileService\\build\\intermediates\\res\\merged\\debug\\layout\\beauty_catogory_content.xml",
+        "source": "F:\\360Downloads\\AutomobileService\\res\\layout\\beauty_catogory_content.xml"
     },
     {
         "merged": "F:\\360Downloads\\AutomobileService\\build\\intermediates\\res\\merged\\debug\\layout\\login_activity_layout.xml",
@@ -184,12 +184,12 @@
         "source": "F:\\360Downloads\\AutomobileService\\res\\layout\\car_beauty_order_item.xml"
     },
     {
-        "merged": "F:\\360Downloads\\AutomobileService\\build\\intermediates\\res\\merged\\debug\\layout\\login_title_back.xml",
-        "source": "F:\\360Downloads\\AutomobileService\\res\\layout\\login_title_back.xml"
-    },
-    {
         "merged": "F:\\360Downloads\\AutomobileService\\build\\intermediates\\res\\merged\\debug\\layout\\history_content_item.xml",
         "source": "F:\\360Downloads\\AutomobileService\\res\\layout\\history_content_item.xml"
+    },
+    {
+        "merged": "F:\\360Downloads\\AutomobileService\\build\\intermediates\\res\\merged\\debug\\layout\\login_title_back.xml",
+        "source": "F:\\360Downloads\\AutomobileService\\res\\layout\\login_title_back.xml"
     },
     {
         "merged": "F:\\360Downloads\\AutomobileService\\build\\intermediates\\res\\merged\\debug\\layout\\no_login_pop_window.xml",
@@ -204,16 +204,16 @@
         "source": "F:\\360Downloads\\AutomobileService\\res\\layout\\car_beauty_activity_view.xml"
     },
     {
-        "merged": "F:\\360Downloads\\AutomobileService\\build\\intermediates\\res\\merged\\debug\\layout\\car_info_fragment.xml",
-        "source": "F:\\360Downloads\\AutomobileService\\res\\layout\\car_info_fragment.xml"
+        "merged": "F:\\360Downloads\\AutomobileService\\build\\intermediates\\res\\merged\\debug\\layout\\convenient_service_lt.xml",
+        "source": "F:\\360Downloads\\AutomobileService\\res\\layout\\convenient_service_lt.xml"
     },
     {
         "merged": "F:\\360Downloads\\AutomobileService\\build\\intermediates\\res\\merged\\debug\\layout\\manager_user_view.xml",
         "source": "F:\\360Downloads\\AutomobileService\\res\\layout\\manager_user_view.xml"
     },
     {
-        "merged": "F:\\360Downloads\\AutomobileService\\build\\intermediates\\res\\merged\\debug\\layout\\convenient_service_lt.xml",
-        "source": "F:\\360Downloads\\AutomobileService\\res\\layout\\convenient_service_lt.xml"
+        "merged": "F:\\360Downloads\\AutomobileService\\build\\intermediates\\res\\merged\\debug\\layout\\car_info_fragment.xml",
+        "source": "F:\\360Downloads\\AutomobileService\\res\\layout\\car_info_fragment.xml"
     },
     {
         "merged": "F:\\360Downloads\\AutomobileService\\build\\intermediates\\res\\merged\\debug\\layout\\home_page_view.xml",

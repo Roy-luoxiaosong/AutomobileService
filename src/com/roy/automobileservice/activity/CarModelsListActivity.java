@@ -9,9 +9,13 @@ import android.view.View;
 import android.view.Window;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
+import android.widget.LinearLayout;
 import android.widget.ListView;
 
+import android.widget.ProgressBar;
 import android.widget.TextView;
+import android.widget.Toast;
+
 import com.roy.automobileservice.R;
 
 import com.roy.automobileservice.adapter.CarTempAdapter;
@@ -43,8 +47,9 @@ public class CarModelsListActivity extends BaseActivity{
 	private CarTempAdapter carAdapter;
 
 	public static List<ChinaCar> cars = new ArrayList<>();
-	//private ProgressBar loadData;
+	private LinearLayout carLinearLayout;
 
+	private ProgressBar progressBar;
 
 	@Override
 	protected void onDestroy() {
@@ -66,6 +71,8 @@ public class CarModelsListActivity extends BaseActivity{
 		setContentView(R.layout.car_models_list_view);
 
 		TextView textView = (TextView)findViewById(R.id.title_back_text);
+		carLinearLayout = (LinearLayout)findViewById(R.id.car_models);
+		progressBar = (ProgressBar)findViewById(R.id.car_progressBar);
 		textView.setText(R.string.all_car_models);
 		//loadData = (ProgressBar)findViewById(R.id.load_data);
 
@@ -85,6 +92,8 @@ public class CarModelsListActivity extends BaseActivity{
 					carAdapter.notifyDataSetChanged();
 					ListView listView = (ListView)findViewById(R.id.car_models_listview);
 					listView.setAdapter(carAdapter);
+					carLinearLayout.setVisibility(View.VISIBLE);
+					progressBar.setVisibility(View.GONE);
 					listView.setOnItemClickListener(new OnItemClickListener() {
 
                         @Override
@@ -109,6 +118,8 @@ public class CarModelsListActivity extends BaseActivity{
 
                         }
                     });
+				}else {
+					Toast.makeText(CarModelsListActivity.this,"加载数据失败，请检查网络设置",Toast.LENGTH_SHORT).show();
 				}
 
 
@@ -116,7 +127,7 @@ public class CarModelsListActivity extends BaseActivity{
 
 
 		});
-		//loadData.setVisibility(View.GONE);
+
 
 
 	}

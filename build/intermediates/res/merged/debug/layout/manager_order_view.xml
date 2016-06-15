@@ -14,8 +14,10 @@
             android:orientation="vertical">
 
             <TextView
+                android:id="@+id/car_order_title"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:visibility="gone"
                 android:layout_gravity="center_horizontal"
                 android:layout_marginTop="10dp"
                 android:text="汽车订单"
@@ -28,12 +30,14 @@
                 android:layout_height="wrap_content" />
 
             <TextView
+                android:id="@+id/car_beauty_order_title"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
                 android:layout_marginTop="10dp"
                 android:text="汽车美容订单"
                 android:textColor="#FF6347"
+                android:visibility="gone"
                 android:textSize="22sp" />
 
             <ListView
@@ -42,12 +46,14 @@
                 android:layout_height="wrap_content" />
 
             <TextView
+                android:id="@+id/car_m_order_title"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
                 android:layout_marginTop="10dp"
                 android:text="汽车保养订单"
                 android:textColor="#FF6347"
+                android:visibility="gone"
                 android:textSize="22sp" />
 
             <ListView

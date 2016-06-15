@@ -17,6 +17,7 @@ import android.widget.Toast;
 import com.roy.automobileservice.R;
 import com.roy.automobileservice.cls.CarBOrder;
 import com.roy.automobileservice.utils.GlobalVariable;
+import com.roy.automobileservice.utils.OrderHP;
 import com.roy.automobileservice.utils.Utils;
 
 import java.util.ArrayList;
@@ -24,6 +25,10 @@ import java.util.Iterator;
 import java.util.List;
 
 import cn.bmob.v3.BmobObject;
+import cn.bmob.v3.BmobQuery;
+import cn.bmob.v3.datatype.BmobQueryResult;
+import cn.bmob.v3.exception.BmobException;
+import cn.bmob.v3.listener.SQLQueryListener;
 
 
 /**
@@ -35,6 +40,7 @@ public class AskForBeautyActivity extends BaseActivity implements CompoundButton
         //intent.putExtra("beauty_names",list);
         context.startActivity(intent);
     }
+    private boolean hasOrder = false;
 
     private CheckBox checkBox1;
     private CheckBox checkBox2;
@@ -216,7 +222,10 @@ public class AskForBeautyActivity extends BaseActivity implements CompoundButton
     public void onClick(View v) {
         switch (v.getId()){
             case R.id.submit_beauty_request:
-
+                if(checkedList==null||checkedList.size()<=0){
+                    Toast.makeText(AskForBeautyActivity.this,"请选择需要保养的项目",Toast.LENGTH_SHORT).show();
+                    return;
+                }
                 if(!LoginActivity.isLogin){
                     Utils.showTipAndLogin(AskForBeautyActivity.this, R.string.tip_msg_to_login_text);
                 }else if(GlobalVariable.loginType!=GlobalVariable.USER_LOGIN){
@@ -224,13 +233,33 @@ public class AskForBeautyActivity extends BaseActivity implements CompoundButton
                 }else if(TextUtils.isEmpty(GlobalVariable.currentUser.getCarName())){
                     Utils.showTipAndJumpToCarModel(AskForBeautyActivity.this,"您还没有拥有汽车，去看看有没有喜欢的汽车吧？");
                 }else{
-                    CarBOrder order = new CarBOrder(checkedList, GlobalVariable.currentUser.getUserName());
-                    Utils.showTipAndSubmitBOrder(AskForBeautyActivity.this,"请确认需要美容的项目\n" +
-                            "提交成功后您将会在我的订单里面看到订单内容",order);
+                    String bql = "select * from CarBOrder where userName="+"'"+GlobalVariable.currentUser.getUserName()+"'";
+                    new BmobQuery<CarBOrder>().doSQLQuery(AskForBeautyActivity.this, bql, new SQLQueryListener<CarBOrder>() {
+                        @Override
+                        public void done(BmobQueryResult<CarBOrder> bmobQueryResult, BmobException e) {
+                            if(e==null){
+                                List<CarBOrder> orders = bmobQueryResult.getResults();
+                                Iterator<CarBOrder> it = orders.iterator();
+                                while (it.hasNext()){
+                                    CarBOrder tem = it.next();
+                                    if(!tem.getState().equals(OrderHP.ORDER_COMPLETE_STATE)){
+                                        Toast.makeText(AskForBeautyActivity.this,"您还有未处理的订单，不能重复下单",Toast.LENGTH_SHORT).show();
+                                        hasOrder = true;
+                                      break;
+                                    }
+                                }
+                                if(!hasOrder){
+                                    CarBOrder order = new CarBOrder(checkedList, GlobalVariable.currentUser.getUserName());
+                                    Utils.showTipAndSubmitBOrder(AskForBeautyActivity.this,"请确认需要美容的项目\n" +
+                                            "提交成功后您将会在我的订单里面看到订单内容",order);
+                                }
+
+                            }
+                        }
+                    });
+
                 }
                 break;
-
-
         }
     }
 }
